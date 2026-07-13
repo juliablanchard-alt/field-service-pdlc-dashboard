@@ -3132,7 +3132,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             {% for project in program.projects %}
-            <div class="project-container">
+            <div class="project-container" data-project-health="{{ (project.health_status|lower|replace(' ', '-')) if project.health_status and project.health_status != 'N/A' else 'not-started' }}">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -15023,7 +15023,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             const matchesPortfolio = selectedPortfolios.size === 0 || selectedPortfolios.has(portfolio);
                             p.style.display = matchesPortfolio ? '' : 'none';
                         });
-                        document.querySelectorAll('#execution-view .project-row').forEach(p => p.style.display = '');
+                        document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = '');
                         document.querySelectorAll('.epic-card').forEach(e => e.style.display = '');
                     } else {
                         // VIEW-DEPENDENT STATUS FILTERING
@@ -15040,12 +15040,12 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             });
 
                             // Hide all projects/epics (Programs view shows programs only)
-                            document.querySelectorAll('#execution-view .project-row').forEach(p => p.style.display = 'none');
+                            document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = 'none');
 
                         } else if (viewType === 'project') {
                             // PROJECTS VIEW: Filter ONLY by project health
                             const matchingProjects = new Set();
-                            document.querySelectorAll('#execution-view .project-row').forEach(project => {
+                            document.querySelectorAll('#execution-view .project-container').forEach(project => {
                                 const projectHealth = project.dataset.projectHealth;
                                 if (projectHealth === selectedStatus) {
                                     matchingProjects.add(project);
@@ -15067,7 +15067,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 program.style.display = (hasMatchingProjects && matchesPortfolio) ? '' : 'none';
                             });
 
-                            document.querySelectorAll('#execution-view .project-row').forEach(project => {
+                            document.querySelectorAll('#execution-view .project-container').forEach(project => {
                                 const matchesStatus = matchingProjects.has(project);
                                 const program = project.closest('.program-row');
                                 const portfolio = program ? program.getAttribute('data-portfolio') : null;
@@ -15085,7 +15085,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 const header = row.querySelector('.program-header');
                                 if (header) header.classList.add('expanded');
                             });
-                            document.querySelectorAll('#execution-view .project-row').forEach(row => {
+                            document.querySelectorAll('#execution-view .project-container').forEach(row => {
                                 row.classList.add('expanded');
                                 const header = row.querySelector('.project-header');
                                 if (header) header.classList.add('expanded');
@@ -15108,7 +15108,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             if (matchingEpics.length === 0) {
                                 console.log('Epics view: 0 matches - hiding all programs/projects/epics');
                                 document.querySelectorAll('#execution-view .program-row').forEach(p => p.style.display = 'none');
-                                document.querySelectorAll('#execution-view .project-row').forEach(p => p.style.display = 'none');
+                                document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = 'none');
                                 document.querySelectorAll('.epic-card').forEach(e => e.style.display = 'none');
 
                                 // Show empty state
@@ -15182,7 +15182,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             const matchesPortfolio = selectedPortfolios.size === 0 || selectedPortfolios.has(portfolio);
                             p.style.display = matchesPortfolio ? '' : 'none';
                         });
-                        document.querySelectorAll('#execution-view .project-row').forEach(p => p.style.display = '');
+                        document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = '');
                         document.querySelectorAll('.month-column').forEach(c => c.style.display = '');
                     } else {
                         // AUTO-SWITCH TO EPIC VIEW
