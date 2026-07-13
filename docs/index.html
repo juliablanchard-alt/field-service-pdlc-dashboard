@@ -966,9 +966,9 @@
         }
 
         .filter-pill[data-status="watch"] {
-            background: #fef3c7;
-            color: #d97706;
-            border-color: #fbbf24;
+            background: #fef3c7 !important;
+            color: #d97706 !important;
+            border-color: #fbbf24 !important;
         }
 
         .filter-pill[data-status="watch"].active {
@@ -7318,6 +7318,8 @@
                 const activeView = document.querySelector('.view-toggle.active:not(.allocations-view-btn)');
                 const viewType = activeView ? activeView.dataset.view : 'epic';
 
+                console.log('Filter clicked:', selectedStatus, 'viewType:', viewType);
+
                 if (selectedStatus === 'all') {
                     // Show everything
                     document.querySelectorAll('#execution-view .program-row').forEach(p => p.style.display = '');
@@ -7328,11 +7330,15 @@
 
                     if (viewType === 'program') {
                         // PROGRAMS VIEW: Filter ONLY by program health
+                        let matchCount = 0;
                         document.querySelectorAll('#execution-view .program-row').forEach(program => {
                             const badge = program.querySelector('.program-badge');
                             const matchesStatus = badge && badge.classList.contains('badge-' + selectedStatus);
+                            if (matchesStatus) matchCount++;
+                            console.log('Program:', program, 'badge classes:', badge ? badge.className : 'none', 'matches:', matchesStatus);
                             program.style.display = matchesStatus ? '' : 'none';
                         });
+                        console.log('Total matches:', matchCount);
 
                         // Hide all projects/epics (Programs view shows programs only)
                         document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = 'none');
