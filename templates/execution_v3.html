@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cloud Execution Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f9fa;
+            color: #1f2937;
+            padding: 24px;
+            font-size: 14px;
+        }
+
+        .stats-section {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .stat-item {
+            padding: 16px 0;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .stat-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .stat-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-bar-label {
+            font-size: 12px;
+            color: #4b5563;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .status-dot.green { background: #10b981; }
+        .status-dot.gray { background: #9ca3af; }
+        .status-dot.yellow { background: #f59e0b; }
+        .status-dot.red { background: #ef4444; }
+
+        .stat-bar-container {
+            flex: 1;
+            background: #f3f4f6;
+            height: 16px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .stat-bar-fill.green { background: #10b981; }
+        .stat-bar-fill.gray { background: #9ca3af; }
+        .stat-bar-fill.yellow { background: #f59e0b; }
+        .stat-bar-fill.red { background: #ef4444; }
+
+        .stat-bar-text {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        .monthly-releases {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .release-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .release-tab {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.15s;
+        }
+
+        .release-tab:hover {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .release-tab.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
+
+        .release-tab .counts {
+            font-size: 11px;
+            opacity: 0.8;
+            margin-left: 4px;
+        }
+
+        .filters-section {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-row {
+            margin-bottom: 16px;
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .portfolio-tab {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.15s;
+        }
+
+        .portfolio-tab:hover {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .portfolio-tab.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
+
+        .filters-controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .filter-group label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: 'Inter', sans-serif;
+            color: #374151;
+            background: white;
+            min-width: 180px;
+        }
+
+        .filter-group input {
+            min-width: 250px;
+        }
+
+        .clear-all-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            background: #dc2626;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            margin-left: auto;
+            transition: background 0.15s;
+        }
+
+        .clear-all-btn:hover {
+            background: #b91c1c;
+        }
+
+        .programs-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .program-section {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .program-section:last-child {
+            border-bottom: none;
+        }
+
+        .program-header {
+            background: #f9fafb;
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 13px;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .program-header:hover {
+            background: #f3f4f6;
+        }
+
+        .program-header .toggle-icon {
+            font-size: 10px;
+            transition: transform 0.2s;
+            color: #6b7280;
+        }
+
+        .program-header.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .program-content {
+            padding: 0;
+        }
+
+        .program-content.hidden {
+            display: none;
+        }
+
+        .project-section {
+            background: #fffbeb;
+            border-left: 3px solid #f59e0b;
+            margin: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .project-header {
+            background: #fffbeb;
+            padding: 10px 16px;
+            font-weight: 500;
+            font-size: 13px;
+            color: #92400e;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .epics-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .epics-table thead {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .epics-table th {
+            padding: 10px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .epics-table td {
+            padding: 12px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid #f3f4f6;
+            color: #374151;
+        }
+
+        .epics-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .epics-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .loc-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .loc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .loc-dot.green { background: #10b981; }
+        .loc-dot.yellow { background: #f59e0b; }
+        .loc-dot.red { background: #ef4444; }
+        .loc-dot.black { background: #111827; }
+
+        .epic-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .epic-link:hover {
+            text-decoration: underline;
+        }
+
+        .health-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .health-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .health-dot.green { background: #10b981; }
+        .health-dot.gray { background: #9ca3af; }
+        .health-dot.yellow { background: #f59e0b; }
+        .health-dot.red { background: #ef4444; }
+
+        .timestamp {
+            text-align: right;
+            font-size: 11px;
+            color: #9ca3af;
+            padding: 12px 24px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Programs</span>
+                    <span class="stat-value">{{ total_programs }}</span>
+                </div>
+                <div class="stat-bars">
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot green"></span>
+                            On Track
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill green" style="width: {{ (health_counts.on_track / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (health_counts.on_track / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ health_counts.on_track }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot gray"></span>
+                            Not Started
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill gray" style="width: {{ (health_counts.not_started / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (health_counts.not_started / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ health_counts.not_started }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot yellow"></span>
+                            Watch
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill yellow" style="width: {{ (health_counts.watch / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (health_counts.watch / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ health_counts.watch }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot red"></span>
+                            Blocked
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill red" style="width: {{ (health_counts.blocked / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (health_counts.blocked / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ health_counts.blocked }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Projects</span>
+                    <span class="stat-value">{{ total_projects }}</span>
+                </div>
+                <div class="stat-bars">
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot green"></span>
+                            On Track
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill green" style="width: {{ (project_stats.on_track / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (project_stats.on_track / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ project_stats.on_track }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot gray"></span>
+                            Not Started
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill gray" style="width: {{ (project_stats.not_started / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (project_stats.not_started / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ project_stats.not_started }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot yellow"></span>
+                            Watch
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill yellow" style="width: {{ (project_stats.watch / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (project_stats.watch / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ project_stats.watch }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot red"></span>
+                            Blocked
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill red" style="width: {{ (project_stats.blocked / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (project_stats.blocked / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ project_stats.blocked }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Epics</span>
+                    <span class="stat-value">{{ total_epics }}</span>
+                </div>
+                <div class="stat-bars">
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot green"></span>
+                            On Track
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill green" style="width: {{ (epic_stats.on_track / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (epic_stats.on_track / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ epic_stats.on_track }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot gray"></span>
+                            Not Started
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill gray" style="width: {{ (epic_stats.not_started / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (epic_stats.not_started / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ epic_stats.not_started }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot yellow"></span>
+                            Watch
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill yellow" style="width: {{ (epic_stats.watch / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (epic_stats.watch / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ epic_stats.watch }}</div>
+                    </div>
+                    <div class="stat-bar-row">
+                        <div class="stat-bar-label">
+                            <span class="status-dot red"></span>
+                            Blocked
+                        </div>
+                        <div class="stat-bar-container">
+                            <div class="stat-bar-fill red" style="width: {{ (epic_stats.blocked / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                        </div>
+                        <div class="stat-bar-text">{{ (epic_stats.blocked / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                        <div class="stat-bar-text" style="min-width: 30px;">{{ epic_stats.blocked }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="monthly-releases">
+        <div class="section-label">Monthly Releases</div>
+        <div class="release-tabs">
+            <div class="release-tab active" data-month="all">ALL</div>
+            {% for month_data in monthly_releases %}
+            <div class="release-tab" data-month="{{ month_data.month }}">
+                {{ month_data.label }}
+                <span class="counts">{{ month_data.prog_count }} Prog, {{ month_data.epic_count }} Epics</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="filters-section">
+        <div class="section-label">Filters</div>
+        <div class="portfolio-row">
+            <label style="font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; margin-bottom: 8px; display: block;">Portfolio</label>
+            <div class="portfolio-tabs">
+                <div class="portfolio-tab active" data-portfolio="all">All</div>
+                {% for portfolio in portfolios %}
+                <div class="portfolio-tab" data-portfolio="{{ portfolio }}">{{ portfolio }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="filters-controls">
+            <div class="filter-group">
+                <label>Program</label>
+                <select id="programSelect">
+                    <option value="">All Programs</option>
+                    {% for program in programs %}
+                    <option value="{{ program.name }}">{{ program.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Search</label>
+                <input type="text" id="searchBox" placeholder="Search by name...">
+            </div>
+
+            <div class="filter-group">
+                <label>Stale [Epic]</label>
+                <select id="staleSelect">
+                    <option value="">All</option>
+                    <option value="30">30+ days</option>
+                    <option value="60">60+ days</option>
+                    <option value="90">90+ days</option>
+                </select>
+            </div>
+
+            <button class="clear-all-btn" onclick="clearFilters()">Clear All</button>
+        </div>
+    </div>
+
+    <div class="programs-container" id="programsContainer">
+        {% for program in programs %}
+        <div class="program-section" data-program="{{ program.name }}" data-subcloud="{{ program.subcloud }}">
+            <div class="program-header" onclick="toggleProgram(this)">
+                <span class="toggle-icon">▼</span>
+                <span>☐ {{ program.name }}</span>
+            </div>
+
+            <div class="program-content">
+                {% for project in program.projects %}
+                <div class="project-section">
+                    <div class="project-header">
+                        📦 {{ project.name }}
+                    </div>
+
+                    {% if project.epics %}
+                    <table class="epics-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 120px;">LOC</th>
+                                <th style="width: 80px;">PRIORITY</th>
+                                <th>EPIC NAME</th>
+                                <th style="width: 120px;">HEALTH</th>
+                                <th style="width: 250px;">HEALTH COMMENTS</th>
+                                <th style="width: 180px;">TEAM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for epic in project.epics %}
+                            <tr data-end-date="{{ epic.end_date }}">
+                                <td>
+                                    <div class="loc-indicator">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="loc-dot green"></span>
+                                        <span>Above the Line</span>
+                                        {% elif epic.health == 'Not Started' %}
+                                        <span class="loc-dot black"></span>
+                                        <span>Not Prioritized</span>
+                                        {% elif epic.health == 'Watch' %}
+                                        <span class="loc-dot yellow"></span>
+                                        <span>Watch</span>
+                                        {% else %}
+                                        <span class="loc-dot black"></span>
+                                        <span>Not Prioritized</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.number if epic.number else '-' }}</td>
+                                <td>
+                                    <a href="#" class="epic-link">{{ epic.name }}</a>
+                                </td>
+                                <td>
+                                    <div class="health-indicator">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="health-dot green"></span>
+                                        <span>On Track</span>
+                                        {% elif epic.health == 'Watch' %}
+                                        <span class="health-dot yellow"></span>
+                                        <span>Watch</span>
+                                        {% elif epic.health == 'Blocked' %}
+                                        <span class="health-dot red"></span>
+                                        <span>Blocked</span>
+                                        {% elif epic.health == 'Not Started' %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Not Started</span>
+                                        {% else %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Unknown</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.health_status if epic.health_status and epic.health_status != 'Unknown' else '-' }}</td>
+                                <td>-</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if last_updated %}
+    <div class="timestamp">
+        Last updated: {{ last_updated }}
+    </div>
+    {% endif %}
+
+    <script>
+        function toggleProgram(header) {
+            header.classList.toggle('collapsed');
+            const content = header.nextElementSibling;
+            content.classList.toggle('hidden');
+        }
+
+        function clearFilters() {
+            document.getElementById('programSelect').value = '';
+            document.getElementById('searchBox').value = '';
+            document.getElementById('staleSelect').value = '';
+
+            document.querySelectorAll('.release-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector('.release-tab[data-month="all"]').classList.add('active');
+
+            document.querySelectorAll('.portfolio-tab').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('.portfolio-tab[data-portfolio="all"]').classList.add('active');
+
+            document.querySelectorAll('.program-section').forEach(section => {
+                section.style.display = 'block';
+            });
+        }
+
+        // Portfolio filter
+        document.querySelectorAll('.portfolio-tab').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.portfolio-tab').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const portfolio = this.dataset.portfolio;
+                document.querySelectorAll('.program-section').forEach(section => {
+                    if (portfolio === 'all' || section.dataset.subcloud === portfolio) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Monthly release filter
+        document.querySelectorAll('.release-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.release-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                const month = this.dataset.month;
+                if (month === 'all') {
+                    document.querySelectorAll('.program-section').forEach(section => {
+                        section.style.display = 'block';
+                    });
+                } else {
+                    document.querySelectorAll('.program-section').forEach(section => {
+                        const hasEpicsInMonth = Array.from(section.querySelectorAll('[data-end-date]'))
+                            .some(row => row.dataset.endDate && row.dataset.endDate.includes(month));
+                        section.style.display = hasEpicsInMonth ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+
+        // Program dropdown filter
+        document.getElementById('programSelect').addEventListener('change', function() {
+            const selectedProgram = this.value;
+            document.querySelectorAll('.program-section').forEach(section => {
+                if (!selectedProgram || section.dataset.program === selectedProgram) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+
+        // Search box filter
+        document.getElementById('searchBox').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            document.querySelectorAll('.program-section').forEach(section => {
+                const programName = section.dataset.program.toLowerCase();
+                const epicNames = Array.from(section.querySelectorAll('.epic-link'))
+                    .map(link => link.textContent.toLowerCase());
+                const hasMatch = programName.includes(searchTerm) || epicNames.some(name => name.includes(searchTerm));
+                section.style.display = hasMatch || searchTerm === '' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+#!/usr/bin/env python3
+"""
+Fetch Field Service Execution Status data from GUS Report
+Report ID: 00OEE000002tswH2AQ (264 Field Service Program Epic Admin)
+Shows: Programs -> Projects -> Epics with health information
+"""
+
+import json
+import subprocess
+from datetime import datetime
+from pathlib import Path
+from collections import defaultdict
+
+SCRIPT_DIR = Path(__file__).parent
+DATA_FILE = SCRIPT_DIR / "data" / "execution_data.json"
+REPORT_ID = "00OEE000002tswH2AQ"  # Field Service report
+TARGET_ORG = "org62"
+
+def fetch_execution_report():
+    """Fetch execution report from GUS with extended metadata"""
+    try:
+        print(f"Fetching GUS report {REPORT_ID}...")
+        result = subprocess.run(
+            ['sf', 'api', 'request', 'rest', '--target-org', TARGET_ORG,
+             f'/services/data/v64.0/analytics/reports/{REPORT_ID}?includeDetails=true',
+             '--method', 'GET'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        report_data = json.loads(result.stdout)
+        return report_data
+    except Exception as e:
+        print(f"Error fetching report: {e}")
+        return None
+
+def parse_health_from_image(html_str):
+    """Extract health status from image HTML or plain text"""
+    if not html_str or html_str == '-':
+        return 'Unknown'
+
+    # Check for plain text health values first
+    health_lower = html_str.lower()
+    if 'on track' in health_lower:
+        return 'On Track'
+    if 'watch' in health_lower:
+        return 'Watch'
+    if 'blocked' in health_lower:
+        return 'Blocked'
+    if 'not started' in health_lower:
+        return 'Not Started'
+
+    # Check for image HTML patterns
+    if 'On_Track_Green' in html_str:
+        return 'On Track'
+    if 'Watch_Yellow' in html_str:
+        return 'Watch'
+    if 'Off_Track_Red' in html_str or 'Blocked_Red' in html_str:
+        return 'Blocked'
+    if 'Not_Started' in html_str:
+        return 'Not Started'
+
+    return 'Unknown'
+
+def parse_report_data(report_data):
+    """Parse GUS report into structured data"""
+    if not report_data:
+        return {
+            'last_updated': datetime.now().isoformat(),
+            'programs': []
+        }
+
+    # Get grouping down labels (Program Name, Program Health, Program Health Comments)
+    groupings_down = report_data.get('groupingsDown', {}).get('groupings', [])
+
+    programs_map = {}
+
+    # Process each program group
+    for prog_group in groupings_down:
+        program_name = prog_group.get('label', 'Unknown')
+        program_id = prog_group.get('value', '')
+
+        # Get second level groupings (by Program Health)
+        for health_group in prog_group.get('groupings', []):
+            program_health_label = health_group.get('label', 'Unknown')
+            program_health = parse_health_from_image(program_health_label)
+
+            # Get third level groupings (by Program Health Comments)
+            for comments_group in health_group.get('groupings', []):
+                program_health_comments = comments_group.get('label', '')
+
+                # Get the fact map key for this grouping
+                fact_key = comments_group.get('key', '')
+
+                # Extract target release from program name
+                target_release = ''
+                if '[' in program_name and ']' in program_name:
+                    target_release = program_name[program_name.find('[')+1:program_name.find(']')]
+
+                # Create/update program entry
+                if program_name not in programs_map:
+                    programs_map[program_name] = {
+                        'name': program_name,
+                        'id': program_id,
+                        'health': program_health,
+                        'health_comments': program_health_comments,
+                        'portfolio': '',  # Will get from !T row
+                        'program_manager': '',  # Will get from data rows
+                        'theme': '',
+                        'target_release': target_release,
+                        'projects': {}
+                    }
+
+                # Check for !T (total) row which has portfolio
+                t_key = fact_key + "!T"
+                t_fact_data = report_data.get('factMap', {}).get(t_key, {})
+                t_rows = t_fact_data.get('rows', [])
+
+                # Extract portfolio from !T row (column 0)
+                if t_rows and not programs_map[program_name]['portfolio']:
+                    t_cells = t_rows[0].get('dataCells', [])
+                    if len(t_cells) > 0:
+                        portfolio_name = t_cells[0].get('label', '')
+                        if portfolio_name:
+                            programs_map[program_name]['portfolio'] = portfolio_name
+
+                # Get data rows from fact map
+                # Use the !T key since that's what contains the actual detail rows
+                data_key = fact_key + "!T" if not fact_key.endswith("!T") else fact_key
+                fact_data = report_data.get('factMap', {}).get(data_key, {})
+                rows = fact_data.get('rows', [])
+
+                # Process rows (projects/epics)
+                for row in rows:
+                    cells = row.get('dataCells', [])
+
+                    # Data columns (based on reportMetadata.detailColumns - ACTUAL from July 2026):
+                    # 0: Epic Name
+                    # 1: LOC
+                    # 2: Priority
+                    # 3: Epic Health Comments
+                    # 4: Health
+                    # 5: Path to Green
+                    # 6: Team: Team Name
+                    # 7: Pillar
+                    # 8: Actual Story Points on Epic
+                    # 9: #Storypoints Closed
+                    # 10: Scheduled Build: Name (Target)
+                    # 11: Owner: Full Name (Epic Owner / Dev Lead)
+                    # 12: Product Owner: Full Name (Project-level)
+                    # 13: Last Modified Date
+                    # 14: Program Health
+                    # 15: Planned Release
+
+                    # NOTE: Program/Portfolio/Project info comes from grouping labels, not data cells!
+
+                    if len(cells) < 1:
+                        continue
+
+                    epic_name = cells[0].get('label', '')
+                    loc = cells[1].get('label', '') if len(cells) > 1 else ''
+                    epic_priority = cells[2].get('label', '') if len(cells) > 2 else ''
+                    epic_health_comments = cells[3].get('label', '') if len(cells) > 3 else ''
+                    epic_health = cells[4].get('label', '') if len(cells) > 4 else ''
+                    path_to_green = cells[5].get('label', '') if len(cells) > 5 else ''
+                    team_name = cells[6].get('label', '') if len(cells) > 6 else ''
+                    pillar = cells[7].get('label', '') if len(cells) > 7 else ''
+                    actual_points = cells[8].get('label', '') if len(cells) > 8 else ''
+                    closed_points = cells[9].get('label', '') if len(cells) > 9 else ''
+                    scheduled_build = cells[10].get('label', '') if len(cells) > 10 else ''
+                    epic_owner = cells[11].get('label', '') if len(cells) > 11 else ''
+                    product_owner = cells[12].get('label', '') if len(cells) > 12 else ''
+                    last_modified = cells[13].get('value', '') if len(cells) > 13 else ''
+                    program_health_cell = cells[14].get('label', '') if len(cells) > 14 else ''
+                    planned_release = cells[15].get('label', '') if len(cells) > 15 else ''
+
+                    # Determine project name from the grouping structure
+                    # We need to track which project each epic belongs to
+                    # For now, use a heuristic: epics with same product_owner likely belong to same project
+                    project_name = f"Project_{product_owner}" if product_owner else epic_name
+
+                    # Update program health comments with full text from first row if not set yet
+                    if project_health_comments and (not programs_map[program_name]['health_comments'] or len(project_health_comments) > len(programs_map[program_name]['health_comments'])):
+                        programs_map[program_name]['health_comments'] = project_health_comments
+                    epic_priority = cells[6].get('label', '')
+                    epic_name = cells[7].get('label', '')
+                    epic_health_img = cells[8].get('label', '') if len(cells) > 8 else ''
+                    epic_health = cells[9].get('label', '') if len(cells) > 9 else ''
+                    epic_health_comments = cells[10].get('label', '') if len(cells) > 10 else ''
+                    program_manager = cells[11].get('label', '') if len(cells) > 11 else ''
+                    end_date = cells[12].get('value', '') if len(cells) > 12 else ''
+
+                    # Extract portfolio if not already set
+                    if not programs_map[program_name]['portfolio'] and portfolio_name:
+                        programs_map[program_name]['portfolio'] = portfolio_name
+
+                    # Extract program manager if not already set
+                    if not programs_map[program_name]['program_manager'] and program_manager:
+                        programs_map[program_name]['program_manager'] = program_manager
+
+                    if not programs_map[program_name]['theme']:
+                        programs_map[program_name]['theme'] = theme
+
+                    # Add project/epic
+                    if project_name and project_name != '-':
+                        if project_name not in programs_map[program_name]['projects']:
+                            programs_map[program_name]['projects'][project_name] = {
+                                'name': project_name,
+                                'epics': []
+                            }
+
+                        if epic_name:
+                            # Parse health from image first, then fallback to health_comments
+                            epic_health_value = parse_health_from_image(epic_health_img)
+                            if epic_health_value == 'Unknown' and epic_health_comments:
+                                # Use health_comments directly if it contains known status
+                                if 'On Track' in epic_health_comments or 'on track' in epic_health_comments.lower():
+                                    epic_health_value = 'On Track'
+                                elif 'Watch' in epic_health_comments or 'watch' in epic_health_comments.lower():
+                                    epic_health_value = 'Watch'
+                                elif 'Blocked' in epic_health_comments or 'blocked' in epic_health_comments.lower():
+                                    epic_health_value = 'Blocked'
+                                elif 'Not Started' in epic_health_comments or 'not started' in epic_health_comments.lower():
+                                    epic_health_value = 'Not Started'
+
+                            programs_map[program_name]['projects'][project_name]['epics'].append({
+                                'number': epic_priority,
+                                'name': epic_name,
+                                'health': epic_health_value,
+                                'health_status': epic_health,
+                                'health_comments': epic_health_comments,
+                                'end_date': end_date
+                            })
+
+    # Convert to list
+    programs = []
+    for prog_name, prog_data in programs_map.items():
+        program = {
+            'name': prog_name,
+            'id': prog_data['id'],
+            'health': prog_data['health'],
+            'health_comments': prog_data['health_comments'],
+            'portfolio': prog_data['portfolio'],
+            'subcloud': prog_data['portfolio'],  # Keep for backward compatibility
+            'program_manager': prog_data['program_manager'],
+            'theme': prog_data['theme'],
+            'target_release': prog_data['target_release'],
+            'projects': []
+        }
+        for proj_name, proj_data in prog_data['projects'].items():
+            program['projects'].append(proj_data)
+        programs.append(program)
+
+    return {
+        'last_updated': datetime.now().isoformat(),
+        'programs': programs
+    }
+
+def fetch_full_health_comments(program_ids):
+    """Fetch full health comments directly from PPM_Program__c records"""
+    if not program_ids:
+        return {}
+
+    # Build SOQL query for all program IDs
+    ids_list = "','".join(program_ids)
+    query = f"SELECT Id, Program_Health_Comments__c FROM PPM_Program__c WHERE Id IN ('{ids_list}')"
+
+    try:
+        print(f"  Fetching full health comments for {len(program_ids)} programs...")
+        result = subprocess.run(
+            ['sf', 'data', 'query', '--query', query, '--target-org', 'gus', '--json'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        data = json.loads(result.stdout)
+        records = data.get('result', {}).get('records', [])
+
+        # Map program ID to full health comments
+        comments_map = {}
+        for record in records:
+            prog_id = record.get('Id')
+            comments = record.get('Program_Health_Comments__c', '')
+            if prog_id and comments:
+                comments_map[prog_id] = comments
+
+        print(f"  ✅ Fetched full comments for {len(comments_map)} programs")
+        return comments_map
+
+    except Exception as e:
+        print(f"  ⚠️ Warning: Could not fetch full health comments: {e}")
+        return {}
+
+def main():
+    """Main execution"""
+    print("🔄 Fetching execution data from GUS...")
+
+    report_data = fetch_execution_report()
+    if not report_data:
+        print("❌ Failed to fetch report")
+        return 1
+
+    parsed_data = parse_report_data(report_data)
+
+    # Fetch full health comments for all programs
+    program_ids = [p['id'] for p in parsed_data['programs'] if p.get('id')]
+    if program_ids:
+        full_comments = fetch_full_health_comments(program_ids)
+
+        # Update programs with full health comments
+        for program in parsed_data['programs']:
+            prog_id = program.get('id')
+            if prog_id and prog_id in full_comments:
+                program['health_comments'] = full_comments[prog_id]
+
+    # Save to file
+    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(DATA_FILE, 'w') as f:
+        json.dump(parsed_data, f, indent=2)
+
+    print(f"✅ Saved {len(parsed_data['programs'])} programs to {DATA_FILE}")
+    return 0
+
+if __name__ == '__main__':
+    exit(main())

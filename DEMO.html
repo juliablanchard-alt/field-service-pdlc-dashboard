@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cloud Execution Dashboard - DEMO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95em;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: white;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 24px;
+            width: calc(100% - 260px);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 20px 28px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .page-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            letter-spacing: -0.02em;
+        }
+
+        .page-title-icon {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 10px;
+            padding: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: bounce 2s infinite;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .demo-badge {
+            background: #fbbf24;
+            color: #78350f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.5em;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Metric Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            padding: 18px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+
+        .metric-card.white { background: white; border: 1px solid #e5e7eb; }
+        .metric-card.blue { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; }
+        .metric-card.cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); color: white; }
+        .metric-card.green { background: linear-gradient(135deg, #059669, #10b981); color: white; }
+
+        .metric-label {
+            font-size: 0.8em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .metric-card.white .metric-label { color: #6b7280; }
+        .metric-card.white .metric-value { color: #111827; }
+
+        /* Phase Columns */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-column {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .phase-header {
+            padding: 16px 20px;
+            color: white;
+            font-size: 0.95em;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .phase-0 .phase-header { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+        .phase-1 .phase-header { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+        .phase-2 .phase-header { background: linear-gradient(135deg, #059669, #10b981); }
+
+        .phase-count {
+            background: rgba(255,255,255,0.25);
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .phase-body {
+            padding: 12px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .phase-2 .phase-body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .program-card:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
+        }
+
+        .program-name {
+            font-weight: 500;
+            color: #111827;
+            font-size: 0.88em;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .program-phase-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+            background: #e0e7ff;
+            color: #4338ca;
+        }
+
+        .program-meta {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.72em;
+            color: #6b7280;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .program-meta span {
+            display: inline;
+            margin-right: 6px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+        }
+
+        .status-on-track {
+            background: #dcfce7;
+            color: #065f46;
+        }
+
+        .status-watch {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-blocked {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-not-started {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .progress-section {
+            margin-top: 8px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7em;
+            color: #6b7280;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s;
+        }
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <span>Service Cloud Execution</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <div class="nav-item active">
+                <span class="nav-icon">📈</span>
+                <span>Overview</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span>Execution</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span>Milestones</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="page-title">
+                <div class="page-title-icon">📊</div>
+                <span>Service Cloud Execution Dashboard</span>
+                <span class="demo-badge">DEMO MODE</span>
+            </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card white">
+                <div class="metric-label">Total Programs</div>
+                <div class="metric-value" id="total-programs">27</div>
+            </div>
+            <div class="metric-card blue">
+                <div class="metric-label">Phase 0 (Planning)</div>
+                <div class="metric-value" id="phase0-count">5</div>
+            </div>
+            <div class="metric-card cyan">
+                <div class="metric-label">Phase 1 (Discovery)</div>
+                <div class="metric-value" id="phase1-count">2</div>
+            </div>
+            <div class="metric-card green">
+                <div class="metric-label">Phase 2 (Productization)</div>
+                <div class="metric-value" id="phase2-count">20</div>
+            </div>
+        </div>
+
+        <!-- Phase Columns -->
+        <div class="phase-grid">
+            <!-- Phase 0 -->
+            <div class="phase-column phase-0">
+                <div class="phase-header">
+                    <div>
+                        <div>🎯 Phase 0: Planning</div>
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 2px; opacity: 0.9;">Prototype candidates under evaluation</div>
+                        <div style="font-size: 0.65em; font-weight: 300; margin-top: 4px; opacity: 0.8;">
+                            📊 Updated: <span id="phase0-timestamp">Jun 2, 8:19 AM PT</span>
+                        </div>
+                    </div>
+                    <span class="phase-count">5</span>
+                </div>
+                <div class="phase-body" id="phase0-body"></div>
+            </div>
+
+            <!-- Phase 1 -->
+            <div class="phase-column phase-1">
+                <div class="phase-header">
+                    <div>
+                        <div>🔍 Phase 1: Discovery</div>
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 2px; opacity: 0.9;">Research & prototype development</div>
+                    </div>
+                    <span class="phase-count">2</span>
+                </div>
+                <div class="phase-body" id="phase1-body"></div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase-column phase-2">
+                <div class="phase-header">
+                    <div>
+                        <div>🚀 Phase 2: Productization</div>
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 2px; opacity: 0.9;">Active development & delivery</div>
+                        <div style="font-size: 0.65em; font-weight: 300; margin-top: 4px; opacity: 0.8;">
+                            📊 Updated: <span id="phase2-timestamp">Jun 1, 6:30 PM PT</span>
+                        </div>
+                    </div>
+                    <span class="phase-count">20</span>
+                </div>
+                <div class="phase-body" id="phase2-body"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🤖 Service Cloud Execution Dashboard - DEMO</p>
+            <p style="margin-top: 8px;">Demo generated: <span id="timestamp"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // Embedded data
+        const DATA = {
+  "phase0_programs": [
+    {
+      "name": "Email",
+      "pm": "Swati Deo",
+      "arch": "Matthew Nielsen",
+      "subcloud": "AFCC",
+      "gtm": "Aug/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - June"
+    },
+    {
+      "name": "Omni Multi-tab VOC",
+      "pm": "Oana Lungu Polanco",
+      "arch": "TBD",
+      "subcloud": "AFCC",
+      "gtm": "Jul/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - June"
+    },
+    {
+      "name": "Chat Blockers/VOCs",
+      "pm": "Abhisek Dash",
+      "arch": "TBD",
+      "subcloud": "AFCC",
+      "gtm": "Sep/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - July"
+    },
+    {
+      "name": "Multi-modal: 266 Schema Freeze",
+      "pm": "Oana Lungu Polanco",
+      "arch": "Michael Macasek",
+      "subcloud": "AFCC",
+      "gtm": "Oct/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - August"
+    },
+    {
+      "name": "Setup [Headless]",
+      "pm": "Abhisek Dash",
+      "arch": "Sai Sudarsan Pogaru",
+      "subcloud": "AFCC",
+      "gtm": "Apr/27",
+      "completion": 0,
+      "next_milestone": "Prototype Review - September"
+    }
+  ],
+  "phase1_programs": [
+    {
+      "name": "Multi-modal RAG",
+      "pm": "Oana Lungu Polanco",
+      "arch": "Michael Macasek",
+      "status": "On Track",
+      "completion": 65
+    },
+    {
+      "name": "Voice",
+      "pm": "Abhisek Dash",
+      "arch": "Sai Sudarsan Pogaru",
+      "status": "Watch",
+      "completion": 45
+    }
+  ],
+  "phase2_programs": [
+  {
+    "name": "[264] HR Service",
+    "pm": "TBD",
+    "status": "Blocked",
+    "target": "264",
+    "completion": 27
+  },
+  {
+    "name": "[264] AF Voice",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 0
+  },
+  {
+    "name": "[264] Best in Class Whatsapp Experiences",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 37
+  },
+  {
+    "name": "[264] Contact Center Modularity",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 38
+  },
+  {
+    "name": "[264] Customer Signal Intelligence",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 29
+  },
+  {
+    "name": "[264] Self Service",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 41
+  },
+  {
+    "name": "[264] WhatsApp Unified Messaging",
+    "pm": "TBD",
+    "status": "Watch",
+    "target": "264",
+    "completion": 17
+  },
+  {
+    "name": "[264] AI Knowledge Creation in A4S (EK)",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 0
+  },
+  {
+    "name": "[264] AI Knowledge Translations (SLK)",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 25
+  },
+  {
+    "name": "[264] Accelerate Live Agent to Enhanced Chat Transition",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 100
+  },
+  {
+    "name": "[264] Admin Setup (incl Number Mgmt), Transcription",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 46
+  },
+  {
+    "name": "[264] Agentfirst IT Service Domain Pack & Intelligence",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 53
+  },
+  {
+    "name": "[264] Agentforce Conversation Client (ACC)",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 50
+  },
+  {
+    "name": "[264] Agentforce Voice & IVA",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 37
+  },
+  {
+    "name": "[264] Agentforce Voice on Salesforce Voice",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 0
+  },
+  {
+    "name": "[264] Channels",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 61
+  },
+  {
+    "name": "[264] Chat Pouncing",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 0
+  },
+  {
+    "name": "[264] Coexistence & Proactive Customer Ops",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 33
+  },
+  {
+    "name": "[264] Command Center for Service",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 33
+  },
+  {
+    "name": "[264] Command Center: Sales Observability",
+    "pm": "TBD",
+    "status": "On Track",
+    "target": "264",
+    "completion": 9
+  }
+]
+};
+
+        // Render Phase 0
+        const phase0Body = document.getElementById('phase0-body');
+        DATA.phase0_programs.forEach(prog => {
+            const card = document.createElement('div');
+            card.className = 'program-card';
+            card.innerHTML = `
+                <div class="program-name">${prog.name}</div>
+                <div class="program-meta">
+                    <span>👤 PM: ${prog.pm}</span>
+                    <span>• 🏗️ Arch: ${prog.arch}</span>
+                    <span>• 🚀 GTM: ${prog.gtm}</span>
+                </div>
+                <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                    <span class="status-badge">${prog.subcloud}</span>
+                </div>
+            `;
+            phase0Body.appendChild(card);
+        });
+
+        // Render Phase 1
+        const phase1Body = document.getElementById('phase1-body');
+        DATA.phase1_programs.forEach(prog => {
+            const statusClass = prog.status.toLowerCase().includes('on track') ? 'status-on-track' : 'status-watch';
+            const card = document.createElement('div');
+            card.className = 'program-card';
+            card.innerHTML = `
+                <div class="program-name">${prog.name}</div>
+                <div class="program-meta">
+                    <span>👤 PM: ${prog.pm}</span>
+                    <span>• 🏗️ Arch: ${prog.arch}</span>
+                </div>
+                <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                    <span class="status-badge ${statusClass}">${prog.status}</span>
+                </div>
+            `;
+            phase1Body.appendChild(card);
+        });
+
+        // Render Phase 2
+        const phase2Body = document.getElementById('phase2-body');
+        DATA.phase2_programs.forEach(prog => {
+            let statusClass = '';
+            const status = prog.status.toLowerCase();
+            if (status.includes('blocked')) statusClass = 'status-blocked';
+            else if (status.includes('watch')) statusClass = 'status-watch';
+            else if (status.includes('on track')) statusClass = 'status-on-track';
+            else if (status.includes('not started')) statusClass = 'status-not-started';
+
+            const card = document.createElement('div');
+            card.className = 'program-card';
+            card.innerHTML = `
+                <span class="program-phase-badge">In Dev</span>
+                <div class="program-name">${prog.name}</div>
+                <div class="program-meta">
+                    <span>👤 TPM: ${prog.pm}</span>
+                </div>
+                <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                    ${statusClass ? `<span class="status-badge ${statusClass}">${prog.status}</span>` : ''}
+                    ${prog.target ? `<span style="font-size: 0.72em; color: #6b7280;">🎯 ${prog.target}</span>` : ''}
+                </div>
+                <div class="progress-section">
+                    <div class="progress-label">
+                        <span>Progress</span>
+                        <span>${prog.completion}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prog.completion}%"></div>
+                    </div>
+                </div>
+            `;
+            phase2Body.appendChild(card);
+        });
+
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

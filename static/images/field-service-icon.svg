@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48">
+  <!-- Field Service location pin icon -->
+  <defs>
+    <linearGradient id="fieldServiceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1589EE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B5CAB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Location pin shape -->
+  <path d="M50,10 C35,10 25,20 25,35 C25,50 50,80 50,80 C50,80 75,50 75,35 C75,20 65,10 50,10 Z"
+        fill="url(#fieldServiceGradient)" stroke="#fff" stroke-width="2"/>
+  <!-- Inner circle -->
+  <circle cx="50" cy="35" r="10" fill="#fff"/>
+  <!-- Tool/wrench symbol -->
+  <path d="M48,32 L48,38 M52,32 L52,38 M45,35 L55,35"
+        stroke="#1589EE" stroke-width="2" stroke-linecap="round"/>
+</svg>

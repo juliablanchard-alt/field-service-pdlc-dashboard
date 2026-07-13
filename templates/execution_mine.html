@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution - Service Cloud Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar - same as index_v3.html */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: white;
+            padding: 4px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95em;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: white;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .container {
+            margin-left: 260px;
+            flex: 1;
+            padding: 24px;
+            width: calc(100% - 260px);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 30px 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            color: white;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .last-updated {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .stat-card.green .stat-value { color: #10b981; }
+        .stat-card.yellow .stat-value { color: #f59e0b; }
+        .stat-card.red .stat-value { color: #ef4444; }
+        .stat-card.gray .stat-value { color: #6b7280; }
+
+        /* Programs Grid */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .program-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .program-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .program-name {
+            font-weight: 600;
+            font-size: 0.95em;
+            color: #111827;
+            flex: 1;
+        }
+
+        .health-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .health-badge.green { background: #d1fae5; color: #065f46; }
+        .health-badge.yellow { background: #fef3c7; color: #92400e; }
+        .health-badge.red { background: #fee2e2; color: #991b1b; }
+        .health-badge.gray { background: #f3f4f6; color: #4b5563; }
+
+        .program-meta {
+            padding: 12px 20px;
+            background: #f9fafb;
+            font-size: 0.8em;
+            color: #6b7280;
+            display: flex;
+            gap: 16px;
+        }
+
+        .program-body {
+            padding: 16px 20px;
+        }
+
+        .project-item {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .project-name {
+            font-weight: 500;
+            font-size: 0.85em;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+
+        .epic-item {
+            font-size: 0.75em;
+            color: #6b7280;
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .epic-health {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="/static/images/mascot.png" alt="Astro">
+                </div>
+                <span>Service Cloud Execution</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>Overview</span>
+            </a>
+            <a href="/execution" class="nav-item active">
+                <span class="nav-icon">📋</span>
+                <span>Execution</span>
+            </a>
+            <a href="/milestones" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span>Milestones</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>📋 Execution Status Dashboard</h1>
+            <div class="subtitle">Programs, Projects & Epics</div>
+            {% if last_updated %}
+            <div class="last-updated">Last updated: <span id="last-updated">{{ last_updated }}</span></div>
+            {% endif %}
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-label">Total Programs</div>
+                <div class="stat-value">{{ total_programs }}</div>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-label">✓ On Track</div>
+                <div class="stat-value">{{ health_counts.on_track }}</div>
+            </div>
+            <div class="stat-card yellow">
+                <div class="stat-label">⚠ Watch</div>
+                <div class="stat-value">{{ health_counts.watch }}</div>
+            </div>
+            <div class="stat-card red">
+                <div class="stat-label">✖ Blocked</div>
+                <div class="stat-value">{{ health_counts.blocked }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Projects</div>
+                <div class="stat-value">{{ total_projects }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Epics</div>
+                <div class="stat-value">{{ total_epics }}</div>
+            </div>
+        </div>
+
+        <!-- Programs Grid -->
+        <div class="programs-grid">
+            {% for program in programs %}
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-name">{{ program.name }}</div>
+                    <span class="health-badge {% if 'On Track' in program.health %}green{% elif 'Watch' in program.health %}yellow{% elif 'Blocked' in program.health %}red{% else %}gray{% endif %}">
+                        {{ program.health }}
+                    </span>
+                </div>
+                <div class="program-meta">
+                    {% if program.subcloud and program.subcloud != '-' %}
+                    <span>☁️ {{ program.subcloud }}</span>
+                    {% endif %}
+                    {% if program.theme %}
+                    <span>🎯 {{ program.theme }}</span>
+                    {% endif %}
+                </div>
+                <div class="program-body">
+                    {% for project in program.projects[:3] %}
+                    <div class="project-item">
+                        <div class="project-name">{{ project.name }}</div>
+                        {% for epic in project.epics[:2] %}
+                        <div class="epic-item">
+                            <span>{{ epic.name[:50] }}...</span>
+                            <span class="epic-health {% if 'On Track' in epic.health %}green{% elif 'Watch' in epic.health %}yellow{% elif 'Blocked' in epic.health %}red{% else %}gray{% endif %}">
+                                {{ epic.health }}
+                            </span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    {% if program.projects|length > 3 %}
+                    <div style="font-size: 0.8em; color: #9ca3af; text-align: center; margin-top: 8px;">
+                        +{{ program.projects|length - 3 }} more projects
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <footer>
+            <p>🤖 Service Cloud Execution Dashboard</p>
+            <p style="margin-top: 8px;">Powered by GUS Report 00OEE0000032xn32AA</p>
+        </footer>
+    </div>
+
+    <script>
+        // Format last updated timestamp
+        const lastUpdatedEl = document.getElementById('last-updated');
+        if (lastUpdatedEl) {
+            const isoDate = lastUpdatedEl.textContent;
+            try {
+                const date = new Date(isoDate);
+                lastUpdatedEl.textContent = date.toLocaleString('en-US', {
+                    timeZone: 'America/Los_Angeles',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                }) + ' PT';
+            } catch (e) {
+                // Keep original if parsing fails
+            }
+        }
+
+        // Auto-refresh every 5 minutes
+        setTimeout(() => {
+            location.reload();
+        }, 300000);
+    </script>
+</body>
+</html>

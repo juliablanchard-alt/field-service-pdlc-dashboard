@@ -1,0 +1,65 @@
+{
+  "last_updated": "2026-06-02T18:45:00.000000-07:00",
+  "programs": [
+    {
+      "name": "Service Agent Copilot",
+      "pm": "Sarah Chen",
+      "arch": "Priya Singh",
+      "status": "\u26a0\ufe0f PASS WITH WARNINGS",
+      "completion": 81,
+      "pbd_url": "https://docs.google.com/document/d/1G9qlJ30thewnZDrLEMFQ3QL5H89wytC_t3W95-OF8oI/edit",
+      "validation_status": "PASS WITH WARNINGS",
+      "report_url": "validation_reports/Service_Agent_Copilot.html",
+      "prototype_url": null,
+      "demo_url": null
+    },
+    {
+      "name": "Case Classification AI",
+      "pm": "TBD",
+      "arch": "TBD",
+      "status": "\u274c FAIL",
+      "completion": 31,
+      "pbd_url": "https://docs.google.com/document/d/1eOfq7snNp5qJxqA06ApmAo2cRwtS9tdjbsaIn1y_hNI/edit",
+      "validation_status": "FAIL",
+      "report_url": "validation_reports/Case_Classification_AI.html",
+      "prototype_url": null,
+      "demo_url": null
+    },
+    {
+      "name": "Industry Compliance Tracker",
+      "pm": "Maria Santos",
+      "arch": "Amit Patel",
+      "status": "\u274c FAIL",
+      "completion": 25,
+      "pbd_url": "https://docs.google.com/document/d/1L1SniCWC_f7wpdDs0HS8h-mkM1ho7Xc0AjvRcBiSNz0/edit",
+      "validation_status": "FAIL",
+      "report_url": "validation_reports/Industry_Compliance_Tracker.md",
+      "prototype_url": null,
+      "demo_url": null
+    },
+    {
+      "name": "Commerce Personalization Engine",
+      "pm": "Alex Rodriguez",
+      "arch": "Sarah Kim",
+      "status": "\u274c FAIL",
+      "completion": 28,
+      "pbd_url": "https://docs.google.com/document/d/1O2ZV03Cj9Y2my_AhSmqcHNdoOVm8vTz6i7I-X-H_rvA/edit",
+      "validation_status": "FAIL",
+      "report_url": "validation_reports/Commerce_Personalization_Engine.md",
+      "prototype_url": null,
+      "demo_url": null
+    },
+    {
+      "name": "Loyalty Insights Dashboard",
+      "pm": "Kira Bauer",
+      "arch": "James Lee",
+      "status": "\u2705 PASS",
+      "completion": 94,
+      "pbd_url": "https://docs.google.com/document/d/1IsrkySrHQgZoG0w2cJO-OnRfQA878XVamNUb67vqonM/edit",
+      "validation_status": "PASS",
+      "report_url": "validation_reports/Loyalty_Insights_Dashboard.md",
+      "prototype_url": null,
+      "demo_url": null
+    }
+  ]
+}

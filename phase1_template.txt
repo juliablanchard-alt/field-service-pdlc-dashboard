@@ -1,0 +1,97 @@
+            <div class="phase-subcolumns">
+                <!-- Sub-column 1: Prototyping -->
+                <div class="phase-subcolumn prototyping-subcolumn">
+                    <div class="subcolumn-header">
+                        <span>Prototyping</span>
+                        <span class="subcolumn-count">{{ programs|selectattr('phase', 'equalto', '1')|selectattr('subcolumn', 'equalto', 'prototyping')|list|length }}</span>
+                    </div>
+
+                    {% for program in programs %}
+                    {% if program.phase == '1' and program.subcolumn == 'prototyping' %}
+                    <div class="program-card" data-portfolio="{{ program.portfolio }}">
+                        <div class="program-name" style="margin-bottom: 8px;">{{ program.name[:80] }}{% if program.name|length > 80 %}...{% endif %}</div>
+
+                        <div style="margin-bottom: 12px;">
+                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">{{ program.portfolio }}</span>
+                        </div>
+
+                        <div class="program-meta">
+                            {% if program.program_manager %}
+                            <div class="meta-item">
+                                <span class="meta-label">PM:</span> {{ program.program_manager }}
+                            </div>
+                            {% endif %}
+                            {% if program.arch_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">Arch:</span> {{ program.arch_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.tpm_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">TPM:</span> {{ program.tpm_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.ux_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">UX:</span> {{ program.ux_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.cx_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">CX:</span> {{ program.cx_lead }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Sub-column 2: Ready for Review -->
+                <div class="phase-subcolumn ready-subcolumn">
+                    <div class="subcolumn-header">
+                        <span>Ready for Review</span>
+                        <span class="subcolumn-count">{{ programs|selectattr('phase', 'equalto', '1')|selectattr('subcolumn', 'equalto', 'ready')|list|length }}</span>
+                    </div>
+
+                    {% for program in programs %}
+                    {% if program.phase == '1' and program.subcolumn == 'ready' %}
+                    <div class="program-card" data-portfolio="{{ program.portfolio }}">
+                        <div class="program-name" style="margin-bottom: 8px;">{{ program.name[:80] }}{% if program.name|length > 80 %}...{% endif %}</div>
+
+                        <div style="margin-bottom: 12px;">
+                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">{{ program.portfolio }}</span>
+                        </div>
+
+                        <div class="program-meta">
+                            {% if program.program_manager %}
+                            <div class="meta-item">
+                                <span class="meta-label">PM:</span> {{ program.program_manager }}
+                            </div>
+                            {% endif %}
+                            {% if program.arch_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">Arch:</span> {{ program.arch_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.tpm_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">TPM:</span> {{ program.tpm_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.ux_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">UX:</span> {{ program.ux_lead }}
+                            </div>
+                            {% endif %}
+                            {% if program.cx_lead %}
+                            <div class="meta-item">
+                                <span class="meta-label">CX:</span> {{ program.cx_lead }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>

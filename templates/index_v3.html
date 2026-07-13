@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cloud Execution Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95em;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: white;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            width: 24px;
+            text-align: center;
+        }
+
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 24px;
+            width: calc(100% - 260px);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 20px 28px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .page-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            letter-spacing: -0.02em;
+        }
+
+        .page-title-icon {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 10px;
+            padding: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .page-title-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .top-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.15);
+            color: white;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.2s;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e3a8a;
+            border-color: white;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #f8fafc;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Metric Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            padding: 18px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+
+        .metric-card.white { background: white; border: 1px solid #e5e7eb; }
+        .metric-card.blue { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; }
+        .metric-card.cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); color: white; }
+        .metric-card.green { background: linear-gradient(135deg, #059669, #10b981); color: white; }
+        .metric-card.pink { background: linear-gradient(135deg, #db2777, #ec4899); color: white; }
+        .metric-card.purple { background: linear-gradient(135deg, #7c3aed, #8b5cf6); color: white; }
+
+        .metric-label {
+            font-size: 0.8em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .metric-card.white .metric-label { color: #6b7280; }
+        .metric-card.white .metric-value { color: #111827; }
+
+        /* Phase Columns */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-column {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .phase-header {
+            padding: 16px 20px;
+            color: white;
+            font-size: 0.95em;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .phase-0 .phase-header { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+        .phase-1 .phase-header { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+        .phase-2 .phase-header { background: linear-gradient(135deg, #059669, #10b981); }
+        .phase-3 .phase-header { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+        .phase-count {
+            background: rgba(255,255,255,0.25);
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .phase-body {
+            padding: 12px;
+        }
+
+        .phase-2 .phase-body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .program-card:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
+        }
+
+        .program-name {
+            font-weight: 500;
+            color: #111827;
+            font-size: 0.88em;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .program-target {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .program-phase-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+            background: #e0e7ff;
+            color: #4338ca;
+        }
+
+        .program-meta {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.72em;
+            color: #6b7280;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .program-meta span {
+            display: inline;
+            margin-right: 6px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+        }
+
+        /* Status colors matching execution tab */
+        .status-on-track {
+            background: #dcfce7;
+            color: #065f46;
+        }
+
+        .status-watch {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-blocked {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-not-started {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        /* Default for other statuses */
+        .status-badge:not(.status-on-track):not(.status-watch):not(.status-blocked):not(.status-not-started) {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .progress-section {
+            margin-top: 8px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7em;
+            color: #6b7280;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s;
+        }
+
+        .next-milestone {
+            margin-top: 8px;
+            padding: 6px 8px;
+            background: #f3f4f6;
+            border-radius: 4px;
+            font-size: 0.72em;
+            color: #374151;
+            border-left: 3px solid #8b5cf6;
+            font-weight: 500;
+        }
+
+        .empty-phase {
+            padding: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 0.9em;
+            grid-column: 1 / -1;
+        }
+
+        /* Phase 1 Top-Right Links (Prototype & Demo) */
+        .phase1-links {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .phase1-link {
+            font-size: 0.8em;
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .phase1-link:hover {
+            color: #0891b2;
+            text-decoration: underline;
+        }
+
+        .phase1-link.disabled {
+            color: #9ca3af;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .phase1-link.disabled:hover {
+            text-decoration: none;
+        }
+
+        /* Phase 1 Bottom Buttons (PBD & Report) */
+        .phase1-btn {
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.7em;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            display: inline-block;
+        }
+
+        .pbd-btn {
+            background: linear-gradient(135deg, #0891b2, #06b6d4);
+            color: white;
+        }
+
+        .pbd-btn:hover {
+            background: linear-gradient(135deg, #0e7490, #0891b2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(8, 145, 178, 0.3);
+        }
+
+        .report-btn {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: #78350f;
+        }
+
+        .report-btn:hover {
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+        }
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon" style="background: white; padding: 4px;">
+                    <img src="/static/images/mascot.png" alt="Astro" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span>Service Cloud Execution</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item active" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📈</span>
+                <span>Overview</span>
+            </a>
+            <a href="/execution" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📋</span>
+                <span>Execution</span>
+            </a>
+            <a href="/milestones" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📅</span>
+                <span>Milestones</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="page-title">
+                <div class="page-title-icon">
+                    <img src="/static/images/mascot.png" alt="Astro">
+                </div>
+                <span>Service Cloud Execution Dashboard</span>
+            </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card white">
+                <div class="metric-label">Total Programs</div>
+                <div class="metric-value">{{ programs['Phase 0']['programs']|length + programs['Phase 1']['programs']|length + programs['Phase 2']['programs']|length }}</div>
+            </div>
+            <div class="metric-card blue">
+                <div class="metric-label">Phase 0 (Planning)</div>
+                <div class="metric-value">{{ programs['Phase 0']['programs']|length }}</div>
+            </div>
+            <div class="metric-card cyan">
+                <div class="metric-label">Phase 1 (Discovery)</div>
+                <div class="metric-value">{{ programs['Phase 1']['programs']|length }}</div>
+            </div>
+            <a href="/execution" class="metric-card green" style="text-decoration: none; color: white; cursor: pointer;">
+                <div class="metric-label">Phase 2 (Productization)</div>
+                <div class="metric-value">{{ programs['Phase 2']['programs']|length }}</div>
+            </a>
+        </div>
+
+        <!-- Phase Columns -->
+        <div class="phase-grid">
+            {% for phase_name in ['Phase 0', 'Phase 1', 'Phase 2'] %}
+            <div class="phase-column phase-{{ loop.index0 }}">
+                <div class="phase-header">
+                    <div>
+                        <div>{{ programs[phase_name]['title'] }}</div>
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 2px; opacity: 0.9;">{{ programs[phase_name]['subtitle'] }}</div>
+                        {% if programs[phase_name].get('last_updated') %}
+                        <div style="font-size: 0.65em; font-weight: 300; margin-top: 4px; opacity: 0.8;">
+                            📊 Updated: <span id="{{ phase_name.lower().replace(' ', '') }}-timestamp">{{ programs[phase_name]['last_updated'] }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <span class="phase-count">{{ programs[phase_name]['programs']|length }}</span>
+                </div>
+                <div class="phase-body">
+                    {% if programs[phase_name]['programs']|length > 0 %}
+                        {% for program in programs[phase_name]['programs'] %}
+                        <div class="program-card" style="{% if phase_name == 'Phase 1' %}position: relative;{% endif %}">
+                            {% if phase_name == 'Phase 2' %}
+                            <span class="program-phase-badge">In Dev</span>
+                            {% endif %}
+                            <div class="program-name">{{ program.name }}</div>
+                            <div class="program-meta">
+                                <span>👤 {% if phase_name == 'Phase 2' %}TPM{% else %}PM{% endif %}: {{ program.pm }}</span>
+                                {% if program.arch %}
+                                <span>• 🏗️ Arch: {{ program.arch }}</span>
+                                {% endif %}
+                                {% if phase_name == 'Phase 0' and program.gtm %}
+                                <span>• 🚀 GTM: {{ program.gtm }}</span>
+                                {% endif %}
+                                {% if program.pod %}
+                                <span>• {{ program.pod }}</span>
+                                {% endif %}
+                                {% if program.team %}
+                                <span>• {{ program.team }}</span>
+                                {% endif %}
+                            </div>
+                            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+                                {% if phase_name == 'Phase 0' %}
+                                    {% if program.subcloud %}
+                                    <span class="status-badge">{{ program.subcloud }}</span>
+                                    {% endif %}
+                                {% elif phase_name == 'Phase 1' %}
+                                    {% set status_lower = program.status.lower() %}
+                                    {% if 'on track' in status_lower %}
+                                        <span class="status-badge status-on-track">{{ program.status }}</span>
+                                    {% elif 'watch' in status_lower %}
+                                        <span class="status-badge status-watch">{{ program.status }}</span>
+                                    {% elif 'blocked' in status_lower %}
+                                        <span class="status-badge status-blocked">{{ program.status }}</span>
+                                    {% elif 'not started' in status_lower %}
+                                        <span class="status-badge status-not-started">{{ program.status }}</span>
+                                    {% elif 'unknown' not in status_lower %}
+                                        <span class="status-badge">{{ program.status }}</span>
+                                    {% endif %}
+                                {% endif %}
+                                {% if phase_name == 'Phase 2' and program.target %}
+                                <span style="font-size: 0.72em; color: #6b7280;">🎯 {{ program.target }}</span>
+                                {% endif %}
+                            </div>
+                            {% if phase_name == 'Phase 0' and program.next_milestone %}
+                            <div style="margin-top: 8px; padding: 6px 8px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 0.75em; color: #1e40af; font-weight: 500;">
+                                📅 {{ program.next_milestone }}
+                            </div>
+                            {% endif %}
+                            {% if phase_name == 'Phase 1' %}
+                            <!-- Top-right links: Prototype & Demo -->
+                            <div class="phase1-links">
+                                {% if program.prototype_url %}
+                                <a href="{{ program.prototype_url }}" target="_blank" class="phase1-link">
+                                    🔬 Prototype
+                                </a>
+                                {% else %}
+                                <span class="phase1-link disabled">
+                                    🔬 Prototype
+                                </span>
+                                {% endif %}
+                                {% if program.demo_url %}
+                                <a href="{{ program.demo_url }}" target="_blank" class="phase1-link">
+                                    🎬 Demo
+                                </a>
+                                {% else %}
+                                <span class="phase1-link disabled">
+                                    🎬 Demo
+                                </span>
+                                {% endif %}
+                            </div>
+                            <!-- Bottom buttons: PBD & Report -->
+                            <div style="margin-top: 10px; display: flex; gap: 8px;">
+                                <a href="{{ program.pbd_url }}" target="_blank" class="phase1-btn pbd-btn">
+                                    📄 View PBD
+                                </a>
+                                {% if program.report_url %}
+                                <a href="{{ url_for('static', filename=program.report_url) }}" target="_blank" class="phase1-btn report-btn">
+                                    📊 View Report
+                                </a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                            {% if phase_name == 'Phase 2' %}
+                            <div class="progress-section">
+                                <div class="progress-label">
+                                    <span>Progress</span>
+                                    <span>{{ program.completion }}%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: {{ program.completion }}%"></div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-phase">No programs in this phase</div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <footer>
+            <p>🤖 Service Cloud Execution Dashboard</p>
+            <p style="margin-top: 8px;">Last updated: <span id="timestamp"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Format Phase timestamps if present (Pacific Time)
+        function formatPhaseTimestamp(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                const isoDate = element.textContent;
+                try {
+                    const date = new Date(isoDate);
+                    element.textContent = date.toLocaleString('en-US', {
+                        timeZone: 'America/Los_Angeles',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        hour12: true
+                    }) + ' PT';
+                } catch (e) {
+                    // Keep original text if parsing fails
+                }
+            }
+        }
+
+        formatPhaseTimestamp('phase0-timestamp');
+        formatPhaseTimestamp('phase2-timestamp');
+
+        setTimeout(() => {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>

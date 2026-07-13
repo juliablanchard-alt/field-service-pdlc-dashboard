@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+"""
+Fetch Field Service Teams Roster data from GUS
+Report: Field Service Gus Roster - June 2026 (00OEE000002a9YH2AY)
+"""
+
+import json
+import subprocess
+from datetime import datetime
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).parent
+DATA_FILE = SCRIPT_DIR / "data" / "teams_data.json"
+REPORT_ID = "00OEE000002a9YH2AY"
+TARGET_ORG = "org62"
+
+def fetch_report():
+    """Fetch report from GUS"""
+    print("🔄 Fetching teams roster from GUS...")
+    result = subprocess.run(
+        ['sf', 'api', 'request', 'rest', '--target-org', TARGET_ORG,
+         f'/services/data/v64.0/analytics/reports/{REPORT_ID}?includeDetails=true',
+         '--method', 'GET'],
+        capture_output=True, text=True, check=True
+    )
+    return json.loads(result.stdout)
+
+def count_filled_nonfilled(groupings, factMap):
+    """Recursively count filled/non-filled positions in subgroupings"""
+    filled = 0
+    non_filled = 0
+
+    for group in groupings:
+        group_key = group.get('key', '')
+        fact_key = f"{group_key}!T"
+        fact_data = factMap.get(fact_key, {})
+        rows = fact_data.get('rows', [])
+
+        for row in rows:
+            cells = row.get('dataCells', [])
+            if len(cells) >= 6:
+                status = cells[5].get('label', '')
+                if status == 'Filled':
+                    filled += 1
+                elif status == 'Non-filled':
+                    non_filled += 1
+
+        if group.get('groupings'):
+            sub_filled, sub_nonfilled = count_filled_nonfilled(
+                group.get('groupings'), factMap
+            )
+            filled += sub_filled
+            non_filled += sub_nonfilled
+
+    return filled, non_filled
+
+def parse_teams(report_data):
+    """Parse teams from report groupings"""
+    teams_list = []
+
+    groupings_down = report_data.get('groupingsDown', {})
+    top_groups = groupings_down.get('groupings', [])
+    factMap = report_data.get('factMap', {})
+
+    for team_group in top_groups:
+        team_name = team_group.get('label', 'Unknown')
+        team_key = team_group.get('key', '')
+
+        # Get aggregate count for this team
+        fact_key = f"{team_key}!T"
+        fact_data = factMap.get(fact_key, {})
+        aggregates = fact_data.get('aggregates', [])
+        total_count = aggregates[0].get('value', 0) if aggregates else 0
+
+        # Count filled vs non-filled
+        filled, non_filled = count_filled_nonfilled(
+            team_group.get('groupings', []), factMap
+        )
+
+        # Determine portfolio(s) this team works on by looking at programs in execution data
+        # For now, we'll derive from team name prefix
+        portfolios = []
+        if team_name.startswith('FSL'):
+            portfolios.append('264 Field Service Foundations')
+        elif team_name.startswith('SFS Mobile'):
+            portfolios.append('264 Field Service Mobile')
+        elif 'Scheduling' in team_name or 'Optimization' in team_name:
+            portfolios.append('264 Field Service Scheduling & Optimization')
+        elif 'WFM' in team_name or 'Worker' in team_name:
+            portfolios.append('264 Field Service Workforce Scheduling')
+        else:
+            # Teams like MomentumForce, QuantumForce - could work across multiple
+            portfolios.append('264 Field Service Foundations')
+
+        teams_list.append({
+            'name': team_name,
+            'filled': filled,
+            'non_filled': non_filled,
+            'total': total_count,
+            'portfolios': portfolios
+        })
+
+    return teams_list
+
+print("🔄 Fetching teams roster data from GUS...")
+report_data = fetch_report()
+
+teams = parse_teams(report_data)
+
+output = {
+    'last_updated': datetime.now().isoformat(),
+    'teams': teams
+}
+
+DATA_FILE.parent.mkdir(exist_ok=True)
+DATA_FILE.write_text(json.dumps(output, indent=2))
+
+total_filled = sum(t['filled'] for t in teams)
+total_non_filled = sum(t['non_filled'] for t in teams)
+total_all = sum(t['total'] for t in teams)
+
+print(f"✅ Saved {len(teams)} teams to {DATA_FILE}")
+print(f"   Total filled: {total_filled}")
+print(f"   Total non-filled: {total_non_filled}")
+print(f"   Total positions: {total_all}")

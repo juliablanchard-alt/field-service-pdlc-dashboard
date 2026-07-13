@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Service Execution Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #111827;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 4px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95em;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: white;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 16px;
+            width: calc(100% - 260px);
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #3d5a80;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .stat-value {
+            font-size: 40px;
+            font-weight: 700;
+            color: #3d5a80;
+            line-height: 1;
+        }
+
+        .stat-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: 8px 80px 1fr 45px 38px;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        .stat-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .stat-dot.green { background: #10b981; }
+        .stat-dot.gray { background: #d1d5db; }
+        .stat-dot.orange { background: #fbbf24; }
+        .stat-dot.red { background: #ef4444; }
+
+        .stat-label-text {
+            color: #374151;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .stat-bar {
+            height: 18px;
+            background: #f3f4f6;
+            border-radius: 9px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            border-radius: 9px;
+        }
+
+        .stat-bar-fill.green { background: #10b981; }
+        .stat-bar-fill.gray { background: #e5e7eb; }
+        .stat-bar-fill.orange { background: #fbbf24; }
+        .stat-bar-fill.red { background: #ef4444; }
+
+        .stat-percent {
+            color: #6b7280;
+            font-size: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .stat-count {
+            color: #111827;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .view-toggles {
+            display: flex;
+            gap: 6px;
+        }
+
+        .release-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .release-pill {
+            padding: 6px 14px;
+            border-radius: 16px;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: all 0.2s;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .release-pill .month-indicator {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .release-pill:hover {
+            border-color: #4267B2;
+            background: #eff6ff;
+            color: #4267B2;
+        }
+
+        .release-pill.active {
+            background: #4267B2;
+            border-color: #4267B2;
+            color: white;
+        }
+
+        .release-pill.all-filter {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+            font-weight: 600;
+        }
+
+        .release-pill.all-filter:hover {
+            background: #e5e7eb;
+            border-color: #6b7280;
+            color: #374151;
+        }
+
+        .release-pill.all-filter.active {
+            background: #374151;
+            border-color: #374151;
+            color: white;
+        }
+
+        /* View Toggle Buttons */
+        .view-toggle {
+            padding: 6px 14px;
+            border-radius: 16px;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            transition: all 0.2s;
+        }
+
+        .view-toggle:hover {
+            opacity: 0.8;
+        }
+
+        .view-toggle[data-view="program"].active {
+            background: #4267B2;
+            border-color: #4267B2;
+            color: white;
+        }
+
+        .view-toggle[data-view="project"].active {
+            background: #17A2B8;
+            border-color: #17A2B8;
+            color: white;
+        }
+
+        .view-toggle[data-view="epic"].active {
+            background: #10B981;
+            border-color: #10B981;
+            color: white;
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: white;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .filter-row:has(.portfolio-pills) {
+            overflow: hidden;
+        }
+
+        .filter-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .custom-multiselect {
+            position: relative;
+            min-width: 300px;
+        }
+
+        .multiselect-display {
+            padding: 8px 32px 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: white;
+            font-size: 13px;
+            color: #374151;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .multiselect-display:hover {
+            border-color: #9ca3af;
+        }
+
+        .multiselect-arrow {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .multiselect-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 4px;
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .multiselect-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .multiselect-option:hover {
+            background: #f3f4f6;
+        }
+
+        .multiselect-option input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .status-pills {
+            display: flex;
+            gap: 6px;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .portfolio-row {
+            margin-bottom: 16px;
+        }
+
+        .portfolio-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .portfolio-pill {
+            padding: 6px 14px;
+            border-radius: 16px;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.15s;
+        }
+
+        .portfolio-pill:hover {
+            border-color: #4267B2;
+            background: #eff6ff;
+        }
+
+        .portfolio-pill.active {
+            background: #4267B2;
+            border-color: #4267B2;
+            color: white;
+        }
+
+        /* All filter styling for both program and status */
+        .portfolio-pill[data-portfolio="all"],
+        .status-pill[data-status="all"] {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+            color: #374151;
+        }
+
+        .portfolio-pill[data-portfolio="all"]:hover,
+        .status-pill[data-status="all"]:hover {
+            background: #e5e7eb;
+            border-color: #6b7280;
+        }
+
+        .portfolio-pill[data-portfolio="all"].active,
+        .status-pill[data-status="all"].active {
+            background: #374151;
+            border-color: #374151;
+            color: white;
+        }
+
+        /* Status Pills */
+        .status-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .status-pill {
+            padding: 6px 14px;
+            border-radius: 16px;
+            border: 1px solid;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+
+        .status-pill[data-status="on-track"] {
+            background: #dcfce7;
+            border-color: #10b981;
+            color: #065f46;
+        }
+
+        .status-pill[data-status="on-track"]:hover {
+            background: #bbf7d0;
+        }
+
+        .status-pill[data-status="on-track"].active {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .status-pill[data-status="not-started"] {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+            color: #374151;
+        }
+
+        .status-pill[data-status="not-started"]:hover {
+            background: #e5e7eb;
+        }
+
+        .status-pill[data-status="not-started"].active {
+            background: #6b7280;
+            border-color: #6b7280;
+            color: white;
+        }
+
+        .status-pill[data-status="watch"] {
+            background: #fef3c7;
+            border-color: #fbbf24;
+            color: #92400e;
+        }
+
+        .status-pill[data-status="watch"]:hover {
+            background: #fde68a;
+        }
+
+        .status-pill[data-status="watch"].active {
+            background: #fbbf24;
+            border-color: #fbbf24;
+            color: white;
+        }
+
+        .status-pill[data-status="blocked"] {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        .status-pill[data-status="blocked"]:hover {
+            background: #fecaca;
+        }
+
+        .status-pill[data-status="blocked"].active {
+            background: #ef4444;
+            border-color: #ef4444;
+            color: white;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+        .filter-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .filter-col label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .filter-col select,
+        .filter-col input {
+            padding: 7px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            color: #374151;
+            background: white;
+        }
+
+        .filter-col select {
+            min-width: 200px;
+        }
+
+        .filter-col input {
+            min-width: 280px;
+        }
+
+        .clear-btn {
+            padding: 7px 16px;
+            border-radius: 6px;
+            border: none;
+            background: #dc2626;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: auto;
+            height: 34px;
+        }
+
+        .clear-btn:hover {
+            background: #b91c1c;
+        }
+
+        /* Program Table View */
+        .program-table-view {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .programs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .programs-table thead {
+            background: #f9fafb;
+        }
+
+        .programs-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #e5e7eb;
+            user-select: none;
+        }
+
+        .programs-table th:hover {
+            background: #f3f4f6;
+        }
+
+        .sort-arrow {
+            display: inline-block;
+            margin-left: 4px;
+            opacity: 0.3;
+        }
+
+        .sort-arrow::after {
+            content: '↕';
+        }
+
+        .sort-arrow.asc::after {
+            content: '↑';
+            opacity: 1;
+        }
+
+        .sort-arrow.desc::after {
+            content: '↓';
+            opacity: 1;
+        }
+
+        .programs-table td {
+            padding: 14px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid #f3f4f6;
+            color: #374151;
+            vertical-align: middle;
+        }
+
+        .programs-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .programs-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .portfolio-cell {
+            padding: 10px 16px;
+        }
+
+        .portfolio-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #1E40AF;
+            white-space: nowrap;
+        }
+
+        .program-name-cell {
+            padding: 10px 16px;
+        }
+
+        .program-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #F3F4F6;
+            border: 1px solid #D1D5DB;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .program-link {
+            color: #0176D3;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .program-link:hover {
+            color: #014486;
+            text-decoration: underline;
+        }
+
+        .updated-cell {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .health-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .health-badge .health-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .health-badge.health-on-track {
+            background: #dcfce7;
+            color: #065f46;
+        }
+
+        .health-badge.health-on-track .health-dot {
+            background: #10b981;
+        }
+
+        .health-badge.health-not-started {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .health-badge.health-not-started .health-dot {
+            background: #9ca3af;
+        }
+
+        .health-badge.health-watch {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .health-badge.health-watch .health-dot {
+            background: #fbbf24;
+        }
+
+        .health-badge.health-blocked {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .health-badge.health-blocked .health-dot {
+            background: #ef4444;
+        }
+
+        .comments-cell {
+            max-width: 600px !important;
+            min-width: 300px !important;
+            white-space: normal !important;
+            line-height: 1.6 !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            text-overflow: clip !important;
+            overflow: visible !important;
+        }
+
+        .target-cell {
+            font-weight: 600;
+            color: #4267B2;
+        }
+
+        /* Programs Container */
+        .programs-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .program-section {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .program-section:last-child {
+            border-bottom: none;
+        }
+
+        .program-header {
+            background: #f9fafb;
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 500;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .program-header:hover {
+            background: #f3f4f6;
+        }
+
+        .program-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .program-toggle {
+            font-size: 10px;
+            color: #6b7280;
+            transition: transform 0.2s;
+        }
+
+        .program-header.collapsed .program-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .program-content {
+            padding: 0;
+        }
+
+        .program-content.hidden {
+            display: none;
+        }
+
+        /* Project Section */
+        .project-section {
+            margin: 12px;
+            border-left: 3px solid #f59e0b;
+            background: #fffbeb;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .project-header {
+            background: #fffbeb;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #92400e;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Epics Table */
+        .epics-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .epics-table thead {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .epics-table th {
+            padding: 8px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .epics-table td {
+            padding: 10px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid #f3f4f6;
+            color: #374151;
+            vertical-align: top;
+        }
+
+        .epics-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .epics-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .loc-cell {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .loc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .loc-dot.green { background: #22c55e; }
+        .loc-dot.black { background: #111827; }
+
+        .epic-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .epic-link:hover {
+            text-decoration: underline;
+        }
+
+        .health-cell {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .health-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .health-dot.green { background: #22c55e; }
+        .health-dot.gray { background: #6b7280; }
+        .health-dot.orange { background: #fbbf24; }
+
+        .timestamp {
+            text-align: right;
+            font-size: 11px;
+            color: #9ca3af;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: transparent;
+            padding: 0 0 12px 0;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .next-refresh {
+            font-size: 11px;
+            color: #10b981;
+            padding: 2px 8px;
+            background: #d1fae5;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .next-refresh.refreshing {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        .refresh-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #4267B2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .refresh-btn:hover {
+            background: #365a99;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(66, 103, 178, 0.3);
+        }
+
+        .refresh-btn:active {
+            transform: translateY(0);
+        }
+
+        .refresh-btn.loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .refresh-btn.loading .refresh-icon {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="/static/images/mascot.png" alt="Astro">
+                </div>
+                <span>Field Service Execution</span>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="/" class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>Overview</span>
+            </a>
+            <a href="/execution" class="nav-item active">
+                <span class="nav-icon">📋</span>
+                <span>Execution</span>
+            </a>
+            <a href="/milestones" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span>Milestones</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div>
+                <h1 class="page-title">Field Service Execution</h1>
+                <div class="last-updated">
+                    <span>Last updated: <span id="execution-timestamp">{{ last_updated if last_updated else 'Never' }}</span></span>
+                    <span class="next-refresh" id="next-refresh">Next refresh in 5:00</span>
+                </div>
+            </div>
+            <button class="refresh-btn" onclick="refreshData()">
+                <span class="refresh-icon">🔄</span>
+                <span>Refresh Data</span>
+            </button>
+        </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-header">
+                <div class="stat-label">Programs</div>
+                <div class="stat-value">{{ total_programs }}</div>
+            </div>
+            <div class="stat-rows">
+                <div class="stat-row">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-label-text">On Track</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill green" style="width: {{ (health_counts.on_track / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent">{{ (health_counts.on_track / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-count">{{ health_counts.on_track }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-label-text">Not Started</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill gray" style="width: {{ (health_counts.not_started / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent">{{ (health_counts.not_started / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-count">{{ health_counts.not_started }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-label-text">Watch</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill orange" style="width: {{ (health_counts.watch / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent">{{ (health_counts.watch / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-count">{{ health_counts.watch }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-label-text">Blocked</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill red" style="width: {{ (health_counts.blocked / total_programs * 100) if total_programs > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent">{{ (health_counts.blocked / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-count">{{ health_counts.blocked }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-card" id="projectsCard">
+            <div class="stat-header">
+                <div class="stat-label">Projects</div>
+                <div class="stat-value" id="projectsTotal">{{ total_projects }}</div>
+            </div>
+            <div class="stat-rows">
+                <div class="stat-row">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-label-text">On Track</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill green" id="projectsOnTrackBar" style="width: {{ (project_stats.on_track / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="projectsOnTrackPct">{{ (project_stats.on_track / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-count" id="projectsOnTrackCount">{{ project_stats.on_track }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-label-text">Not Started</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill gray" id="projectsNotStartedBar" style="width: {{ (project_stats.not_started / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="projectsNotStartedPct">{{ (project_stats.not_started / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-count" id="projectsNotStartedCount">{{ project_stats.not_started }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-label-text">Watch</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill orange" id="projectsWatchBar" style="width: {{ (project_stats.watch / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="projectsWatchPct">{{ (project_stats.watch / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-count" id="projectsWatchCount">{{ project_stats.watch }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-label-text">Blocked</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill red" id="projectsBlockedBar" style="width: {{ (project_stats.blocked / total_projects * 100) if total_projects > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="projectsBlockedPct">{{ (project_stats.blocked / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-count" id="projectsBlockedCount">{{ project_stats.blocked }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-card" id="epicsCard">
+            <div class="stat-header">
+                <div class="stat-label">Epics</div>
+                <div class="stat-value" id="epicsTotal">{{ total_epics }}</div>
+            </div>
+            <div class="stat-rows">
+                <div class="stat-row">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-label-text">On Track</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill green" id="epicsOnTrackBar" style="width: {{ (epic_stats.on_track / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="epicsOnTrackPct">{{ (epic_stats.on_track / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-count" id="epicsOnTrackCount">{{ epic_stats.on_track }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-label-text">Not Started</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill gray" id="epicsNotStartedBar" style="width: {{ (epic_stats.not_started / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="epicsNotStartedPct">{{ (epic_stats.not_started / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-count" id="epicsNotStartedCount">{{ epic_stats.not_started }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-label-text">Watch</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill orange" id="epicsWatchBar" style="width: {{ (epic_stats.watch / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="epicsWatchPct">{{ (epic_stats.watch / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-count" id="epicsWatchCount">{{ epic_stats.watch }}</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-label-text">Blocked</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill red" id="epicsBlockedBar" style="width: {{ (epic_stats.blocked / total_epics * 100) if total_epics > 0 else 0 }}%"></div>
+                    </div>
+                    <div class="stat-percent" id="epicsBlockedPct">{{ (epic_stats.blocked / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-count" id="epicsBlockedCount">{{ epic_stats.blocked }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filters-section">
+        <!-- View Toggle -->
+        <div class="filter-row">
+            <label class="filter-label">VIEW</label>
+            <div class="view-toggles">
+                <button class="view-toggle active" data-view="program">Programs</button>
+                <button class="view-toggle" data-view="project">Projects</button>
+                <button class="view-toggle" data-view="epic">Epics</button>
+            </div>
+        </div>
+
+        <!-- Portfolio Filter Row -->
+        <div class="filter-row">
+            <label class="filter-label">PORTFOLIO</label>
+            <div class="custom-multiselect" id="portfolioMultiSelect">
+                <div class="multiselect-display">
+                    <span class="multiselect-text">All Portfolios</span>
+                    <svg class="multiselect-arrow" width="12" height="12" viewBox="0 0 12 12">
+                        <path fill="#374151" d="M6 9L1 4h10z"/>
+                    </svg>
+                </div>
+                <div class="multiselect-dropdown" style="display: none;">
+                    <label class="multiselect-option">
+                        <input type="checkbox" value="all" checked> All Portfolios
+                    </label>
+                    {% for portfolio in portfolios %}
+                    <label class="multiselect-option">
+                        <input type="checkbox" value="{{ portfolio }}"> {{ portfolio }}
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Filter Row -->
+        <div class="filter-row">
+            <label class="filter-label">STATUS</label>
+            <div class="status-pills">
+                <div class="status-pill active" data-status="all">All</div>
+                <div class="status-pill" data-status="on-track">On Track</div>
+                <div class="status-pill" data-status="not-started">Not Started</div>
+                <div class="status-pill" data-status="watch">Watch</div>
+                <div class="status-pill" data-status="blocked">Blocked</div>
+            </div>
+        </div>
+
+        <!-- Month Filter Row -->
+        <div class="filter-row">
+            <label class="filter-label">MONTH</label>
+            <div class="release-pills" id="releasePills">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Helper function to map release number to freeze month
+        function mapReleaseToFreezeMonth(releaseNumber) {
+            if (!releaseNumber || !releaseNumber.match(/^\d+$/)) return null;
+            const releaseNum = parseInt(releaseNumber);
+            const baseRelease = 262;
+            const baseYear = 2026;
+            const baseMonth = 4;
+            const releasesDiff = (releaseNum - baseRelease) / 2;
+            const monthsOffset = releasesDiff * 4;
+            const totalMonths = baseMonth - 1 + monthsOffset;
+            const year = baseYear + Math.floor(totalMonths / 12);
+            const month = (totalMonths % 12) + 1;
+            return `${year}-${String(month).padStart(2, '0')}`;
+        }
+
+        // Store monthly release data for each view
+        const monthlyDataByView = {
+            program: {{ monthly_releases_program | tojson }},
+            project: {{ monthly_releases_project | tojson }},
+            epic: {{ monthly_releases_epic | tojson }}
+        };
+
+        const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+        // Calculate 7-month range: 1 past, current, 5 future
+        function getMonthRange() {
+            const now = new Date();
+            const months = [];
+
+            // Start from 1 month ago
+            for (let i = -1; i <= 5; i++) {
+                const date = new Date(now.getFullYear(), now.getMonth() + i, 1);
+                const monthNum = String(date.getMonth() + 1).padStart(2, '0');
+                const monthLabel = monthNames[date.getMonth()];
+                const year = date.getFullYear();
+                months.push({
+                    monthNum: monthNum,
+                    label: monthLabel,
+                    yearMonth: `${year}-${monthNum}`
+                });
+            }
+            return months;
+        }
+
+        const monthRange = getMonthRange();
+
+        // Render month pills
+        function renderMonthPills(view = 'program') {
+            const pillsContainer = document.getElementById('releasePills');
+            pillsContainer.innerHTML = '';
+
+            // Add ALL filter first
+            const allPill = document.createElement('div');
+            allPill.className = 'release-pill all-filter active';
+            allPill.dataset.month = 'all';
+            allPill.textContent = 'ALL';
+            pillsContainer.appendChild(allPill);
+
+            // Calculate which months have programs with releases
+            const monthsWithReleases = new Set();
+            if (typeof allProgramsData !== 'undefined') {
+                console.log('Calculating months with releases...');
+                allProgramsData.forEach(program => {
+                    if (program.target_release) {
+                        const freezeMonth = mapReleaseToFreezeMonth(program.target_release);
+                        console.log(`Program: ${program.name}, Release: ${program.target_release}, Freeze: ${freezeMonth}`);
+                        if (freezeMonth) {
+                            monthsWithReleases.add(freezeMonth);
+                        }
+                    }
+                });
+                console.log('Months with releases:', Array.from(monthsWithReleases));
+            } else {
+                console.log('allProgramsData not defined yet');
+            }
+
+            // Add month pills for the 7-month range
+            monthRange.forEach(month => {
+                const pill = document.createElement('div');
+                pill.className = 'release-pill';
+                pill.dataset.month = month.yearMonth;
+
+                // Add indicator dot if this month has releases
+                const hasReleases = monthsWithReleases.has(month.yearMonth);
+                pill.innerHTML = hasReleases
+                    ? `<span class="month-indicator"></span><span>${month.label}</span>`
+                    : `<span>${month.label}</span>`;
+
+                pillsContainer.appendChild(pill);
+            });
+
+            // Re-attach click handlers
+            attachPillClickHandlers();
+        }
+
+        // View toggle functionality
+        document.querySelectorAll('.view-toggle').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.view-toggle').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const view = this.dataset.view;
+
+                // Show/hide appropriate view
+                const programTableView = document.getElementById('programTableView');
+                const programsContainer = document.getElementById('programsContainer');
+
+                if (view === 'program') {
+                    // Show program table view
+                    programTableView.style.display = 'block';
+                    programsContainer.style.display = 'none';
+                } else {
+                    // Show nested projects/epics view
+                    programTableView.style.display = 'none';
+                    programsContainer.style.display = 'block';
+                }
+
+                renderMonthPills(view);
+            });
+        });
+
+        // Month pill click handlers
+        function attachPillClickHandlers() {
+            document.querySelectorAll('.release-pill').forEach(pill => {
+                pill.addEventListener('click', function() {
+                    const month = this.dataset.month;
+
+                    // Remove active from all pills
+                    document.querySelectorAll('.release-pill').forEach(p => p.classList.remove('active'));
+
+                    // Add active to clicked pill
+                    this.classList.add('active');
+
+                    // Update current month filter
+                    currentMonthFilter = month || 'all';
+
+                    // Get selected portfolios
+                    let selectedPortfolios = ['all'];
+                    if (typeof portfolioCheckboxes !== 'undefined' && portfolioCheckboxes && portfolioCheckboxes.length > 0) {
+                        selectedPortfolios = Array.from(portfolioCheckboxes)
+                            .filter(cb => cb.checked)
+                            .map(cb => cb.value);
+                    }
+
+                    // Apply all filters
+                    applyAllFilters(selectedPortfolios, currentStatusFilter, currentMonthFilter);
+                });
+            });
+        }
+
+        // Status filter functionality
+        document.querySelectorAll('.status-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.status-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                const status = this.dataset.status;
+                console.log('Filter by status:', status);
+                // Implement status filtering here
+            });
+        });
+
+        // Initialize on page load
+        renderMonthPills('program');
+    </script>
+
+
+    <!-- Program Table View (shown when VIEW=Programs) -->
+    <div class="program-table-view" id="programTableView">
+        <table class="programs-table">
+            <thead>
+                <tr>
+                    <th style="width: 200px; cursor: pointer;" data-column="portfolio">PORTFOLIO <span class="sort-arrow"></span></th>
+                    <th style="width: 350px; cursor: pointer;" data-column="program">PROGRAM <span class="sort-arrow"></span></th>
+                    <th style="width: 120px; cursor: pointer;" data-column="health">HEALTH <span class="sort-arrow"></span></th>
+                    <th style="cursor: pointer;" data-column="comments">HEALTH COMMENTS <span class="sort-arrow"></span></th>
+                    <th style="width: 150px; cursor: pointer;" data-column="manager">PROGRAM MANAGER <span class="sort-arrow"></span></th>
+                    <th style="width: 120px; cursor: pointer;" data-column="updated">LAST UPDATED <span class="sort-arrow"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for program in programs %}
+                <tr data-program="{{ program.name }}" data-subcloud="{{ program.subcloud }}" data-portfolio="{{ program.portfolio }}" data-target-release="{{ program.target_release }}">
+                    <td class="portfolio-cell">
+                        {% if program.portfolio %}
+                        <span class="portfolio-pill">{{ program.portfolio }}</span>
+                        {% endif %}
+                    </td>
+                    <td class="program-name-cell">
+                        <a href="https://gus.lightning.force.com/lightning/r/PPM_Program__c/{{ program.id }}/view" target="_blank" class="program-link">{{ program.name }}</a>
+                    </td>
+                    <td>
+                        <div class="health-badge health-{{ program.health.lower().replace(' ', '-') }}">
+                            <span class="health-dot"></span>
+                            <span>{{ program.health }}</span>
+                        </div>
+                    </td>
+                    <td class="comments-cell">{{ program.health_comments | latest_comment }}</td>
+                    <td class="manager-cell">{{ program.program_manager if program.program_manager else '-' }}</td>
+                    <td class="updated-cell">{{ last_updated[:10] if last_updated else '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Programs Nested View (shown when VIEW=Projects or Epics) -->
+    <div class="programs-container" id="programsContainer" style="display: none;">
+        {% for program in programs %}
+        <div class="program-section" data-program="{{ program.name }}" data-portfolio="{{ program.portfolio }}" data-subcloud="{{ program.subcloud }}" data-health="{{ program.health }}" data-target-release="{{ program.target_release }}">
+            <div class="program-header" onclick="toggleProgram(this)">
+                <div class="program-title">
+                    <span>☐ {{ program.name }}</span>
+                </div>
+                <span class="program-toggle">▼</span>
+            </div>
+
+            <div class="program-content">
+                {% for project in program.projects %}
+                <div class="project-section">
+                    <div class="project-header">
+                        📦 {{ project.name }}
+                    </div>
+
+                    {% if project.epics %}
+                    <table class="epics-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 140px;">LOC</th>
+                                <th style="width: 80px;">PRIORITY</th>
+                                <th>EPIC NAME</th>
+                                <th style="width: 110px;">HEALTH</th>
+                                <th style="width: 280px;">HEALTH COMMENTS</th>
+                                <th style="width: 180px;">TEAM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for epic in project.epics %}
+                            <tr data-end-date="{{ epic.end_date }}" data-project="{{ project.name }}" data-epic-health="{{ epic.health }}">
+                                <td>
+                                    <div class="loc-cell">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="loc-dot green"></span>
+                                        <span>Above the Line</span>
+                                        {% else %}
+                                        <span class="loc-dot black"></span>
+                                        <span>Not Prioritized</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.number if epic.number else '-' }}</td>
+                                <td>
+                                    <a href="#" class="epic-link">{{ epic.name }}</a>
+                                </td>
+                                <td>
+                                    <div class="health-cell">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="health-dot green"></span>
+                                        <span>On Track</span>
+                                        {% elif epic.health == 'Watch' %}
+                                        <span class="health-dot orange"></span>
+                                        <span>Watch</span>
+                                        {% elif epic.health == 'Not Started' %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Not Started</span>
+                                        {% else %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Unknown</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.health_status if epic.health_status and epic.health_status != 'Unknown' else '-' }}</td>
+                                <td>-</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if last_updated %}
+    <div class="timestamp">
+        Last updated: {{ last_updated }}
+    </div>
+    {% endif %}
+
+    <script>
+        // Store all program data for filtering
+        const allProgramsData = {{ programs | tojson }};
+
+        function toggleProgram(header) {
+            header.classList.toggle('collapsed');
+            const content = header.nextElementSibling;
+            content.classList.toggle('hidden');
+        }
+
+        // Global filter state and functions (must be outside DOMContentLoaded)
+        let currentStatusFilter = 'all';
+        let currentMonthFilter = 'all';
+        let portfolioCheckboxes = null;  // Global reference to portfolio checkboxes
+
+        // Helper function to map release number to freeze month
+        function mapReleaseToFreezeMonth(releaseNumber) {
+            if (!releaseNumber || !releaseNumber.match(/^\d+$/)) return null;
+            const releaseNum = parseInt(releaseNumber);
+            const baseRelease = 262;
+            const baseYear = 2026;
+            const baseMonth = 4;
+            const releasesDiff = (releaseNum - baseRelease) / 2;
+            const monthsOffset = releasesDiff * 4;
+            const totalMonths = baseMonth - 1 + monthsOffset;
+            const year = baseYear + Math.floor(totalMonths / 12);
+            const month = (totalMonths % 12) + 1;
+            return `${year}-${String(month).padStart(2, '0')}`;
+        }
+
+        function applyAllFilters(selectedPortfolios, statusFilter, monthFilter) {
+            console.log('=== APPLY FILTERS ===');
+            console.log('Portfolios:', selectedPortfolios, 'Status:', statusFilter, 'Month:', monthFilter);
+
+            let visibleCount = 0;
+            document.querySelectorAll('.programs-table tbody tr').forEach(row => {
+                const portfolio = row.dataset.portfolio;
+                const healthBadge = row.querySelector('.health-badge span:last-child');
+                const health = healthBadge ? healthBadge.textContent.toLowerCase() : '';
+                const targetRelease = row.dataset.targetRelease;
+
+                const portfolioMatch = selectedPortfolios.includes('all') || selectedPortfolios.includes(portfolio);
+
+                let statusMatch = statusFilter === 'all';
+                if (!statusMatch) {
+                    if (statusFilter === 'on-track' && health.includes('on track')) statusMatch = true;
+                    else if (statusFilter === 'not-started' && health.includes('not started')) statusMatch = true;
+                    else if (statusFilter === 'watch' && health.includes('watch')) statusMatch = true;
+                    else if (statusFilter === 'blocked' && health.includes('blocked')) statusMatch = true;
+                }
+
+                let monthMatch = monthFilter === 'all';
+                if (!monthMatch && targetRelease) {
+                    const freezeMonth = mapReleaseToFreezeMonth(targetRelease);
+                    if (visibleCount < 3) console.log(`Release ${targetRelease} -> ${freezeMonth} vs ${monthFilter}`);
+                    monthMatch = freezeMonth === monthFilter;
+                }
+
+                const shouldShow = portfolioMatch && statusMatch && monthMatch;
+                row.style.display = shouldShow ? '' : 'none';
+                if (shouldShow) visibleCount++;
+            });
+
+            console.log('Visible:', visibleCount);
+            console.log('Filter state - Portfolios:', selectedPortfolios, 'Status:', statusFilter, 'Month:', monthFilter);
+
+            document.querySelectorAll('.program-section').forEach(section => {
+                const portfolio = section.dataset.portfolio;
+                const health = (section.dataset.health || '').toLowerCase();
+                const targetRelease = section.dataset.targetRelease;
+                const programName = section.dataset.program;
+
+                // Apply same AND logic as table rows
+                const portfolioMatch = selectedPortfolios.includes('all') || selectedPortfolios.includes(portfolio);
+
+                let statusMatch = statusFilter === 'all';
+                if (!statusMatch) {
+                    if (statusFilter === 'on-track' && health.includes('on track')) statusMatch = true;
+                    else if (statusFilter === 'not-started' && health.includes('not started')) statusMatch = true;
+                    else if (statusFilter === 'watch' && health.includes('watch')) statusMatch = true;
+                    else if (statusFilter === 'blocked' && health.includes('blocked')) statusMatch = true;
+                }
+
+                let monthMatch = monthFilter === 'all';
+                if (!monthMatch && targetRelease) {
+                    const freezeMonth = mapReleaseToFreezeMonth(targetRelease);
+                    monthMatch = freezeMonth === monthFilter;
+                }
+
+                const shouldShow = portfolioMatch && statusMatch && monthMatch;
+
+                // Debug HR Service specifically
+                if (programName && programName.includes('HR Service')) {
+                    console.log('HR Service Debug:', {
+                        programName,
+                        portfolio,
+                        health,
+                        portfolioMatch,
+                        statusMatch,
+                        monthMatch,
+                        shouldShow
+                    });
+                }
+
+                section.style.display = shouldShow ? 'block' : 'none';
+            });
+            if (typeof updateStatsCards === 'function') updateStatsCards();
+        }
+
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+
+        function clearFilters() {
+            const programSelect = document.getElementById('programSelect');
+            const searchBox = document.getElementById('searchBox');
+            const staleSelect = document.getElementById('staleSelect');
+
+            if (programSelect) programSelect.value = '';
+            if (searchBox) searchBox.value = '';
+            if (staleSelect) staleSelect.value = '';
+
+            // Reset multi-select to "All"
+            if (typeof portfolioCheckboxes !== 'undefined' && portfolioCheckboxes) {
+                portfolioCheckboxes.forEach(cb => {
+                    cb.checked = cb.value === 'all';
+                });
+                updatePortfolioDisplay();
+            }
+
+            document.querySelectorAll('.release-pill').forEach(pill => {
+                pill.classList.remove('active');
+            });
+            document.querySelector('.release-pill[data-month="all"]').classList.add('active');
+
+            document.querySelectorAll('.program-section').forEach(section => {
+                section.style.display = 'block';
+            });
+        }
+
+        // Custom multi-select portfolio filter
+        const portfolioMultiSelect = document.getElementById('portfolioMultiSelect');
+        if (!portfolioMultiSelect) {
+            console.error('portfolioMultiSelect not found - skipping portfolio filter setup');
+        } else {
+            const portfolioDisplay = portfolioMultiSelect.querySelector('.multiselect-display');
+            const portfolioDropdown = portfolioMultiSelect.querySelector('.multiselect-dropdown');
+            const portfolioText = portfolioMultiSelect.querySelector('.multiselect-text');
+            portfolioCheckboxes = portfolioMultiSelect.querySelectorAll('input[type="checkbox"]');  // Assign to global
+            const allCheckbox = portfolioMultiSelect.querySelector('input[value="all"]');
+
+        // Toggle dropdown
+        if (portfolioDisplay) {
+            portfolioDisplay.addEventListener('click', function(e) {
+                e.stopPropagation();
+                portfolioDropdown.style.display = portfolioDropdown.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+
+        // Close dropdown when clicking outside
+        if (portfolioMultiSelect && portfolioDropdown) {
+            document.addEventListener('click', function(e) {
+                if (!portfolioMultiSelect.contains(e.target)) {
+                    portfolioDropdown.style.display = 'none';
+                }
+            });
+        }
+
+        // Update filter when checkboxes change
+        if (portfolioCheckboxes && portfolioCheckboxes.length > 0) {
+            portfolioCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.value === 'all' && this.checked) {
+                    // Uncheck all others when "All" is checked
+                    portfolioCheckboxes.forEach(cb => {
+                        if (cb.value !== 'all') cb.checked = false;
+                    });
+                } else if (this.value !== 'all' && this.checked) {
+                    // Uncheck "All" when any individual option is checked
+                    allCheckbox.checked = false;
+                }
+
+                // If nothing is checked, check "All"
+                const anyChecked = Array.from(portfolioCheckboxes).some(cb => cb.checked);
+                if (!anyChecked) {
+                    allCheckbox.checked = true;
+                }
+
+                updatePortfolioDisplay();
+                filterProgramsByPortfolio();
+            });
+            });
+        }
+
+        function updatePortfolioDisplay() {
+            if (!portfolioText || !portfolioCheckboxes) return;
+            const checked = Array.from(portfolioCheckboxes).filter(cb => cb.checked);
+            if (checked.length === 0 || (checked.length === 1 && checked[0].value === 'all')) {
+                portfolioText.textContent = 'All Portfolios';
+            } else {
+                const count = checked.length;
+                portfolioText.textContent = `${count} Portfolio${count > 1 ? 's' : ''} Selected`;
+            }
+        }
+
+        function filterProgramsByPortfolio() {
+            if (!portfolioCheckboxes || portfolioCheckboxes.length === 0) return;
+
+            const selectedValues = Array.from(portfolioCheckboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            applyAllFilters(selectedValues, currentStatusFilter, currentMonthFilter);
+        }
+        } // End if portfolioMultiSelect exists
+
+        // Status filter pills
+        document.querySelectorAll('.status-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.status-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                // Get selected status
+                currentStatusFilter = this.dataset.status;
+
+                // Get selected portfolios
+                let selectedPortfolios = ['all'];
+                if (typeof portfolioCheckboxes !== 'undefined' && portfolioCheckboxes && portfolioCheckboxes.length > 0) {
+                    selectedPortfolios = Array.from(portfolioCheckboxes)
+                        .filter(cb => cb.checked)
+                        .map(cb => cb.value);
+                }
+
+                // Apply filters
+                applyAllFilters(selectedPortfolios, currentStatusFilter, currentMonthFilter);
+            });
+        });
+
+        // Month filter pills - add click handlers after pills are rendered
+        function attachMonthFilterHandlers() {
+            document.querySelectorAll('.release-pill').forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Update active state
+                    document.querySelectorAll('.release-pill').forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Get selected month
+                    currentMonthFilter = this.dataset.month || 'all';
+
+                    // Get selected portfolios
+                    let selectedPortfolios = ['all'];
+                    if (typeof portfolioCheckboxes !== 'undefined' && portfolioCheckboxes && portfolioCheckboxes.length > 0) {
+                        selectedPortfolios = Array.from(portfolioCheckboxes)
+                            .filter(cb => cb.checked)
+                            .map(cb => cb.value);
+                    }
+
+                    // Apply filters
+                    applyAllFilters(selectedPortfolios, currentStatusFilter, currentMonthFilter);
+                });
+            });
+        }
+
+        function updateStatsCards() {
+            // Get visible programs based on table rows
+            const allRows = document.querySelectorAll('.programs-table tbody tr');
+
+            const visibleProgramNames = [];
+            allRows.forEach(row => {
+                // Empty display style or undefined means visible
+                if (!row.style.display || row.style.display === '' || row.style.display !== 'none') {
+                    visibleProgramNames.push(row.dataset.program);
+                }
+            });
+
+            // Filter programs data to only visible ones
+            const visiblePrograms = allProgramsData.filter(p => visibleProgramNames.includes(p.name));
+
+            // Calculate stats
+            let projectStats = { on_track: 0, not_started: 0, watch: 0, blocked: 0, total: 0 };
+            let epicStats = { on_track: 0, not_started: 0, watch: 0, blocked: 0, total: 0 };
+
+            visiblePrograms.forEach(program => {
+                const projects = program.projects || [];
+
+                projects.forEach(project => {
+                    projectStats.total++;
+
+                    const epics = project.epics || [];
+
+                    // Determine project health from epic healths
+                    if (epics.length === 0) {
+                        projectStats.not_started++;
+                    } else {
+                        const healths = epics.map(e => (e.health || '').toLowerCase());
+                        if (healths.some(h => h.includes('blocked'))) {
+                            projectStats.blocked++;
+                        } else if (healths.some(h => h.includes('watch'))) {
+                            projectStats.watch++;
+                        } else if (healths.some(h => h.includes('not started'))) {
+                            projectStats.not_started++;
+                        } else if (healths.some(h => h.includes('on track'))) {
+                            projectStats.on_track++;
+                        } else {
+                            projectStats.not_started++;
+                        }
+                    }
+
+                    // Count epics
+                    epics.forEach(epic => {
+                        epicStats.total++;
+                        const h = (epic.health || '').toLowerCase();
+                        if (h.includes('on track')) {
+                            epicStats.on_track++;
+                        } else if (h.includes('watch')) {
+                            epicStats.watch++;
+                        } else if (h.includes('blocked')) {
+                            epicStats.blocked++;
+                        } else if (h.includes('not started')) {
+                            epicStats.not_started++;
+                        }
+                    });
+                });
+            });
+
+            // Update Projects card
+            document.getElementById('projectsTotal').textContent = projectStats.total;
+            document.getElementById('projectsOnTrackCount').textContent = projectStats.on_track;
+            document.getElementById('projectsNotStartedCount').textContent = projectStats.not_started;
+            document.getElementById('projectsWatchCount').textContent = projectStats.watch;
+            document.getElementById('projectsBlockedCount').textContent = projectStats.blocked;
+
+            const projectPctOnTrack = projectStats.total > 0 ? Math.round(projectStats.on_track / projectStats.total * 100) : 0;
+            const projectPctNotStarted = projectStats.total > 0 ? Math.round(projectStats.not_started / projectStats.total * 100) : 0;
+            const projectPctWatch = projectStats.total > 0 ? Math.round(projectStats.watch / projectStats.total * 100) : 0;
+            const projectPctBlocked = projectStats.total > 0 ? Math.round(projectStats.blocked / projectStats.total * 100) : 0;
+
+            document.getElementById('projectsOnTrackPct').textContent = projectPctOnTrack + '%';
+            document.getElementById('projectsNotStartedPct').textContent = projectPctNotStarted + '%';
+            document.getElementById('projectsWatchPct').textContent = projectPctWatch + '%';
+            document.getElementById('projectsBlockedPct').textContent = projectPctBlocked + '%';
+
+            document.getElementById('projectsOnTrackBar').style.width = projectPctOnTrack + '%';
+            document.getElementById('projectsNotStartedBar').style.width = projectPctNotStarted + '%';
+            document.getElementById('projectsWatchBar').style.width = projectPctWatch + '%';
+            document.getElementById('projectsBlockedBar').style.width = projectPctBlocked + '%';
+
+            // Update Epics card
+            document.getElementById('epicsTotal').textContent = epicStats.total;
+            document.getElementById('epicsOnTrackCount').textContent = epicStats.on_track;
+            document.getElementById('epicsNotStartedCount').textContent = epicStats.not_started;
+            document.getElementById('epicsWatchCount').textContent = epicStats.watch;
+            document.getElementById('epicsBlockedCount').textContent = epicStats.blocked;
+
+            const epicPctOnTrack = epicStats.total > 0 ? Math.round(epicStats.on_track / epicStats.total * 100) : 0;
+            const epicPctNotStarted = epicStats.total > 0 ? Math.round(epicStats.not_started / epicStats.total * 100) : 0;
+            const epicPctWatch = epicStats.total > 0 ? Math.round(epicStats.watch / epicStats.total * 100) : 0;
+            const epicPctBlocked = epicStats.total > 0 ? Math.round(epicStats.blocked / epicStats.total * 100) : 0;
+
+            document.getElementById('epicsOnTrackPct').textContent = epicPctOnTrack + '%';
+            document.getElementById('epicsNotStartedPct').textContent = epicPctNotStarted + '%';
+            document.getElementById('epicsWatchPct').textContent = epicPctWatch + '%';
+            document.getElementById('epicsBlockedPct').textContent = epicPctBlocked + '%';
+
+            document.getElementById('epicsOnTrackBar').style.width = epicPctOnTrack + '%';
+            document.getElementById('epicsNotStartedBar').style.width = epicPctNotStarted + '%';
+            document.getElementById('epicsWatchBar').style.width = epicPctWatch + '%';
+            document.getElementById('epicsBlockedBar').style.width = epicPctBlocked + '%';
+        }
+
+        // Monthly release filter
+        document.querySelectorAll('.release-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.release-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                const month = this.dataset.month;
+                if (month === 'all') {
+                    document.querySelectorAll('.program-section').forEach(section => {
+                        section.style.display = 'block';
+                    });
+                } else {
+                    document.querySelectorAll('.program-section').forEach(section => {
+                        const hasEpicsInMonth = Array.from(section.querySelectorAll('[data-end-date]'))
+                            .some(row => row.dataset.endDate && row.dataset.endDate.includes(month));
+                        section.style.display = hasEpicsInMonth ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+
+        // Program dropdown filter
+        const programSelect = document.getElementById('programSelect');
+        if (programSelect) {
+            programSelect.addEventListener('change', function() {
+                const selectedProgram = this.value;
+                document.querySelectorAll('.program-section').forEach(section => {
+                    if (!selectedProgram || section.dataset.program === selectedProgram) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Search box filter
+        const searchBox = document.getElementById('searchBox');
+        if (searchBox) {
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                document.querySelectorAll('.program-section').forEach(section => {
+                    const programName = section.dataset.program.toLowerCase();
+                    const epicNames = Array.from(section.querySelectorAll('.epic-link'))
+                        .map(link => link.textContent.toLowerCase());
+                    const hasMatch = programName.includes(searchTerm) || epicNames.some(name => name.includes(searchTerm));
+                    section.style.display = hasMatch || searchTerm === '' ? 'block' : 'none';
+                });
+            });
+        }
+
+        // Initialize stats on page load
+        updateStatsCards();
+
+        // Table sorting
+        let currentSortColumn = null;
+        let currentSortDirection = 'asc';
+
+        document.querySelectorAll('.programs-table th[data-column]').forEach(th => {
+            th.addEventListener('click', function() {
+                const column = this.dataset.column;
+                const tbody = document.querySelector('.programs-table tbody');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                // Toggle sort direction
+                if (currentSortColumn === column) {
+                    currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSortDirection = 'asc';
+                    currentSortColumn = column;
+                }
+
+                // Update arrow indicators
+                document.querySelectorAll('.sort-arrow').forEach(arrow => {
+                    arrow.className = 'sort-arrow';
+                });
+                this.querySelector('.sort-arrow').className = `sort-arrow ${currentSortDirection}`;
+
+                // Sort rows
+                rows.sort((a, b) => {
+                    let aVal, bVal;
+
+                    switch(column) {
+                        case 'portfolio':
+                            aVal = a.querySelector('.portfolio-pill')?.textContent || '';
+                            bVal = b.querySelector('.portfolio-pill')?.textContent || '';
+                            break;
+                        case 'program':
+                            aVal = a.querySelector('.program-pill')?.textContent || '';
+                            bVal = b.querySelector('.program-pill')?.textContent || '';
+                            break;
+                        case 'health':
+                            const healthOrder = {'On Track': 1, 'Watch': 2, 'Blocked': 3, 'Not Started': 4, 'Unknown': 5};
+                            aVal = healthOrder[a.querySelector('.health-badge span:last-child')?.textContent] || 999;
+                            bVal = healthOrder[b.querySelector('.health-badge span:last-child')?.textContent] || 999;
+                            break;
+                        case 'comments':
+                            aVal = a.querySelector('.comments-cell')?.textContent || '';
+                            bVal = b.querySelector('.comments-cell')?.textContent || '';
+                            break;
+                        case 'manager':
+                            aVal = a.querySelector('.manager-cell')?.textContent || '';
+                            bVal = b.querySelector('.manager-cell')?.textContent || '';
+                            break;
+                        case 'updated':
+                            aVal = a.querySelector('.updated-cell')?.textContent || '';
+                            bVal = b.querySelector('.updated-cell')?.textContent || '';
+                            break;
+                    }
+
+                    if (column === 'health') {
+                        return currentSortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+                    } else {
+                        if (aVal < bVal) return currentSortDirection === 'asc' ? -1 : 1;
+                        if (aVal > bVal) return currentSortDirection === 'asc' ? 1 : -1;
+                        return 0;
+                    }
+                });
+
+                // Re-append sorted rows
+                rows.forEach(row => tbody.appendChild(row));
+            });
+        });
+
+        }); // End DOMContentLoaded
+
+        // Refresh data function
+        function refreshData() {
+            const btn = document.querySelector('.refresh-btn');
+            btn.classList.add('loading');
+            btn.disabled = true;
+
+            fetch('/api/refresh-execution-data', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+                    } else {
+                        alert('Failed to refresh data: ' + data.error);
+                        btn.classList.remove('loading');
+                        btn.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    alert('Error refreshing data: ' + error);
+                    btn.classList.remove('loading');
+                    btn.disabled = false;
+                });
+        }
+
+        // Format execution timestamp (Pacific Time)
+        const executionTimestamp = document.getElementById('execution-timestamp');
+        if (executionTimestamp && executionTimestamp.textContent !== 'Never') {
+            const isoDate = executionTimestamp.textContent;
+            try {
+                const date = new Date(isoDate);
+                executionTimestamp.textContent = date.toLocaleString('en-US', {
+                    timeZone: 'America/Los_Angeles',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                }) + ' PT';
+            } catch (e) {
+                // Keep original text if parsing fails
+            }
+        }
+
+        // Auto-refresh every 5 minutes
+        const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes in milliseconds
+        let countdownInterval;
+        let remainingSeconds = 300; // 5 minutes
+
+        function updateCountdown() {
+            const minutes = Math.floor(remainingSeconds / 60);
+            const seconds = remainingSeconds % 60;
+            const nextRefreshEl = document.getElementById('next-refresh');
+
+            if (remainingSeconds > 0) {
+                nextRefreshEl.textContent = `Next refresh in ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                remainingSeconds--;
+            } else {
+                nextRefreshEl.textContent = 'Refreshing...';
+                nextRefreshEl.classList.add('refreshing');
+                autoRefreshData();
+            }
+        }
+
+        function autoRefreshData() {
+            fetch('/api/refresh-execution-data', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+                    } else {
+                        console.error('Auto-refresh failed:', data.error);
+                        // Reset countdown and try again
+                        remainingSeconds = 300;
+                        const nextRefreshEl = document.getElementById('next-refresh');
+                        nextRefreshEl.classList.remove('refreshing');
+                    }
+                })
+                .catch(error => {
+                    console.error('Auto-refresh error:', error);
+                    // Reset countdown and try again
+                    remainingSeconds = 300;
+                    const nextRefreshEl = document.getElementById('next-refresh');
+                    nextRefreshEl.classList.remove('refreshing');
+                });
+        }
+
+        // Start countdown
+        countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initialize immediately
+    </script>
+    </div> <!-- End main-content -->
+</body>
+</html>

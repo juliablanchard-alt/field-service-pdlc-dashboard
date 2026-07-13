@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cloud Execution Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e8eaed;
+            padding: 16px;
+            font-size: 13px;
+            color: #202124;
+        }
+
+        /* Stats Grid - 3 columns */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #202124;
+            line-height: 1;
+        }
+
+        .stat-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stat-item {
+            display: grid;
+            grid-template-columns: 8px 75px 1fr 40px 25px;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .stat-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .stat-dot.green { background: #34a853; }
+        .stat-dot.gray { background: #9aa0a6; }
+        .stat-dot.orange { background: #fbbc04; }
+        .stat-dot.red { background: #ea4335; }
+
+        .stat-name {
+            color: #5f6368;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .stat-bar-bg {
+            height: 16px;
+            background: #f1f3f4;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .stat-bar {
+            height: 100%;
+            transition: width 0.3s;
+        }
+
+        .stat-bar.green { background: #34a853; }
+        .stat-bar.gray { background: #9aa0a6; }
+        .stat-bar.orange { background: #fbbc04; }
+        .stat-bar.red { background: #ea4335; }
+
+        .stat-pct {
+            font-size: 11px;
+            color: #5f6368;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .stat-num {
+            font-size: 12px;
+            color: #202124;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+        }
+
+        .section-header {
+            font-size: 11px;
+            font-weight: 600;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+
+        /* Pills */
+        .pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            padding: 6px 12px;
+            border: 1px solid #dadce0;
+            border-radius: 16px;
+            background: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            color: #5f6368;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .pill:hover {
+            background: #f8f9fa;
+            border-color: #1a73e8;
+        }
+
+        .pill.active {
+            background: #1a73e8;
+            border-color: #1a73e8;
+            color: white;
+        }
+
+        /* Filter Controls */
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            margin-top: 12px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .filter-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 6px 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            color: #202124;
+            background: white;
+        }
+
+        .filter-group select {
+            min-width: 180px;
+        }
+
+        .filter-group input {
+            min-width: 240px;
+        }
+
+        .clear-btn {
+            padding: 6px 16px;
+            border: none;
+            border-radius: 4px;
+            background: #ea4335;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+            height: 32px;
+        }
+
+        .clear-btn:hover {
+            background: #d33426;
+        }
+
+        /* Programs */
+        .programs {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+            overflow: hidden;
+        }
+
+        .program {
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .program:last-child {
+            border-bottom: none;
+        }
+
+        .program-head {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 500;
+            color: #202124;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .program-head:hover {
+            background: #f1f3f4;
+        }
+
+        .program-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle {
+            font-size: 10px;
+            color: #5f6368;
+            transition: transform 0.2s;
+        }
+
+        .program-head.collapsed .toggle {
+            transform: rotate(-90deg);
+        }
+
+        .program-body {
+            padding: 0;
+        }
+
+        .program-body.hidden {
+            display: none;
+        }
+
+        /* Project */
+        .project {
+            margin: 12px;
+            border-left: 4px solid #fbbc04;
+            background: #fef7e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .project-head {
+            background: #fef7e0;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #7f4e00;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: #f8f9fa;
+            border-top: 1px solid #e8eaed;
+        }
+
+        th {
+            padding: 10px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        td {
+            padding: 12px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid #f1f3f4;
+            color: #202124;
+            vertical-align: top;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .loc {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .loc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .loc-dot.green { background: #34a853; }
+        .loc-dot.black { background: #202124; }
+
+        .epic-link {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .epic-link:hover {
+            text-decoration: underline;
+        }
+
+        .health {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .health-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .health-dot.green { background: #34a853; }
+        .health-dot.gray { background: #9aa0a6; }
+        .health-dot.orange { background: #fbbc04; }
+
+        .footer {
+            text-align: right;
+            font-size: 11px;
+            color: #9aa0a6;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 12px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-header">
+                <div class="stat-label">Programs</div>
+                <div class="stat-value">{{ total_programs }}</div>
+            </div>
+            <div class="stat-items">
+                <div class="stat-item">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-name">On Track</div>
+                    <div class="stat-bar-bg"><div class="stat-bar green" style="width: {{ (health_counts.on_track / total_programs * 100) if total_programs > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (health_counts.on_track / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ health_counts.on_track }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-name">Not Started</div>
+                    <div class="stat-bar-bg"><div class="stat-bar gray" style="width: {{ (health_counts.not_started / total_programs * 100) if total_programs > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (health_counts.not_started / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ health_counts.not_started }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-name">Watch</div>
+                    <div class="stat-bar-bg"><div class="stat-bar orange" style="width: {{ (health_counts.watch / total_programs * 100) if total_programs > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (health_counts.watch / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ health_counts.watch }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-name">Blocked</div>
+                    <div class="stat-bar-bg"><div class="stat-bar red" style="width: {{ (health_counts.blocked / total_programs * 100) if total_programs > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (health_counts.blocked / total_programs * 100)|round|int if total_programs > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ health_counts.blocked }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <div class="stat-label">Projects</div>
+                <div class="stat-value">{{ total_projects }}</div>
+            </div>
+            <div class="stat-items">
+                <div class="stat-item">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-name">On Track</div>
+                    <div class="stat-bar-bg"><div class="stat-bar green" style="width: {{ (project_stats.on_track / total_projects * 100) if total_projects > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (project_stats.on_track / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ project_stats.on_track }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-name">Not Started</div>
+                    <div class="stat-bar-bg"><div class="stat-bar gray" style="width: {{ (project_stats.not_started / total_projects * 100) if total_projects > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (project_stats.not_started / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ project_stats.not_started }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-name">Watch</div>
+                    <div class="stat-bar-bg"><div class="stat-bar orange" style="width: {{ (project_stats.watch / total_projects * 100) if total_projects > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (project_stats.watch / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ project_stats.watch }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-name">Blocked</div>
+                    <div class="stat-bar-bg"><div class="stat-bar red" style="width: {{ (project_stats.blocked / total_projects * 100) if total_projects > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (project_stats.blocked / total_projects * 100)|round|int if total_projects > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ project_stats.blocked }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <div class="stat-label">Epics</div>
+                <div class="stat-value">{{ total_epics }}</div>
+            </div>
+            <div class="stat-items">
+                <div class="stat-item">
+                    <div class="stat-dot green"></div>
+                    <div class="stat-name">On Track</div>
+                    <div class="stat-bar-bg"><div class="stat-bar green" style="width: {{ (epic_stats.on_track / total_epics * 100) if total_epics > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (epic_stats.on_track / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ epic_stats.on_track }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot gray"></div>
+                    <div class="stat-name">Not Started</div>
+                    <div class="stat-bar-bg"><div class="stat-bar gray" style="width: {{ (epic_stats.not_started / total_epics * 100) if total_epics > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (epic_stats.not_started / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ epic_stats.not_started }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot orange"></div>
+                    <div class="stat-name">Watch</div>
+                    <div class="stat-bar-bg"><div class="stat-bar orange" style="width: {{ (epic_stats.watch / total_epics * 100) if total_epics > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (epic_stats.watch / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ epic_stats.watch }}</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-dot red"></div>
+                    <div class="stat-name">Blocked</div>
+                    <div class="stat-bar-bg"><div class="stat-bar red" style="width: {{ (epic_stats.blocked / total_epics * 100) if total_epics > 0 else 0 }}%"></div></div>
+                    <div class="stat-pct">{{ (epic_stats.blocked / total_epics * 100)|round|int if total_epics > 0 else 0 }}%</div>
+                    <div class="stat-num">{{ epic_stats.blocked }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Releases -->
+    <div class="section">
+        <div class="section-header">Monthly Releases</div>
+        <div class="pills">
+            <div class="pill active" data-month="all">ALL</div>
+            {% for m in monthly_releases %}
+            <div class="pill" data-month="{{ m.month }}">{{ m.label }} {{ m.prog_count }} Prog, {{ m.epic_count }} Epics</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="section">
+        <div class="section-header">Filters</div>
+        <div class="section-header">Portfolio</div>
+        <div class="pills">
+            <div class="pill active" data-portfolio="all">All</div>
+            {% for p in portfolios %}
+            <div class="pill" data-portfolio="{{ p }}">{{ p }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="filter-row">
+            <div class="filter-group">
+                <div class="filter-label">Program</div>
+                <select id="programSelect">
+                    <option value="">All Programs</option>
+                    {% for program in programs %}
+                    <option value="{{ program.name }}">{{ program.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-label">Search</div>
+                <input type="text" id="searchBox" placeholder="Search by name...">
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-label">Stale [Epic]</div>
+                <select id="staleSelect">
+                    <option value="">All</option>
+                    <option value="30">30+ days</option>
+                    <option value="60">60+ days</option>
+                    <option value="90">90+ days</option>
+                </select>
+            </div>
+
+            <button class="clear-btn" onclick="clearFilters()">Clear All</button>
+        </div>
+    </div>
+
+    <!-- Programs -->
+    <div class="programs" id="programsContainer">
+        {% for program in programs %}
+        <div class="program" data-program="{{ program.name }}" data-subcloud="{{ program.subcloud }}">
+            <div class="program-head" onclick="toggleProgram(this)">
+                <div class="program-title">
+                    <span>☐ {{ program.name }}</span>
+                </div>
+                <span class="toggle">▼</span>
+            </div>
+
+            <div class="program-body">
+                {% for project in program.projects %}
+                <div class="project">
+                    <div class="project-head">
+                        📦 {{ project.name }}
+                    </div>
+
+                    {% if project.epics %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 130px;">LOC</th>
+                                <th style="width: 70px;">PRIORITY</th>
+                                <th>EPIC NAME</th>
+                                <th style="width: 100px;">HEALTH</th>
+                                <th style="width: 280px;">HEALTH COMMENTS</th>
+                                <th style="width: 160px;">TEAM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for epic in project.epics %}
+                            <tr data-end-date="{{ epic.end_date }}">
+                                <td>
+                                    <div class="loc">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="loc-dot green"></span>
+                                        <span>Above the Line</span>
+                                        {% else %}
+                                        <span class="loc-dot black"></span>
+                                        <span>Not Prioritized</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.number if epic.number else '-' }}</td>
+                                <td><a href="#" class="epic-link">{{ epic.name }}</a></td>
+                                <td>
+                                    <div class="health">
+                                        {% if epic.health == 'On Track' %}
+                                        <span class="health-dot green"></span>
+                                        <span>On Track</span>
+                                        {% elif epic.health == 'Watch' %}
+                                        <span class="health-dot orange"></span>
+                                        <span>Watch</span>
+                                        {% elif epic.health == 'Not Started' %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Not Started</span>
+                                        {% else %}
+                                        <span class="health-dot gray"></span>
+                                        <span>Unknown</span>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td>{{ epic.health_status if epic.health_status and epic.health_status != 'Unknown' else '-' }}</td>
+                                <td>-</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if last_updated %}
+    <div class="footer">Last updated: {{ last_updated }}</div>
+    {% endif %}
+
+    <script>
+        function toggleProgram(h) {
+            h.classList.toggle('collapsed');
+            h.nextElementSibling.classList.toggle('hidden');
+        }
+
+        function clearFilters() {
+            document.getElementById('programSelect').value = '';
+            document.getElementById('searchBox').value = '';
+            document.getElementById('staleSelect').value = '';
+            document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.pill[data-month="all"]').forEach(p => p.classList.add('active'));
+            document.querySelectorAll('.pill[data-portfolio="all"]').forEach(p => p.classList.add('active'));
+            document.querySelectorAll('.program').forEach(s => s.style.display = 'block');
+        }
+
+        document.querySelectorAll('.pill[data-portfolio]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.pill[data-portfolio]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const p = this.dataset.portfolio;
+                document.querySelectorAll('.program').forEach(s => {
+                    s.style.display = (p === 'all' || s.dataset.subcloud === p) ? 'block' : 'none';
+                });
+            });
+        });
+
+        document.querySelectorAll('.pill[data-month]').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.pill[data-month]').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                const m = this.dataset.month;
+                if (m === 'all') {
+                    document.querySelectorAll('.program').forEach(s => s.style.display = 'block');
+                } else {
+                    document.querySelectorAll('.program').forEach(s => {
+                        const has = Array.from(s.querySelectorAll('[data-end-date]')).some(r => r.dataset.endDate && r.dataset.endDate.includes(m));
+                        s.style.display = has ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+
+        document.getElementById('programSelect').addEventListener('change', function() {
+            const sel = this.value;
+            document.querySelectorAll('.program').forEach(s => {
+                s.style.display = (!sel || s.dataset.program === sel) ? 'block' : 'none';
+            });
+        });
+
+        document.getElementById('searchBox').addEventListener('input', function() {
+            const term = this.value.toLowerCase();
+            document.querySelectorAll('.program').forEach(s => {
+                const pname = s.dataset.program.toLowerCase();
+                const enames = Array.from(s.querySelectorAll('.epic-link')).map(l => l.textContent.toLowerCase());
+                const match = pname.includes(term) || enames.some(n => n.includes(term));
+                s.style.display = (match || term === '') ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

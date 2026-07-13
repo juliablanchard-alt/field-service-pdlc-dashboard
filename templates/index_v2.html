@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADLC Process Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        /* Blue Header */
+        .header-bar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-title {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .header-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .header-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 24px 40px;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: white;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #374151;
+            background: white;
+            min-width: 150px;
+        }
+
+        /* Colorful Metric Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .metric-card.white { background: white; }
+        .metric-card.blue-dark { background: #1e40af; color: white; }
+        .metric-card.blue-light { background: #3b82f6; color: white; }
+        .metric-card.green { background: #10b981; color: white; }
+        .metric-card.pink { background: #ec4899; color: white; }
+        .metric-card.purple { background: #8b5cf6; color: white; }
+
+        .metric-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .metric-card.white .metric-label { color: #6b7280; }
+        .metric-card.white .metric-value { color: #111827; }
+
+        /* Phase Columns */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-column {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .phase-header {
+            padding: 16px 20px;
+            color: white;
+            font-size: 0.95em;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .phase-0 .phase-header { background: #8b5cf6; }
+        .phase-1 .phase-header { background: #3b82f6; }
+        .phase-2 .phase-header { background: #10b981; }
+        .phase-3 .phase-header { background: #f59e0b; }
+
+        .phase-count {
+            background: rgba(255,255,255,0.25);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+
+        .phase-body {
+            padding: 16px;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 14px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .program-card:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
+        }
+
+        .program-name {
+            font-weight: 500;
+            color: #111827;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .program-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 0.8em;
+            color: #6b7280;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 500;
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .progress-section {
+            margin-top: 12px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75em;
+            color: #6b7280;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s;
+        }
+
+        .next-milestone {
+            margin-top: 10px;
+            padding: 8px 10px;
+            background: #fef3c7;
+            border-radius: 5px;
+            font-size: 0.8em;
+            color: #92400e;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .empty-phase {
+            padding: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Blue Header Bar -->
+    <div class="header-bar">
+        <div class="header-title">🎯 ADLC Process Dashboard</div>
+        <div class="header-actions">
+            <button class="header-btn">Explore more dashboards</button>
+            <button class="header-btn" style="background: rgba(255,255,255,0.9); color: #1e40af;">Export Report</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <select class="filter-select">
+                <option>📅 May 1, 2026 - May 28, 2026</option>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Quarter</option>
+            </select>
+            <select class="filter-select">
+                <option>All Portfolios</option>
+                <option>M10 UACP</option>
+                <option>M4 AFCC - BYOT</option>
+                <option>M4 AFCC - Digital</option>
+            </select>
+            <select class="filter-select">
+                <option>All PMs</option>
+                <option>Sarah Chen</option>
+                <option>James Park</option>
+                <option>Alex Rodriguez</option>
+            </select>
+            <select class="filter-select">
+                <option>All Statuses</option>
+                <option>On Track</option>
+                <option>At Risk</option>
+                <option>Blocked</option>
+            </select>
+        </div>
+
+        <!-- Colorful Metric Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card white">
+                <div class="metric-label">Total Programs</div>
+                <div class="metric-value">{{ programs['Phase 0']['programs']|length + programs['Phase 1']['programs']|length + programs['Phase 2']['programs']|length + programs['Phase 3']['programs']|length }}</div>
+            </div>
+            <div class="metric-card purple">
+                <div class="metric-label">Phase 0 (Planning)</div>
+                <div class="metric-value">{{ programs['Phase 0']['programs']|length }}</div>
+            </div>
+            <div class="metric-card blue-light">
+                <div class="metric-label">Phase 1 (Discovery)</div>
+                <div class="metric-value">{{ programs['Phase 1']['programs']|length }}</div>
+            </div>
+            <div class="metric-card green">
+                <div class="metric-label">Phase 2 (Productization)</div>
+                <div class="metric-value">{{ programs['Phase 2']['programs']|length }}</div>
+            </div>
+            <div class="metric-card pink">
+                <div class="metric-label">Phase 3 (GTM)</div>
+                <div class="metric-value">{{ programs['Phase 3']['programs']|length }}</div>
+            </div>
+        </div>
+
+        <!-- Phase Columns -->
+        <div class="phase-grid">
+            {% for phase_name in ['Phase 0', 'Phase 1', 'Phase 2', 'Phase 3'] %}
+            <div class="phase-column phase-{{ loop.index0 }}">
+                <div class="phase-header">
+                    <div>
+                        <div>{{ programs[phase_name]['title'] }}</div>
+                        <div style="font-size: 0.75em; font-weight: 400; margin-top: 2px; opacity: 0.9;">{{ programs[phase_name]['subtitle'] }}</div>
+                        <div style="font-size: 0.7em; font-weight: 400; margin-top: 2px; opacity: 0.8; font-style: italic;">({{ programs[phase_name]['cycle'] }})</div>
+                    </div>
+                    <span class="phase-count">{{ programs[phase_name]['programs']|length }}</span>
+                </div>
+                <div class="phase-body">
+                    {% if programs[phase_name]['programs']|length > 0 %}
+                        {% for program in programs[phase_name]['programs'] %}
+                        <div class="program-card">
+                            <div class="program-name">{{ program.name }}</div>
+                            <div class="program-meta">
+                                <span>👤 {{ program.pm }}</span>
+                                {% if program.pod %}
+                                <span>• {{ program.pod }}</span>
+                                {% endif %}
+                                {% if program.team %}
+                                <span>• {{ program.team }}</span>
+                                {% endif %}
+                            </div>
+                            <span class="status-badge">{{ program.status }}</span>
+                            <div class="progress-section">
+                                <div class="progress-label">
+                                    <span>Progress</span>
+                                    <span>{{ program.completion }}%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: {{ program.completion }}%"></div>
+                                </div>
+                            </div>
+                            <div class="next-milestone">📅 {{ program.next_milestone }}</div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="empty-phase">No programs in this phase</div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <footer>
+            <p>🤖 ADLC Process Dashboard - Experimental Prototype</p>
+            <p style="margin-top: 8px;">Last updated: <span id="timestamp"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // Update timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Auto-refresh every 30 seconds
+        setTimeout(() => {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "last_updated": "2026-06-03T07:35:59.412673-07:00",
+  "programs": [
+    {
+      "name": "Email",
+      "pm": "Swati Deo",
+      "arch": "Matthew Nielsen",
+      "subcloud": "AFCC",
+      "gtm": "Aug/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - June"
+    },
+    {
+      "name": "Omni Multi-tab VOC",
+      "pm": "Oana Lungu Polanco",
+      "arch": "TBD",
+      "subcloud": "AFCC",
+      "gtm": "Jul/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - June"
+    },
+    {
+      "name": "Chat Blockers/VOCs",
+      "pm": "Abhisek Dash",
+      "arch": "TBD",
+      "subcloud": "AFCC",
+      "gtm": "Sep/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - July"
+    },
+    {
+      "name": "Multi-modal: 266 Schema Freeze",
+      "pm": "Oana Lungu Polanco",
+      "arch": "Michael Macasek",
+      "subcloud": "AFCC",
+      "gtm": "Oct/26",
+      "completion": 0,
+      "next_milestone": "Prototype Review - August"
+    },
+    {
+      "name": "Setup [Headless]",
+      "pm": "Abhisek Dash",
+      "arch": "Sai Sudarsan Pogaru",
+      "subcloud": "AFCC",
+      "gtm": "Apr/27",
+      "completion": 0,
+      "next_milestone": "Prototype Review - September"
+    }
+  ]
+}

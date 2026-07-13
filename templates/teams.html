@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - Service Cloud Execution Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95em;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: white;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 0;
+            width: calc(100% - 260px);
+            background: white;
+        }
+
+        .dashboard-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: contain;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon" style="background: white; padding: 4px;">
+                    <img src="/static/images/mascot.png" alt="Astro" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span>Service Cloud Execution</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="http://localhost:5001/" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📈</span>
+                <span>Overview</span>
+            </a>
+            <a href="/execution" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📋</span>
+                <span>Execution</span>
+            </a>
+            <a href="/teams" class="nav-item active" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">👥</span>
+                <span>Teams</span>
+            </a>
+            <a href="/milestones" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span class="nav-icon">📅</span>
+                <span>Milestones</span>
+            </a>
+            <div class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>Analytics</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <img src="/static/images/tableau-dashboard.png" alt="Team Capacity & Allocations Dashboard" class="dashboard-image">
+    </div>
+</body>
+</html>
