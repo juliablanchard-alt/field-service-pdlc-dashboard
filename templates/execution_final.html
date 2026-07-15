@@ -929,14 +929,24 @@
         .loc-dot.green { background: #22c55e; }
         .loc-dot.black { background: #111827; }
 
+        .project-link {
+            color: #2563eb;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            color: #1d4ed8;
+        }
+
         .epic-link {
             color: #2563eb;
-            text-decoration: none;
+            text-decoration: underline;
             font-weight: 500;
         }
 
         .epic-link:hover {
-            text-decoration: underline;
+            color: #1d4ed8;
         }
 
         .health-cell {
@@ -1513,7 +1523,12 @@
                 {% for project in program.projects %}
                 <div class="project-section">
                     <div class="project-header">
-                        📦 {{ project.name }}
+                        📦
+                        {% if project.id %}
+                        <a href="https://gus.lightning.force.com/lightning/r/agf__ADM_Product__c/{{ project.id }}/view" target="_blank" class="project-link">{{ project.name }}</a>
+                        {% else %}
+                        {{ project.name }}
+                        {% endif %}
                     </div>
 
                     {% if project.epics %}
@@ -1544,7 +1559,11 @@
                                 </td>
                                 <td>{{ epic.number if epic.number else '-' }}</td>
                                 <td>
-                                    <a href="#" class="epic-link">{{ epic.name }}</a>
+                                    {% if epic.id %}
+                                    <a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/{{ epic.id }}/view" target="_blank" class="epic-link">{{ epic.name }}</a>
+                                    {% else %}
+                                    {{ epic.name }}
+                                    {% endif %}
                                 </td>
                                 <td>
                                     <div class="health-cell">
