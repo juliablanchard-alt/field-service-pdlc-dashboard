@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-12T20:24:53.130147",
+  "last_updated": "2026-07-15T19:13:49.725083",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -8,23 +8,7 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 137,
-      "work_items_closed_june": 46,
-      "capacity_committed_july": 242,
-      "work_items_committed_july": 72,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Scheduling Flows": 107.0
-      },
-      "june_delivered_unmapped": 30.0,
-      "july_committed_by_program": {
-        "264 Scheduling Flows": 218.0
-      },
-      "july_committed_unmapped": 24.0
+      ]
     },
     {
       "name": "FSL - Core - Foundations",
@@ -33,23 +17,7 @@
       "total": 1,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 38,
-      "work_items_closed_june": 13,
-      "capacity_committed_july": 61,
-      "work_items_committed_july": 12,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 WFS - Workforce Management": 33.0
-      },
-      "june_delivered_unmapped": 5.0,
-      "july_committed_by_program": {
-        "264 WFS - Workforce Management": 61.0
-      },
-      "july_committed_unmapped": 0
+      ]
     },
     {
       "name": "FSL - Foundation - Apps",
@@ -58,23 +26,7 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 60,
-      "work_items_closed_june": 23,
-      "capacity_committed_july": 24,
-      "work_items_committed_july": 8,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Onsite Scheduling": 47.0
-      },
-      "june_delivered_unmapped": 13.0,
-      "july_committed_by_program": {
-        "264 Onsite Scheduling": 13.0
-      },
-      "july_committed_unmapped": 11.0
+      ]
     },
     {
       "name": "FSL - Foundation - Atlas",
@@ -83,19 +35,7 @@
       "total": 6,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 176,
-      "work_items_closed_june": 74,
-      "capacity_committed_july": 114,
-      "work_items_committed_july": 32,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 176.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 114.0
+      ]
     },
     {
       "name": "FSL - Foundation - Corecodiles",
@@ -104,25 +44,7 @@
       "total": 6,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 124.0,
-      "work_items_closed_june": 90,
-      "capacity_committed_july": 48.5,
-      "work_items_committed_july": 35,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O: Agentic S&O": 74.0,
-        "FS 264: S&O Trust": 39.0
-      },
-      "june_delivered_unmapped": 11.0,
-      "july_committed_by_program": {
-        "FS 264: S&O: Agentic S&O": 26.0,
-        "FS 264: S&O Trust": 18.5
-      },
-      "july_committed_unmapped": 4.0
+      ]
     },
     {
       "name": "FSL - Operations - Intelligence",
@@ -131,23 +53,7 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 155,
-      "work_items_closed_june": 51,
-      "capacity_committed_july": 106,
-      "work_items_committed_july": 25,
-      "capacity_committed_august": 6,
-      "work_items_committed_august": 2,
-      "capacity_committed_september": 6,
-      "work_items_committed_september": 2,
-      "june_delivered_by_program": {
-        "[264] Mobile Insights GA": 19.0
-      },
-      "june_delivered_unmapped": 136.0,
-      "july_committed_by_program": {
-        "[264] Mobile Insights GA": 15.0
-      },
-      "july_committed_unmapped": 91.0
+      ]
     },
     {
       "name": "FSL - Resource - Dispatch Console",
@@ -156,24 +62,7 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 111,
-      "work_items_closed_june": 42,
-      "capacity_committed_july": 51,
-      "work_items_committed_july": 17,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O Trust": 6.0,
-        "FS 264: S&O: The New Scheduling Console": 18.0
-      },
-      "june_delivered_unmapped": 87.0,
-      "july_committed_by_program": {
-        "FS 264: S&O: The New Scheduling Console": 32.0
-      },
-      "july_committed_unmapped": 19.0
+      ]
     },
     {
       "name": "FSL - Resource - Scheduling Hawks",
@@ -182,19 +71,7 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 336,
-      "work_items_closed_june": 111,
-      "capacity_committed_july": 126,
-      "work_items_committed_july": 31,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 336.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 126.0
+      ]
     },
     {
       "name": "FSL - Resource - Scheduling Intelligence",
@@ -203,26 +80,7 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 173,
-      "work_items_closed_june": 68,
-      "capacity_committed_july": 10,
-      "work_items_committed_july": 5,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O: Agentic S&O": 4.0,
-        "FS 264: S&O Trust": 63.0,
-        "FS 264: S&O: The New Scheduling Console": 51.0,
-        "FS 264: S&O: S&O Customer Success": 1.0
-      },
-      "june_delivered_unmapped": 54.0,
-      "july_committed_by_program": {
-        "FS 264: S&O Trust": 7.0
-      },
-      "july_committed_unmapped": 3.0
+      ]
     },
     {
       "name": "FSL - Resource - Scheduling Orcas",
@@ -231,25 +89,7 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 356,
-      "work_items_closed_june": 142,
-      "capacity_committed_july": 129,
-      "work_items_committed_july": 42,
-      "capacity_committed_august": 3,
-      "work_items_committed_august": 1,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O Trust": 299.0,
-        "FS 264: S&O: Agentic S&O": 57.0
-      },
-      "june_delivered_unmapped": 0,
-      "july_committed_by_program": {
-        "FS 264: S&O Trust": 42.0,
-        "FS 264: S&O: Agentic S&O": 87.0
-      },
-      "july_committed_unmapped": 0
+      ]
     },
     {
       "name": "FSL - Resource - Scheduling Platform",
@@ -258,26 +98,7 @@
       "total": 9,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 152,
-      "work_items_closed_june": 54,
-      "capacity_committed_july": 78,
-      "work_items_committed_july": 29,
-      "capacity_committed_august": 27,
-      "work_items_committed_august": 4,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O Trust": 44.0,
-        "264 Infield": 47.0,
-        "264 Infield & Onsite Hybrid": 17.0
-      },
-      "june_delivered_unmapped": 44.0,
-      "july_committed_by_program": {
-        "FS 264: S&O Trust": 26.0,
-        "264 Infield": 26.0
-      },
-      "july_committed_unmapped": 26.0
+      ]
     },
     {
       "name": "MomentumForce",
@@ -286,23 +107,7 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 188.5,
-      "work_items_closed_june": 156,
-      "capacity_committed_july": 39,
-      "work_items_committed_july": 26,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O Trust": 89.5
-      },
-      "june_delivered_unmapped": 99.0,
-      "july_committed_by_program": {
-        "FS 264: S&O Trust": 14.0
-      },
-      "july_committed_unmapped": 25.0
+      ]
     },
     {
       "name": "Optimization Engineering",
@@ -311,25 +116,7 @@
       "total": 12,
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
-      ],
-      "capacity_delivered_june": 250.0,
-      "work_items_closed_june": 138,
-      "capacity_committed_july": 144.5,
-      "work_items_committed_july": 69,
-      "capacity_committed_august": 39,
-      "work_items_committed_august": 24,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "FS 264: S&O: S&O Customer Success": 29.0,
-        "FS 264: S&O: Agentic S&O": 34.0
-      },
-      "june_delivered_unmapped": 187.0,
-      "july_committed_by_program": {
-        "FS 264: S&O: Agentic S&O": 21.5,
-        "FS 264: S&O: S&O Customer Success": 9.0
-      },
-      "july_committed_unmapped": 114.0
+      ]
     },
     {
       "name": "QuantumForce",
@@ -338,19 +125,7 @@
       "total": 3,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 111,
-      "work_items_closed_june": 98,
-      "capacity_committed_july": 38,
-      "work_items_committed_july": 24,
-      "capacity_committed_august": 14,
-      "work_items_committed_august": 5,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 111.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 38.0
+      ]
     },
     {
       "name": "SFS Core Scheduler",
@@ -359,23 +134,7 @@
       "total": 11,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 182,
-      "work_items_closed_june": 69,
-      "capacity_committed_july": 203,
-      "work_items_committed_july": 62,
-      "capacity_committed_august": 1,
-      "work_items_committed_august": 1,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Operations Console": 144.0
-      },
-      "june_delivered_unmapped": 38.0,
-      "july_committed_by_program": {
-        "264 Operations Console": 77.0
-      },
-      "july_committed_unmapped": 126.0
+      ]
     },
     {
       "name": "SFS Frontline AI",
@@ -384,24 +143,7 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 144,
-      "work_items_closed_june": 89,
-      "capacity_committed_july": 8,
-      "work_items_committed_july": 5,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Mobile Agentic AI": 38.0,
-        "264 Field Service: Workforce Scheduling on Mobile": 6.0
-      },
-      "june_delivered_unmapped": 100.0,
-      "july_committed_by_program": {
-        "264 Field Service: Mobile Agentic AI": 2.0
-      },
-      "july_committed_unmapped": 6.0
+      ]
     },
     {
       "name": "SFS Mobile AGX",
@@ -410,23 +152,7 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 171,
-      "work_items_closed_june": 68,
-      "capacity_committed_july": 20,
-      "work_items_committed_july": 8,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 39.0
-      },
-      "june_delivered_unmapped": 132.0,
-      "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 3.0
-      },
-      "july_committed_unmapped": 17.0
+      ]
     },
     {
       "name": "SFS Mobile Assets",
@@ -435,24 +161,7 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 137,
-      "work_items_closed_june": 80,
-      "capacity_committed_july": 100,
-      "work_items_committed_july": 39,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 32.0
-      },
-      "june_delivered_unmapped": 105.0,
-      "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 18.0,
-        "264 Field Service: Customer Trust": 3.0
-      },
-      "july_committed_unmapped": 79.0
+      ]
     },
     {
       "name": "SFS Mobile Comms and Search",
@@ -461,23 +170,7 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 84,
-      "work_items_closed_june": 41,
-      "capacity_committed_july": 62,
-      "work_items_committed_july": 22,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: KONE": 16.0
-      },
-      "june_delivered_unmapped": 68.0,
-      "july_committed_by_program": {
-        "264 Field Service: KONE": 27.0
-      },
-      "july_committed_unmapped": 35.0
+      ]
     },
     {
       "name": "SFS Mobile Core Experience",
@@ -486,24 +179,7 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 73,
-      "work_items_closed_june": 34,
-      "capacity_committed_july": 95,
-      "work_items_committed_july": 38,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 11.0,
-        "264 Field Service: Customer Trust": 7.0
-      },
-      "june_delivered_unmapped": 55.0,
-      "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 51.0
-      },
-      "july_committed_unmapped": 44.0
+      ]
     },
     {
       "name": "SFS Mobile Location and DC",
@@ -512,24 +188,7 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 135,
-      "work_items_closed_june": 66,
-      "capacity_committed_july": 51,
-      "work_items_committed_july": 26,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 6.0,
-        "264 Field Service: Customer Trust": 2.0
-      },
-      "june_delivered_unmapped": 127.0,
-      "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 1.0
-      },
-      "july_committed_unmapped": 50.0
+      ]
     },
     {
       "name": "SFS Mobile Offline Extensibility",
@@ -538,19 +197,7 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 0,
-      "work_items_closed_june": 0,
-      "capacity_committed_july": 0,
-      "work_items_committed_july": 0,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 0
+      ]
     },
     {
       "name": "SFS Mobile Platform DX",
@@ -559,19 +206,7 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 100,
-      "work_items_closed_june": 46,
-      "capacity_committed_july": 9,
-      "work_items_committed_july": 3,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 100.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 9.0
+      ]
     },
     {
       "name": "SFS Mobile - Quality",
@@ -580,19 +215,7 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 0,
-      "work_items_closed_june": 0,
-      "capacity_committed_july": 0,
-      "work_items_committed_july": 0,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 0
+      ]
     },
     {
       "name": "SFS Mobile Services",
@@ -601,23 +224,7 @@
       "total": 4,
       "portfolios": [
         "264 Field Service Mobile"
-      ],
-      "capacity_delivered_june": 117,
-      "work_items_closed_june": 64,
-      "capacity_committed_july": 97,
-      "work_items_committed_july": 45,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 6.0
-      },
-      "june_delivered_unmapped": 111.0,
-      "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 10.0
-      },
-      "july_committed_unmapped": 87.0
+      ]
     },
     {
       "name": "SFS Setup Experience",
@@ -626,19 +233,7 @@
       "total": 3,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 20,
-      "work_items_closed_june": 11,
-      "capacity_committed_july": 24,
-      "work_items_committed_july": 11,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 20.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 24.0
+      ]
     },
     {
       "name": "SFS - WFM - Worker - Experience",
@@ -647,19 +242,7 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Workforce Scheduling"
-      ],
-      "capacity_delivered_june": 190,
-      "work_items_closed_june": 64,
-      "capacity_committed_july": 23,
-      "work_items_committed_july": 6,
-      "capacity_committed_august": 6,
-      "work_items_committed_august": 2,
-      "capacity_committed_september": 6,
-      "work_items_committed_september": 2,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 190.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 23.0
+      ]
     },
     {
       "name": "SynergyForce",
@@ -668,19 +251,7 @@
       "total": 3,
       "portfolios": [
         "264 Field Service Foundations"
-      ],
-      "capacity_delivered_june": 3,
-      "work_items_closed_june": 3,
-      "capacity_committed_july": 0,
-      "work_items_committed_july": 0,
-      "capacity_committed_august": 0,
-      "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 3.0,
-      "july_committed_by_program": {},
-      "july_committed_unmapped": 0
+      ]
     }
   ]
 }

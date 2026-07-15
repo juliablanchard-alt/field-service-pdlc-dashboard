@@ -579,6 +579,13 @@
             letter-spacing: -0.01em;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            /* Limit to 2 lines max with ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+            max-height: calc(1.4em * 2); /* 2 lines */
         }
 
         .program-name a {
@@ -2733,7 +2740,7 @@
                 </h1>
                 <p class="last-updated" style="font-size: 12.5px; color: white; margin: 0;"></p>
             </div>
-            <button class="refresh-button" onclick="refreshData()" aria-label="Refresh dashboard data" tabindex="-1" style="display: none;">Refresh Data</button>
+            <button class="refresh-button" onclick="refreshData()" aria-label="Refresh dashboard data" tabindex="-1">🔄 Refresh Data</button>
         </div>
     </header>
 
@@ -3828,6 +3835,8 @@
             
             
             
+            
+            
         </div>
 
         <div class="phase-column phase-1 has-subcolumns">
@@ -3870,7 +3879,7 @@
         <div class="phase-column phase-2 has-subcolumns">
             <div class="phase-header">
                 <span>2️⃣ Productization & GTM Initiation</span>
-                <span class="phase-count">21</span>
+                <span class="phase-count">22</span>
             </div>
 
             <div class="phase-subcolumns">
@@ -3891,7 +3900,7 @@
                 <div class="phase-subcolumn inprogress-subcolumn">
                     <div class="subcolumn-header">
                         <span>In Progress</span>
-                        <span class="subcolumn-count">21</span>
+                        <span class="subcolumn-count">22</span>
                     </div>
 
                     
@@ -4005,6 +4014,39 @@
                     
                     
                     
+                    <div class="program-card" data-portfolio="264 Field Service Foundations">
+                        <div class="program-name" style="margin-bottom: 8px;">
+                            
+                            <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/a1fEE00000044Y5YAI/view"
+                               target="_blank">
+                                [264] Field Service: Headless (aka Project Codey)
+                            </a>
+                            
+                        </div>
+
+                        <div style="margin-bottom: 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">264 Field Service Foundations</span>
+                            
+                            
+                                
+                            
+                            
+                            
+                            <span class="badge-on-track" style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">On Track</span>
+                            
+                        </div>
+
+                        <div class="program-meta">
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    
                     <div class="program-card" data-portfolio="264 Field Service Mobile">
                         <div class="program-name" style="margin-bottom: 8px;">
                             
@@ -4083,27 +4125,7 @@
                                 
                                     
                                 
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
                             
-                                
-                                    
                                 
                                     
                                 
@@ -4136,10 +4158,6 @@
                                     
                                 
                             
-                                
-                                    
-                                
-                                    
                                 
                                     
                                 
@@ -5063,10 +5081,6 @@
                                         
                                     
                                 
-                                    
-                                
-                                    
-                                
                             
                             
                                 <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; font-weight: 600;">
@@ -5411,7 +5425,7 @@
             <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">PROGRAMS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">21</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">22</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -5423,13 +5437,13 @@
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">On Track</div>
-                        <div style="font-size: 13px; color: #94a3b8;">29%</div>
-                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">6</div>
+                        <div style="font-size: 13px; color: #94a3b8;">32%</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">7</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">Watch</div>
-                        <div style="font-size: 13px; color: #94a3b8;">10%</div>
+                        <div style="font-size: 13px; color: #94a3b8;">9%</div>
                         <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">2</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -5451,19 +5465,19 @@
             <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">PROJECTS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">70</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">71</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #9ca3af;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">Not Started</div>
-                        <div style="font-size: 13px; color: #94a3b8;">27%</div>
-                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">19</div>
+                        <div style="font-size: 13px; color: #94a3b8;">28%</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">20</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">On Track</div>
-                        <div style="font-size: 13px; color: #94a3b8;">56%</div>
+                        <div style="font-size: 13px; color: #94a3b8;">55%</div>
                         <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">39</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -5491,20 +5505,20 @@
             <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">EPICS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">249</div>
+                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">235</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #9ca3af;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">Not Started</div>
-                        <div style="font-size: 13px; color: #94a3b8;">22%</div>
-                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">55</div>
+                        <div style="font-size: 13px; color: #94a3b8;">17%</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">40</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">On Track</div>
-                        <div style="font-size: 13px; color: #94a3b8;">53%</div>
-                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">133</div>
+                        <div style="font-size: 13px; color: #94a3b8;">56%</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">132</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
@@ -5521,8 +5535,8 @@
                     <div style="display: flex; align-items: center; gap: 12px;">
                         <div style="width: 10px; height: 10px; border-radius: 50%; background: #3b82f6;"></div>
                         <div style="flex: 1; font-size: 13px; color: #475569;">Completed</div>
-                        <div style="font-size: 13px; color: #94a3b8;">18%</div>
-                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">44</div>
+                        <div style="font-size: 13px; color: #94a3b8;">19%</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #1e293b; min-width: 32px; text-align: right;">45</div>
                     </div>
                 </div>
             </div>
@@ -5595,7 +5609,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -5618,6 +5632,70 @@
                         <span class="epic-badge badge-on-track">On Track</span>
                         
                     </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Program Row -->
+    <div class="program-row" data-program-id="a1fEE00000044Y5YAI" data-portfolio="264 Field Service Foundations">
+        <div class="program-header" onclick="toggleProgram(this)">
+            <div class="expand-icon">▶</div>
+            <div class="program-content">
+                <a href="https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE00000044Y5YAI/view"
+                   target="_blank"
+                   class="program-name-link"
+                   onclick="event.stopPropagation();"
+                   tabindex="-1">[264] Field Service: Headless (aka Project Codey) ↗</a>
+                <div class="program-meta-row">
+                    <span class="program-meta-badge portfolio-badge">264 Field Service Foundations</span>
+                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                    <span class="program-meta-badge pm-badge">👤 TBD</span>
+
+                    
+
+                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                    <span class="program-meta-badge count-badge">🎯 1 Project</span>
+                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                    
+                    <span class="program-badge badge-on-track">On Track</span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Container -->
+        <div class="projects-container">
+            
+            <div class="project-container" data-project-health="not-started">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <div class="project-expand-icon">▶</div>
+                    <div class="project-icon">📦</div>
+                    <div class="project-info">
+                        <div class="project-name">
+                            
+                            -
+                            
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-meta-item">
+                                <span class="project-meta-label">Epics:</span> 0
+                            </span>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="project-health-badge">
+                        
+                        <span class="project-badge badge-not-started">Not Started</span>
+                        
+                    </div>
+                </div>
+                <div class="epics-container">
                     
                 </div>
             </div>
@@ -5833,7 +5911,7 @@
                         </div>
                         <div class="project-meta">
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Epics:</span> 12
+                                <span class="project-meta-label">Epics:</span> 3
                             </span>
                             
                             
@@ -5851,7 +5929,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -5872,94 +5950,6 @@
                         </span>
                         
                         <span class="epic-badge badge-on-track">On Track</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Conditional Visibility
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-on-track">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Flow Builder, Setup Experience
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-on-track">On Track</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Instrumentation
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Iteration of Steps
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Optional Actions
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Parallel Steps
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [AGX GA] Screen Debugging
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [Workforce Scheduling GA] Additional Cards
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
                         
                     </div>
                     
@@ -5985,17 +5975,6 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 [Workforce Scheduling GA] Template Enhancements
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
@@ -6016,13 +5995,13 @@
                         </div>
                         <div class="project-meta">
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Epics:</span> 3
+                                <span class="project-meta-label">Epics:</span> 2
                             </span>
                             
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Dev Lead:</span> Maya Shavin
+                                <span class="project-meta-label">Dev Lead:</span> Adi Sharet
                             </span>
                             
                             
@@ -6034,7 +6013,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-12
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -6046,17 +6025,6 @@
                     </div>
                 </div>
                 <div class="epics-container">
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            [264][SFS MCX][Data Capture] Automation Enhancement - Phase 2
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
                     
                     <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
@@ -6118,7 +6086,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-10
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -6283,25 +6251,25 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] iOS Mobile Experience
                             
                         </span>
                         
-                        <span class="epic-badge badge-not-started">Not Started</span>
+                        <span class="epic-badge badge-on-track">On Track</span>
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] iOS Offline-ability
                             
                         </span>
                         
-                        <span class="epic-badge badge-not-started">Not Started</span>
+                        <span class="epic-badge badge-on-track">On Track</span>
                         
                     </div>
                     
@@ -6393,7 +6361,7 @@
                         </div>
                         <div class="project-meta">
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Epics:</span> 4
+                                <span class="project-meta-label">Epics:</span> 2
                             </span>
                             
                             
@@ -6411,7 +6379,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -6435,36 +6403,14 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
                             
                             [264] [SFS Mobile Assets] [Unified Scheduling] Service document for AGX
                             
                         </span>
                         
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            [SFS Mobile Assets] Service Document 2.0 - Close Logging Gaps (Android + iOS)
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            [SFS Mobile Assets] Service document bugs
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
+                        <span class="epic-badge badge-on-track">On Track</span>
                         
                     </div>
                     
@@ -6622,17 +6568,6 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 SFS Frontline AI - Image to Form (AI)
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
                     <div class="epic-row epic-card-health-unknown">
                         <span class="epic-name">
                             
@@ -6688,17 +6623,6 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
-                        <span class="epic-name">
-                            
-                            264 SFS Frontline AI - Voice to Form (Traceability)
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-not-started">Not Started</span>
-                        
-                    </div>
-                    
                     <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
                             
@@ -6729,6 +6653,28 @@
                         </span>
                         
                         <span class="epic-badge badge-not-started">Not Started</span>
+                        
+                    </div>
+                    
+                    <div class="epic-row epic-card-health-not-started">
+                        <span class="epic-name">
+                            
+                            266 SFS Frontline AI - Image to Form (AI)
+                            
+                        </span>
+                        
+                        <span class="epic-badge badge-not-started">Not Started</span>
+                        
+                    </div>
+                    
+                    <div class="epic-row epic-card-health-unknown">
+                        <span class="epic-name">
+                            
+                            266 SFS Frontline AI - Voice to Form (Traceability)
+                            
+                        </span>
+                        
+                        <span class="epic-badge badge-on-hold">On Hold</span>
                         
                     </div>
                     
@@ -6798,7 +6744,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7032,7 +6978,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7277,7 +7223,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7447,7 +7393,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7564,7 +7510,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7724,7 +7670,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -7857,7 +7803,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-06-08
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -8073,7 +8019,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -8248,7 +8194,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-06-30
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -8482,7 +8428,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -8631,7 +8577,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-12
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -8709,7 +8655,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-12
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9183,7 +9129,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9313,7 +9259,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-12
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9588,7 +9534,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-09
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9683,7 +9629,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-12
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9707,14 +9653,14 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-completed">
                         <span class="epic-name">
                             
                             [264] SFS Unified Scheduling Agent HLD
                             
                         </span>
                         
-                        <span class="epic-badge badge-on-track">On Track</span>
+                        <span class="epic-badge badge-completed">Completed</span>
                         
                     </div>
                     
@@ -9829,7 +9775,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -9984,7 +9930,7 @@
                                target="_blank"
                                style="color: inherit; text-decoration: none; cursor: pointer;"
                                onclick="event.stopPropagation();">
-                                264 WFS - Workforce Management
+                                264 WFS - Workforce (Unified) Scheduling
                             </a>
                             
                         </div>
@@ -10008,7 +9954,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-06-07
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-14
                             </span>
                             
                         </div>
@@ -10021,14 +9967,14 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-unknown">
                         <span class="epic-name">
                             
                             262 SFS [Core Foundations] Event Management
                             
                         </span>
                         
-                        <span class="epic-badge badge-on-track">On Track</span>
+                        <span class="epic-badge badge-canceled">Canceled</span>
                         
                     </div>
                     
@@ -10120,7 +10066,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -10607,7 +10553,7 @@
                         </div>
                         <div class="project-meta">
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Epics:</span> 9
+                                <span class="project-meta-label">Epics:</span> 7
                             </span>
                             
                             
@@ -10674,7 +10620,7 @@
                     <div class="epic-row epic-card-health-on-track">
                         <span class="epic-name">
                             
-                            264 [FSL - Foundation - Apps] Territory Sharing
+                            264 [FSL - Foundation - Apps] Service Territory Sharing
                             
                         </span>
                         
@@ -10697,28 +10643,6 @@
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-on-track">On Track</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-unknown">
-                        <span class="epic-name">
-                            
-                            264 SFS [Unified Scheduling] - Fetch Data Hammer
-                            
-                        </span>
-                        
-                        <span class="epic-badge badge-on-hold">On Hold</span>
-                        
-                    </div>
-                    
-                    <div class="epic-row epic-card-health-on-track">
-                        <span class="epic-name">
-                            
-                            264 SFS [Unified Scheduling] - Generic Fetch Data
                             
                         </span>
                         
@@ -10808,7 +10732,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -10985,7 +10909,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-10
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -11195,7 +11119,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -11295,7 +11219,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-11
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -11516,7 +11440,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-11
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -11882,7 +11806,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-13
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -12192,7 +12116,7 @@
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-11
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-15
                             </span>
                             
                         </div>
@@ -23466,10 +23390,10 @@
                             10
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            137
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            242
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23493,42 +23417,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Scheduling Flows
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            107.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            218.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            30.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            24.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -23549,10 +23442,10 @@
                             1
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            38
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            61
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23576,42 +23469,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 WFS - Workforce Management
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            33.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            61.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            5.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -23632,10 +23494,10 @@
                             7
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            60
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            24
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23659,42 +23521,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Onsite Scheduling
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            47.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            13.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            13.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            11.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -23715,10 +23546,10 @@
                             6
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            176
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            114
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23767,10 +23598,10 @@
                             6
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            124.0
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            48.5
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23794,58 +23625,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            39.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            18.5
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: Agentic S&O
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            74.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            26.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            11.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            4.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -23866,16 +23650,16 @@
                             10
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            155
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            106
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            6
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            6
+                            —
                         </td>
                     </tr>
 
@@ -23893,42 +23677,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            [264] Mobile Insights GA
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            19.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            15.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            136.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            91.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -23949,10 +23702,10 @@
                             7
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            111
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            51
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -23976,58 +23729,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            6.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: The New Scheduling Console
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            18.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            32.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            87.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            19.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24048,10 +23754,10 @@
                             10
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            336
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            126
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24100,10 +23806,10 @@
                             8
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            173
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            10
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24127,90 +23833,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            63.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            7.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: Agentic S&O
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            4.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: S&O Customer Success
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            1.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: The New Scheduling Console
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            51.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            54.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            3.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24231,13 +23858,13 @@
                             7
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            356
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            129
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            3
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24258,42 +23885,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            299.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            42.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: Agentic S&O
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            57.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            87.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24314,13 +23910,13 @@
                             9
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            152
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            78
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            27
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24341,74 +23937,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Infield
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            47.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            26.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Infield & Onsite Hybrid
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            17.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            44.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            26.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            44.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            26.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24429,10 +23962,10 @@
                             8
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            188.5
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            39
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24456,42 +23989,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            89.5
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            14.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            99.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            25.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24512,13 +24014,13 @@
                             12
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            250.0
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            144.5
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            39
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24539,58 +24041,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: Agentic S&O
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            34.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            21.5
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            FS 264: S&O: S&O Customer Success
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            29.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            9.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            187.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            114.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24611,13 +24066,13 @@
                             3
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            111
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            38
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            14
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24663,13 +24118,13 @@
                             11
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            182
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            203
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            1
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24690,42 +24145,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Operations Console
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            144.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            77.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            38.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            126.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24746,10 +24170,10 @@
                             7
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            144
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            8
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24773,58 +24197,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Mobile Agentic AI
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            38.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            2.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            6.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            100.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            6.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24845,10 +24222,10 @@
                             2
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            171
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            20
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24872,42 +24249,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            39.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            3.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            132.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            17.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -24928,10 +24274,10 @@
                             8
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            137
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            100
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -24955,58 +24301,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Customer Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            3.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            32.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            18.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            105.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            79.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -25027,10 +24326,10 @@
                             5
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            84
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            62
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25054,42 +24353,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: KONE
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            16.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            27.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            68.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            35.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -25110,10 +24378,10 @@
                             5
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            73
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            95
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25137,58 +24405,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Customer Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            7.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            11.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            51.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            55.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            44.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -25209,10 +24430,10 @@
                             8
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            135
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            51
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25236,58 +24457,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Customer Trust
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            2.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            —
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            6.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            1.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            127.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            50.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -25360,10 +24534,10 @@
                             8
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            100
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            9
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25464,10 +24638,10 @@
                             4
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            117
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            97
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25491,42 +24665,11 @@
                                     <col style="width: auto;">
                                 </colgroup>
                                 
-                                    
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b; font-style: italic;">
-                                            264 Field Service: Workforce Scheduling on Mobile
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #059669; border-left: 2px solid #0ea5e9;">
-                                            6.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
-                                            10.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
-
-                                    
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
-                                            [Unmapped]
-                                        </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8; border-left: 2px solid #0ea5e9;">
-                                            111.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #94a3b8;">
-                                            87.0
-                                        </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                    </tr>
-                                    
+                                <tr>
+                                    <td colspan="7" style="padding: 16px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        No program mapping available
+                                    </td>
+                                </tr>
                                 
                             </table>
                         </td>
@@ -25547,10 +24690,10 @@
                             3
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            20
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            24
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -25599,16 +24742,16 @@
                             2
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            190
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            23
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            6
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            6
+                            —
                         </td>
                     </tr>
 
@@ -25651,7 +24794,7 @@
                             3
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            3
+                            —
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
                             —
@@ -26679,6 +25822,41 @@ document.getElementById('program-search').addEventListener('input', (e) => {
             container.classList.toggle('expanded');
             header.classList.toggle('expanded');
         }
+
+        // Auto-refresh every 5 minutes (300,000 ms)
+        // Only for Flask version - GitHub Pages uses static data
+        const AUTO_REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
+        let autoRefreshTimer;
+
+        function startAutoRefresh() {
+            // Check if /api/refresh endpoint exists (Flask app)
+            fetch('/api/refresh', { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok || response.status === 405) {
+                        // Endpoint exists, enable auto-refresh
+                        console.log('Auto-refresh enabled: will refresh every 5 minutes');
+                        autoRefreshTimer = setInterval(() => {
+                            console.log('Auto-refreshing dashboard...');
+                            refreshData();
+                        }, AUTO_REFRESH_INTERVAL);
+                    } else {
+                        console.log('Static site detected - auto-refresh disabled');
+                    }
+                })
+                .catch(() => {
+                    console.log('Static site detected - auto-refresh disabled');
+                });
+        }
+
+        // Start auto-refresh on page load
+        window.addEventListener('load', startAutoRefresh);
+
+        // Clear timer on page unload
+        window.addEventListener('beforeunload', () => {
+            if (autoRefreshTimer) {
+                clearInterval(autoRefreshTimer);
+            }
+        });
     </script>
 </body>
 </html>
