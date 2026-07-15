@@ -5,20 +5,37 @@ Converts Flask template to static HTML with embedded JSON data
 """
 import json
 import os
+import sys
 from jinja2 import Template
 
-# Load data files
-with open('data/execution_data.json', 'r') as f:
-    exec_data = json.load(f)
+# Load data files with error handling
+try:
+    with open('data/execution_data.json', 'r') as f:
+        exec_data = json.load(f)
+except Exception as e:
+    print(f"Warning: Could not load execution_data.json: {e}")
+    exec_data = {'programs': [], 'last_updated': None}
 
-with open('data/phase_0_programs.json', 'r') as f:
-    phase_0_data = json.load(f)
+try:
+    with open('data/phase_0_programs.json', 'r') as f:
+        phase_0_data = json.load(f)
+except Exception as e:
+    print(f"Warning: Could not load phase_0_programs.json: {e}")
+    phase_0_data = {'programs': []}
 
-with open('data/phase_1_programs.json', 'r') as f:
-    phase_1_data = json.load(f)
+try:
+    with open('data/phase_1_programs.json', 'r') as f:
+        phase_1_data = json.load(f)
+except Exception as e:
+    print(f"Warning: Could not load phase_1_programs.json: {e}")
+    phase_1_data = {'programs': []}
 
-with open('data/teams_data.json', 'r') as f:
-    teams_data = json.load(f)
+try:
+    with open('data/teams_data.json', 'r') as f:
+        teams_data = json.load(f)
+except Exception as e:
+    print(f"Warning: Could not load teams_data.json: {e}")
+    teams_data = {'teams': []}
 
 # Load the template
 with open('templates/field_service_dynamic.html', 'r') as f:
@@ -150,12 +167,20 @@ html = template.render(
 )
 
 # Write to docs/index.html
-with open('docs/index.html', 'w') as f:
-    f.write(html)
+try:
+    # Ensure docs directory exists
+    os.makedirs('docs', exist_ok=True)
 
-print("✅ Successfully synced field_service_dynamic.html to docs/index.html")
-print(f"   - {len(all_programs)} total programs")
-print(f"   - {total_execution_programs} execution programs")
-print(f"   - {total_projects} projects")
-print(f"   - {total_epics} epics")
-print(f"   - {total_teams} teams")
+    with open('docs/index.html', 'w') as f:
+        f.write(html)
+
+    print("✅ Successfully synced field_service_dynamic.html to docs/index.html")
+    print(f"   - {len(all_programs)} total programs")
+    print(f"   - {total_execution_programs} execution programs")
+    print(f"   - {total_projects} projects")
+    print(f"   - {total_epics} epics")
+    print(f"   - {total_teams} teams")
+    sys.exit(0)
+except Exception as e:
+    print(f"❌ Error writing to docs/index.html: {e}")
+    sys.exit(1)

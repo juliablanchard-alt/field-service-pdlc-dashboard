@@ -824,9 +824,48 @@ def milestones():
     """Milestones calendar view"""
     return render_template('milestones.html')
 
+@app.route('/api/refresh', methods=['GET', 'POST'])
+def refresh_all_data():
+    """Refresh all dashboard data (execution + teams)"""
+    try:
+        import subprocess
+        base_dir = os.path.dirname(__file__)
+        results = []
+
+        # Fetch execution data
+        exec_script = os.path.join(base_dir, 'fetch_execution_data.py')
+        exec_result = subprocess.run(['python3', exec_script], capture_output=True, text=True, timeout=120)
+        results.append({
+            'script': 'execution',
+            'success': exec_result.returncode == 0,
+            'output': exec_result.stdout if exec_result.returncode == 0 else exec_result.stderr
+        })
+
+        # Fetch teams data
+        teams_script = os.path.join(base_dir, 'fetch_teams_data.py')
+        teams_result = subprocess.run(['python3', teams_script], capture_output=True, text=True, timeout=120)
+        results.append({
+            'script': 'teams',
+            'success': teams_result.returncode == 0,
+            'output': teams_result.stdout if teams_result.returncode == 0 else teams_result.stderr
+        })
+
+        # Check if all succeeded
+        all_success = all(r['success'] for r in results)
+
+        if all_success:
+            return jsonify({"success": True, "message": "All data refreshed successfully", "details": results})
+        else:
+            return jsonify({"success": False, "message": "Some refreshes failed", "details": results}), 207
+
+    except subprocess.TimeoutExpired:
+        return jsonify({"success": False, "error": "Refresh timeout - try again later"}), 500
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
 @app.route('/api/refresh-execution-data', methods=['POST'])
 def refresh_execution_data():
-    """Refresh execution data from GUS"""
+    """Refresh execution data from GUS (legacy endpoint)"""
     try:
         import subprocess
         script_path = os.path.join(os.path.dirname(__file__), 'fetch_execution_data.py')

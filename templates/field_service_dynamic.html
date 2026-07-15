@@ -579,6 +579,13 @@
             letter-spacing: -0.01em;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            /* Limit to 2 lines max with ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+            max-height: calc(1.4em * 2); /* 2 lines */
         }
 
         .program-name a {
@@ -2733,7 +2740,7 @@
                 </h1>
                 <p class="last-updated" style="font-size: 12.5px; color: white; margin: 0;"></p>
             </div>
-            <button class="refresh-button" onclick="refreshData()" aria-label="Refresh dashboard data" tabindex="-1" style="display: none;">Refresh Data</button>
+            <button class="refresh-button" onclick="refreshData()" aria-label="Refresh dashboard data" tabindex="-1">🔄 Refresh Data</button>
         </div>
     </header>
 
@@ -2841,10 +2848,10 @@
                         <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program.id }}/view"
                            target="_blank"
                            style="color: inherit; text-decoration: none; cursor: pointer;">
-                            {{ program.name[:80] }}{% if program.name|length > 80 %}...{% endif %}
+                            {{ program.name }}
                         </a>
                         {% else %}
-                        {{ program.name[:80] }}{% if program.name|length > 80 %}...{% endif %}
+                        {{ program.name }}
                         {% endif %}
                     </div>
 
@@ -15440,6 +15447,41 @@ document.getElementById('program-search').addEventListener('input', (e) => {
             container.classList.toggle('expanded');
             header.classList.toggle('expanded');
         }
+
+        // Auto-refresh every 5 minutes (300,000 ms)
+        // Only for Flask version - GitHub Pages uses static data
+        const AUTO_REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
+        let autoRefreshTimer;
+
+        function startAutoRefresh() {
+            // Check if /api/refresh endpoint exists (Flask app)
+            fetch('/api/refresh', { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok || response.status === 405) {
+                        // Endpoint exists, enable auto-refresh
+                        console.log('Auto-refresh enabled: will refresh every 5 minutes');
+                        autoRefreshTimer = setInterval(() => {
+                            console.log('Auto-refreshing dashboard...');
+                            refreshData();
+                        }, AUTO_REFRESH_INTERVAL);
+                    } else {
+                        console.log('Static site detected - auto-refresh disabled');
+                    }
+                })
+                .catch(() => {
+                    console.log('Static site detected - auto-refresh disabled');
+                });
+        }
+
+        // Start auto-refresh on page load
+        window.addEventListener('load', startAutoRefresh);
+
+        // Clear timer on page unload
+        window.addEventListener('beforeunload', () => {
+            if (autoRefreshTimer) {
+                clearInterval(autoRefreshTimer);
+            }
+        });
     </script>
 </body>
 </html>
