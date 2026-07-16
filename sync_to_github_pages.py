@@ -52,15 +52,19 @@ teams = teams_data.get('teams', [])
 # Build programs list combining all phases
 all_programs = []
 
-# Add Phase 0
+# Add Phase 0 and Phase 1 from phase_0_programs.json (which includes both)
+# Respect the phase field already set in the JSON
 for prog in phase_0_programs:
-    prog['phase'] = '0'
+    # Only set phase if not already present
+    if 'phase' not in prog:
+        prog['phase'] = '0'
     all_programs.append(prog)
 
-# Add Phase 1
-for prog in phase_1_programs:
-    prog['phase'] = '1'
-    all_programs.append(prog)
+# Add old Phase 1 programs from phase_1_programs.json (if any)
+# Skip these for now since we're using Google Sheet data
+# for prog in phase_1_programs:
+#     prog['phase'] = '1'
+#     all_programs.append(prog)
 
 # Add Phase 2 (execution programs)
 for prog in execution_programs:
@@ -144,13 +148,18 @@ total_teams = len(teams)
 total_filled = sum(t.get('filled', 0) for t in teams)
 total_non_filled = sum(t.get('non_filled', 0) for t in teams)
 
+# Calculate actual phase counts from all_programs
+actual_phase_0_count = sum(1 for p in all_programs if p.get('phase') == '0')
+actual_phase_1_count = sum(1 for p in all_programs if p.get('phase') == '1')
+actual_phase_2_count = sum(1 for p in all_programs if p.get('phase') == '2')
+
 # Render template
 html = template.render(
     programs=all_programs,
     portfolios=portfolios,
-    phase_0_count=len(phase_0_programs),
-    phase_1_count=len(phase_1_programs),
-    phase_2_count=len(execution_programs),
+    phase_0_count=actual_phase_0_count,
+    phase_1_count=actual_phase_1_count,
+    phase_2_count=actual_phase_2_count,
     phase_3_count=0,
     execution_programs=execution_programs,
     total_execution_programs=total_execution_programs,

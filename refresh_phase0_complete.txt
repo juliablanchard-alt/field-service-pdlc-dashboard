@@ -1,0 +1,15 @@
+# COMPLETE PHASE 0 REFRESH PROCESS
+
+To refresh Phase 0 data to match the Google Sheet:
+
+1. Tell Claude: "Refresh Phase 0 data from the Field Service Google Sheet"
+
+2. Claude will:
+   - Fetch ALL rows from the sheet via MCP
+   - Parse rows filtering for: PM Backlog, Prototyping, Ready for Review, Engineering Backlog
+   - Save to data/phase_0_programs.json
+   - Each program will include a link back to the Google Sheet row
+
+3. Then click the refresh button on localhost:5002 to see the updated data
+
+Current issue: Only have ~50 rows processed, need all 104 rows
