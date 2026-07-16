@@ -14467,17 +14467,40 @@
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #475569; font-weight: 600;">
                             {{ team.total }}
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #059669; font-weight: 600; border-left: 2px solid #0ea5e9;">
-                            {{ team.capacity_delivered_june if team.capacity_delivered_june else '—' }}
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; font-weight: 600; border-left: 2px solid #0ea5e9;">
+                            {% if team.june_delivered %}
+                                <div style="color: #059669;">{{ team.june_delivered }}</div>
+                                <div style="font-size: 11px; color: #94a3b8; font-weight: 400;">of {{ team.june_capacity_limit|int }} PD</div>
+                            {% else %}
+                                <span style="color: #cbd5e1;">—</span>
+                            {% endif %}
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            {{ team.capacity_committed_july if team.capacity_committed_july else '—' }}
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; font-weight: 600;">
+                            {% if team.july_committed %}
+                                {% set pct = (team.july_committed / team.july_capacity_limit * 100) if team.july_capacity_limit > 0 else 0 %}
+                                <div style="color: {% if pct > 100 %}#dc2626{% elif pct > 80 %}#f59e0b{% else %}#2563eb{% endif %};">{{ team.july_committed }}</div>
+                                <div style="font-size: 11px; color: #94a3b8; font-weight: 400;">of {{ team.july_capacity_limit|int }} PD ({{ pct|int }}%)</div>
+                            {% else %}
+                                <span style="color: #cbd5e1;">—</span>
+                            {% endif %}
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            {{ team.capacity_committed_august if team.capacity_committed_august else '—' }}
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; font-weight: 600;">
+                            {% if team.august_committed %}
+                                {% set pct = (team.august_committed / team.august_capacity_limit * 100) if team.august_capacity_limit > 0 else 0 %}
+                                <div style="color: {% if pct > 100 %}#dc2626{% elif pct > 80 %}#f59e0b{% else %}#2563eb{% endif %};">{{ team.august_committed }}</div>
+                                <div style="font-size: 11px; color: #94a3b8; font-weight: 400;">of {{ team.august_capacity_limit|int }} PD ({{ pct|int }}%)</div>
+                            {% else %}
+                                <span style="color: #cbd5e1;">—</span>
+                            {% endif %}
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #2563eb; font-weight: 600;">
-                            {{ team.capacity_committed_september if team.capacity_committed_september else '—' }}
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; font-weight: 600;">
+                            {% if team.september_committed %}
+                                {% set pct = (team.september_committed / team.september_capacity_limit * 100) if team.september_capacity_limit > 0 else 0 %}
+                                <div style="color: {% if pct > 100 %}#dc2626{% elif pct > 80 %}#f59e0b{% else %}#2563eb{% endif %};">{{ team.september_committed }}</div>
+                                <div style="font-size: 11px; color: #94a3b8; font-weight: 400;">of {{ team.september_capacity_limit|int }} PD ({{ pct|int }}%)</div>
+                            {% else %}
+                                <span style="color: #cbd5e1;">—</span>
+                            {% endif %}
                         </td>
                     </tr>
 

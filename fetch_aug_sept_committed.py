@@ -81,11 +81,18 @@ for month_num, month_name in [('08', 'August'), ('09', 'September')]:
             team_committed[team_name]['work_items'] += 1
 
     # Update teams data
-    field_name = f'capacity_committed_{month_name.lower()}'
-    count_field = f'work_items_committed_{month_name.lower()}'
+    month_lower = month_name.lower()
+    field_name = f'{month_lower}_committed'
+    count_field = f'{month_lower}_work_items'
+    capacity_field = f'{month_lower}_capacity_limit'
 
     for team in teams_data['teams']:
         team_name = team['name']
+
+        # Calculate theoretical capacity: filled × 0.8 × 20 working days
+        filled = team.get('filled', 0)
+        team[capacity_field] = filled * 0.8 * 20
+
         if team_name in team_committed:
             team[field_name] = round(team_committed[team_name]['points'], 1)
             team[count_field] = team_committed[team_name]['work_items']

@@ -84,12 +84,17 @@ for item in work_items:
 # Step 5: Update teams data with committed capacity
 for team in teams_data['teams']:
     team_name = team['name']
+
+    # Calculate theoretical capacity: filled × 0.8 × 20 working days
+    filled = team.get('filled', 0)
+    team['july_capacity_limit'] = filled * 0.8 * 20
+
     if team_name in team_committed:
-        team['capacity_committed_july'] = round(team_committed[team_name]['points'], 1)
-        team['work_items_committed_july'] = team_committed[team_name]['work_items']
+        team['july_committed'] = round(team_committed[team_name]['points'], 1)
+        team['july_work_items'] = team_committed[team_name]['work_items']
     else:
-        team['capacity_committed_july'] = 0
-        team['work_items_committed_july'] = 0
+        team['july_committed'] = 0
+        team['july_work_items'] = 0
 
 # Update timestamp
 teams_data['last_updated'] = datetime.now().isoformat()
@@ -106,9 +111,9 @@ print("=" * 80)
 total_points = 0
 total_items = 0
 
-for team in sorted(teams_data['teams'], key=lambda t: t.get('capacity_committed_july', 0), reverse=True):
-    points = team.get('capacity_committed_july', 0)
-    items = team.get('work_items_committed_july', 0)
+for team in sorted(teams_data['teams'], key=lambda t: t.get('july_committed', 0), reverse=True):
+    points = team.get('july_committed', 0)
+    items = team.get('july_work_items', 0)
     print(f"{team['name']:<50} {points:>15.1f} {items:>12}")
     total_points += points
     total_items += items

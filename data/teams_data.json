@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16T19:35:05.164642",
+  "last_updated": "2026-07-16T19:50:35.726219",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -8,7 +8,21 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 160.0,
+      "june_delivered": 233,
+      "june_work_items": 91,
+      "capacity_committed_july": 220,
+      "work_items_committed_july": 63,
+      "july_capacity_limit": 160.0,
+      "july_committed": 220,
+      "july_work_items": 63,
+      "august_capacity_limit": 160.0,
+      "august_committed": 3,
+      "august_work_items": 2,
+      "september_capacity_limit": 160.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Core - Foundations",
@@ -17,7 +31,21 @@
       "total": 1,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 16.0,
+      "june_delivered": 74,
+      "june_work_items": 20,
+      "capacity_committed_july": 61,
+      "work_items_committed_july": 12,
+      "july_capacity_limit": 16.0,
+      "july_committed": 61,
+      "july_work_items": 12,
+      "august_capacity_limit": 16.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 16.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Foundation - Apps",
@@ -26,7 +54,21 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 112.00000000000001,
+      "june_delivered": 479,
+      "june_work_items": 100,
+      "capacity_committed_july": 103,
+      "work_items_committed_july": 35,
+      "july_capacity_limit": 112.00000000000001,
+      "july_committed": 103,
+      "july_work_items": 35,
+      "august_capacity_limit": 112.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 112.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Foundation - Atlas",
@@ -35,7 +77,21 @@
       "total": 6,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 96.00000000000001,
+      "june_delivered": 250,
+      "june_work_items": 103,
+      "capacity_committed_july": 107,
+      "work_items_committed_july": 35,
+      "july_capacity_limit": 96.00000000000001,
+      "july_committed": 107,
+      "july_work_items": 35,
+      "august_capacity_limit": 96.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 96.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Foundation - Corecodiles",
@@ -44,7 +100,21 @@
       "total": 6,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 96.00000000000001,
+      "june_delivered": 146.0,
+      "june_work_items": 107,
+      "capacity_committed_july": 32.5,
+      "work_items_committed_july": 24,
+      "july_capacity_limit": 96.00000000000001,
+      "july_committed": 32.5,
+      "july_work_items": 24,
+      "august_capacity_limit": 96.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 96.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Operations - Intelligence",
@@ -53,7 +123,21 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 160.0,
+      "june_delivered": 163,
+      "june_work_items": 53,
+      "capacity_committed_july": 140,
+      "work_items_committed_july": 36,
+      "july_capacity_limit": 160.0,
+      "july_committed": 140,
+      "july_work_items": 36,
+      "august_capacity_limit": 160.0,
+      "august_committed": 6,
+      "august_work_items": 2,
+      "september_capacity_limit": 160.0,
+      "september_committed": 6,
+      "september_work_items": 2
     },
     {
       "name": "FSL - Resource - Dispatch Console",
@@ -62,7 +146,21 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 112.00000000000001,
+      "june_delivered": 168,
+      "june_work_items": 59,
+      "capacity_committed_july": 43,
+      "work_items_committed_july": 13,
+      "july_capacity_limit": 112.00000000000001,
+      "july_committed": 43,
+      "july_work_items": 13,
+      "august_capacity_limit": 112.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 112.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Resource - Scheduling Hawks",
@@ -71,7 +169,21 @@
       "total": 10,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 160.0,
+      "june_delivered": 464,
+      "june_work_items": 156,
+      "capacity_committed_july": 138,
+      "work_items_committed_july": 38,
+      "july_capacity_limit": 160.0,
+      "july_committed": 138,
+      "july_work_items": 38,
+      "august_capacity_limit": 160.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 160.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Resource - Scheduling Intelligence",
@@ -80,7 +192,21 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 128.0,
+      "june_delivered": 210,
+      "june_work_items": 81,
+      "capacity_committed_july": 73,
+      "work_items_committed_july": 25,
+      "july_capacity_limit": 128.0,
+      "july_committed": 73,
+      "july_work_items": 25,
+      "august_capacity_limit": 128.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 128.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Resource - Scheduling Orcas",
@@ -89,7 +215,21 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 112.00000000000001,
+      "june_delivered": 479,
+      "june_work_items": 187,
+      "capacity_committed_july": 89,
+      "work_items_committed_july": 30,
+      "july_capacity_limit": 112.00000000000001,
+      "july_committed": 89,
+      "july_work_items": 30,
+      "august_capacity_limit": 112.00000000000001,
+      "august_committed": 3,
+      "august_work_items": 1,
+      "september_capacity_limit": 112.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "FSL - Resource - Scheduling Platform",
@@ -98,7 +238,21 @@
       "total": 9,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 144.0,
+      "june_delivered": 354,
+      "june_work_items": 103,
+      "capacity_committed_july": 72,
+      "work_items_committed_july": 25,
+      "july_capacity_limit": 144.0,
+      "july_committed": 72,
+      "july_work_items": 25,
+      "august_capacity_limit": 144.0,
+      "august_committed": 27,
+      "august_work_items": 4,
+      "september_capacity_limit": 144.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "MomentumForce",
@@ -107,7 +261,21 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 128.0,
+      "june_delivered": 405.5,
+      "june_work_items": 186,
+      "capacity_committed_july": 92.0,
+      "work_items_committed_july": 62,
+      "july_capacity_limit": 128.0,
+      "july_committed": 92.0,
+      "july_work_items": 62,
+      "august_capacity_limit": 128.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 128.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "Optimization Engineering",
@@ -116,7 +284,21 @@
       "total": 12,
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
-      ]
+      ],
+      "june_capacity_limit": 192.00000000000003,
+      "june_delivered": 327.0,
+      "june_work_items": 190,
+      "capacity_committed_july": 106,
+      "work_items_committed_july": 49,
+      "july_capacity_limit": 192.00000000000003,
+      "july_committed": 106,
+      "july_work_items": 49,
+      "august_capacity_limit": 192.00000000000003,
+      "august_committed": 47,
+      "august_work_items": 27,
+      "september_capacity_limit": 192.00000000000003,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "QuantumForce",
@@ -125,7 +307,21 @@
       "total": 3,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 48.00000000000001,
+      "june_delivered": 129,
+      "june_work_items": 113,
+      "capacity_committed_july": 34,
+      "work_items_committed_july": 23,
+      "july_capacity_limit": 48.00000000000001,
+      "july_committed": 34,
+      "july_work_items": 23,
+      "august_capacity_limit": 48.00000000000001,
+      "august_committed": 14,
+      "august_work_items": 5,
+      "september_capacity_limit": 48.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Core Scheduler",
@@ -134,7 +330,21 @@
       "total": 11,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 176.0,
+      "june_delivered": 405,
+      "june_work_items": 147,
+      "capacity_committed_july": 119,
+      "work_items_committed_july": 47,
+      "july_capacity_limit": 176.0,
+      "july_committed": 119,
+      "july_work_items": 47,
+      "august_capacity_limit": 176.0,
+      "august_committed": 1,
+      "august_work_items": 1,
+      "september_capacity_limit": 176.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Frontline AI",
@@ -143,7 +353,21 @@
       "total": 7,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 112.00000000000001,
+      "june_delivered": 234,
+      "june_work_items": 134,
+      "capacity_committed_july": 46,
+      "work_items_committed_july": 24,
+      "july_capacity_limit": 112.00000000000001,
+      "july_committed": 46,
+      "july_work_items": 24,
+      "august_capacity_limit": 112.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 112.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile AGX",
@@ -152,7 +376,21 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 32.0,
+      "june_delivered": 289,
+      "june_work_items": 114,
+      "capacity_committed_july": 151,
+      "work_items_committed_july": 42,
+      "july_capacity_limit": 32.0,
+      "july_committed": 151,
+      "july_work_items": 42,
+      "august_capacity_limit": 32.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 32.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Assets",
@@ -161,7 +399,21 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 128.0,
+      "june_delivered": 295,
+      "june_work_items": 137,
+      "capacity_committed_july": 124,
+      "work_items_committed_july": 54,
+      "july_capacity_limit": 128.0,
+      "july_committed": 124,
+      "july_work_items": 54,
+      "august_capacity_limit": 128.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 128.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Comms and Search",
@@ -170,7 +422,21 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 80.0,
+      "june_delivered": 118,
+      "june_work_items": 57,
+      "capacity_committed_july": 63,
+      "work_items_committed_july": 22,
+      "july_capacity_limit": 80.0,
+      "july_committed": 63,
+      "july_work_items": 22,
+      "august_capacity_limit": 80.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 80.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Core Experience",
@@ -179,7 +445,21 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 80.0,
+      "june_delivered": 175,
+      "june_work_items": 73,
+      "capacity_committed_july": 67,
+      "work_items_committed_july": 30,
+      "july_capacity_limit": 80.0,
+      "july_committed": 67,
+      "july_work_items": 30,
+      "august_capacity_limit": 80.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 80.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Location and DC",
@@ -188,7 +468,21 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 128.0,
+      "june_delivered": 461,
+      "june_work_items": 159,
+      "capacity_committed_july": 43,
+      "work_items_committed_july": 23,
+      "july_capacity_limit": 128.0,
+      "july_committed": 43,
+      "july_work_items": 23,
+      "august_capacity_limit": 128.0,
+      "august_committed": 2,
+      "august_work_items": 1,
+      "september_capacity_limit": 128.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Offline Extensibility",
@@ -197,7 +491,21 @@
       "total": 5,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 80.0,
+      "june_delivered": 0,
+      "june_work_items": 0,
+      "capacity_committed_july": 0,
+      "work_items_committed_july": 0,
+      "july_capacity_limit": 80.0,
+      "july_committed": 0,
+      "july_work_items": 0,
+      "august_capacity_limit": 80.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 80.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Platform DX",
@@ -206,7 +514,21 @@
       "total": 8,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 128.0,
+      "june_delivered": 196,
+      "june_work_items": 118,
+      "capacity_committed_july": 65,
+      "work_items_committed_july": 29,
+      "july_capacity_limit": 128.0,
+      "july_committed": 65,
+      "july_work_items": 29,
+      "august_capacity_limit": 128.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 128.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile - Quality",
@@ -215,7 +537,21 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 32.0,
+      "june_delivered": 0,
+      "june_work_items": 0,
+      "capacity_committed_july": 3,
+      "work_items_committed_july": 1,
+      "july_capacity_limit": 32.0,
+      "july_committed": 3,
+      "july_work_items": 1,
+      "august_capacity_limit": 32.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 32.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Mobile Services",
@@ -224,7 +560,21 @@
       "total": 4,
       "portfolios": [
         "264 Field Service Mobile"
-      ]
+      ],
+      "june_capacity_limit": 64.0,
+      "june_delivered": 294,
+      "june_work_items": 124,
+      "capacity_committed_july": 123,
+      "work_items_committed_july": 59,
+      "july_capacity_limit": 64.0,
+      "july_committed": 123,
+      "july_work_items": 59,
+      "august_capacity_limit": 64.0,
+      "august_committed": 1,
+      "august_work_items": 1,
+      "september_capacity_limit": 64.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS Setup Experience",
@@ -233,7 +583,21 @@
       "total": 4,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 64.0,
+      "june_delivered": 36,
+      "june_work_items": 19,
+      "capacity_committed_july": 25,
+      "work_items_committed_july": 12,
+      "july_capacity_limit": 64.0,
+      "july_committed": 25,
+      "july_work_items": 12,
+      "august_capacity_limit": 64.0,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 64.0,
+      "september_committed": 0,
+      "september_work_items": 0
     },
     {
       "name": "SFS - WFM - Worker - Experience",
@@ -242,7 +606,21 @@
       "total": 2,
       "portfolios": [
         "264 Field Service Workforce Scheduling"
-      ]
+      ],
+      "june_capacity_limit": 32.0,
+      "june_delivered": 206,
+      "june_work_items": 70,
+      "capacity_committed_july": 56,
+      "work_items_committed_july": 17,
+      "july_capacity_limit": 32.0,
+      "july_committed": 56,
+      "july_work_items": 17,
+      "august_capacity_limit": 32.0,
+      "august_committed": 6,
+      "august_work_items": 2,
+      "september_capacity_limit": 32.0,
+      "september_committed": 6,
+      "september_work_items": 2
     },
     {
       "name": "SynergyForce",
@@ -251,7 +629,21 @@
       "total": 3,
       "portfolios": [
         "264 Field Service Foundations"
-      ]
+      ],
+      "june_capacity_limit": 48.00000000000001,
+      "june_delivered": 5,
+      "june_work_items": 4,
+      "capacity_committed_july": 0,
+      "work_items_committed_july": 0,
+      "july_capacity_limit": 48.00000000000001,
+      "july_committed": 0,
+      "july_work_items": 0,
+      "august_capacity_limit": 48.00000000000001,
+      "august_committed": 0,
+      "august_work_items": 0,
+      "september_capacity_limit": 48.00000000000001,
+      "september_committed": 0,
+      "september_work_items": 0
     }
   ]
 }
