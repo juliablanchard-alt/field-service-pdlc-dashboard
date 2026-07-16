@@ -2844,7 +2844,13 @@
             {% if program.phase == '0' %}
                 <div class="program-card" data-portfolio="{{ program.portfolio }}">
                     <div class="program-name" style="margin-bottom: 8px;">
-                        {% if program.id %}
+                        {% if program.sheet_url %}
+                        <a href="{{ program.sheet_url }}"
+                           target="_blank"
+                           style="color: inherit; text-decoration: none; cursor: pointer;">
+                            {{ program.name }}
+                        </a>
+                        {% elif program.id %}
                         <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program.id }}/view"
                            target="_blank"
                            style="color: inherit; text-decoration: none; cursor: pointer;">
@@ -2904,7 +2910,42 @@
                         <span>Prototyping</span>
                         <span class="subcolumn-count">0</span>
                     </div>
-                    <div class="empty-state" role="status" aria-live="polite">
+
+                    {% for program in programs %}
+                    {% if program.phase == '1' and program.subcolumn == 'prototyping' %}
+                    <div class="program-card" data-portfolio="{{ program.portfolio }}">
+                        <div class="program-name" style="margin-bottom: 8px;">
+                            {% if program.sheet_url %}
+                            <a href="{{ program.sheet_url }}"
+                               target="_blank"
+                               style="color: inherit; text-decoration: none; cursor: pointer;">
+                                {{ program.name }}
+                            </a>
+                            {% elif program.id %}
+                            <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program.id }}/view"
+                               target="_blank"
+                               style="color: inherit; text-decoration: none; cursor: pointer;">
+                                {{ program.name }}
+                            </a>
+                            {% else %}
+                            {{ program.name }}
+                            {% endif %}
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">{{ program.portfolio }}</span>
+                        </div>
+                        <div class="program-meta">
+                            {% if program.program_manager %}
+                            <div class="meta-item">
+                                <span class="meta-label">PM:</span> {{ program.program_manager }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    <div class="empty-state" role="status" aria-live="polite" style="display: none;">
                         <div class="empty-state-icon">🔬</div>
                         <div class="empty-state-title">No programs in prototyping</div>
                         <div class="empty-state-text">Programs in discovery will appear here</div>
@@ -2917,7 +2958,42 @@
                         <span>Ready for Review</span>
                         <span class="subcolumn-count">0</span>
                     </div>
-                    <div class="empty-state" role="status" aria-live="polite">
+
+                    {% for program in programs %}
+                    {% if program.phase == '1' and program.subcolumn == 'ready_for_review' %}
+                    <div class="program-card" data-portfolio="{{ program.portfolio }}">
+                        <div class="program-name" style="margin-bottom: 8px;">
+                            {% if program.sheet_url %}
+                            <a href="{{ program.sheet_url }}"
+                               target="_blank"
+                               style="color: inherit; text-decoration: none; cursor: pointer;">
+                                {{ program.name }}
+                            </a>
+                            {% elif program.id %}
+                            <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program.id }}/view"
+                               target="_blank"
+                               style="color: inherit; text-decoration: none; cursor: pointer;">
+                                {{ program.name }}
+                            </a>
+                            {% else %}
+                            {{ program.name }}
+                            {% endif %}
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">{{ program.portfolio }}</span>
+                        </div>
+                        <div class="program-meta">
+                            {% if program.program_manager %}
+                            <div class="meta-item">
+                                <span class="meta-label">PM:</span> {{ program.program_manager }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    <div class="empty-state" role="status" aria-live="polite" style="display: none;">
                         <div class="empty-state-icon">👀</div>
                         <div class="empty-state-title">No programs ready for review</div>
                         <div class="empty-state-text">Programs ready for stakeholder review will appear here</div>
