@@ -49,6 +49,20 @@ phase_0_programs = phase_0_data.get('programs', []) if isinstance(phase_0_data, 
 phase_1_programs = phase_1_data.get('programs', []) if isinstance(phase_1_data, dict) else phase_1_data
 teams = teams_data.get('teams', [])
 
+# Transform teams data field names for template compatibility (same as app.py)
+for team in teams:
+    # Rename capacity fields to match template expectations
+    team['june_delivered'] = team.get('capacity_delivered_june', 0)
+    team['july_committed'] = team.get('capacity_committed_july', 0)
+    team['august_committed'] = team.get('capacity_committed_august', 0)
+    team['september_committed'] = team.get('capacity_committed_september', 0)
+
+    # Calculate capacity limits (assume 24 PD per person per month as default)
+    team['june_capacity_limit'] = team.get('total', 0) * 24
+    team['july_capacity_limit'] = team.get('total', 0) * 24
+    team['august_capacity_limit'] = team.get('total', 0) * 24
+    team['september_capacity_limit'] = team.get('total', 0) * 24
+
 # Build programs list combining all phases
 all_programs = []
 
