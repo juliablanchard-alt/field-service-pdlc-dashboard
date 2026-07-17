@@ -3170,9 +3170,9 @@
                                     {% endif %}
                                 {% endfor %}
                             {% endfor %}
-                            {% if scheduled_builds %}
+                            {% if program.target_release %}
                                 <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; font-weight: 600;">
-                                    🎯 {{ scheduled_builds|join(', ') }}
+                                    🎯 {{ program.target_release }}
                                 </span>
                             {% endif %}
                             {% if program.health_status and program.health_status != 'N/A' %}
