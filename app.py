@@ -407,6 +407,19 @@ def index():
                 # Final fallback: default to 264 for current work
                 prog['target_release'] = '264'
 
+        # Map portfolio to TPM (Technical Program Manager)
+        portfolio = prog.get('portfolio', '')
+        if 'Mobile' in portfolio:
+            prog['program_manager'] = 'Julia Blanchard'
+        elif 'Foundations' in portfolio or 'UWM' in portfolio:
+            prog['program_manager'] = 'Scott Andrus'
+        elif 'Scheduling & Optimization' in portfolio or 'Scheduling and Optimization' in portfolio:
+            prog['program_manager'] = 'Irit Suliman'
+        elif 'Workforce Scheduling' in portfolio:
+            prog['program_manager'] = 'Yonit Shefer'
+        else:
+            prog['program_manager'] = 'Not Assigned'
+
         for proj in prog.get('projects', []):
             # Collect ALL unique teams and derive both PO and Dev Lead from team records
             all_product_owners = set()
@@ -505,6 +518,19 @@ def index():
             else:
                 # Final fallback: default to 264 for current work
                 prog['target_release'] = '264'
+
+        # Map portfolio to TPM (Technical Program Manager)
+        portfolio = prog.get('portfolio', '')
+        if 'Mobile' in portfolio:
+            prog['program_manager'] = 'Julia Blanchard'
+        elif 'Foundations' in portfolio or 'UWM' in portfolio:
+            prog['program_manager'] = 'Scott Andrus'
+        elif 'Scheduling & Optimization' in portfolio or 'Scheduling and Optimization' in portfolio:
+            prog['program_manager'] = 'Irit Suliman'
+        elif 'Workforce Scheduling' in portfolio:
+            prog['program_manager'] = 'Yonit Shefer'
+        else:
+            prog['program_manager'] = 'Not Assigned'
 
     # Don't normalize execution_programs - they already have correct portfolio values from GUS
 
