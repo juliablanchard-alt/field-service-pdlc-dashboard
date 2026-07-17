@@ -61,11 +61,19 @@ def map_release_to_freeze_month(release_number):
     - 264: Freeze in August 2026
     - 266: Freeze in December 2026
     - 268: Freeze in April 2027
+
+    Handles patch releases (e.g., "264.6", "264.patch") by extracting major release number
     """
-    if not release_number or not release_number.isdigit():
+    if not release_number:
         return None
 
-    release_num = int(release_number)
+    # Extract major release number from patches (264.6 -> 264, 264.patch -> 264)
+    release_str = str(release_number).split('.')[0].split('patch')[0]
+
+    if not release_str.isdigit():
+        return None
+
+    release_num = int(release_str)
 
     base_release = 262
     base_year = 2026
@@ -360,7 +368,7 @@ def index():
     total_projects = sum(len(prog.get('projects', [])) for prog in execution_programs)
 
     # Calculate program health counts
-    health_counts = {'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
+    health_counts = {'not_assigned': 0, 'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
     for prog in execution_programs:
         health = prog.get('health', 'Unknown').lower()
         if 'on track' in health:
@@ -373,29 +381,36 @@ def index():
             health_counts['not_started'] += 1
         elif 'completed' in health or 'complete' in health:
             health_counts['completed'] += 1
+        else:
+            # Unknown or missing health status
+            health_counts['not_assigned'] += 1
 
     # Calculate project and epic stats
-    project_stats = {'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
+    project_stats = {'not_assigned': 0, 'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
     all_epics = []
     for prog in execution_programs:
         for proj in prog.get('projects', []):
             epics = proj.get('epics', [])
-            if epics:
-                all_epics.extend(epics)
-                # Infer project health from epic health
-                epic_healths = [e.get('health', 'Unknown').lower() for e in epics]
-                if any('blocked' in h for h in epic_healths):
-                    project_stats['blocked'] += 1
-                elif any('watch' in h for h in epic_healths):
-                    project_stats['watch'] += 1
-                elif any('on track' in h for h in epic_healths):
-                    project_stats['on_track'] += 1
-                else:
-                    project_stats['not_started'] += 1
+            all_epics.extend(epics)
+
+            # Check project health_status
+            proj_health = proj.get('health_status', 'Unknown').lower()
+            if 'on track' in proj_health:
+                project_stats['on_track'] += 1
+            elif 'watch' in proj_health:
+                project_stats['watch'] += 1
+            elif 'blocked' in proj_health:
+                project_stats['blocked'] += 1
+            elif 'not started' in proj_health:
+                project_stats['not_started'] += 1
+            elif 'completed' in proj_health or 'complete' in proj_health:
+                project_stats['completed'] += 1
+            else:
+                # Unknown or missing health status
+                project_stats['not_assigned'] += 1
 
     # Calculate epic stats
-    total_epics = len(all_epics)
-    epic_stats = {'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
+    epic_stats = {'not_assigned': 0, 'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
     for epic in all_epics:
         health = epic.get('health', 'Unknown').lower()
         if 'on track' in health:
@@ -408,6 +423,12 @@ def index():
             epic_stats['not_started'] += 1
         elif 'completed' in health or 'complete' in health:
             epic_stats['completed'] += 1
+        else:
+            # Unknown or missing health status
+            epic_stats['not_assigned'] += 1
+
+    # Total epics = all epics including not assigned
+    total_epics = sum(epic_stats.values())
 
     # Sort execution programs by portfolio
     execution_programs_sorted = sorted(execution_programs, key=lambda p: (p.get('portfolio', '') or 'zzz', p.get('name', '')))

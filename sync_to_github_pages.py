@@ -96,14 +96,10 @@ portfolios = sorted(set(
 # Calculate stats
 total_execution_programs = len(execution_programs)
 total_projects = sum(len(p.get('projects', [])) for p in execution_programs)
-total_epics = sum(
-    len(proj.get('epics', []))
-    for p in execution_programs
-    for proj in p.get('projects', [])
-)
 
 # Health counts
 health_counts = {
+    'not_assigned': 0,
     'on_track': 0,
     'watch': 0,
     'blocked': 0,
@@ -123,10 +119,12 @@ for prog in execution_programs:
         health_counts['not_started'] += 1
     elif 'completed' in health or 'complete' in health:
         health_counts['completed'] += 1
+    else:
+        health_counts['not_assigned'] += 1
 
 # Project stats
-project_stats = {'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
-epic_stats = {'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
+project_stats = {'not_assigned': 0, 'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
+epic_stats = {'not_assigned': 0, 'on_track': 0, 'watch': 0, 'blocked': 0, 'not_started': 0, 'completed': 0}
 
 total_project_epics = 0
 for prog in execution_programs:
@@ -142,6 +140,8 @@ for prog in execution_programs:
             project_stats['not_started'] += 1
         elif 'completed' in health or 'complete' in health:
             project_stats['completed'] += 1
+        else:
+            project_stats['not_assigned'] += 1
 
         for epic in proj.get('epics', []):
             total_project_epics += 1
@@ -156,6 +156,11 @@ for prog in execution_programs:
                 epic_stats['not_started'] += 1
             elif 'completed' in health or 'complete' in health:
                 epic_stats['completed'] += 1
+            else:
+                epic_stats['not_assigned'] += 1
+
+# Total epics = sum of all health statuses including not assigned
+total_epics = sum(epic_stats.values())
 
 # Team stats
 total_teams = len(teams)
