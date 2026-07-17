@@ -14522,31 +14522,31 @@
                                     {% set all_programs = (team.june_delivered_by_program.keys() | list + team.july_committed_by_program.keys() | list + team.august_committed_by_program.keys() | list + team.september_committed_by_program.keys() | list) | unique | sort %}
                                     {% for program in all_programs %}
                                     <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; font-style: italic;">
-                                            <div>
+                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; font-style: italic; vertical-align: top;">
+                                            <div style="display: block; margin-bottom: 2px;">
                                                 {% if program_lookup.get(program) and program_lookup[program].get('id') %}
                                                 <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program_lookup[program]['id'] }}/view"
                                                    target="_blank"
-                                                   style="color: #2563eb; text-decoration: none; font-weight: 500;">{{ program }}</a>
+                                                   style="color: #2563eb; text-decoration: none; font-weight: 500; display: block;">{{ program }}</a>
                                                 {% else %}
-                                                <span style="color: #2563eb; font-weight: 500;">{{ program }}</span>
+                                                <span style="color: #2563eb; font-weight: 500; display: block;">{{ program }}</span>
                                                 {% endif %}
                                             </div>
                                             {% if program_lookup.get(program) and program_lookup[program].get('portfolio') %}
-                                            <div style="color: #94a3b8; font-size: 10.5px; font-weight: 400; font-style: normal; margin-top: 4px;">{{ program_lookup[program]['portfolio'] }}</div>
+                                            <div style="color: #94a3b8; font-size: 10.5px; font-weight: 400; font-style: normal; display: block; line-height: 1.3;">{{ program_lookup[program]['portfolio'] }}</div>
                                             {% endif %}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b;">
+                                        <td style="text-align: center; padding: 8px 16px; vertical-align: top;"></td>
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
                                             {{ team.june_delivered_by_program.get(program, 0) if team.june_delivered_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.july_committed_by_program.get(program, 0) if team.july_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.august_committed_by_program.get(program, 0) if team.august_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.september_committed_by_program.get(program, 0) if team.september_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
                                     </tr>
@@ -14554,21 +14554,20 @@
                                     <!-- Display Unmapped row if any unmapped capacity exists -->
                                     {% if team.june_delivered_unmapped or team.july_committed_unmapped or team.august_committed_unmapped or team.september_committed_unmapped %}
                                     <tr style="border-bottom: 1px solid #f1f5f9;">
-                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic;">
+                                        <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic; vertical-align: top;">
                                             Unmapped
                                         </td>
-                                        <td style="padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px;"></td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; border-left: 2px solid #0ea5e9;">
+                                        <td style="padding: 8px 16px; vertical-align: top;"></td>
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
                                             {{ team.june_delivered_unmapped if team.june_delivered_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.july_committed_unmapped if team.july_committed_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.august_committed_unmapped if team.august_committed_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.september_committed_unmapped if team.september_committed_unmapped > 0 else '—' }}
                                         </td>
                                     </tr>
