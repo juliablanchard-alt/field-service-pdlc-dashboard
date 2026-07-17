@@ -475,6 +475,14 @@ def index():
     ]
     programs_by_capacity = sorted(programs_by_capacity, key=lambda p: p['june_delivered'] + p['july_committed'], reverse=True)
 
+    # Build program name → {id, portfolio} lookup for Allocations tab
+    program_lookup = {}
+    for prog in execution_programs:
+        program_lookup[prog.get('name', '')] = {
+            'id': prog.get('id', ''),
+            'portfolio': prog.get('portfolio', '')
+        }
+
     return render_template('field_service_dynamic.html',
                            static_site=False,
                            programs=all_programs,
@@ -494,7 +502,8 @@ def index():
                            total_teams=total_teams,
                            total_filled=total_filled,
                            total_non_filled=total_non_filled,
-                           programs_by_capacity=programs_by_capacity)
+                           programs_by_capacity=programs_by_capacity,
+                           program_lookup=program_lookup)
 
 @app.route('/api/programs')
 def api_programs():

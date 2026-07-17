@@ -162,6 +162,14 @@ total_teams = len(teams)
 total_filled = sum(t.get('filled', 0) for t in teams)
 total_non_filled = sum(t.get('non_filled', 0) for t in teams)
 
+# Build program name → {id, portfolio} lookup for Allocations tab
+program_lookup = {}
+for prog in execution_programs:
+    program_lookup[prog.get('name', '')] = {
+        'id': prog.get('id', ''),
+        'portfolio': prog.get('portfolio', '')
+    }
+
 # Calculate actual phase counts from all_programs
 actual_phase_0_count = sum(1 for p in all_programs if p.get('phase') == '0')
 actual_phase_1_count = sum(1 for p in all_programs if p.get('phase') == '1')
@@ -187,7 +195,8 @@ html = template.render(
     total_teams=total_teams,
     total_filled=total_filled,
     total_non_filled=total_non_filled,
-    programs_by_capacity=[]
+    programs_by_capacity=[],
+    program_lookup=program_lookup
 )
 
 # Write to docs/index.html
