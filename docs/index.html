@@ -2817,15 +2817,13 @@
                 <label class="filter-label-exec">MONTH</label>
                 <div class="filter-pills">
                     <button class="filter-pill month-pill active" data-month="all" tabindex="-1">All Months</button>
-                    
-                    <button class="filter-pill month-pill" data-month="2026-06" tabindex="-1">June</button>
-                    
-                    <button class="filter-pill month-pill" data-month="2026-07" tabindex="-1">July</button>
-                    
+
+                    <button class="filter-pill month-pill" data-month="2026-04" tabindex="-1">April</button>
+
                     <button class="filter-pill month-pill" data-month="2026-08" tabindex="-1">August</button>
-                    
-                    <button class="filter-pill month-pill" data-month="2026-09" tabindex="-1">September</button>
-                    
+
+                    <button class="filter-pill month-pill" data-month="2026-12" tabindex="-1">December</button>
+
                 </div>
             </div>
         </div>
@@ -7502,10 +7500,10 @@
         <!-- Stats Cards -->
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px;">
             <!-- Programs Card -->
-            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" data-card="programs">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">PROGRAMS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">22</div>
+                    <div class="text-3xl" style="font-size: 32px; font-weight: 700; color: #1e293b;">22</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -7548,10 +7546,10 @@
             </div>
 
             <!-- Projects Card -->
-            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" data-card="projects">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">PROJECTS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">71</div>
+                    <div class="text-3xl" style="font-size: 32px; font-weight: 700; color: #1e293b;">71</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -7594,10 +7592,10 @@
             </div>
 
             <!-- Epics Card -->
-            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" data-card="epics">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">EPICS</div>
-                    <div style="font-size: 32px; font-weight: 700; color: #1e293b;">241</div>
+                    <div class="text-3xl" style="font-size: 32px; font-weight: 700; color: #1e293b;">241</div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
@@ -7643,7 +7641,7 @@
     <!-- Field Service Program Rows -->
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE000000311BYAQ" data-portfolio="264 Field Service Foundations">
+    <div class="program-row" data-program-id="a1fEE000000311BYAQ" data-portfolio="264 Field Service Foundations" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -7672,7 +7670,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -7720,7 +7718,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Operations Intelligence] Mobile Insights GA
@@ -7738,7 +7736,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000044Y5YAI" data-portfolio="264 Field Service Foundations">
+    <div class="program-row" data-program-id="a1fEE00000044Y5YAI" data-portfolio="264 Field Service Foundations" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -7767,7 +7765,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -7815,7 +7813,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             Headless 360: Field Service Configuration
@@ -7826,7 +7824,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             Headless 360: Workforce & Resource Management
@@ -7837,7 +7835,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             Headless 360 Conversation & Grounding
@@ -7848,7 +7846,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             Headless 360 - Mobile Experience - Data Capture & Pre Work Brief
@@ -7859,7 +7857,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             Headless 360 Mobile Experience - Mobile App Config
@@ -7877,7 +7875,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003hV3YAI" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003hV3YAI" data-portfolio="264 Field Service Mobile" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -7906,7 +7904,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -7954,7 +7952,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement
@@ -7965,7 +7963,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement: Golden Org
@@ -7976,7 +7974,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement: High Value E2E Automation
@@ -7987,7 +7985,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement: Maestro Framework
@@ -7998,7 +7996,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement: Release Validation
@@ -8009,7 +8007,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement: Release Validation Automation
@@ -8020,7 +8018,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Quality Enablement A11Y
@@ -8038,7 +8036,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003BBsYAM" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003BBsYAM" data-portfolio="264 Field Service Mobile" data-health="Watch">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -8067,7 +8065,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8115,7 +8113,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="262" data-health="On Track">
                         <span class="epic-name">
                             
                             262 [AGX Pilot] iOS - Mobile Experience
@@ -8126,7 +8124,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] Job Home Overview Customization (JHOC)
@@ -8137,7 +8135,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] Offline Engine
@@ -8151,7 +8149,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8199,7 +8197,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS MCX][Data Capture] Reactive Dependent Picklist
@@ -8210,7 +8208,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS MCX][Mobile for Industries] Data Capture Enhancements
@@ -8224,7 +8222,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8272,7 +8270,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [Core] Enable PSS Data Hierarchy for Performance Priming
@@ -8286,7 +8284,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8329,7 +8327,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Unified Scheduling New Pre-work Brief Flow
@@ -8343,7 +8341,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8391,7 +8389,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264][SFS MCX][Mobile for Industries] Push Notification Enhancements
@@ -8402,7 +8400,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [SFS Mobile Assets][Unified Scheduling] Push Notification Enhancements
@@ -8413,7 +8411,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] Flow builder, Setup Experience - Pilot support
@@ -8424,7 +8422,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] iOS Mobile Experience
@@ -8435,7 +8433,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [Workforce Scheduling GA] iOS Offline-ability
@@ -8449,7 +8447,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8492,7 +8490,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Mobile [Unified Scheduling] Schedule List Enhancement
@@ -8503,7 +8501,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Mobile [Unified Scheduling] Schedule View Map Enhancement
@@ -8517,7 +8515,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="blocked">
+            <div class="project-container" data-project-health="blocked" data-health="Blocked">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8565,7 +8563,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-blocked">
+                    <div class="epic-row epic-card-health-blocked" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Blocked">
                         <span class="epic-name">
                             
                             [264][SFS MCX][Mobile for Industries] Service Document Enhancements
@@ -8576,7 +8574,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [SFS Mobile Assets] [Unified Scheduling] Service document for AGX
@@ -8594,7 +8592,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003BBqYAM" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003BBqYAM" data-portfolio="264 Field Service Mobile" data-health="Watch">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -8623,7 +8621,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8658,7 +8656,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003BBrYAM" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003BBrYAM" data-portfolio="264 Field Service Mobile" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -8687,7 +8685,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8730,7 +8728,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Agentforce Voice (Pilot Support)
@@ -8741,7 +8739,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Canceled">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - PWB via Agentforce
@@ -8752,7 +8750,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - V2F Legal Disclaimer for first time user
@@ -8763,7 +8761,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Canceled">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - V2F via Agentforce
@@ -8774,7 +8772,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Voice to Form: Support for Dynamic Forms
@@ -8785,7 +8783,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Voice to Form (Spanish & French)
@@ -8796,7 +8794,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Voice to Form Instrumentation
@@ -8807,7 +8805,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Voice to Form Offline Pilot
@@ -8818,7 +8816,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS Frontline AI - Voice To Form UX Enhancements
@@ -8829,7 +8827,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             266 SFS Frontline AI - Image to Form (AI)
@@ -8840,7 +8838,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Hold">
                         <span class="epic-name">
                             
                             266 SFS Frontline AI - Voice to Form (Traceability)
@@ -8858,7 +8856,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003hq1YAA" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003hq1YAA" data-portfolio="264 Field Service Mobile" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -8887,7 +8885,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="watch">
+            <div class="project-container" data-project-health="watch" data-health="Watch">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -8930,7 +8928,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-watch">
+                    <div class="epic-row epic-card-health-watch" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Watch">
                         <span class="epic-name">
                             
                             264 - SFS Mobile - C&S - Data SDK Support
@@ -8941,7 +8939,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-watch">
+                    <div class="epic-row epic-card-health-watch" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Watch">
                         <span class="epic-name">
                             
                             264 - SFS Mobile - C&S - Data SDK Support(Internal Trust)
@@ -8952,7 +8950,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-watch">
+                    <div class="epic-row epic-card-health-watch" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Watch">
                         <span class="epic-name">
                             
                             264 - SFS Mobile - C&S - Data SDK Support(LDS optimations/Direct to LDS)
@@ -8970,7 +8968,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003BBpYAM" data-portfolio="264 Field Service Mobile">
+    <div class="program-row" data-program-id="a1fEE0000003BBpYAM" data-portfolio="264 Field Service Mobile" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -8999,7 +8997,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9047,7 +9045,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS MCX][Native GIS] Work Order Related List Layer (GA Enhancement)
@@ -9058,7 +9056,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             [Android] Priority Notifications
@@ -9069,7 +9067,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             Enable Arabic Translations in Field Service Mobile
@@ -9087,7 +9085,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003hmnYAA" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE0000003hmnYAA" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -9116,7 +9114,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9164,7 +9162,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Agentforce Scheduling/Employee agent trust
@@ -9175,7 +9173,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS Orcas General trust
@@ -9189,7 +9187,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9237,7 +9235,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS][LS] Send error back to service if fetching a file fails
@@ -9248,7 +9246,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS][O2] Inherit FIT tests
@@ -9259,7 +9257,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] [Trust] Adoption
@@ -9270,7 +9268,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [ESO] [TRUST] Serivce Support
@@ -9281,7 +9279,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [TRUST] Test UI Supervisor view - 1st time
@@ -9292,7 +9290,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [TRUST] Work capacity tokens and enhancement of groupIDs
@@ -9303,7 +9301,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [264][Trust][Scheduling Intelligence]
@@ -9314,7 +9312,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [264][Trust] Improve Heap-Size Pagination Tuning
@@ -9325,7 +9323,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             *[8.3.1][264] Hackathon/Demo Days
@@ -9336,7 +9334,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - On call duty
@@ -9347,7 +9345,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - Patch and Merge
@@ -9361,7 +9359,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9409,7 +9407,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - Zero Incidents initiative
@@ -9423,7 +9421,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9459,7 +9457,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9495,7 +9493,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9531,7 +9529,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9579,7 +9577,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             *[1.16.11][264] SFS: 3PP bug fixes and Service Deployments
@@ -9590,7 +9588,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [1.16.5][264][PBS] Daily On-Call Support
@@ -9601,7 +9599,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [1.16.5][264][PBS] Infrastructure Maintenance
@@ -9612,7 +9610,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [1.16.5][264][SFS][FSL][FSE] Infrastructure Maintenance
@@ -9623,7 +9621,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [1.16.5][264][SFS] Daily On-Call Support
@@ -9634,7 +9632,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - O2 services ongoing DevOps work
@@ -9648,7 +9646,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9696,7 +9694,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - Technical Debt
@@ -9710,7 +9708,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9758,7 +9756,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS][LS] PFT for MP\LS
@@ -9772,7 +9770,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9808,7 +9806,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9856,7 +9854,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             *[1.16.11][264] Non-Hyperforce Security bugs/Host vulnerabilities/Wiz/Cloud Misc
@@ -9867,7 +9865,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [8.9.10] [264] [FSE][FSL][V8] FY 2027 Q1 & Q2 QAR
@@ -9878,7 +9876,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * [8.9.8] [264] [FSE][FSL][V8]-CTS LRP Epic
@@ -9889,7 +9887,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             * 264 SFS [Trust] - Vulnerability issues
@@ -9907,7 +9905,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000036aLYAQ" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE00000036aLYAQ" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -9936,7 +9934,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -9989,7 +9987,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 Workforce Optimization - Max Contracted Work Rule GA
@@ -10000,7 +9998,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Canceled">
                         <span class="epic-name">
                             
                             264 Workforce Optimization - Max Contracted Work Rule GA
@@ -10014,7 +10012,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10059,7 +10057,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000036X7YAI" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE00000036X7YAI" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -10088,7 +10086,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10123,7 +10121,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000036TtYAI" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE00000036TtYAI" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -10152,7 +10150,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10205,7 +10203,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Bundled Work
@@ -10219,7 +10217,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10272,7 +10270,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [TRUST] DC2 UI custom actions
@@ -10286,7 +10284,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10327,7 +10325,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10380,7 +10378,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.7" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] D&D Scheduled appointments from list
@@ -10394,7 +10392,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10447,7 +10445,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Gantt Search For Appointments
@@ -10461,7 +10459,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10514,7 +10512,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.4" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Adjust Appt/Absence Duration & D&D Snap-In
@@ -10525,7 +10523,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Adjust Duration AND Snap-In
@@ -10536,7 +10534,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.7" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] holiday display
@@ -10547,7 +10545,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.7" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Side by Side Gantt and List
@@ -10561,7 +10559,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10614,7 +10612,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Gantt Color Palette
@@ -10628,7 +10626,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10669,7 +10667,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10710,7 +10708,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10763,7 +10761,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console]Long Term View
@@ -10774,7 +10772,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Canceled">
                         <span class="epic-name">
                             
                             [Scheduling Console] Long-Cycle Work & Long-Term Views
@@ -10788,7 +10786,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10841,7 +10839,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console]  [Dispatch Console Team] Complex Work Enhancements
@@ -10852,7 +10850,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Complex Work Enhancements
@@ -10863,7 +10861,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.3" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Multi-Day Work Support
@@ -10874,7 +10872,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS][O2] Multi Day Work Enhancements
@@ -10888,7 +10886,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -10941,7 +10939,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][SFS][O2] RSO Simulator
@@ -10955,7 +10953,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11000,7 +10998,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000036bxYAA" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE00000036bxYAA" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -11029,7 +11027,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11082,7 +11080,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Customer Success - AB/TI multi-day appointments - 1 month horizon
@@ -11093,7 +11091,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Customer Success - AB/TI multi-day appointments - 3 month horizon
@@ -11104,7 +11102,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS Customer Success - Book and schedule multi-day appointments
@@ -11115,7 +11113,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS Customer Success - MDW for BGO (Vestas)
@@ -11129,7 +11127,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11174,7 +11172,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003lQbYAI" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE0000003lQbYAI" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -11203,7 +11201,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11238,7 +11236,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000036VVYAY" data-portfolio="264 Field Service Scheduling & Optimization">
+    <div class="program-row" data-program-id="a1fEE00000036VVYAY" data-portfolio="264 Field Service Scheduling & Optimization" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -11267,7 +11265,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11315,7 +11313,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="262.11" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Agentforce Scheduling Outreach
@@ -11326,7 +11324,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="Completed">
                         <span class="epic-name">
                             
                             262 Dispatch Experience 2.0 - Outreach
@@ -11340,7 +11338,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11383,7 +11381,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             Agentforce Scheduling Agent - Email Channel Support
@@ -11397,7 +11395,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11445,7 +11443,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="262.13" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Agentforce scheduling  - Day Of Service notification
@@ -11459,7 +11457,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="not-started">
+            <div class="project-container" data-project-health="not-started" data-health="Not Started">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11502,7 +11500,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Canceled">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Agentforce scheduling  - Fill Gaps (Stretch Demo)
@@ -11516,7 +11514,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11569,7 +11567,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Guest user legacy
@@ -11580,7 +11578,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.11" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [AF] - SFS Agentforce legacy Voice blueprint
@@ -11594,7 +11592,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11647,7 +11645,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="262.11" data-health="On Hold">
                         <span class="epic-name">
                             
                             [264] SFS [AF] [TRUST] Employee migration to agent script
@@ -11658,7 +11656,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.10" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [AF] NGA Guest
@@ -11672,7 +11670,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11720,7 +11718,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264.7" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264][Scheduling Console] Transparency Into Schedule Actions
@@ -11731,7 +11729,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.patch" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Transparency - Core Logic
@@ -11742,7 +11740,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Transparency - Engine
@@ -11753,7 +11751,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] Transparency - O2 Service
@@ -11767,7 +11765,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11815,7 +11813,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264.patch" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS Unified Scheduling Agent
@@ -11826,7 +11824,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS Unified Scheduling Agent HLD
@@ -11840,7 +11838,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11888,7 +11886,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="262.13" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] SFS [AF] - SFS Agentforce Scheduling Setup Outbound
@@ -11899,7 +11897,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             Agentforce Scheduling Setup Wizard (Proactive Outreach Focus)
@@ -11913,7 +11911,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -11961,7 +11959,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="262.11" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] SFS [AF] - SFS Agentforce Voice - Inbound
@@ -11972,7 +11970,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="262.13" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] SFS [AF] - SFS Agentforce Voice -  Outbound
@@ -11983,7 +11981,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             Voice-Enabled Natural Field Service Agent - Inbound
@@ -11997,7 +11995,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12045,7 +12043,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] SFS [AF] SPIKE - New Workspace ADX
@@ -12063,7 +12061,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdWYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdWYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12092,7 +12090,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12140,7 +12138,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="262" data-health="Canceled">
                         <span class="epic-name">
                             
                             262 SFS [Core Foundations] Event Management
@@ -12151,7 +12149,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Core Foundations] Event Management & SA Sharing
@@ -12162,7 +12160,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Core Foundations] Shift Management
@@ -12180,7 +12178,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdVYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdVYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12209,7 +12207,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12252,7 +12250,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264 Unified Scheduling] Basic Setup
@@ -12263,7 +12261,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264 Unified Scheduling] Group Appointments
@@ -12274,7 +12272,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264 Unified Scheduling] Guest Appointments
@@ -12285,7 +12283,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264 Unified Scheduling] Unified Flows
@@ -12296,7 +12294,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             [264 Unified Scheduling] Visits Scheduling
@@ -12314,7 +12312,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdUYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdUYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12343,7 +12341,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="blocked">
+            <div class="project-container" data-project-health="blocked" data-health="Blocked">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12391,7 +12389,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: 260 Tech Debt
@@ -12402,7 +12400,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Console Header
@@ -12413,7 +12411,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Cross Component Communication (LMS)
@@ -12424,7 +12422,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Customization
@@ -12435,7 +12433,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Drag & Drop
@@ -12446,7 +12444,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Filter
@@ -12457,7 +12455,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Gantt
@@ -12468,7 +12466,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-blocked">
+                    <div class="epic-row epic-card-health-blocked" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Blocked">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Push Service
@@ -12479,7 +12477,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Settings
@@ -12490,7 +12488,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: Travel Time
@@ -12501,7 +12499,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264: PSS-FS: Operations Console: User Preference Persistence
@@ -12512,7 +12510,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             Release 264: PSS-FS: Operations Console
@@ -12523,7 +12521,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Release 264: PSS-FS: Operations Console: Accessibility
@@ -12534,7 +12532,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Release 264: PSS-FS: Operations Console - List View
@@ -12545,7 +12543,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Release 264: PSS-FS: Operations Console - Map View
@@ -12556,7 +12554,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Release 264: PSS-FS: Operations Console - RSO Activity Tracker
@@ -12574,7 +12572,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdSYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdSYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12603,7 +12601,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12651,7 +12649,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="Completed">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Engagement Channel Type removal
@@ -12662,7 +12660,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Work Type,Appointment Category, ECT consolidation
@@ -12680,7 +12678,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdTYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdTYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12709,7 +12707,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12757,7 +12755,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Bulkification for UAPIs
@@ -12768,7 +12766,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Completed">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] ID Based Input support for Sch/Resch/Can API
@@ -12779,7 +12777,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Rules Framework
@@ -12790,7 +12788,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Service Territory Sharing
@@ -12801,7 +12799,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Workforce Policy Management
@@ -12812,7 +12810,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning
@@ -12823,7 +12821,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - Setting setup - Unified Integration
@@ -12841,7 +12839,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE0000003DdRYAU" data-portfolio="264 Field Service Workforce Scheduling">
+    <div class="program-row" data-program-id="a1fEE0000003DdRYAU" data-portfolio="264 Field Service Workforce Scheduling" data-health="Unknown">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -12870,7 +12868,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -12918,7 +12916,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] Settings & Licenses: Field Service Mobile under WFS Add-On
@@ -12929,7 +12927,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - Cancel and Unschedule API Integration
@@ -12940,7 +12938,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - Check Rules Unified API Integration
@@ -12951,7 +12949,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - D&D Unified Integration
@@ -12962,7 +12960,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - Get Candidates and Appointment Booking In-Memory
@@ -12973,7 +12971,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - In Field Licensing
@@ -12984,7 +12982,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - MP2Core Unified Enhancements
@@ -12995,7 +12993,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - MP2Core Unified Infrastructure Enhancements
@@ -13006,7 +13004,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Unified Scheduling] - Optimization Unified API Integration
@@ -13024,7 +13022,7 @@
     </div>
     
     <!-- Program Row -->
-    <div class="program-row" data-program-id="a1fEE00000031HJYAY" data-portfolio="FY27 SC M4 UWM">
+    <div class="program-row" data-program-id="a1fEE00000031HJYAY" data-portfolio="FY27 SC M4 UWM" data-health="On Track">
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
@@ -13053,7 +13051,7 @@
         <!-- Projects Container -->
         <div class="projects-container">
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13106,7 +13104,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Hold">
                         <span class="epic-name">
                             
                             264 UMW Worker Engagement Experience: Licensing
@@ -13117,7 +13115,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Agentic Shift Management
@@ -13128,7 +13126,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="262.12" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Agentic Shift Management - July Release
@@ -13139,7 +13137,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.9" data-health="Completed">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Agentic Shift Management - June Release
@@ -13150,7 +13148,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.4" data-health="Completed">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Agentic Shift Management - May Release
@@ -13161,7 +13159,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Calendar Enhancements
@@ -13172,7 +13170,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="262.12" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Calendar Enhancements - July Release
@@ -13183,7 +13181,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.8" data-health="Completed">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Calendar Enhancements - June Release
@@ -13194,7 +13192,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262.4" data-health="Completed">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Calendar Enhancements - May Release
@@ -13205,7 +13203,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Notifications
@@ -13216,7 +13214,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Hold">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Slack Native Experience
@@ -13227,7 +13225,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience: Trust
@@ -13238,7 +13236,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 UWM Worker Engagement Experience - HLDs, Spikes and Advanced Planning
@@ -13249,7 +13247,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="266" data-health="On Track">
                         <span class="epic-name">
                             
                             266 UWM Worker Engagement Experience: Non-Productive Activities
@@ -13263,7 +13261,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13316,7 +13314,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [OI] Capacity Planning GA Readiness
@@ -13327,7 +13325,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [OI] Capacity Planning UI - SFS/FWM
@@ -13338,7 +13336,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="266" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 SFS [OI] Monthly Release - Scenario Planning UI - SFS/FWM
@@ -13349,7 +13347,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [OI] Scenario Planning Data Model - SFS/FWM
@@ -13363,7 +13361,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="blocked">
+            <div class="project-container" data-project-health="blocked" data-health="Blocked">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13416,7 +13414,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [PFT] Telemetry for Schedule Management
@@ -13427,7 +13425,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="266" data-health="On Track">
                         <span class="epic-name">
                             
                             [266] Drag and Drop Actions on the Grid
@@ -13438,7 +13436,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SPIKEs for Schedule Management
@@ -13449,7 +13447,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             Adding Shift Segments template to Shift Templates
@@ -13460,7 +13458,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Agentforce for Shift Planners - Optimize Shift Mgt with Agentforce Prompts
@@ -13471,7 +13469,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-blocked">
+                    <div class="epic-row epic-card-health-blocked" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Blocked">
                         <span class="epic-name">
                             
                             Auto Refresh of Gantt
@@ -13482,7 +13480,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-watch">
+                    <div class="epic-row epic-card-health-watch" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Watch">
                         <span class="epic-name">
                             
                             Create shifts manually using capacity plan and shift Patterns
@@ -13493,7 +13491,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Drag and Drop Actions on the Grid
@@ -13504,7 +13502,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="-" data-health="On Track">
                         <span class="epic-name">
                             
                             MWM GA Readiness
@@ -13515,7 +13513,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Netstaffing Changes for Schedule Management Job profile View
@@ -13526,7 +13524,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             Q4 Testing for 264
@@ -13537,7 +13535,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Requests Panel - Shift PTO/Absence Requests/Open Shift Requests
@@ -13548,7 +13546,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Search and Filter on Grid
@@ -13559,7 +13557,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Shift Activities - Create and Manage
@@ -13570,7 +13568,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Canceled">
                         <span class="epic-name">
                             
                             Shift Stacking
@@ -13584,7 +13582,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13637,7 +13635,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [UWM] [DC] Aggregation of Workloads in Data Cloud
@@ -13648,7 +13646,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [UWM] [DC] Move Historic Work on Data Cloud
@@ -13659,7 +13657,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264][UWM][Stretch] - UWM Intraday
@@ -13670,7 +13668,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             264 - 15/30 min Interval Support
@@ -13681,7 +13679,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-unknown">
+                    <div class="epic-row epic-card-health-unknown" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Canceled">
                         <span class="epic-name">
                             
                             264 - Advanced Planning
@@ -13692,7 +13690,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 Omni-Widget Activities
@@ -13703,7 +13701,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 Real-Time Adherence
@@ -13714,7 +13712,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 UWM - UWM Intraday
@@ -13725,7 +13723,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             264 WFM & MWM Setup in Salesforce Go
@@ -13739,7 +13737,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13792,7 +13790,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] UWM S&O Engine: Multi-breaks
@@ -13803,7 +13801,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Engine: NFR from 5000 to 100,000 activities + Quality + Benchmark
@@ -13814,7 +13812,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] UWM S&O Engine: Shift constraints
@@ -13825,7 +13823,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Engine: Shift Creation+Assignment Optimization (Fixed Templates)
@@ -13836,7 +13834,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="266" data-health="Not Started">
                         <span class="epic-name">
                             
                             [266] UWM S&O Engine: Shift-Gap Estimate (Unassigned Resource)
@@ -13847,7 +13845,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             264 SFS [Infra] WEM Project
@@ -13861,7 +13859,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="completed">
+            <div class="project-container" data-project-health="completed" data-health="Completed">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -13914,7 +13912,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="262" data-health="Completed">
                         <span class="epic-name">
                             
                             [262] UWM S&O M1: High-Performance GetCandidate & Bulk Optimization
@@ -13925,7 +13923,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] UWM S&O M2: Intelligent Shift Global Optimization
@@ -13936,7 +13934,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="-" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] UWM S&O M3: Labor Compliance & Worker Fairness
@@ -13950,7 +13948,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -14003,7 +14001,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [ATL] UWM S&O Service: Multi-breaks and break rules
@@ -14014,7 +14012,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] [ATL] UWM S&O Service: New Rules & Objectives & Shift constraints
@@ -14025,7 +14023,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="266" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] [BTL] UWM S&O Service: Check rules API
@@ -14036,7 +14034,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="266" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] [BTL] UWM S&O Service: Single & Bulk shift assignment
@@ -14047,7 +14045,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Engine: 15m intervals
@@ -14058,7 +14056,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Service: NFR from 5000 to 100,000 activities + Quality + Benchmark
@@ -14069,7 +14067,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Service: Shift assignment optimization
@@ -14080,7 +14078,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Service: Shift Creation+Assignment Optimization (Dynamic Template)
@@ -14091,7 +14089,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Service: Shift Creation+Assignment Optimization (Fixed Templates)
@@ -14102,7 +14100,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] UWM S&O Service: Technical Debt
@@ -14116,7 +14114,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -14169,7 +14167,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [PFT] Telemetry for Capacity Planning
@@ -14180,7 +14178,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [UWM] [DC] Capacity Planning in Data Cloud
@@ -14191,7 +14189,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             15/30 min interval support for Capacity Plan
@@ -14202,7 +14200,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Calculate Capacity Plan for Skill Based Flow and include channel dimension.
@@ -14213,7 +14211,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Multi Dimensional support during CP creation
@@ -14224,7 +14222,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Revamp Capacity plan detail to include channel and support for Skill calculation
@@ -14235,7 +14233,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Skill Group to Job Profile Translation
@@ -14246,7 +14244,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             Trust Work for Capacity Planning Team
@@ -14260,7 +14258,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -14313,7 +14311,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] [UWM] [DC] Forecasting in Data Cloud
@@ -14324,7 +14322,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] Analysis: Conversational Forecasting & Anomaly Detection using MoiraiAgent
@@ -14335,7 +14333,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Forecasting - Moirai Support and Enhanced Workloads Support
@@ -14346,7 +14344,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] Moirai Forecast Accuracy
@@ -14357,7 +14355,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] POC: Intra-day Reforecasting for Real-time Shift Optimization
@@ -14371,7 +14369,7 @@
                 </div>
             </div>
             
-            <div class="project-container" data-project-health="on-track">
+            <div class="project-container" data-project-health="on-track" data-health="On Track">
                 <div class="project-header" onclick="toggleProject(this)">
                     <div class="project-expand-icon">▶</div>
                     <div class="project-icon">📦</div>
@@ -14424,7 +14422,7 @@
                 </div>
                 <div class="epics-container">
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] [PFT] Telemetry for Forecasting
@@ -14435,7 +14433,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-completed">
+                    <div class="epic-row epic-card-health-completed" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Completed">
                         <span class="epic-name">
                             
                             [264] [PFT] Telemetry for Workloads
@@ -14446,7 +14444,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] 15 & 30-Minute Interval Support
@@ -14457,7 +14455,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Auto Creation of Skill Groups
@@ -14468,7 +14466,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-not-started">
+                    <div class="epic-row epic-card-health-not-started" data-scheduled-month="no-date" data-scheduled-build="264" data-health="Not Started">
                         <span class="epic-name">
                             
                             [264] Display Forecast Accuracy
@@ -14479,7 +14477,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Enhanced Forecast Creation - Omni Queues/Skills + Channels, FS, and MWM
@@ -14490,7 +14488,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Enhanced Workload Creation - Omni Queues/Skills + Channels, FS, and MWM
@@ -14501,7 +14499,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Forecasting - Moirai Integration Support and Enhanced Workloads Support
@@ -14512,7 +14510,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] List View of Skill Groups
@@ -14523,7 +14521,7 @@
                         
                     </div>
                     
-                    <div class="epic-row epic-card-health-on-track">
+                    <div class="epic-row epic-card-health-on-track" data-scheduled-month="no-date" data-scheduled-build="264" data-health="On Track">
                         <span class="epic-name">
                             
                             [264] Manually Add/Edit/Delete Skill Group
@@ -29224,15 +29222,21 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                     const selectedMonth = this.dataset.month;
 
                     if (selectedMonth === 'all') {
-                        // Show all programs, projects, month columns (BUT RESPECT PORTFOLIO FILTER)
+                        // Show all programs, projects, epics (BUT RESPECT PORTFOLIO FILTER)
                         document.querySelectorAll('#execution-view .program-row').forEach(p => {
                             const portfolio = p.getAttribute('data-portfolio');
                             const matchesPortfolio = selectedPortfolios.size === 0 || selectedPortfolios.has(portfolio);
                             p.style.display = matchesPortfolio ? '' : 'none';
                         });
                         document.querySelectorAll('#execution-view .project-container').forEach(p => p.style.display = '');
-                        document.querySelectorAll('.month-column').forEach(c => c.style.display = '');
+                        document.querySelectorAll('.epic-row').forEach(e => e.style.display = '');
+
+                        // Recalculate stat cards for all visible items
+                        recalculateStatCards();
                     } else {
+                        // selectedMonth is already in YYYY-MM format (2026-06, 2026-07, etc.)
+                        const targetMonth = selectedMonth;
+
                         // AUTO-SWITCH TO EPIC VIEW
                         document.querySelectorAll('.view-toggle').forEach(t => t.classList.remove('active'));
                         document.querySelector('.view-toggle[data-view="epic"]').classList.add('active');
@@ -29244,26 +29248,28 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             if (header) header.classList.add('expanded');
                         });
 
-                        document.querySelectorAll('#execution-view .project-row').forEach(row => {
+                        document.querySelectorAll('#execution-view .project-container').forEach(row => {
                             row.classList.add('expanded');
                             const header = row.querySelector('.project-header');
                             if (header) header.classList.add('expanded');
                         });
 
-                        // 1. Find all epics in the selected month (by end_date ONLY)
+                        // 1. Find all epics in the selected month by data-scheduled-month attribute
                         const epicsInMonth = [];
-                        document.querySelectorAll('.month-column').forEach(col => {
-                            if (col.dataset.month === selectedMonth) {
-                                col.querySelectorAll('.epic-card').forEach(epic => {
-                                    epicsInMonth.push(epic);
-                                });
+                        document.querySelectorAll('.epic-row').forEach(epic => {
+                            const epicMonth = epic.getAttribute('data-scheduled-month');
+                            if (epicMonth === targetMonth) {
+                                epicsInMonth.push(epic);
+                                epic.style.display = '';
+                            } else {
+                                epic.style.display = 'none';
                             }
                         });
 
                         // 2. Get parent projects that have epics in this month
                         const projectsWithEpics = new Set();
                         epicsInMonth.forEach(epic => {
-                            const project = epic.closest('.project-row');
+                            const project = epic.closest('.project-container');
                             if (project) projectsWithEpics.add(project);
                         });
 
@@ -29277,28 +29283,148 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                         // 4. Hide programs that don't have epics in this month (RESPECT PORTFOLIO FILTER)
                         document.querySelectorAll('#execution-view .program-row').forEach(program => {
                             const hasEpicsInMonth = programsWithEpics.has(program);
-
-                            // Check if portfolio filter is active
                             const programPortfolio = program.getAttribute('data-portfolio');
                             const matchesPortfolio = selectedPortfolios.size === 0 || selectedPortfolios.has(programPortfolio);
 
-                            // Show ONLY if has epics in month AND matches portfolio filter
                             program.style.display = (hasEpicsInMonth && matchesPortfolio) ? '' : 'none';
                         });
 
                         // 5. Hide projects that don't have epics in this month
-                        document.querySelectorAll('#execution-view .project-row').forEach(project => {
+                        document.querySelectorAll('#execution-view .project-container').forEach(project => {
                             project.style.display = projectsWithEpics.has(project) ? '' : 'none';
                         });
 
-                        // 6. Hide all month columns except the selected month
-                        document.querySelectorAll('.month-column').forEach(col => {
-                            col.style.display = col.dataset.month === selectedMonth ? '' : 'none';
-                        });
+                        // Recalculate stat cards based on visible items only
+                        recalculateStatCards();
                     }
                 });
             });
         });
+
+        // Recalculate stat cards based on visible items only
+        function recalculateStatCards() {
+            // Count visible programs by health status
+            const programCounts = {not_assigned: 0, not_started: 0, on_track: 0, watch: 0, blocked: 0, completed: 0};
+            document.querySelectorAll('#execution-view .program-row').forEach(prog => {
+                if (prog.style.display !== 'none') {
+                    const health = prog.getAttribute('data-health') || 'unknown';
+                    const healthLower = health.toLowerCase();
+                    if (healthLower.includes('on track')) {
+                        programCounts.on_track++;
+                    } else if (healthLower.includes('watch')) {
+                        programCounts.watch++;
+                    } else if (healthLower.includes('blocked')) {
+                        programCounts.blocked++;
+                    } else if (healthLower.includes('not started')) {
+                        programCounts.not_started++;
+                    } else if (healthLower.includes('completed') || healthLower.includes('complete')) {
+                        programCounts.completed++;
+                    } else {
+                        programCounts.not_assigned++;
+                    }
+                }
+            });
+
+            // Count visible projects by health status
+            const projectCounts = {not_assigned: 0, not_started: 0, on_track: 0, watch: 0, blocked: 0, completed: 0};
+            document.querySelectorAll('#execution-view .project-container').forEach(proj => {
+                if (proj.style.display !== 'none') {
+                    const health = proj.getAttribute('data-health') || 'unknown';
+                    const healthLower = health.toLowerCase();
+                    if (healthLower.includes('on track')) {
+                        projectCounts.on_track++;
+                    } else if (healthLower.includes('watch')) {
+                        projectCounts.watch++;
+                    } else if (healthLower.includes('blocked')) {
+                        projectCounts.blocked++;
+                    } else if (healthLower.includes('not started')) {
+                        projectCounts.not_started++;
+                    } else if (healthLower.includes('completed') || healthLower.includes('complete')) {
+                        projectCounts.completed++;
+                    } else {
+                        projectCounts.not_assigned++;
+                    }
+                }
+            });
+
+            // Count visible epics by health status
+            const epicCounts = {not_assigned: 0, not_started: 0, on_track: 0, watch: 0, blocked: 0, completed: 0};
+            document.querySelectorAll('#execution-view .epic-row').forEach(epic => {
+                if (epic.style.display !== 'none') {
+                    const health = epic.getAttribute('data-health') || 'unknown';
+                    const healthLower = health.toLowerCase();
+                    if (healthLower.includes('on track')) {
+                        epicCounts.on_track++;
+                    } else if (healthLower.includes('watch')) {
+                        epicCounts.watch++;
+                    } else if (healthLower.includes('blocked')) {
+                        epicCounts.blocked++;
+                    } else if (healthLower.includes('not started')) {
+                        epicCounts.not_started++;
+                    } else if (healthLower.includes('completed') || healthLower.includes('complete')) {
+                        epicCounts.completed++;
+                    } else {
+                        epicCounts.not_assigned++;
+                    }
+                }
+            });
+
+            // Update Programs stat card
+            const programTotal = Object.values(programCounts).reduce((a, b) => a + b, 0);
+            document.querySelector('[data-card="programs"] .text-3xl').textContent = programTotal;
+            updateStatRow('programs', 'not_assigned', programCounts.not_assigned, programTotal);
+            updateStatRow('programs', 'not_started', programCounts.not_started, programTotal);
+            updateStatRow('programs', 'on_track', programCounts.on_track, programTotal);
+            updateStatRow('programs', 'watch', programCounts.watch, programTotal);
+            updateStatRow('programs', 'blocked', programCounts.blocked, programTotal);
+            updateStatRow('programs', 'completed', programCounts.completed, programTotal);
+
+            // Update Projects stat card
+            const projectTotal = Object.values(projectCounts).reduce((a, b) => a + b, 0);
+            document.querySelector('[data-card="projects"] .text-3xl').textContent = projectTotal;
+            updateStatRow('projects', 'not_assigned', projectCounts.not_assigned, projectTotal);
+            updateStatRow('projects', 'not_started', projectCounts.not_started, projectTotal);
+            updateStatRow('projects', 'on_track', projectCounts.on_track, projectTotal);
+            updateStatRow('projects', 'watch', projectCounts.watch, projectTotal);
+            updateStatRow('projects', 'blocked', projectCounts.blocked, projectTotal);
+            updateStatRow('projects', 'completed', projectCounts.completed, projectTotal);
+
+            // Update Epics stat card
+            const epicTotal = Object.values(epicCounts).reduce((a, b) => a + b, 0);
+            document.querySelector('[data-card="epics"] .text-3xl').textContent = epicTotal;
+            updateStatRow('epics', 'not_assigned', epicCounts.not_assigned, epicTotal);
+            updateStatRow('epics', 'not_started', epicCounts.not_started, epicTotal);
+            updateStatRow('epics', 'on_track', epicCounts.on_track, epicTotal);
+            updateStatRow('epics', 'watch', epicCounts.watch, epicTotal);
+            updateStatRow('epics', 'blocked', epicCounts.blocked, epicTotal);
+            updateStatRow('epics', 'completed', epicCounts.completed, epicTotal);
+        }
+
+        function updateStatRow(cardType, status, count, total) {
+            const card = document.querySelector(`[data-card="${cardType}"]`);
+            if (!card) return;
+
+            const rows = card.querySelectorAll('[style*="display: flex"]');
+            const statusMap = {
+                'not_assigned': 0,
+                'not_started': 1,
+                'on_track': 2,
+                'watch': 3,
+                'blocked': 4,
+                'completed': 5
+            };
+
+            const rowIndex = statusMap[status];
+            if (rowIndex !== undefined && rows[rowIndex]) {
+                const row = rows[rowIndex];
+                const percentage = total > 0 ? Math.round((count / total) * 100) : 0;
+                const percentDiv = row.querySelector('[style*="color: #94a3b8"]');
+                const countDiv = row.querySelector('[style*="min-width: 32px"]');
+
+                if (percentDiv) percentDiv.textContent = `${percentage}%`;
+                if (countDiv) countDiv.textContent = count;
+            }
+        }
 
         function switchView(viewName) {
             // Hide all views
