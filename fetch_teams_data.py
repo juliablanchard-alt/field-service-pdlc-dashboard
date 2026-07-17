@@ -107,6 +107,42 @@ report_data = fetch_report()
 
 teams = parse_teams(report_data)
 
+# Load existing teams data to preserve capacity fields
+existing_data = {}
+if DATA_FILE.exists():
+    try:
+        existing_data = json.loads(DATA_FILE.read_text())
+        print(f"📋 Loaded existing teams data to preserve capacity fields")
+    except Exception as e:
+        print(f"⚠️  Could not load existing data: {e}")
+
+# Build a map of existing team capacity data
+existing_teams_map = {}
+if existing_data.get('teams'):
+    for team in existing_data['teams']:
+        existing_teams_map[team['name']] = team
+
+# Merge new roster data with existing capacity data
+for team in teams:
+    team_name = team['name']
+    if team_name in existing_teams_map:
+        existing_team = existing_teams_map[team_name]
+        # Preserve all capacity-related fields
+        capacity_fields = [
+            'capacity_delivered_june', 'work_items_closed_june',
+            'capacity_committed_july', 'work_items_committed_july',
+            'capacity_committed_august', 'work_items_committed_august',
+            'capacity_committed_september', 'work_items_committed_september',
+            'june_delivered_by_program', 'june_delivered_unmapped',
+            'july_committed_by_program', 'july_committed_unmapped',
+            'august_committed_by_program', 'august_committed_unmapped',
+            'september_committed_by_program', 'september_committed_unmapped'
+        ]
+        for field in capacity_fields:
+            if field in existing_team:
+                team[field] = existing_team[field]
+        print(f"   ✓ Preserved capacity data for {team_name}")
+
 output = {
     'last_updated': datetime.now().isoformat(),
     'teams': teams
