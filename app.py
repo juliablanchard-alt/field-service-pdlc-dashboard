@@ -403,6 +403,9 @@ def index():
             match = re.search(r'\[(\d{3})\]', prog.get('name', ''))
             if match:
                 prog['target_release'] = match.group(1)
+            else:
+                # Final fallback: default to 264 for current work
+                prog['target_release'] = '264'
 
         for proj in prog.get('projects', []):
             # Collect ALL unique teams and derive both PO and Dev Lead from team records
@@ -499,6 +502,9 @@ def index():
             match = re.search(r'\[(\d{3})\]', prog.get('name', ''))
             if match:
                 prog['target_release'] = match.group(1)
+            else:
+                # Final fallback: default to 264 for current work
+                prog['target_release'] = '264'
 
     # Don't normalize execution_programs - they already have correct portfolio values from GUS
 
