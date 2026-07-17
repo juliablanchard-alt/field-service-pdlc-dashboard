@@ -2908,7 +2908,7 @@
                 <div class="phase-subcolumn prototyping-subcolumn">
                     <div class="subcolumn-header">
                         <span>Prototyping</span>
-                        <span class="subcolumn-count">0</span>
+                        <span class="subcolumn-count">{{ programs|selectattr('phase', 'equalto', '1')|selectattr('subcolumn', 'equalto', 'prototyping')|list|length }}</span>
                     </div>
 
                     {% for program in programs %}
@@ -2999,7 +2999,7 @@
                 <div class="phase-subcolumn ready-subcolumn">
                     <div class="subcolumn-header">
                         <span>Ready for Review</span>
-                        <span class="subcolumn-count">0</span>
+                        <span class="subcolumn-count">{{ programs|selectattr('phase', 'equalto', '1')|selectattr('subcolumn', 'equalto', 'ready_for_review')|list|length }}</span>
                     </div>
 
                     {% for program in programs %}
