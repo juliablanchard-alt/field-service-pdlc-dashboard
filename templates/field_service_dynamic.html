@@ -546,6 +546,9 @@
             transform: translateZ(0);
             word-wrap: break-word;
             overflow-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+            min-height: 140px;
         }
 
         .program-card:hover {
@@ -3114,29 +3117,12 @@
                             {% endif %}
                         </div>
 
-                        <div style="margin-bottom: 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                            <span style="display: inline-block; font-size: 13px; color: #475569; font-weight: 600; background: #dbeafe; padding: 4px 10px; border-radius: 6px;">{{ program.portfolio }}</span>
-                            {% set scheduled_builds = [] %}
-                            {% for project in program.projects %}
-                                {% for epic in project.epics %}
-                                    {% if epic.scheduled_build and epic.scheduled_build.strip() and epic.scheduled_build != '-' and epic.scheduled_build not in scheduled_builds %}
-                                        {% set _ = scheduled_builds.append(epic.scheduled_build) %}
-                                    {% endif %}
-                                {% endfor %}
-                            {% endfor %}
-                            {% if scheduled_builds %}
-                                <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; font-weight: 600;">
-                                    🎯 {{ scheduled_builds|join(', ') }}
-                                </span>
-                            {% endif %}
-                            {% if program.health_status and program.health_status != 'N/A' %}
-                            <span class="badge-{{ program.health_status|lower|replace(' ', '-') }}" style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">{{ program.health_status }}</span>
-                            {% elif program.health %}
-                            <span class="badge-{{ program.health|lower|replace(' ', '-') }}" style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">{{ program.health }}</span>
-                            {% endif %}
+                        <!-- Portfolio badge with reduced padding -->
+                        <div style="margin-bottom: 10px;">
+                            <span style="display: inline-block; font-size: 11px; color: #475569; font-weight: 600; background: #dbeafe; padding: 3px 7px; border-radius: 6px; line-height: 1.3;">{{ program.portfolio }}</span>
                         </div>
 
-                        <div class="program-meta">
+                        <div class="program-meta" style="margin-bottom: 10px;">
                             {% if program.program_manager %}
                             <div class="meta-item">
                                 <span class="meta-label">PM:</span> {{ program.program_manager }}
@@ -3161,6 +3147,28 @@
                             <div class="meta-item">
                                 <span class="meta-label">CX:</span> {{ program.cx_lead }}
                             </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Build and health badges at bottom -->
+                        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: auto;">
+                            {% set scheduled_builds = [] %}
+                            {% for project in program.projects %}
+                                {% for epic in project.epics %}
+                                    {% if epic.scheduled_build and epic.scheduled_build.strip() and epic.scheduled_build != '-' and epic.scheduled_build not in scheduled_builds %}
+                                        {% set _ = scheduled_builds.append(epic.scheduled_build) %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                            {% if scheduled_builds %}
+                                <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; font-weight: 600;">
+                                    🎯 {{ scheduled_builds|join(', ') }}
+                                </span>
+                            {% endif %}
+                            {% if program.health_status and program.health_status != 'N/A' %}
+                            <span class="badge-{{ program.health_status|lower|replace(' ', '-') }}" style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">{{ program.health_status }}</span>
+                            {% elif program.health %}
+                            <span class="badge-{{ program.health|lower|replace(' ', '-') }}" style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">{{ program.health }}</span>
                             {% endif %}
                         </div>
                     </div>
