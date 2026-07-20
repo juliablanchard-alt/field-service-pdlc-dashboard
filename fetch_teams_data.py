@@ -5,6 +5,7 @@ Report: Field Service Gus Roster - June 2026 (00OEE000002a9YH2AY)
 """
 
 import json
+import os
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -54,6 +55,34 @@ def count_filled_nonfilled(groupings, factMap):
 
     return filled, non_filled
 
+def derive_team_portfolios():
+    """Derive team→portfolio mapping from actual epic assignments in GUS data"""
+    exec_data_path = os.path.join(SCRIPT_DIR, 'data', 'execution_data.json')
+    team_portfolio_map = {}
+
+    if os.path.exists(exec_data_path):
+        with open(exec_data_path, 'r') as f:
+            exec_data = json.load(f)
+
+        # Build map of team → set of portfolios from epic assignments
+        for prog in exec_data.get('programs', []):
+            portfolio = prog.get('portfolio', '')
+            if not portfolio:
+                continue
+            for proj in prog.get('projects', []):
+                for epic in proj.get('epics', []):
+                    epic_team = epic.get('team', '')
+                    if epic_team and epic_team != '-':
+                        if epic_team not in team_portfolio_map:
+                            team_portfolio_map[epic_team] = set()
+                        team_portfolio_map[epic_team].add(portfolio)
+
+    # Convert sets to sorted lists for JSON serialization
+    for team in team_portfolio_map:
+        team_portfolio_map[team] = sorted(list(team_portfolio_map[team]))
+
+    return team_portfolio_map
+
 def parse_teams(report_data):
     """Parse teams from report groupings"""
     teams_list = []
@@ -61,6 +90,11 @@ def parse_teams(report_data):
     groupings_down = report_data.get('groupingsDown', {})
     top_groups = groupings_down.get('groupings', [])
     factMap = report_data.get('factMap', {})
+
+    # Load derived team→portfolio mapping from actual GUS data
+    print("🔍 Deriving team portfolios from GUS execution data...")
+    team_portfolio_map = derive_team_portfolios()
+    print(f"   ✓ Found portfolio mappings for {len(team_portfolio_map)} teams")
 
     for team_group in top_groups:
         team_name = team_group.get('label', 'Unknown')
@@ -77,20 +111,22 @@ def parse_teams(report_data):
             team_group.get('groupings', []), factMap
         )
 
-        # Determine portfolio(s) this team works on by looking at programs in execution data
-        # For now, we'll derive from team name prefix
-        portfolios = []
-        if team_name.startswith('FSL'):
-            portfolios.append('264 Field Service Foundations')
-        elif team_name.startswith('SFS Mobile'):
-            portfolios.append('264 Field Service Mobile')
-        elif 'Scheduling' in team_name or 'Optimization' in team_name:
-            portfolios.append('264 Field Service Scheduling & Optimization')
-        elif 'WFM' in team_name or 'Worker' in team_name:
-            portfolios.append('264 Field Service Workforce Scheduling')
+        # Use derived mapping or fall back to name-based logic
+        if team_name in team_portfolio_map:
+            portfolios = team_portfolio_map[team_name]
         else:
-            # Teams like MomentumForce, QuantumForce - could work across multiple
-            portfolios.append('264 Field Service Foundations')
+            # Fallback for teams with no current epic assignments
+            portfolios = []
+            if team_name.startswith('FSL'):
+                portfolios.append('264 Field Service Foundations')
+            elif team_name.startswith('SFS Mobile') or 'SFS Mobile' in team_name:
+                portfolios.append('264 Field Service Mobile')
+            elif 'Scheduling' in team_name or 'Optimization' in team_name:
+                portfolios.append('264 Field Service Scheduling & Optimization')
+            elif 'WFM' in team_name or 'Worker' in team_name:
+                portfolios.append('264 Field Service Workforce Scheduling')
+            else:
+                portfolios.append('264 Field Service Foundations')
 
         teams_list.append({
             'name': team_name,

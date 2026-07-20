@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T10:31:41.828154",
+  "last_updated": "2026-07-20T12:52:20.112652",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -7,7 +7,7 @@
       "non_filled": 0,
       "total": 10,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 137,
       "work_items_closed_june": 46,
@@ -36,7 +36,7 @@
       "non_filled": 0,
       "total": 1,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 38,
       "work_items_closed_june": 13,
@@ -65,7 +65,7 @@
       "non_filled": 0,
       "total": 7,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 60,
       "work_items_closed_june": 23,
@@ -94,7 +94,7 @@
       "non_filled": 0,
       "total": 6,
       "portfolios": [
-        "264 Field Service Foundations"
+        "FY27 SC M4 UWM"
       ],
       "capacity_delivered_june": 176,
       "work_items_closed_june": 74,
@@ -119,7 +119,7 @@
       "non_filled": 0,
       "total": 6,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization"
       ],
       "capacity_delivered_june": 124.0,
       "work_items_closed_june": 90,
@@ -150,7 +150,8 @@
       "non_filled": 0,
       "total": 10,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Foundations",
+        "FY27 SC M4 UWM"
       ],
       "capacity_delivered_june": 155,
       "work_items_closed_june": 51,
@@ -179,7 +180,7 @@
       "non_filled": 0,
       "total": 7,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization"
       ],
       "capacity_delivered_june": 111,
       "work_items_closed_june": 42,
@@ -209,7 +210,8 @@
       "non_filled": 0,
       "total": 10,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization",
+        "FY27 SC M4 UWM"
       ],
       "capacity_delivered_june": 336,
       "work_items_closed_june": 111,
@@ -234,7 +236,8 @@
       "non_filled": 0,
       "total": 8,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization",
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 173,
       "work_items_closed_june": 68,
@@ -266,7 +269,7 @@
       "non_filled": 0,
       "total": 7,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization"
       ],
       "capacity_delivered_june": 356,
       "work_items_closed_june": 142,
@@ -297,7 +300,8 @@
       "non_filled": 0,
       "total": 9,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization",
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 152,
       "work_items_closed_june": 54,
@@ -329,7 +333,7 @@
       "non_filled": 0,
       "total": 8,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Scheduling & Optimization"
       ],
       "capacity_delivered_june": 188.5,
       "work_items_closed_june": 156,
@@ -358,7 +362,8 @@
       "non_filled": 0,
       "total": 12,
       "portfolios": [
-        "264 Field Service Scheduling & Optimization"
+        "264 Field Service Scheduling & Optimization",
+        "FY27 SC M4 UWM"
       ],
       "capacity_delivered_june": 250.0,
       "work_items_closed_june": 138,
@@ -414,7 +419,7 @@
       "non_filled": 0,
       "total": 11,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 182,
       "work_items_closed_june": 69,
@@ -443,7 +448,7 @@
       "non_filled": 0,
       "total": 7,
       "portfolios": [
-        "264 Field Service Foundations"
+        "264 Field Service Mobile"
       ],
       "capacity_delivered_june": 144,
       "work_items_closed_june": 89,
@@ -561,7 +566,9 @@
       "non_filled": 0,
       "total": 5,
       "portfolios": [
-        "264 Field Service Mobile"
+        "264 Field Service Foundations",
+        "264 Field Service Mobile",
+        "264 Field Service Workforce Scheduling"
       ],
       "capacity_delivered_june": 73,
       "work_items_closed_june": 34,
@@ -696,6 +703,7 @@
       "non_filled": 0,
       "total": 4,
       "portfolios": [
+        "264 Field Service Foundations",
         "264 Field Service Mobile"
       ],
       "capacity_delivered_june": 117,
@@ -750,7 +758,7 @@
       "non_filled": 0,
       "total": 2,
       "portfolios": [
-        "264 Field Service Workforce Scheduling"
+        "FY27 SC M4 UWM"
       ],
       "capacity_delivered_june": 190,
       "work_items_closed_june": 64,
