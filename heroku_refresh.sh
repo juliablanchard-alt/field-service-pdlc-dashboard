@@ -6,6 +6,15 @@ set -e
 
 echo "Starting Heroku data refresh at $(date)"
 
+# Check if today is a weekday (Monday=1, Sunday=7)
+DAY_OF_WEEK=$(date +%u)
+if [ "$DAY_OF_WEEK" -gt 5 ]; then
+    echo "Today is weekend (day $DAY_OF_WEEK), skipping refresh"
+    exit 0
+fi
+
+echo "Today is weekday (day $DAY_OF_WEEK), proceeding with refresh"
+
 # Authenticate with Salesforce using SFDX_AUTH_URL from config var
 if [ -n "$SFDX_AUTH_URL" ]; then
     echo "Authenticating with Salesforce..."
