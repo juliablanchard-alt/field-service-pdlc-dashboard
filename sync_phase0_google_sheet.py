@@ -15,6 +15,7 @@ JSON_FILE = SCRIPT_DIR / "data" / "phase_0_programs.json"
 # Column mapping (0-indexed)
 COL_PORTFOLIO = 0      # A
 COL_STAGE = 3          # D
+COL_INITIATIVE = 4     # E
 COL_FEATURE = 8        # I
 COL_STATUS = 16        # Q
 COL_PM_LEAD = 17       # R
@@ -66,9 +67,13 @@ def parse_sheet_rows(rows):
         portfolio = row[COL_PORTFOLIO] if len(row) > COL_PORTFOLIO else ''
         stage = row[COL_STAGE] if len(row) > COL_STAGE else ''
         feature = row[COL_FEATURE] if len(row) > COL_FEATURE else ''
+        initiative = row[COL_INITIATIVE] if len(row) > COL_INITIATIVE else ''
+
+        # Use Initiative as fallback if Feature is empty
+        program_name = feature if feature else initiative
 
         # Skip empty or engineering rows
-        if not feature or not portfolio or 'Engineering Backlog' in str(stage):
+        if not program_name or not portfolio or 'Engineering Backlog' in str(stage):
             continue
 
         # Determine phase and subcolumn
@@ -89,7 +94,7 @@ def parse_sheet_rows(rows):
                 subcolumn = 'prototyping'  # Default for Phase 1
 
         program = {
-            'name': str(feature)[:80],
+            'name': str(program_name)[:80],
             'portfolio': str(portfolio),
             'stage': str(stage),
             'phase': phase,

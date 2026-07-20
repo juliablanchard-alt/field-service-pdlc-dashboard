@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T12:23:06.698839",
+  "last_updated": "2026-07-20T12:27:55.772136",
   "source": "Google Sheets",
   "sheet_id": "1ERWXm6wVS5ItzxCqR6pX1tTf6_ec2_D-jPZeEF5V89c",
   "programs": [
@@ -317,6 +317,32 @@
     },
     {
       "name": "Improve barcode scanner experience to support multi-scanning",
+      "portfolio": "Mobile",
+      "stage": "PM Backlog (Phase 0)",
+      "phase": "0",
+      "subcolumn": "backlog",
+      "status": "",
+      "pm_lead": "Sharon Adler",
+      "arch_lead": "",
+      "tpm_lead": "",
+      "ux_lead": "",
+      "cx_lead": ""
+    },
+    {
+      "name": "Location Intelligence: Last 30 Meters ",
+      "portfolio": "Mobile",
+      "stage": "PM Backlog (Phase 0)",
+      "phase": "0",
+      "subcolumn": "backlog",
+      "status": "",
+      "pm_lead": "Sharon Adler",
+      "arch_lead": "",
+      "tpm_lead": "",
+      "ux_lead": "",
+      "cx_lead": ""
+    },
+    {
+      "name": "Agentic Search",
       "portfolio": "Mobile",
       "stage": "PM Backlog (Phase 0)",
       "phase": "0",
@@ -706,6 +732,19 @@
       "cx_lead": ""
     },
     {
+      "name": "Features adoption (RVA, etc.)",
+      "portfolio": "Scheduling & Optimization",
+      "stage": "PM Backlog (Phase 0)",
+      "phase": "0",
+      "subcolumn": "backlog",
+      "status": "",
+      "pm_lead": "",
+      "arch_lead": "",
+      "tpm_lead": "",
+      "ux_lead": "",
+      "cx_lead": ""
+    },
+    {
       "name": "Setup",
       "portfolio": "Scheduling & Optimization",
       "stage": "PM Backlog (Phase 0)",
@@ -1006,6 +1045,19 @@
     },
     {
       "name": "D&D with Violation and Suggestions ",
+      "portfolio": "Scheduling & Optimization",
+      "stage": "PM Backlog (Phase 0)",
+      "phase": "0",
+      "subcolumn": "backlog",
+      "status": "",
+      "pm_lead": "",
+      "arch_lead": "",
+      "tpm_lead": "",
+      "ux_lead": "",
+      "cx_lead": ""
+    },
+    {
+      "name": "WFS Stack Rank",
       "portfolio": "Scheduling & Optimization",
       "stage": "PM Backlog (Phase 0)",
       "phase": "0",
