@@ -71,18 +71,29 @@ def parse_sheet_rows(rows):
         if not feature or not portfolio or 'Engineering Backlog' in str(stage):
             continue
 
-        # Determine phase
+        # Determine phase and subcolumn
         phase = '0'
+        subcolumn = 'backlog'  # Default for Phase 0
+
         if 'PM Backlog' in str(stage) or 'Phase 0' in str(stage):
             phase = '0'
+            subcolumn = 'backlog'
         elif any(keyword in str(stage) for keyword in ['Prototyping', 'Ready for Review', 'Approved', 'Discovery', 'Phase 1']):
             phase = '1'
+            # Determine Phase 1 subcolumn based on stage
+            if 'Prototyping' in str(stage):
+                subcolumn = 'prototyping'
+            elif 'Ready for Review' in str(stage) or 'Approved' in str(stage):
+                subcolumn = 'ready_for_review'
+            else:
+                subcolumn = 'prototyping'  # Default for Phase 1
 
         program = {
             'name': str(feature)[:80],
             'portfolio': str(portfolio),
             'stage': str(stage),
             'phase': phase,
+            'subcolumn': subcolumn,
             'status': str(row[COL_STATUS]) if len(row) > COL_STATUS else '',
             'pm_lead': str(row[COL_PM_LEAD]) if len(row) > COL_PM_LEAD else '',
             'arch_lead': str(row[COL_ARCH_LEAD]) if len(row) > COL_ARCH_LEAD else '',
