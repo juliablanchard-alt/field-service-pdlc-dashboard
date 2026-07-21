@@ -15060,18 +15060,23 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                                style="color: #2563eb; text-decoration: none;">
                                                 ${epic.epic_name}
                                             </a>` :
-                                            `<span style="color: #dc2626; font-weight: 500;">${epic.epic_name}</span>
-                                             <span style="color: #94a3b8; font-size: 11px; font-style: italic;"> (Work items without epic assignment)</span>`
+                                            epic.work_items && epic.work_items.length > 0 ?
+                                                `<a href="https://gus.lightning.force.com/lightning/r/ADM_Work__c/${epic.work_items[0].id}/view"
+                                                   target="_blank"
+                                                   style="color: #dc2626; text-decoration: none;">
+                                                    ${epic.epic_name}
+                                                </a>
+                                                <span style="color: #94a3b8; font-size: 11px; font-style: italic;"> (Work items without epic assignment)</span>` :
+                                                `<span style="color: #dc2626; font-weight: 500;">${epic.epic_name}</span>
+                                                 <span style="color: #94a3b8; font-size: 11px; font-style: italic;"> (Work items without epic assignment)</span>`
                                         }
                                     </div>
                                     <div style="font-size: 11px; color: #94a3b8;">
-                                        Owner: ${epic.epic_owner} | Priority: ${epic.priority || '-'}
+                                        Owner: ${epic.epic_owner}${epic.epic_health && epic.epic_health !== 'Unknown' ? ` | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.epic_health}</span>` : ''}
                                     </div>
                                 </td>
                                 <td style="text-align: center; padding: 8px 16px; vertical-align: top;">
-                                    <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
-                                        ${epic.epic_health}
-                                    </span>
+
                                 </td>
                                 <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
                                     ${monthName === 'June PD' ? epic.story_points : '—'}
@@ -16112,7 +16117,8 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 loadOrphanedData();
             }
 
-            // Removed: No longer saving active view to localStorage
+            // Save active view to localStorage so refresh doesn't reset to overview
+            localStorage.setItem('activeView', viewName);
         }
 
         // Orphaned epics data
@@ -16452,6 +16458,17 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                     console.log('Static site detected - auto-refresh disabled');
                 });
         }
+
+        // Restore active view from localStorage on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedView = localStorage.getItem('activeView');
+            if (savedView && savedView !== 'overview') {
+                // Small delay to ensure DOM is ready
+                setTimeout(() => {
+                    switchView(savedView);
+                }, 100);
+            }
+        });
 
         // Start auto-refresh on page load
         window.addEventListener('load', startAutoRefresh);
