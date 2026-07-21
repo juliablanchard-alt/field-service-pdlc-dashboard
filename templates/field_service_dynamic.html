@@ -14805,8 +14805,8 @@
 
     <!-- Orphaned Epics Content -->
     <div id="orphaned-view" class="view-content">
-        <h2 style="font-size: 24px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Orphaned Epics</h2>
-        <p style="color: #64748b; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">
+        <h2 style="font-size: 24px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">Orphaned Epics</h2>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">
             Epics missing program or project assignments (264+ releases only). These require PM/leadership intervention to properly nest in the portfolio hierarchy.
         </p>
 
@@ -14824,7 +14824,7 @@
                 <div class="stat-header">
                     <div>
                         <div class="stat-label" style="font-size: 10px;">ORPHANED CAPACITY (PD)</div>
-                        <div class="stat-value" id="orphaned-capacity" style="color: #dc2626; font-size: 28px;">—</div>
+                        <div class="stat-value" id="orphaned-capacity" style="color: #d97706; font-size: 28px;">—</div>
                     </div>
                 </div>
             </div>
@@ -14850,12 +14850,11 @@
         <div id="orphaned-by-team" style="display: block;">
             <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; table-layout: fixed;">
                 <colgroup>
-                    <col style="width: 32%;">
-                    <col style="width: 10%;">
+                    <col style="width: 40%;">
                     <col style="width: 12%;">
-                    <col style="width: 14%;">
-                    <col style="width: 12%;">
-                    <col style="width: 20%;">
+                    <col style="width: 16%;">
+                    <col style="width: 16%;">
+                    <col style="width: 16%;">
                 </colgroup>
                 <thead>
                     <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
@@ -14864,11 +14863,10 @@
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Health</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Triage</th>
                     </tr>
                 </thead>
                 <tbody id="orphaned-team-tbody">
-                    <tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -14877,12 +14875,11 @@
         <div id="orphaned-by-release" style="display: none;">
             <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; table-layout: fixed;">
                 <colgroup>
-                    <col style="width: 10%;">
-                    <col style="width: 32%;">
-                    <col style="width: 10%;">
                     <col style="width: 12%;">
-                    <col style="width: 14%;">
-                    <col style="width: 22%;">
+                    <col style="width: 40%;">
+                    <col style="width: 12%;">
+                    <col style="width: 16%;">
+                    <col style="width: 20%;">
                 </colgroup>
                 <thead>
                     <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
@@ -14891,11 +14888,10 @@
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epics</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Health</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Triage</th>
                     </tr>
                 </thead>
                 <tbody id="orphaned-release-tbody">
-                    <tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -16182,7 +16178,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
         function renderOrphanedByTeam() {
             const tbody = document.getElementById('orphaned-team-tbody');
             if (!orphanedData.by_team || orphanedData.by_team.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
                 return;
             }
 
@@ -16191,13 +16187,12 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 if (!team.epics || team.epics.length === 0) return;
 
                 const sanitizedName = team.name.replace(/[^a-zA-Z0-9]/g, '-');
-                const triageCount = team.epics.filter(e => e.triage_needed).length;
 
                 // Team summary row (collapsed by default)
                 html += `
                     <tr class="team-row" data-team="${sanitizedName}" style="background: #f8fafc; border-bottom: 1px solid #e5e7eb; cursor: pointer;" onclick="toggleTeamBreakdown('${sanitizedName}')">
                         <td style="padding: 12px 16px;">
-                            <span style="font-weight: 600; color: #1e293b; display: inline-flex; align-items: center;">
+                            <span style="font-weight: 600; font-size: 15px; color: #1e293b; display: inline-flex; align-items: center;">
                                 <svg id="icon-${sanitizedName}" style="width: 16px; height: 16px; margin-right: 8px; transition: transform 0.2s;" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -16209,14 +16204,11 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 ${team.epics.length}
                             </span>
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #dc2626; font-weight: 600;">
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #d97706; font-weight: 600;">
                             ${Math.round(team.total_capacity || 0)}
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
-                        <td style="padding: 12px 16px;">
-                            ${triageCount > 0 ? `<span style="color: #dc2626; font-size: 12px; font-weight: 600;">${triageCount} need triage</span>` : ''}
-                        </td>
                     </tr>
                 `;
 
@@ -16239,19 +16231,16 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 </div>
                             </td>
                             <td style="text-align: center; padding: 8px 16px;"></td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #dc2626; font-weight: 600;">
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #d97706; font-weight: 600;">
                                 ${Math.round(epic.story_points || 0)}
                             </td>
-                            <td style="text-align: left; padding: 8px 16px;">
+                            <td style="text-align: center; padding: 8px 16px;">
                                 <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
                                     ${epic.health}
                                 </span>
                             </td>
                             <td style="text-align: center; padding: 8px 16px; font-size: 11px; color: #64748b;">
                                 ${epic.scheduled_build || '-'}
-                            </td>
-                            <td style="padding: 8px 16px;">
-                                ${epic.triage_needed ? '<span style="color: #dc2626; font-size: 11px; font-weight: 600;">Needs triage</span>' : ''}
                             </td>
                         </tr>
                     `;
@@ -16281,7 +16270,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
         function renderOrphanedByRelease() {
             const tbody = document.getElementById('orphaned-release-tbody');
             if (!orphanedData.by_release || orphanedData.by_release.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
                 return;
             }
 
@@ -16290,7 +16279,6 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 if (!release.epics || release.epics.length === 0) return;
 
                 const sanitizedRelease = release.name.replace(/[^a-zA-Z0-9]/g, '-');
-                const triageCount = release.epics.filter(e => e.triage_needed).length;
 
                 // Release summary row (collapsed by default)
                 html += `
@@ -16313,13 +16301,10 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 ${release.epics.length}
                             </span>
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #dc2626; font-weight: 600;">
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #d97706; font-weight: 600;">
                             ${Math.round(release.orphaned_capacity || 0)}
                         </td>
                         <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
-                        <td style="padding: 12px 16px;">
-                            ${triageCount > 0 ? `<span style="color: #dc2626; font-size: 12px; font-weight: 600;">${triageCount} need triage</span>` : ''}
-                        </td>
                     </tr>
                 `;
 
@@ -16343,16 +16328,13 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                                 </div>
                             </td>
                             <td style="text-align: center; padding: 8px 16px;"></td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #dc2626; font-weight: 600;">
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #d97706; font-weight: 600;">
                                 ${Math.round(epic.story_points || 0)}
                             </td>
-                            <td style="text-align: left; padding: 8px 16px;">
+                            <td style="text-align: center; padding: 8px 16px;">
                                 <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
                                     ${epic.health}
                                 </span>
-                            </td>
-                            <td style="padding: 8px 16px;">
-                                ${epic.triage_needed ? '<span style="color: #dc2626; font-size: 11px; font-weight: 600;">Needs triage</span>' : ''}
                             </td>
                         </tr>
                     `;

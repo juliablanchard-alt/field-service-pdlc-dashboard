@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21T09:57:50.498677",
+  "last_updated": "2026-07-21T10:37:56.049301",
   "programs": [
     {
       "name": "[264] Mobile Insights GA",
@@ -708,7 +708,7 @@
               "owner": "Nitasha Walia",
               "team": "SFS Frontline AI",
               "scheduled_build": "-",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe1  Stretch Goal",
               "path_to_green": "-"
             },
@@ -1370,7 +1370,7 @@
               "owner": "Navneet Gehlot",
               "team": "MomentumForce",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udd34 Below the Line",
               "path_to_green": "-"
             },
@@ -1384,7 +1384,7 @@
               "owner": "Orelie Fridler",
               "team": "FSL - Resource - Scheduling Platform",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe2 Above the Line",
               "path_to_green": "-"
             }
@@ -2163,7 +2163,7 @@
           "product_owner": "",
           "dev_lead": "Gal Asraf",
           "target": "264.7",
-          "last_modified": "2026-07-20",
+          "last_modified": "2026-07-21",
           "health_status": "On Track",
           "epics": [
             {
@@ -2176,7 +2176,7 @@
               "owner": "Gal Asraf",
               "team": "FSL - Talpiot - Dispatch Console",
               "scheduled_build": "264.7",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe2 Above the Line",
               "path_to_green": "-"
             },
@@ -2424,7 +2424,7 @@
               "owner": "Reshma Dixit",
               "team": "FSL - Core - Foundations",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe2 Above the Line",
               "path_to_green": "-"
             },
@@ -3080,7 +3080,7 @@
               "owner": "Limor Rohald",
               "team": "FSL - Resource - Scheduling Platform",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe2 Above the Line",
               "path_to_green": "-"
             },
@@ -3488,7 +3488,7 @@
               "owner": "Ruchika Pashine",
               "team": "FSL - Foundation - Atlas",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe2 Above the Line",
               "path_to_green": "-"
             },
@@ -3681,7 +3681,7 @@
               "owner": "Vartika Vaish",
               "team": "Team-WFM-Foundation",
               "scheduled_build": "264",
-              "last_modified": "2026-07-20",
+              "last_modified": "2026-07-21",
               "loc": "\ud83d\udfe1  Stretch Goal",
               "path_to_green": "-"
             },
