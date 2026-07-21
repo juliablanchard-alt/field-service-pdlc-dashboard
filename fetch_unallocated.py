@@ -353,14 +353,8 @@ def filter_for_unallocated(all_epics):
 
     print(f"Filtered to {len(unallocated)} unallocated epics (264+)")
 
-    # Check work items - filter out epics with all work closed
-    if unallocated:
-        epic_ids = [e['id'] for e in unallocated]
-        all_closed_ids = check_epic_work_items(epic_ids)
-
-        # Remove epics with all work closed
-        unallocated = [e for e in unallocated if e['id'] not in all_closed_ids]
-        print(f"After removing epics with all work closed: {len(unallocated)} epics")
+    # Note: We no longer filter out epics with all work closed/completed
+    # Completed work in 2026 that's orphaned represents unmapped capacity that should be visible
 
     return unallocated
 
