@@ -21,7 +21,7 @@ def check_epic_hygiene(epic):
 
     # Missing scheduled build (release month)
     if not epic.get('scheduled_build') or epic.get('scheduled_build') in ['-', '', 'null']:
-        issues.append('missing_release')
+        issues.append('missing_scheduled_build')
 
     # Missing priority
     if not epic.get('priority') or epic.get('priority') in ['-', '', 'null']:
@@ -36,11 +36,6 @@ def check_epic_hygiene(epic):
     comments = epic.get('health_comments', '')
     if health in ['Blocked', 'On Hold'] and (not comments or comments in ['-', '', 'null']):
         issues.append('blocked_no_comments')
-
-    # Zero or missing story points
-    story_points = epic.get('story_points', 0)
-    if not story_points or story_points == 0:
-        issues.append('missing_story_points')
 
     return issues
 
@@ -70,9 +65,11 @@ def analyze_execution_data():
 
                 if epic_issues:
                     # Track this epic's issues
+                    # NOTE: epic.id is empty in report, so we use name as the key
                     epic_data = {
                         'epic_id': epic.get('id', ''),
                         'epic_name': epic.get('name', ''),
+                        'epic_name_key': epic.get('name', '').strip(),  # Normalized name for matching
                         'team': epic.get('team', ''),
                         'owner': epic.get('owner', ''),
                         'health': epic.get('health', ''),
@@ -114,11 +111,10 @@ def analyze_execution_data():
         'teams_affected': len(teams_affected),
         'programs_affected': len(programs_affected),
         'issue_breakdown': {
-            'missing_release': issue_counts['missing_release'],
+            'missing_scheduled_build': issue_counts['missing_scheduled_build'],
             'missing_priority': issue_counts['missing_priority'],
             'missing_owner': issue_counts['missing_owner'],
-            'blocked_no_comments': issue_counts['blocked_no_comments'],
-            'missing_story_points': issue_counts['missing_story_points']
+            'blocked_no_comments': issue_counts['blocked_no_comments']
         }
     }
 

@@ -3370,6 +3370,21 @@
             </div>
         </div>
 
+        <!-- Needs Attention Banner -->
+        <div id="hygiene-banner" style="display: none; background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 20px;">⚠️</span>
+                <div style="flex: 1;">
+                    <div style="font-weight: 600; color: #92400e; font-size: 14px; margin-bottom: 4px;">
+                        <span id="hygiene-count">0</span> epics need attention
+                    </div>
+                    <div style="color: #78350f; font-size: 12px;">
+                        Missing data or requiring updates • <a href="#" onclick="toggleHygieneFilter(); return false;" style="color: #d97706; text-decoration: underline;">Filter view</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!-- Field Service Program Rows -->
     {% for program in execution_programs %}
     <!-- Program Row -->

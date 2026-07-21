@@ -1327,6 +1327,18 @@ def unmapped_details():
         print(f"Error loading unmapped details: {e}", flush=True)
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/hygiene')
+def hygiene():
+    """Serve hygiene issues for Needs Attention feature"""
+    hygiene_file = os.path.join('data', 'hygiene_issues.json')
+    try:
+        with open(hygiene_file, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error loading hygiene data: {e}", flush=True)
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/health')
 def health():
     """Health check endpoint"""
