@@ -75,7 +75,7 @@ def fetch_all_field_service_epics_direct():
            Priority__c, Scheduled_Build__r.Name,
            Owner.Name, Owner.IsActive, Team__r.Name,
            Project__r.Name,
-           LastModifiedDate,
+           CreatedDate, LastModifiedDate,
            Actual_Story_Points_on_Epic__c
     FROM ADM_Epic__c
     WHERE (Team__r.Name LIKE '%Field Service%'
@@ -130,6 +130,7 @@ def fetch_all_field_service_epics_direct():
             'team': team,
             'scheduled_build': scheduled_build,
             'status': record.get('Health__c', 'Unknown'),  # Using Health__c as status (no Status__c field)
+            'created_date': record.get('CreatedDate', '')[:10] if record.get('CreatedDate') else '',
             'last_modified': record.get('LastModifiedDate', '')[:10] if record.get('LastModifiedDate') else '',
             'story_points': story_points,
             'program_name': program_name,
@@ -212,9 +213,15 @@ def filter_for_unallocated(all_epics):
         if not epic.get('owner_is_active', True):
             continue
 
-        # Filter out epics last modified before 2025 (stale 2023-2024 work)
+        # Filter out epics with 0 story points created before 2026 (old work, likely abandoned)
+        story_points = epic.get('story_points', 0)
+        created_date = epic.get('created_date', '')
+        if story_points == 0 and created_date and created_date < '2026-01-01':
+            continue
+
+        # Filter out epics not modified in 2026 (focus on current year work only)
         last_modified = epic.get('last_modified', '')
-        if last_modified and last_modified < '2025-01-01':
+        if last_modified and last_modified < '2026-01-01':
             continue
 
         # Filter out epics not modified in 6+ months UNLESS they have 264+ in the title
@@ -244,6 +251,10 @@ def filter_for_unallocated(all_epics):
         release_num = None
 
         if scheduled_build and scheduled_build not in ['-', '', 'Backlog', 'Future build']:
+            # Check for pre-264 releases explicitly (same as fetch_unmapped_details.py)
+            if any(scheduled_build.startswith(old) for old in ['234', '236', '238', '240', '242', '244', '246', '248', '250', '252', '254', '256', '258', '260', '262']):
+                continue  # Skip pre-264 releases
+
             # For standard releases: extract leading number (264, 266, 264.10)
             match = re.match(r'^(\d+)', scheduled_build)
             if match:
@@ -254,6 +265,8 @@ def filter_for_unallocated(all_epics):
                 match = re.search(r'\b(\d{3})\b', scheduled_build)
                 if match:
                     release_num = int(match.group(1))
+                    if release_num < 264:
+                        continue  # Skip if extracted number is pre-264
 
         # Only include epics for 264 and beyond (or no release/backlog)
         is_current_or_future = (
@@ -328,6 +341,15 @@ def load_active_teams():
         print(f"Warning: Could not load active teams: {e}")
         return set()
 
+def extract_release_number(epic_name):
+    """Extract release number from epic name for sorting (264, 266, etc.)"""
+    import re
+    # Look for 3-digit release numbers (264, 266, 268, etc.)
+    match = re.search(r'\b(2\d{2})\b', epic_name)
+    if match:
+        return int(match.group(1))
+    return 999  # No release number, sort to bottom
+
 def group_by_team(epics):
     """Group epics by team with capacity calculations"""
     # Load active teams to filter
@@ -345,6 +367,8 @@ def group_by_team(epics):
     # Convert to sorted list
     team_list = []
     for team_name, team_epics in sorted(teams.items()):
+        # Sort epics within team by release number (264 first, 266 last)
+        team_epics.sort(key=lambda e: (extract_release_number(e['name']), e['name']))
         # Calculate total story points (capacity)
         total_capacity = sum(e.get('story_points', 0) for e in team_epics)
         orphaned_capacity = sum(e.get('story_points', 0) for e in team_epics if e.get('is_orphaned'))
@@ -389,6 +413,9 @@ def group_by_release(epics):
     # Convert to list format
     release_list = []
     for release_name, release_epics in sorted_releases:
+        # Sort epics within release by epic name
+        release_epics.sort(key=lambda e: e['name'])
+
         # Calculate total story points (capacity)
         total_capacity = sum(e.get('story_points', 0) for e in release_epics)
         orphaned_capacity = sum(e.get('story_points', 0) for e in release_epics if e.get('is_orphaned'))
