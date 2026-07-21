@@ -16479,8 +16479,117 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 });
         }
 
+        // Hygiene data storage
+        let hygieneData = null;
+        let hygieneFilterActive = false;
+
+        // Load hygiene data on page load
+        async function loadHygieneData() {
+            try {
+                const response = await fetch('/api/hygiene');
+                if (!response.ok) {
+                    console.warn('Hygiene data not available');
+                    return;
+                }
+                hygieneData = await response.json();
+
+                // Update banner
+                const count = hygieneData.summary.total_epics_needing_attention;
+                document.getElementById('hygiene-count').textContent = count;
+
+                if (count > 0) {
+                    document.getElementById('hygiene-banner').style.display = 'block';
+                }
+
+                // Render badges on all epic rows
+                renderHygieneBadges();
+
+                console.log(`Loaded hygiene data: ${count} epics need attention`);
+            } catch (error) {
+                console.error('Failed to load hygiene data:', error);
+            }
+        }
+
+        // Render hygiene badges on all epic rows
+        function renderHygieneBadges() {
+            if (!hygieneData || !hygieneData.epics) return;
+
+            const epicRows = document.querySelectorAll('[data-epic-name]');
+            epicRows.forEach(row => {
+                const epicName = row.dataset.epicName;
+                if (!epicName) return;
+
+                const badgesContainer = row.querySelector('.hygiene-badges-container');
+                if (!badgesContainer) return;
+
+                const badgesHtml = getHygieneBadges(epicName);
+                if (badgesHtml) {
+                    badgesContainer.innerHTML = badgesHtml;
+                }
+            });
+        }
+
+        // Get hygiene badges HTML for an epic
+        function getHygieneBadges(epicName) {
+            if (!hygieneData || !hygieneData.epics) return '';
+
+            const epicIssues = hygieneData.epics.find(e => e.epic_name_key === epicName.trim());
+            if (!epicIssues || !epicIssues.issues || epicIssues.issues.length === 0) return '';
+
+            const badges = [];
+            const issues = epicIssues.issues;
+
+            if (issues.includes('missing_scheduled_build')) {
+                badges.push('<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500;">📅 No Release</span>');
+            }
+            if (issues.includes('missing_priority')) {
+                badges.push('<span style="background: #dbeafe; color: #1e40af; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500;">⭐ No Priority</span>');
+            }
+            if (issues.includes('missing_owner')) {
+                badges.push('<span style="background: #fce7f3; color: #9f1239; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500;">👤 No Owner</span>');
+            }
+            if (issues.includes('blocked_no_comments')) {
+                badges.push('<span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500;">🚫 Blocked (no notes)</span>');
+            }
+
+            return badges.join('');
+        }
+
+        // Toggle hygiene filter
+        function toggleHygieneFilter() {
+            hygieneFilterActive = !hygieneFilterActive;
+
+            if (!hygieneData) {
+                alert('Hygiene data not loaded yet');
+                return;
+            }
+
+            const epicNames = new Set(hygieneData.epics.map(e => e.epic_name_key));
+            const allEpicRows = document.querySelectorAll('[data-epic-name]');
+
+            allEpicRows.forEach(row => {
+                const epicName = row.dataset.epicName?.trim();
+                if (hygieneFilterActive) {
+                    // Show only epics with issues
+                    row.style.display = epicNames.has(epicName) ? '' : 'none';
+                } else {
+                    // Show all epics
+                    row.style.display = '';
+                }
+            });
+
+            // Update banner link text
+            const bannerLink = document.querySelector('#hygiene-banner a');
+            if (bannerLink) {
+                bannerLink.textContent = hygieneFilterActive ? 'Show all' : 'Filter view';
+            }
+        }
+
         // Restore active view from localStorage on page load
         window.addEventListener('DOMContentLoaded', () => {
+            // Load hygiene data
+            loadHygieneData();
+
             const savedView = localStorage.getItem('activeView');
             if (savedView && savedView !== 'overview') {
                 // Small delay to ensure DOM is ready
