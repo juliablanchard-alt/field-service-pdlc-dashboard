@@ -16236,12 +16236,12 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #d97706; font-weight: 600;">
                                 ${Math.round(epic.story_points || 0)}
                             </td>
-                            <td style="text-align: center; padding: 8px 16px;">
+                            <td style="text-align: left; padding: 8px 16px 8px 24px;">
                                 <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
                                     ${epic.health}
                                 </span>
                             </td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 11px; color: #64748b;">
+                            <td style="text-align: left; padding: 8px 16px; font-size: 11px; color: #64748b;">
                                 ${epic.scheduled_build || '-'}
                             </td>
                         </tr>
@@ -16333,8 +16333,8 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                             <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #d97706; font-weight: 600;">
                                 ${Math.round(epic.story_points || 0)}
                             </td>
-                            <td style="text-align: center; padding: 8px 16px;">
-                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
+                            <td style="text-align: left; padding: 8px 16px 8px 24px;">
+                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
                                     ${epic.health}
                                 </span>
                             </td>
