@@ -1294,6 +1294,36 @@ def validate_pbd():
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 
+@app.route('/api/orphaned')
+def api_orphaned():
+    """API endpoint for orphaned epics data (missing program/project)"""
+    try:
+        file_path = os.path.join(os.path.dirname(__file__), 'data', 'unallocated_data.json')
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error loading orphaned data: {e}", flush=True)
+        return jsonify({
+            'last_updated': None,
+            'summary': {},
+            'epics': [],
+            'by_team': [],
+            'by_release': []
+        })
+
+@app.route('/api/unmapped-details')
+def unmapped_details():
+    """Serve unmapped epic details for Allocations tab"""
+    unmapped_file = os.path.join('data', 'unmapped_details.json')
+    try:
+        with open(unmapped_file, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error loading unmapped details: {e}", flush=True)
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/health')
 def health():
     """Health check endpoint"""

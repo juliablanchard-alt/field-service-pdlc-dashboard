@@ -14803,54 +14803,99 @@
         </div>
     </div>
 
-    <!-- Orphaned Content -->
-    <div id="orphaned-view" class="view-content" style="display: none;">
+    <!-- Orphaned Epics Content -->
+    <div id="orphaned-view" class="view-content">
+        <h2 style="font-size: 24px; font-weight: 600; color: #1e293b; margin-bottom: 8px;">Orphaned Epics</h2>
+        <p style="color: #64748b; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">
+            Epics missing program or project assignments (264+ releases only). These require PM/leadership intervention to properly nest in the portfolio hierarchy.
+        </p>
+
+        <!-- Stats Grid - 3 stat cards -->
+        <div class="stats-grid" style="margin-bottom: 16px; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+            <div class="stat-card" style="min-width: 0;">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label" style="font-size: 10px;">ORPHANED EPICS</div>
+                        <div class="stat-value" id="orphaned-total" style="font-size: 28px;">—</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" style="min-width: 0;">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label" style="font-size: 10px;">ORPHANED CAPACITY (PD)</div>
+                        <div class="stat-value" id="orphaned-capacity" style="color: #dc2626; font-size: 28px;">—</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" style="min-width: 0;">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label" style="font-size: 10px;">TEAMS AFFECTED</div>
+                        <div class="stat-value" id="orphaned-teams" style="font-size: 28px;">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Toggles -->
+        <div class="view-toggles-container" style="margin-bottom: 16px;">
+            <div class="view-toggles">
+                <button class="view-toggle orphaned-view-btn active" data-view="by-team" tabindex="-1">Teams</button>
+                <button class="view-toggle orphaned-view-btn" data-view="by-release" tabindex="-1">Release</button>
+            </div>
+        </div>
+
         <!-- By Team View -->
         <div id="orphaned-by-team" style="display: block;">
-            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; table-layout: fixed;">
                 <colgroup>
-                    <col style="width: 40%;">
+                    <col style="width: 32%;">
+                    <col style="width: 10%;">
                     <col style="width: 12%;">
-                    <col style="width: 15%;">
-                    <col style="width: 18%;">
-                    <col style="width: 15%;">
+                    <col style="width: 14%;">
+                    <col style="width: 12%;">
+                    <col style="width: 20%;">
                 </colgroup>
                 <thead>
                     <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epic Name</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Team</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Owner</th>
-                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Team / Epic</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epics</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Health</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Triage</th>
                     </tr>
                 </thead>
-                <tbody id="orphaned-by-team-body">
-                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                <tbody id="orphaned-team-tbody">
+                    <tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
                 </tbody>
             </table>
         </div>
 
         <!-- By Release View -->
         <div id="orphaned-by-release" style="display: none;">
-            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; table-layout: fixed;">
                 <colgroup>
-                    <col style="width: 40%;">
+                    <col style="width: 10%;">
+                    <col style="width: 32%;">
+                    <col style="width: 10%;">
                     <col style="width: 12%;">
-                    <col style="width: 15%;">
-                    <col style="width: 18%;">
-                    <col style="width: 15%;">
+                    <col style="width: 14%;">
+                    <col style="width: 22%;">
                 </colgroup>
                 <thead>
                     <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epic Name</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Team</th>
-                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Owner</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epic</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epics</th>
                         <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Health</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Triage</th>
                     </tr>
                 </thead>
-                <tbody id="orphaned-by-release-body">
-                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                <tbody id="orphaned-release-tbody">
+                    <tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -16024,8 +16069,13 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 selectedView.classList.add('active');
             }
 
-            // Activate selected button
-            event.target.classList.add('active');
+            // Activate the clicked button by finding the one that matches this view
+            const activeButton = Array.from(document.querySelectorAll('.nav-button')).find(btn =>
+                btn.textContent.trim().toLowerCase() === viewName.toLowerCase()
+            );
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
 
             // Show/hide execution filters
             const executionFilters = document.getElementById('execution-filters-inline');
@@ -16076,11 +16126,17 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 const response = await fetch('/api/orphaned');
                 orphanedData = await response.json();
                 window.orphanedDataLoaded = true;
+
+                // Update stat cards - showing only orphaned metrics
+                document.getElementById('orphaned-total').textContent = orphanedData.summary.orphaned_epics || 0;
+                document.getElementById('orphaned-capacity').textContent = Math.round(orphanedData.summary.orphaned_capacity || 0);
+                document.getElementById('orphaned-teams').textContent = orphanedData.summary.unique_teams || 0;
+
                 renderOrphanedView('by-team');
             } catch (error) {
                 console.error('Error loading orphaned data:', error);
-                document.getElementById('orphaned-by-team-body').innerHTML =
-                    '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #dc2626;">Error loading orphaned epics data</td></tr>';
+                document.getElementById('orphaned-team-tbody').innerHTML =
+                    '<tr><td colspan="6" style="padding: 40px; text-align: center; color: #dc2626;">Error loading orphaned epics data</td></tr>';
             }
         }
 
@@ -16103,6 +16159,16 @@ document.getElementById('program-search').addEventListener('input', (e) => {
             }
         }
 
+        // Add orphaned view toggle listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.orphaned-view-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const view = btn.dataset.view;
+                    switchOrphanedView(view);
+                });
+            });
+        });
+
         function renderOrphanedView(viewType) {
             if (!orphanedData) return;
 
@@ -16114,49 +16180,79 @@ document.getElementById('program-search').addEventListener('input', (e) => {
         }
 
         function renderOrphanedByTeam() {
-            const tbody = document.getElementById('orphaned-by-team-body');
+            const tbody = document.getElementById('orphaned-team-tbody');
             if (!orphanedData.by_team || orphanedData.by_team.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
                 return;
             }
 
             let html = '';
-            orphanedData.by_team.forEach(teamGroup => {
-                // Team header row
+            orphanedData.by_team.forEach((team, index) => {
+                if (!team.epics || team.epics.length === 0) return;
+
+                const sanitizedName = team.name.replace(/[^a-zA-Z0-9]/g, '-');
+                const triageCount = team.epics.filter(e => e.triage_needed).length;
+
+                // Team summary row (collapsed by default)
                 html += `
-                    <tr style="background: #f8fafc; border-top: 2px solid #e5e7eb;">
-                        <td colspan="4" style="padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
-                            ${teamGroup.name}
+                    <tr class="team-row" data-team="${sanitizedName}" style="background: #f8fafc; border-bottom: 1px solid #e5e7eb; cursor: pointer;" onclick="toggleTeamBreakdown('${sanitizedName}')">
+                        <td style="padding: 12px 16px;">
+                            <span style="font-weight: 600; color: #1e293b; display: inline-flex; align-items: center;">
+                                <svg id="icon-${sanitizedName}" style="width: 16px; height: 16px; margin-right: 8px; transition: transform 0.2s;" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                ${team.name}
+                            </span>
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
-                            ${teamGroup.total_capacity} PD
+                        <td style="text-align: center; padding: 12px 16px;">
+                            <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">
+                                ${team.epics.length}
+                            </span>
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #dc2626; font-weight: 600;">
+                            ${Math.round(team.total_capacity || 0)}
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
+                        <td style="padding: 12px 16px;">
+                            ${triageCount > 0 ? `<span style="color: #dc2626; font-size: 12px; font-weight: 600;">${triageCount} need triage</span>` : ''}
                         </td>
                     </tr>
                 `;
 
-                // Epic rows
-                teamGroup.epics.forEach(epic => {
+                // Epic details (collapsed by default)
+                team.epics.forEach(epic => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
-                                       epic.health === 'Watch' || epic.health === 'At Risk' ? '#f59e0b' :
-                                       epic.health === 'Blocked' || epic.health === 'Off Track' ? '#dc2626' : '#94a3b8';
+                                      epic.health === 'Watch' ? '#f59e0b' :
+                                      epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
 
                     html += `
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 8px 16px 8px 32px; font-size: 13px;">
-                                <a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.id}/view"
-                                   target="_blank"
-                                   style="color: #2563eb; text-decoration: none;">
-                                    ${epic.name}
-                                </a>
+                        <tr id="breakdown-orphaned-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b;">
+                                <div style="font-weight: 500; margin-bottom: 2px;">
+                                    <a href="https://gus.my.salesforce.com/${epic.id}" target="_blank" style="color: #0176D3; text-decoration: none;">
+                                        ${epic.name}
+                                    </a>
+                                </div>
+                                <div style="font-size: 11px; color: #94a3b8;">
+                                    Owner: ${epic.owner} | Priority: ${epic.priority || '-'}
+                                </div>
                             </td>
-                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.team || '-'}</td>
-                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.owner || '-'}</td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px;">
-                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
-                                    ${epic.health || 'Unknown'}
+                            <td style="text-align: center; padding: 8px 16px;"></td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #dc2626; font-weight: 600;">
+                                ${Math.round(epic.story_points || 0)}
+                            </td>
+                            <td style="text-align: left; padding: 8px 16px;">
+                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
+                                    ${epic.health}
                                 </span>
                             </td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.story_points || 0}</td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 11px; color: #64748b;">
+                                ${epic.scheduled_build || '-'}
+                            </td>
+                            <td style="padding: 8px 16px;">
+                                ${epic.triage_needed ? '<span style="color: #dc2626; font-size: 11px; font-weight: 600;">Needs triage</span>' : ''}
+                            </td>
                         </tr>
                     `;
                 });
@@ -16165,56 +16261,122 @@ document.getElementById('program-search').addEventListener('input', (e) => {
             tbody.innerHTML = html;
         }
 
+        function toggleTeamBreakdown(teamName) {
+            const icon = document.getElementById(`icon-${teamName}`);
+            const breakdownRows = document.querySelectorAll(`#breakdown-orphaned-${teamName}`);
+
+            if (breakdownRows.length > 0) {
+                const isExpanded = breakdownRows[0].style.display !== 'none';
+                breakdownRows.forEach(row => {
+                    row.style.display = isExpanded ? 'none' : 'table-row';
+                });
+
+                // Rotate icon
+                if (icon) {
+                    icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+                }
+            }
+        }
+
         function renderOrphanedByRelease() {
-            const tbody = document.getElementById('orphaned-by-release-body');
+            const tbody = document.getElementById('orphaned-release-tbody');
             if (!orphanedData.by_release || orphanedData.by_release.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
                 return;
             }
 
             let html = '';
-            orphanedData.by_release.forEach(releaseGroup => {
-                // Release header row
+            orphanedData.by_release.forEach(release => {
+                if (!release.epics || release.epics.length === 0) return;
+
+                const sanitizedRelease = release.name.replace(/[^a-zA-Z0-9]/g, '-');
+                const triageCount = release.epics.filter(e => e.triage_needed).length;
+
+                // Release summary row (collapsed by default)
                 html += `
-                    <tr style="background: #f8fafc; border-top: 2px solid #e5e7eb;">
-                        <td colspan="4" style="padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
-                            Release ${releaseGroup.name || 'Unscheduled'}
+                    <tr class="release-row" data-release="${sanitizedRelease}" style="background: #f8fafc; border-bottom: 1px solid #e5e7eb; cursor: pointer;" onclick="toggleReleaseBreakdown('${sanitizedRelease}')">
+                        <td style="text-align: center; padding: 12px 16px;">
+                            <span style="background: #2563eb; color: white; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                                ${release.name}
+                            </span>
                         </td>
-                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
-                            ${releaseGroup.epic_count} epics (${releaseGroup.orphaned_capacity} PD)
+                        <td style="padding: 12px 16px;">
+                            <span style="font-weight: 600; color: #1e293b; display: inline-flex; align-items: center;">
+                                <svg id="icon-release-${sanitizedRelease}" style="width: 16px; height: 16px; margin-right: 8px; transition: transform 0.2s;" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                ${release.epics.length} orphaned ${release.epics.length === 1 ? 'epic' : 'epics'}
+                            </span>
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px;">
+                            <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">
+                                ${release.epics.length}
+                            </span>
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; color: #dc2626; font-weight: 600;">
+                            ${Math.round(release.orphaned_capacity || 0)}
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 13px; color: #64748b;">—</td>
+                        <td style="padding: 12px 16px;">
+                            ${triageCount > 0 ? `<span style="color: #dc2626; font-size: 12px; font-weight: 600;">${triageCount} need triage</span>` : ''}
                         </td>
                     </tr>
                 `;
 
-                // Epic rows
-                releaseGroup.epics.forEach(epic => {
+                // Epic details (collapsed by default)
+                release.epics.forEach(epic => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
-                                       epic.health === 'Watch' || epic.health === 'At Risk' ? '#f59e0b' :
-                                       epic.health === 'Blocked' || epic.health === 'Off Track' ? '#dc2626' : '#94a3b8';
+                                      epic.health === 'Watch' ? '#f59e0b' :
+                                      epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
 
                     html += `
-                        <tr style="border-bottom: 1px solid #f1f5f9;">
-                            <td style="padding: 8px 16px 8px 32px; font-size: 13px;">
-                                <a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.id}/view"
-                                   target="_blank"
-                                   style="color: #2563eb; text-decoration: none;">
-                                    ${epic.name}
-                                </a>
+                        <tr id="breakdown-release-${sanitizedRelease}" style="display: none; border-bottom: 1px solid #f1f5f9;">
+                            <td style="text-align: center; padding: 8px 16px;"></td>
+                            <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b;">
+                                <div style="font-weight: 500; margin-bottom: 2px;">
+                                    <a href="https://gus.my.salesforce.com/${epic.id}" target="_blank" style="color: #0176D3; text-decoration: none;">
+                                        ${epic.name}
+                                    </a>
+                                </div>
+                                <div style="font-size: 11px; color: #94a3b8;">
+                                    Team: ${epic.team} | Owner: ${epic.owner}
+                                </div>
                             </td>
-                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.team || '-'}</td>
-                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.owner || '-'}</td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px;">
-                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
-                                    ${epic.health || 'Unknown'}
+                            <td style="text-align: center; padding: 8px 16px;"></td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #dc2626; font-weight: 600;">
+                                ${Math.round(epic.story_points || 0)}
+                            </td>
+                            <td style="text-align: left; padding: 8px 16px;">
+                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">
+                                    ${epic.health}
                                 </span>
                             </td>
-                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.story_points || 0}</td>
+                            <td style="padding: 8px 16px;">
+                                ${epic.triage_needed ? '<span style="color: #dc2626; font-size: 11px; font-weight: 600;">Needs triage</span>' : ''}
+                            </td>
                         </tr>
                     `;
                 });
             });
 
             tbody.innerHTML = html;
+        }
+
+        function toggleReleaseBreakdown(releaseName) {
+            const icon = document.getElementById(`icon-release-${releaseName}`);
+            const breakdownRows = document.querySelectorAll(`#breakdown-release-${releaseName}`);
+
+            if (breakdownRows.length > 0) {
+                const isExpanded = breakdownRows[0].style.display !== 'none';
+                breakdownRows.forEach(row => {
+                    row.style.display = isExpanded ? 'none' : 'table-row';
+                });
+
+                // Rotate icon
+                if (icon) {
+                    icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+                }
+            }
         }
 
         // Check if execution view is empty on page load

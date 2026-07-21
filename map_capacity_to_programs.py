@@ -96,8 +96,10 @@ for item in june_items:
         if project_name and project_name in project_to_program:
             program_name = project_to_program[project_name]
             june_team_program[team_name][program_name] += points
-        else:
+        elif not project_name:
+            # Only count as unmapped if there's NO project at all
             june_unmapped[team_name] += points
+        # else: has project but not in program map - don't count as unmapped
 
 # Query July committed work items
 print("\n🔄 Mapping July committed capacity to programs...")
@@ -131,8 +133,10 @@ for item in july_items:
         if project_name and project_name in project_to_program:
             program_name = project_to_program[project_name]
             july_team_program[team_name][program_name] += points
-        else:
+        elif not project_name:
+            # Only count as unmapped if there's NO project at all
             july_unmapped[team_name] += points
+        # else: has project but not in program map - don't count as unmapped
 
 # Update teams data with program breakdown
 for team in teams_data['teams']:

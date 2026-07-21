@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Debug</title>
+</head>
+<body>
+    <h1>Dashboard Debug Info</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+        fetch('http://localhost:5002/')
+            .then(r => r.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                const phase0Cards = doc.querySelectorAll('.phase-0 .program-card');
+                const proto = doc.querySelectorAll('.prototyping-subcolumn .program-card');
+                const ready = doc.querySelectorAll('.ready-subcolumn .program-card');
+
+                const output = `
+Phase 0 cards in HTML: ${phase0Cards.length}
+Phase 1 Prototyping: ${proto.length}
+Phase 1 Ready for Review: ${ready.length}
+
+Sample Phase 0 programs:
+${Array.from(phase0Cards).slice(0, 5).map(card =>
+    `  - ${card.querySelector('.program-name')?.textContent.trim()}`
+).join('\n')}
+
+Sample Prototyping programs:
+${Array.from(proto).map(card =>
+    `  - ${card.querySelector('.program-name')?.textContent.trim()}`
+).join('\n')}
+                `;
+
+                document.getElementById('output').textContent = output;
+            });
+    </script>
+</body>
+</html>
