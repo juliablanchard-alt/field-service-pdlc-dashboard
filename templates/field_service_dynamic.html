@@ -2749,6 +2749,7 @@
         <button class="nav-button active" onclick="switchView('overview')" tabindex="-1">Overview</button>
         <button class="nav-button" onclick="switchView('execution')" tabindex="-1">Execution</button>
         <button class="nav-button" onclick="switchView('allocations')" tabindex="-1">Allocations</button>
+        <button class="nav-button" onclick="switchView('orphaned')" tabindex="-1">Orphaned</button>
     </div>
 
     <!-- Filter Bar -->
@@ -14627,9 +14628,9 @@
                                                 {% if program_lookup.get(program) and program_lookup[program].get('id') %}
                                                 <a href="https://gus.lightning.force.com/lightning/r/ADM_Product_Tag__c/{{ program_lookup[program]['id'] }}/view"
                                                    target="_blank"
-                                                   style="color: #0176D3; text-decoration: none; font-weight: 500; display: block;">{{ program }}</a>
+                                                   style="color: #2563eb; text-decoration: none; font-weight: 500; display: block;">{{ program }}</a>
                                                 {% else %}
-                                                <span style="color: #0176D3; font-weight: 500; display: block;">{{ program }}</span>
+                                                <span style="color: #2563eb; font-weight: 500; display: block;">{{ program }}</span>
                                                 {% endif %}
                                             </div>
                                             {% if program_lookup.get(program) and program_lookup[program].get('portfolio') %}
@@ -14640,34 +14641,35 @@
                                         <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
                                             {{ team.june_delivered_by_program.get(program, 0) if team.june_delivered_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.july_committed_by_program.get(program, 0) if team.july_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.august_committed_by_program.get(program, 0) if team.august_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.september_committed_by_program.get(program, 0) if team.september_committed_by_program.get(program, 0) > 0 else '—' }}
                                         </td>
                                     </tr>
                                     {% endfor %}
                                     <!-- Display Unmapped row if any unmapped capacity exists -->
                                     {% if team.june_delivered_unmapped or team.july_committed_unmapped or team.august_committed_unmapped or team.september_committed_unmapped %}
-                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                    <tr style="border-bottom: 1px solid #f1f5f9; cursor: pointer;" onclick="toggleUnmappedBreakdown('{{ team.name | replace(' ', '-') | replace(':', '') }}', '{{ team.name }}')">
                                         <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic; vertical-align: top;">
-                                            Unmapped
+                                            <span class="expand-icon" id="expand-unmapped-{{ team.name | replace(' ', '-') | replace(':', '') }}" style="display: inline-block; width: 18px; margin-right: 4px; font-size: 14px; color: #94a3b8; transition: transform 0.2s;">▸</span>
+                                            Unallocated
                                         </td>
                                         <td style="padding: 8px 16px; vertical-align: top;"></td>
                                         <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
                                             {{ team.june_delivered_unmapped if team.june_delivered_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.july_committed_unmapped if team.july_committed_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.august_committed_unmapped if team.august_committed_unmapped > 0 else '—' }}
                                         </td>
-                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #0176D3; vertical-align: top;">
+                                        <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
                                             {{ team.september_committed_unmapped if team.september_committed_unmapped > 0 else '—' }}
                                         </td>
                                     </tr>
@@ -14789,6 +14791,66 @@
         </div>
     </div>
 
+    <!-- Orphaned Content -->
+    <div id="orphaned-view" class="view-content" style="display: none;">
+        <div style="margin-bottom: 20px;">
+            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
+                <button id="orphaned-by-team-btn" class="view-toggle active" onclick="switchOrphanedView('by-team')">By Team</button>
+                <button id="orphaned-by-release-btn" class="view-toggle" onclick="switchOrphanedView('by-release')">By Release</button>
+            </div>
+        </div>
+
+        <!-- By Team View -->
+        <div id="orphaned-by-team" style="display: block;">
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                <colgroup>
+                    <col style="width: 40%;">
+                    <col style="width: 12%;">
+                    <col style="width: 15%;">
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                </colgroup>
+                <thead>
+                    <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epic Name</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Team</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Owner</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
+                    </tr>
+                </thead>
+                <tbody id="orphaned-by-team-body">
+                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- By Release View -->
+        <div id="orphaned-by-release" style="display: none;">
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                <colgroup>
+                    <col style="width: 40%;">
+                    <col style="width: 12%;">
+                    <col style="width: 15%;">
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                </colgroup>
+                <thead>
+                    <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Epic Name</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Team</th>
+                        <th style="text-align: left; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Owner</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Release</th>
+                        <th style="text-align: center; padding: 12px 16px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Capacity (PD)</th>
+                    </tr>
+                </thead>
+                <tbody id="orphaned-by-release-body">
+                    <tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     </div><!-- End tab-content -->
 </div><!-- End content-wrapper -->
 
@@ -14891,6 +14953,116 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                         expandIcon.textContent = '▸';
                     }
                 }
+            }
+        }
+
+        async function toggleUnmappedBreakdown(sanitizedTeamName, originalTeamName) {
+            const expandIcon = document.getElementById('expand-unmapped-' + sanitizedTeamName);
+            if (!expandIcon) {
+                console.error('Could not find expand icon with ID:', 'expand-unmapped-' + sanitizedTeamName);
+                return;
+            }
+
+            // Check if breakdown rows already exist
+            const existingBreakdownRows = document.querySelectorAll('.breakdown-unmapped-' + sanitizedTeamName);
+
+            if (existingBreakdownRows.length > 0) {
+                // Toggle visibility
+                const isHidden = existingBreakdownRows[0].style.display === 'none';
+                existingBreakdownRows.forEach(row => {
+                    row.style.display = isHidden ? '' : 'none';
+                });
+                expandIcon.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
+                expandIcon.textContent = isHidden ? '▾' : '▸';
+                return;
+            }
+
+            // Otherwise, load and render epic breakdown
+            try {
+                const response = await fetch('/api/unmapped-details');
+                if (!response.ok) {
+                    console.error('API error:', response.status, response.statusText);
+                    return;
+                }
+                const data = await response.json();
+
+                // Build epic breakdown rows for this team across all months
+                let epicsHtml = '';
+                const months = ['june_delivered_unmapped', 'july_committed_unmapped', 'august_committed_unmapped', 'september_committed_unmapped'];
+                const monthNames = ['June PD', 'July C', 'August C', 'September C'];
+
+                // Collect all epics for this team using the original team name
+                const epicsByMonth = {};
+                months.forEach((month, idx) => {
+                    if (data[month] && data[month][originalTeamName]) {
+                        epicsByMonth[monthNames[idx]] = data[month][originalTeamName];
+                    }
+                });
+
+                // Check if we found any epics
+                if (Object.keys(epicsByMonth).length === 0) {
+                    console.log('No unmapped epic details found for team:', originalTeamName);
+                    return;
+                }
+
+                // Render epic rows grouped by month
+                Object.entries(epicsByMonth).forEach(([monthName, epics]) => {
+                    epics.forEach(epic => {
+                        const healthColor = epic.epic_health === 'On Track' ? '#10b981' :
+                                          epic.epic_health === 'Watch' ? '#f59e0b' :
+                                          epic.epic_health === 'Blocked' ? '#dc2626' : '#94a3b8';
+
+                        epicsHtml += `
+                            <tr class="breakdown-unmapped-${sanitizedTeamName}" style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 8px 16px 8px 64px; font-size: 12px; vertical-align: top;">
+                                    <div style="font-weight: 500; margin-bottom: 2px;">
+                                        ${epic.epic_id !== 'no-epic' ?
+                                            `<a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.epic_id}/view"
+                                               target="_blank"
+                                               style="color: #2563eb; text-decoration: none;">
+                                                ${epic.epic_name}
+                                            </a>` :
+                                            `<span style="color: #dc2626; font-weight: 500;">${epic.epic_name}</span>
+                                             <span style="color: #94a3b8; font-size: 11px; font-style: italic;"> (Work items without epic assignment)</span>`
+                                        }
+                                    </div>
+                                    <div style="font-size: 11px; color: #94a3b8;">
+                                        Owner: ${epic.epic_owner} | Priority: ${epic.priority || '-'}
+                                    </div>
+                                </td>
+                                <td style="text-align: center; padding: 8px 16px; vertical-align: top;">
+                                    <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
+                                        ${epic.epic_health}
+                                    </span>
+                                </td>
+                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
+                                    ${monthName === 'June PD' ? epic.story_points : '—'}
+                                </td>
+                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                    ${monthName === 'July C' ? epic.story_points : '—'}
+                                </td>
+                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                    ${monthName === 'August C' ? epic.story_points : '—'}
+                                </td>
+                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                    ${monthName === 'September C' ? epic.story_points : '—'}
+                                </td>
+                            </tr>
+                        `;
+                    });
+                });
+
+                // Insert breakdown rows after the unmapped row
+                const unmappedRow = expandIcon.closest('tr');
+                unmappedRow.insertAdjacentHTML('afterend', epicsHtml);
+
+                // Expand the icon
+                expandIcon.style.transform = 'rotate(90deg)';
+                expandIcon.textContent = '▾';
+
+            } catch (error) {
+                console.error('Error loading unmapped details:', error);
+                alert('Failed to load unallocated epic details');
             }
         }
 
@@ -15862,7 +16034,158 @@ document.getElementById('program-search').addEventListener('input', (e) => {
                 allocationsFilters.style.display = viewName === 'allocations' ? 'contents' : 'none';
             }
 
+            // Load orphaned data when switching to orphaned view
+            if (viewName === 'orphaned' && !window.orphanedDataLoaded) {
+                loadOrphanedData();
+            }
+
             // Removed: No longer saving active view to localStorage
+        }
+
+        // Orphaned epics data
+        let orphanedData = null;
+        window.orphanedDataLoaded = false;
+
+        async function loadOrphanedData() {
+            try {
+                const response = await fetch('/api/orphaned');
+                orphanedData = await response.json();
+                window.orphanedDataLoaded = true;
+                renderOrphanedView('by-team');
+            } catch (error) {
+                console.error('Error loading orphaned data:', error);
+                document.getElementById('orphaned-by-team-body').innerHTML =
+                    '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #dc2626;">Error loading orphaned epics data</td></tr>';
+            }
+        }
+
+        function switchOrphanedView(viewType) {
+            // Update button states
+            document.getElementById('orphaned-by-team-btn').classList.toggle('active', viewType === 'by-team');
+            document.getElementById('orphaned-by-release-btn').classList.toggle('active', viewType === 'by-release');
+
+            // Show/hide views
+            document.getElementById('orphaned-by-team').style.display = viewType === 'by-team' ? 'block' : 'none';
+            document.getElementById('orphaned-by-release').style.display = viewType === 'by-release' ? 'block' : 'none';
+
+            // Render the selected view
+            if (orphanedData) {
+                renderOrphanedView(viewType);
+            }
+        }
+
+        function renderOrphanedView(viewType) {
+            if (!orphanedData) return;
+
+            if (viewType === 'by-team') {
+                renderOrphanedByTeam();
+            } else {
+                renderOrphanedByRelease();
+            }
+        }
+
+        function renderOrphanedByTeam() {
+            const tbody = document.getElementById('orphaned-by-team-body');
+            if (!orphanedData.by_team || orphanedData.by_team.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                return;
+            }
+
+            let html = '';
+            orphanedData.by_team.forEach(teamGroup => {
+                // Team header row
+                html += `
+                    <tr style="background: #f8fafc; border-top: 2px solid #e5e7eb;">
+                        <td colspan="4" style="padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
+                            ${teamGroup.team}
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
+                            ${teamGroup.total_capacity} PD
+                        </td>
+                    </tr>
+                `;
+
+                // Epic rows
+                teamGroup.epics.forEach(epic => {
+                    const healthColor = epic.health === 'On Track' ? '#10b981' :
+                                       epic.health === 'Watch' || epic.health === 'At Risk' ? '#f59e0b' :
+                                       epic.health === 'Blocked' || epic.health === 'Off Track' ? '#dc2626' : '#94a3b8';
+
+                    html += `
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 8px 16px 8px 32px; font-size: 13px;">
+                                <a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.id}/view"
+                                   target="_blank"
+                                   style="color: #2563eb; text-decoration: none;">
+                                    ${epic.name}
+                                </a>
+                            </td>
+                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.team || '-'}</td>
+                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.owner || '-'}</td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px;">
+                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
+                                    ${epic.health || 'Unknown'}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.story_points || 0}</td>
+                        </tr>
+                    `;
+                });
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        function renderOrphanedByRelease() {
+            const tbody = document.getElementById('orphaned-by-release-body');
+            if (!orphanedData.by_release || orphanedData.by_release.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: #94a3b8;">No orphaned epics found</td></tr>';
+                return;
+            }
+
+            let html = '';
+            orphanedData.by_release.forEach(releaseGroup => {
+                // Release header row
+                html += `
+                    <tr style="background: #f8fafc; border-top: 2px solid #e5e7eb;">
+                        <td colspan="4" style="padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
+                            Release ${releaseGroup.release || 'Unscheduled'}
+                        </td>
+                        <td style="text-align: center; padding: 12px 16px; font-size: 14px; font-weight: 600; color: #1e293b;">
+                            ${releaseGroup.epic_count} epics
+                        </td>
+                    </tr>
+                `;
+
+                // Epic rows
+                releaseGroup.epics.forEach(epic => {
+                    const healthColor = epic.health === 'On Track' ? '#10b981' :
+                                       epic.health === 'Watch' || epic.health === 'At Risk' ? '#f59e0b' :
+                                       epic.health === 'Blocked' || epic.health === 'Off Track' ? '#dc2626' : '#94a3b8';
+
+                    html += `
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 8px 16px 8px 32px; font-size: 13px;">
+                                <a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.id}/view"
+                                   target="_blank"
+                                   style="color: #2563eb; text-decoration: none;">
+                                    ${epic.name}
+                                </a>
+                            </td>
+                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.team || '-'}</td>
+                            <td style="padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.owner || '-'}</td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px;">
+                                <span style="background: ${healthColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap;">
+                                    ${epic.health || 'Unknown'}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b;">${epic.story_points || 0}</td>
+                        </tr>
+                    `;
+                });
+            });
+
+            tbody.innerHTML = html;
         }
 
         // Check if execution view is empty on page load
