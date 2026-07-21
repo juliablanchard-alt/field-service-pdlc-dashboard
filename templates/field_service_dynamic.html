@@ -2749,9 +2749,7 @@
         <button class="nav-button active" onclick="switchView('overview')" tabindex="-1">Overview</button>
         <button class="nav-button" onclick="switchView('execution')" tabindex="-1">Execution</button>
         <button class="nav-button" onclick="switchView('allocations')" tabindex="-1">Allocations</button>
-        {% if show_orphaned_tab %}
         <button class="nav-button" onclick="switchView('orphaned')" tabindex="-1">Orphaned</button>
-        {% endif %}
     </div>
 
     <!-- Filter Bar -->
@@ -14805,7 +14803,6 @@
         </div>
     </div>
 
-    {% if show_orphaned_tab %}
     <!-- Orphaned Epics Content -->
     <div id="orphaned-view" class="view-content">
         <h2 style="font-size: 24px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">Orphaned Epics</h2>
@@ -14887,7 +14884,6 @@
             </table>
         </div>
     </div>
-    {% endif %}
 
     </div><!-- End tab-content -->
 </div><!-- End content-wrapper -->
