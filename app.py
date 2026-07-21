@@ -14,10 +14,13 @@ import time
 
 app = Flask(__name__, static_folder='static')
 
+# Feature flags - control what's visible in each environment
+SHOW_ORPHANED_TAB = os.getenv('SHOW_ORPHANED_TAB', 'true').lower() == 'true'
+
 # Cache busting
 @app.context_processor
 def inject_cache_buster():
-    return dict(cache_bust=int(time.time()))
+    return dict(cache_bust=int(time.time()), show_orphaned_tab=SHOW_ORPHANED_TAB)
 
 @app.after_request
 def add_header(response):
