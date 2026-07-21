@@ -14,10 +14,20 @@ import time
 
 app = Flask(__name__, static_folder='static')
 
+# Beta feature access control
+BETA_USERS = os.getenv('BETA_USERS', 'julia.blanchard@salesforce.com').split(',')
+
+def check_beta_access():
+    """Check if user has beta feature access via URL parameter"""
+    from flask import request
+    beta_key = request.args.get('beta')
+    # Simple key-based access for now - can be replaced with email auth later
+    return beta_key in BETA_USERS or beta_key == 'team'
+
 # Cache busting
 @app.context_processor
 def inject_cache_buster():
-    return dict(cache_bust=int(time.time()))
+    return dict(cache_bust=int(time.time()), show_orphaned_tab=check_beta_access())
 
 @app.after_request
 def add_header(response):
