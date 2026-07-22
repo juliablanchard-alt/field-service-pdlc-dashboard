@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-07-21T18:26:03.846419",
+  "last_updated": "2026-07-22T09:08:01.516364",
   "teams": [
     {
       "name": "FSL - Asset - 360",
-      "filled": 10,
+      "filled": 9,
       "non_filled": 0,
-      "total": 10,
+      "total": 9,
       "portfolios": [
         "264 Field Service Workforce Scheduling"
       ],
