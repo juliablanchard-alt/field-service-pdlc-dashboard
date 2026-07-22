@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22T09:08:01.516364",
+  "last_updated": "2026-07-22T14:08:15.891558",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -784,9 +784,9 @@
     },
     {
       "name": "SynergyForce",
-      "filled": 3,
+      "filled": 2,
       "non_filled": 0,
-      "total": 3,
+      "total": 2,
       "portfolios": [
         "264 Field Service Foundations"
       ],
