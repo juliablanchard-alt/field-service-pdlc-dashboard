@@ -3398,11 +3398,18 @@
         <div class="program-header" onclick="toggleProgram(this)">
             <div class="expand-icon">▶</div>
             <div class="program-content">
-                <a href="https://gus.lightning.force.com/lightning/r/PPM_Program__c/{{ program.id }}/view"
-                   target="_blank"
-                   class="program-name-link"
-                   onclick="event.stopPropagation();"
-                   tabindex="-1">{{ program.name }} ↗</a>
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px;">
+                    <a href="https://gus.lightning.force.com/lightning/r/PPM_Program__c/{{ program.id }}/view"
+                       target="_blank"
+                       class="program-name-link"
+                       onclick="event.stopPropagation();"
+                       tabindex="-1">{{ program.name }} ↗</a>
+                    {% if program.health_status and program.health_status != 'N/A' %}
+                    <span class="program-badge badge-{{ program.health_status|lower|replace(' ', '-') }}">{{ program.health_status }}</span>
+                    {% else %}
+                    <span class="program-badge badge-not-started">Not Started</span>
+                    {% endif %}
+                </div>
                 <div class="program-meta-row" style="display: flex; align-items: center; gap: 8px; width: 100%;">
                     <span class="program-meta-badge portfolio-badge">{{ program.portfolio }}</span>
                     <span style="color: #9ca3af; margin: 0 4px;">|</span>
@@ -3442,11 +3449,6 @@
                     {% endif %}
                 </div>
             </div>
-            {% if program.health_status and program.health_status != 'N/A' %}
-            <span class="program-badge badge-{{ program.health_status|lower|replace(' ', '-') }}">{{ program.health_status }}</span>
-            {% else %}
-            <span class="program-badge badge-not-started">Not Started</span>
-            {% endif %}
         </div>
 
         <!-- Projects Container -->
