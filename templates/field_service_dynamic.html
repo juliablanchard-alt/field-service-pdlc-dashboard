@@ -3399,23 +3399,50 @@
                    class="program-name-link"
                    onclick="event.stopPropagation();"
                    tabindex="-1">{{ program.name }} ↗</a>
-                <div class="program-meta-row">
-                    <span class="program-meta-badge portfolio-badge">{{ program.portfolio }}</span>
-                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
-                    <span class="program-meta-badge pm-badge">👤 {{ program.program_manager if program.program_manager else 'TBD' }}</span>
+                <div class="program-meta-row" style="display: flex; align-items: center; gap: 8px;">
+                    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <span class="program-meta-badge portfolio-badge">{{ program.portfolio }}</span>
+                        <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                        <span class="program-meta-badge pm-badge">👤 {{ program.program_manager if program.program_manager else 'TBD' }}</span>
 
-                    {% if program.target_release %}
-                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
-                    <span class="program-meta-badge target-badge">🎯 {{ program.target_release }}</span>
-                    {% endif %}
+                        {% if program.target_release %}
+                        <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                        <span class="program-meta-badge target-badge">🎯 {{ program.target_release }}</span>
+                        {% endif %}
 
-                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
-                    <span class="program-meta-badge count-badge">📦 {{ program.projects|length }} Project{{ 's' if program.projects|length != 1 else '' }}</span>
-                    <span style="color: #9ca3af; margin: 0 4px;">|</span>
-                    {% if program.health_status and program.health_status != 'N/A' %}
-                    <span class="program-badge badge-{{ program.health_status|lower|replace(' ', '-') }}">{{ program.health_status }}</span>
-                    {% else %}
-                    <span class="program-badge badge-not-started">Not Started</span>
+                        <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                        <span class="program-meta-badge count-badge">📦 {{ program.projects|length }} Project{{ 's' if program.projects|length != 1 else '' }}</span>
+                        <span style="color: #9ca3af; margin: 0 4px;">|</span>
+                        {% if program.health_status and program.health_status != 'N/A' %}
+                        <span class="program-badge badge-{{ program.health_status|lower|replace(' ', '-') }}">{{ program.health_status }}</span>
+                        {% else %}
+                        <span class="program-badge badge-not-started">Not Started</span>
+                        {% endif %}
+                    </div>
+
+                    {% if show_hygiene_features and program.hygiene_total > 0 %}
+                    <div style="margin-left: auto; font-size: 11px; white-space: nowrap;">
+                        <span style="color: #d97706;">⚠️ Missing:</span>
+                        <span style="color: #64748b;">
+                        {% set hygiene_parts = [] %}
+                        {% if program.hygiene_issues.missing_priority > 0 %}
+                            {% set _ = hygiene_parts.append('Priority on Epics (' ~ program.hygiene_issues.missing_priority ~ ')') %}
+                        {% endif %}
+                        {% if program.hygiene_issues.missing_scheduled_build > 0 %}
+                            {% set _ = hygiene_parts.append('Scheduled Build on Epics (' ~ program.hygiene_issues.missing_scheduled_build ~ ')') %}
+                        {% endif %}
+                        {% if program.hygiene_issues.missing_planned_release > 0 %}
+                            {% set _ = hygiene_parts.append('Planned Release on Epics (' ~ program.hygiene_issues.missing_planned_release ~ ')') %}
+                        {% endif %}
+                        {% if program.hygiene_issues.blocked_no_comments > 0 %}
+                            {% set _ = hygiene_parts.append('Health Comments on Epics (' ~ program.hygiene_issues.blocked_no_comments ~ ')') %}
+                        {% endif %}
+                        {% if program.hygiene_issues.missing_owner > 0 %}
+                            {% set _ = hygiene_parts.append('Owner on Epics (' ~ program.hygiene_issues.missing_owner ~ ')') %}
+                        {% endif %}
+                        {{ hygiene_parts|join(', ') }}
+                        </span>
+                    </div>
                     {% endif %}
                 </div>
             </div>

@@ -324,6 +324,42 @@ def normalize_portfolio_name(program_name, portfolio_field):
     # For non-Field Service programs (like UWM), use the actual portfolio field from GUS
     return portfolio_field
 
+def enrich_programs_with_hygiene(execution_programs):
+    """Add aggregated hygiene issue counts to each program"""
+    # Load hygiene data
+    hygiene_file = os.path.join(os.path.dirname(__file__), 'data', 'hygiene_issues.json')
+    try:
+        with open(hygiene_file, 'r') as f:
+            hygiene_data = json.load(f)
+    except:
+        return execution_programs  # Return unchanged if hygiene data unavailable
+
+    # Build epic name -> issues mapping
+    epic_issues = {e['epic_name_key']: e['issues'] for e in hygiene_data.get('epics', [])}
+
+    # Aggregate hygiene issues by program
+    for program in execution_programs:
+        issue_counts = {
+            'missing_scheduled_build': 0,
+            'missing_priority': 0,
+            'missing_planned_release': 0,
+            'blocked_no_comments': 0,
+            'missing_owner': 0
+        }
+
+        for project in program.get('projects', []):
+            for epic in project.get('epics', []):
+                epic_name = epic['name'].strip()
+                if epic_name in epic_issues:
+                    for issue in epic_issues[epic_name]:
+                        issue_counts[issue] += 1
+
+        # Add hygiene summary to program
+        program['hygiene_issues'] = issue_counts
+        program['hygiene_total'] = sum(issue_counts.values())
+
+    return execution_programs
+
 @app.route('/')
 def index():
     """Main dashboard - Field Service PDLC with Heroku layout"""
@@ -366,6 +402,9 @@ def index():
 
     # Keep execution_programs separate (unmodified) for stats and execution tab
     execution_programs = exec_data.get('programs', [])
+
+    # Enrich programs with aggregated hygiene issue counts
+    execution_programs = enrich_programs_with_hygiene(execution_programs)
 
     # Load team→Product Owner and team→Dev Lead mappings
     team_data_file = os.path.join(os.path.dirname(__file__), 'data', 'team_product_owners.json')
