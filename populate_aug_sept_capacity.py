@@ -65,24 +65,24 @@ print(f"✅ Found {len(scrum_teams)} teams")
 
 team_ids_str = "', '".join(team_ids)
 
-# Query June work items (for unmapped details only)
-print("\n🔄 Finding June 2026 work items (by sprint start date)...")
-june_sprinted_query = f"""
+# Query June work items (DELIVERED - by Closed_On__c date)
+print("\n🔄 Finding June 2026 work items (delivered/closed in June)...")
+june_delivered_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
        Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
        Epic__r.Health__c,
-       Owner.Name, Status__c,
+       Owner.Name, Status__c, Closed_On__c,
        Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
-WHERE Sprint__r.Start_Date__c >= 2026-06-01
-  AND Sprint__r.Start_Date__c < 2026-07-01
+WHERE Closed_On__c >= 2026-06-01T00:00:00Z
+  AND Closed_On__c < 2026-07-01T00:00:00Z
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
 LIMIT 50000
 """
 
-june_items = run_soql(june_sprinted_query)
-print(f"✅ Found {len(june_items)} June work items")
+june_items = run_soql(june_delivered_query)
+print(f"✅ Found {len(june_items)} June work items (delivered)")
 
 # Build epic-to-project mapping for June
 june_epic_to_project = {}
