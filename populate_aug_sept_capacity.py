@@ -231,6 +231,48 @@ for item in september_items:
         project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
         september_epic_to_project[epic_id] = project
 
+# Aggregate June capacity by team + program
+june_team_program = defaultdict(lambda: defaultdict(float))
+june_unmapped = defaultdict(float)
+
+for item in june_items:
+    team_id = item.get('Scrum_Team__c')
+    points = item.get('Story_Points__c', 0) or 0
+    epic_id = item.get('Epic__c')
+
+    project_name = june_epic_to_project.get(epic_id)
+
+    if team_id in team_name_map:
+        team_name = team_name_map[team_id]
+
+        if project_name and project_name in project_to_program:
+            program_name = project_to_program[project_name]
+            june_team_program[team_name][program_name] += points
+        else:
+            # Unmapped (no project assignment or project not in execution data)
+            june_unmapped[team_name] += points
+
+# Aggregate July capacity by team + program
+july_team_program = defaultdict(lambda: defaultdict(float))
+july_unmapped = defaultdict(float)
+
+for item in july_items:
+    team_id = item.get('Scrum_Team__c')
+    points = item.get('Story_Points__c', 0) or 0
+    epic_id = item.get('Epic__c')
+
+    project_name = july_epic_to_project.get(epic_id)
+
+    if team_id in team_name_map:
+        team_name = team_name_map[team_id]
+
+        if project_name and project_name in project_to_program:
+            program_name = project_to_program[project_name]
+            july_team_program[team_name][program_name] += points
+        else:
+            # Unmapped (no project assignment or project not in execution data)
+            july_unmapped[team_name] += points
+
 # Aggregate August capacity by team + program
 august_team_program = defaultdict(lambda: defaultdict(float))
 august_unmapped = defaultdict(float)
@@ -273,9 +315,27 @@ for item in september_items:
             # Unmapped (no project assignment or project not in execution data)
             september_unmapped[team_name] += points
 
-# Update teams data with program breakdown
+# Update teams data with program breakdown (June-September)
 for team in teams_data['teams']:
     team_name = team['name']
+
+    # June delivered by program
+    june_by_prog = dict(june_team_program.get(team_name, {}))
+    june_unmapped_val = june_unmapped.get(team_name, 0)
+
+    team['june_delivered_by_program'] = june_by_prog
+    team['june_delivered_unmapped'] = june_unmapped_val
+    team['capacity_delivered_june'] = sum(june_by_prog.values()) + june_unmapped_val
+    team['work_items_delivered_june'] = len([i for i in june_items if team_name_map.get(i.get('Scrum_Team__c')) == team_name])
+
+    # July committed by program
+    july_by_prog = dict(july_team_program.get(team_name, {}))
+    july_unmapped_val = july_unmapped.get(team_name, 0)
+
+    team['july_committed_by_program'] = july_by_prog
+    team['july_committed_unmapped'] = july_unmapped_val
+    team['capacity_committed_july'] = sum(july_by_prog.values()) + july_unmapped_val
+    team['work_items_committed_july'] = len([i for i in july_items if team_name_map.get(i.get('Scrum_Team__c')) == team_name])
 
     # August committed by program
     august_by_prog = dict(august_team_program.get(team_name, {}))
@@ -299,7 +359,31 @@ for team in teams_data['teams']:
 with open(TEAMS_FILE, 'w') as f:
     json.dump(teams_data, f, indent=2)
 
-# Print summary
+# Print summary for all four months
+print("\n📊 June Delivered Capacity by Program:")
+june_program_totals = defaultdict(float)
+for team_name, programs in june_team_program.items():
+    for program, points in programs.items():
+        june_program_totals[program] += points
+
+for program, points in sorted(june_program_totals.items(), key=lambda x: x[1], reverse=True):
+    print(f"  {program}: {points:.1f} points")
+
+total_june_unmapped = sum(june_unmapped.values())
+print(f"  [Unmapped]: {total_june_unmapped:.1f} points")
+
+print("\n📊 July Committed Capacity by Program:")
+july_program_totals = defaultdict(float)
+for team_name, programs in july_team_program.items():
+    for program, points in programs.items():
+        july_program_totals[program] += points
+
+for program, points in sorted(july_program_totals.items(), key=lambda x: x[1], reverse=True):
+    print(f"  {program}: {points:.1f} points")
+
+total_july_unmapped = sum(july_unmapped.values())
+print(f"  [Unmapped]: {total_july_unmapped:.1f} points")
+
 print("\n📊 August Committed Capacity by Program:")
 august_program_totals = defaultdict(float)
 for team_name, programs in august_team_program.items():
