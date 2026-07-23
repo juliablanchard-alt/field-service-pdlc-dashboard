@@ -15099,87 +15099,61 @@ if (programSearch) {
                 }
                 const data = await response.json();
 
-                // Build epic breakdown rows for this team across all months
+                // Build work item breakdown rows for this team
                 let epicsHtml = '';
-                const months = ['june_delivered_unmapped', 'july_committed_unmapped', 'august_committed_unmapped', 'september_committed_unmapped'];
-                const monthNames = ['June PD', 'July C', 'August C', 'September C'];
 
-                // Collect all epics for this team using the original team name
-                const epicsByMonth = {};
-                months.forEach((month, idx) => {
-                    if (data[month] && data[month][originalTeamName]) {
-                        epicsByMonth[monthNames[idx]] = data[month][originalTeamName];
-                    }
-                });
+                // Get work items for this team (new structure: data[teamName] = [workItems])
+                const workItems = data[originalTeamName];
 
-                // Check if we found any epics
-                if (Object.keys(epicsByMonth).length === 0) {
-                    console.log('No unmapped epic details found for team:', originalTeamName);
+                // Check if we found any work items
+                if (!workItems || workItems.length === 0) {
+                    console.log('No unmapped work item details found for team:', originalTeamName);
                     return;
                 }
 
-                // Render epic rows grouped by month
-                Object.entries(epicsByMonth).forEach(([monthName, epics]) => {
-                    epics.forEach(epic => {
-                        const healthColor = epic.epic_health === 'On Track' ? '#10b981' :
-                                          epic.epic_health === 'Watch' ? '#f59e0b' :
-                                          epic.epic_health === 'Blocked' ? '#dc2626' : '#94a3b8';
+                // Render work item rows
+                workItems.forEach(item => {
+                    const workItemId = item.work_item_name.replace('W-', '');  // Extract ID from W-xxxxx format
+                    const monthColumn = item.month === 'June' ? 0 : item.month === 'July' ? 1 : item.month === 'August' ? 2 : 3;
 
-                        epicsHtml += `
-                            <tr class="breakdown-unmapped-${sanitizedTeamName}" style="border-bottom: 1px solid #f1f5f9;">
-                                <td style="padding: 8px 16px 8px 64px; font-size: 12px; vertical-align: top;">
-                                    <div style="font-weight: 500; margin-bottom: 2px; line-height: 1.3;">
-                                        ${epic.epic_id !== 'no-epic' ?
-                                            `<a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${epic.epic_id}/view"
-                                               target="_blank"
-                                               style="color: #0176D3; text-decoration: none;">
-                                                ${epic.epic_name}
-                                            </a>` :
-                                            epic.work_items && epic.work_items.length > 0 ?
-                                                `<a href="https://gus.lightning.force.com/lightning/r/ADM_Work__c/${epic.work_items[0].id}/view"
-                                                   target="_blank"
-                                                   style="color: #0176D3; text-decoration: none;">
-                                                    [Work Item] ${epic.work_items[0].subject || epic.work_items[0].name}
-                                                </a>
-                                                <div style="color: #94a3b8; font-size: 11px; font-style: italic; margin-top: 2px;">(No epic assignment)</div>` :
-                                                `<span style="color: #0176D3; font-weight: 500;">[Work Item]</span>
-                                                 <div style="color: #94a3b8; font-size: 11px; font-style: italic; margin-top: 2px;">(No epic assignment)</div>`
-                                        }
-                                    </div>
-                                    <div style="font-size: 11px; color: #94a3b8;">
-                                        ${epic.epic_id !== 'no-epic' ?
-                                            `Owner: ${epic.epic_owner}${epic.epic_health && epic.epic_health !== 'Unknown' ? ` | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.epic_health}</span>` : ''}` :
-                                            epic.work_items && epic.work_items.length > 0 ?
-                                                (() => {
-                                                    const wi = epic.work_items[0];
-                                                    const statusColor = wi.status === 'Closed' ? '#10b981' :
-                                                                      wi.status === 'In Progress' ? '#3b82f6' :
-                                                                      wi.status === 'QA In Progress' ? '#8b5cf6' :
-                                                                      wi.status === 'New' ? '#94a3b8' : '#64748b';
-                                                    return `Assigned to: ${wi.assignee !== '-' ? wi.assignee : '-'}${wi.status ? ` | <span style="background: ${statusColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${wi.status}</span>` : ''}`;
-                                                })() :
-                                                'Assigned to: -'
-                                        }
-                                    </div>
-                                </td>
-                                <td style="text-align: center; padding: 8px 16px; vertical-align: top;">
-
-                                </td>
-                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
-                                    ${monthName === 'June PD' ? epic.story_points : '—'}
-                                </td>
-                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
-                                    ${monthName === 'July C' ? epic.story_points : '—'}
-                                </td>
-                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
-                                    ${monthName === 'August C' ? epic.story_points : '—'}
-                                </td>
-                                <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
-                                    ${monthName === 'September C' ? epic.story_points : '—'}
-                                </td>
-                            </tr>
-                        `;
-                    });
+                    epicsHtml += `
+                        <tr class="breakdown-unmapped-${sanitizedTeamName}" style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 8px 16px 8px 64px; font-size: 12px; vertical-align: top;">
+                                <div style="font-weight: 500; margin-bottom: 2px; line-height: 1.3;">
+                                    ${item.epic_id ?
+                                        `<a href="https://gus.lightning.force.com/lightning/r/ADM_Epic__c/${item.epic_id}/view"
+                                           target="_blank"
+                                           style="color: #0176D3; text-decoration: none;">
+                                            ${item.epic_name || 'Unknown Epic'}
+                                        </a>` :
+                                        `<span style="color: #64748b; font-style: italic;">[No Epic Assignment]</span>`
+                                    }
+                                </div>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">
+                                    <a href="https://gus.lightning.force.com/lightning/r/ADM_Work__c/${workItemId}/view"
+                                       target="_blank"
+                                       style="color: #0176D3; text-decoration: none;">
+                                        ${item.work_item_name}
+                                    </a>
+                                    ${item.scheduled_build && item.scheduled_build !== '-' ? ` | Build: ${item.scheduled_build}` : ''}
+                                    ${item.sprint_name && item.sprint_name !== 'No Sprint' ? ` | Sprint: ${item.sprint_name}` : ' | No Sprint'}
+                                </div>
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; vertical-align: top;"></td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
+                                ${monthColumn === 0 ? item.story_points : '—'}
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                ${monthColumn === 1 ? item.story_points : '—'}
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                ${monthColumn === 2 ? item.story_points : '—'}
+                            </td>
+                            <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #2563eb; vertical-align: top;">
+                                ${monthColumn === 3 ? item.story_points : '—'}
+                            </td>
+                        </tr>
+                    `;
                 });
 
                 // Insert breakdown rows after the unmapped row
