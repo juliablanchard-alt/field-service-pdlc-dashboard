@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T09:24:22.501501",
+  "last_updated": "2026-07-23T11:08:57.546872",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -15,8 +15,8 @@
       "work_items_committed_july": 72,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 6.0,
+      "work_items_committed_september": 2,
       "june_delivered_by_program": {
         "264 Scheduling Flows": 107.0
       },
@@ -28,7 +28,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 6.0
     },
     {
       "name": "FSL - Core - Foundations",
@@ -103,8 +103,8 @@
       "work_items_committed_july": 32,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 110.0,
+      "work_items_committed_september": 37,
       "june_delivered_by_program": {},
       "june_delivered_unmapped": 30.0,
       "july_committed_by_program": {},
@@ -112,7 +112,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 110.0
     },
     {
       "name": "FSL - Foundation - Corecodiles",
@@ -158,10 +158,10 @@
       "work_items_closed_june": 51,
       "capacity_committed_july": 106,
       "work_items_committed_july": 25,
-      "capacity_committed_august": 6,
-      "work_items_committed_august": 2,
-      "capacity_committed_september": 6,
-      "work_items_committed_september": 2,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
+      "capacity_committed_september": 88.0,
+      "work_items_committed_september": 43,
       "june_delivered_by_program": {
         "[264] Mobile Insights GA": 19.0
       },
@@ -173,7 +173,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 88.0
     },
     {
       "name": "FSL - Resource - Dispatch Console",
@@ -189,8 +189,8 @@
       "work_items_committed_july": 17,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 61.0,
+      "work_items_committed_september": 24,
       "june_delivered_by_program": {
         "FS 264: S&O Trust": 6.0,
         "FS 264: S&O: The New Scheduling Console": 18.0
@@ -202,7 +202,9 @@
       "july_committed_unmapped": 17.0,
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
-      "september_committed_by_program": {},
+      "september_committed_by_program": {
+        "FS 264: S&O: The New Scheduling Console": 61.0
+      },
       "september_committed_unmapped": 0
     },
     {
@@ -278,8 +280,8 @@
       "work_items_closed_june": 142,
       "capacity_committed_july": 129,
       "work_items_committed_july": 42,
-      "capacity_committed_august": 3,
-      "work_items_committed_august": 1,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
@@ -310,10 +312,10 @@
       "work_items_closed_june": 54,
       "capacity_committed_july": 78,
       "work_items_committed_july": 29,
-      "capacity_committed_august": 27,
-      "work_items_committed_august": 4,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
+      "capacity_committed_september": 21.0,
+      "work_items_committed_september": 16,
       "june_delivered_by_program": {
         "FS 264: S&O Trust": 44.0,
         "264 Infield": 47.0,
@@ -328,7 +330,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 21.0
     },
     {
       "name": "MomentumForce",
@@ -372,10 +374,10 @@
       "work_items_closed_june": 138,
       "capacity_committed_july": 144.5,
       "work_items_committed_july": 69,
-      "capacity_committed_august": 39,
-      "work_items_committed_august": 24,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
       "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "work_items_committed_september": 8,
       "june_delivered_by_program": {
         "FS 264: S&O: S&O Customer Success": 29.0,
         "FS 264: S&O: Agentic S&O": 34.0
@@ -403,8 +405,8 @@
       "work_items_closed_june": 98,
       "capacity_committed_july": 38,
       "work_items_committed_july": 24,
-      "capacity_committed_august": 14,
-      "work_items_committed_august": 5,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {},
@@ -428,10 +430,10 @@
       "work_items_closed_june": 69,
       "capacity_committed_july": 203,
       "work_items_committed_july": 62,
-      "capacity_committed_august": 1,
-      "work_items_committed_august": 1,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
+      "capacity_committed_september": 22.0,
+      "work_items_committed_september": 13,
       "june_delivered_by_program": {
         "264 Operations Console": 154.0
       },
@@ -443,7 +445,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 22.0
     },
     {
       "name": "SFS Frontline AI",
@@ -459,8 +461,8 @@
       "work_items_committed_july": 5,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 1.0,
+      "work_items_committed_september": 1,
       "june_delivered_by_program": {
         "264 Field Service: Mobile Agentic AI": 38.0,
         "264 Field Service: Workforce Scheduling on Mobile": 6.0
@@ -473,7 +475,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 1.0
     },
     {
       "name": "SFS Mobile AGX",
@@ -715,8 +717,8 @@
       "work_items_committed_july": 45,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 283.0,
+      "work_items_committed_september": 71,
       "june_delivered_by_program": {
         "264 Field Service: Workforce Scheduling on Mobile": 6.0
       },
@@ -728,7 +730,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 283.0
     },
     {
       "name": "SFS Setup Experience",
@@ -744,8 +746,8 @@
       "work_items_committed_july": 11,
       "capacity_committed_august": 0,
       "work_items_committed_august": 0,
-      "capacity_committed_september": 0,
-      "work_items_committed_september": 0,
+      "capacity_committed_september": 5.0,
+      "work_items_committed_september": 2,
       "june_delivered_by_program": {},
       "june_delivered_unmapped": 20.0,
       "july_committed_by_program": {
@@ -755,7 +757,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 5.0
     },
     {
       "name": "SFS - WFM - Worker - Experience",
@@ -769,10 +771,10 @@
       "work_items_closed_june": 64,
       "capacity_committed_july": 23,
       "work_items_committed_july": 6,
-      "capacity_committed_august": 6,
-      "work_items_committed_august": 2,
-      "capacity_committed_september": 6,
-      "work_items_committed_september": 2,
+      "capacity_committed_august": 0,
+      "work_items_committed_august": 0,
+      "capacity_committed_september": 558.0,
+      "work_items_committed_september": 121,
       "june_delivered_by_program": {},
       "june_delivered_unmapped": 70.0,
       "july_committed_by_program": {},
@@ -780,7 +782,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0
+      "september_committed_unmapped": 558.0
     },
     {
       "name": "SynergyForce",

@@ -1,13 +1,13 @@
 {
   "summary": {
-    "total_epics_needing_attention": 146,
+    "total_epics_needing_attention": 145,
     "teams_affected": 28,
     "programs_affected": 19,
     "issue_breakdown": {
-      "missing_scheduled_build": 51,
-      "missing_priority": 103,
+      "missing_scheduled_build": 50,
+      "missing_priority": 102,
       "missing_owner": 0,
-      "blocked_no_comments": 3,
+      "blocked_no_comments": 2,
       "missing_planned_release": 65
     }
   },
@@ -1611,7 +1611,7 @@
       "epic_name_key": "264: PSS-FS: Operations Console: Push Service",
       "team": "SFS Core Scheduler",
       "owner": "Kritica Mantri",
-      "health": "Blocked",
+      "health": "Watch",
       "scheduled_build": "264",
       "priority": "-",
       "story_points": 0,
@@ -1619,8 +1619,7 @@
       "portfolio": "264 Field Service Workforce Scheduling",
       "project": "264 Operations Console",
       "issues": [
-        "missing_priority",
-        "blocked_no_comments"
+        "missing_priority"
       ]
     },
     {
@@ -1787,7 +1786,7 @@
       "epic_name_key": "264 [FSL - Foundation - Apps] Rules Framework",
       "team": "FSL - Foundation - Apps",
       "owner": "Siddharth Mathur",
-      "health": "On Track",
+      "health": "Completed",
       "scheduled_build": "-",
       "priority": "-",
       "story_points": 0,
@@ -1818,30 +1817,12 @@
       ]
     },
     {
-      "epic_id": "a3QEE000002SmQL2A0",
-      "epic_name": "264 [FSL - Foundation - Apps] Workforce Policy Management",
-      "epic_name_key": "264 [FSL - Foundation - Apps] Workforce Policy Management",
-      "team": "FSL - Foundation - Apps",
-      "owner": "Siddharth Mathur",
-      "health": "On Track",
-      "scheduled_build": "-",
-      "priority": "-",
-      "story_points": 0,
-      "program": "264 Infield & Onsite Hybrid",
-      "portfolio": "264 Field Service Workforce Scheduling",
-      "project": "264 Infield & Onsite Hybrid",
-      "issues": [
-        "missing_scheduled_build",
-        "missing_priority"
-      ]
-    },
-    {
       "epic_id": "a3QEE000002V35J2AS",
       "epic_name": "264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning",
       "epic_name_key": "264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning",
       "team": "FSL - Foundation - Apps",
       "owner": "Siddharth Mathur",
-      "health": "On Track",
+      "health": "Completed",
       "scheduled_build": "-",
       "priority": "-",
       "story_points": 0,
@@ -2774,7 +2755,7 @@
     },
     {
       "name": "FSL - Foundation - Apps",
-      "epic_count": 8,
+      "epic_count": 7,
       "epics": [
         {
           "epic_id": "a3QEE000002UxmH2AS",
@@ -2853,7 +2834,7 @@
           "epic_name_key": "264 [FSL - Foundation - Apps] Rules Framework",
           "team": "FSL - Foundation - Apps",
           "owner": "Siddharth Mathur",
-          "health": "On Track",
+          "health": "Completed",
           "scheduled_build": "-",
           "priority": "-",
           "story_points": 0,
@@ -2884,30 +2865,12 @@
           ]
         },
         {
-          "epic_id": "a3QEE000002SmQL2A0",
-          "epic_name": "264 [FSL - Foundation - Apps] Workforce Policy Management",
-          "epic_name_key": "264 [FSL - Foundation - Apps] Workforce Policy Management",
-          "team": "FSL - Foundation - Apps",
-          "owner": "Siddharth Mathur",
-          "health": "On Track",
-          "scheduled_build": "-",
-          "priority": "-",
-          "story_points": 0,
-          "program": "264 Infield & Onsite Hybrid",
-          "portfolio": "264 Field Service Workforce Scheduling",
-          "project": "264 Infield & Onsite Hybrid",
-          "issues": [
-            "missing_scheduled_build",
-            "missing_priority"
-          ]
-        },
-        {
           "epic_id": "a3QEE000002V35J2AS",
           "epic_name": "264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning",
           "epic_name_key": "264 [FSL - Foundation - Apps] Workforce Scheduling - Licensing and Provisioning",
           "team": "FSL - Foundation - Apps",
           "owner": "Siddharth Mathur",
-          "health": "On Track",
+          "health": "Completed",
           "scheduled_build": "-",
           "priority": "-",
           "story_points": 0,
@@ -4222,7 +4185,7 @@
           "epic_name_key": "264: PSS-FS: Operations Console: Push Service",
           "team": "SFS Core Scheduler",
           "owner": "Kritica Mantri",
-          "health": "Blocked",
+          "health": "Watch",
           "scheduled_build": "264",
           "priority": "-",
           "story_points": 0,
@@ -4230,8 +4193,7 @@
           "portfolio": "264 Field Service Workforce Scheduling",
           "project": "264 Operations Console",
           "issues": [
-            "missing_priority",
-            "blocked_no_comments"
+            "missing_priority"
           ]
         },
         {
