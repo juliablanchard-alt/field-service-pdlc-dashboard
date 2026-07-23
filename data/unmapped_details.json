@@ -4,7 +4,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 160,
+      "story_points": 158,
       "work_items": [
         {
           "work_item_name": "W-22794768",
@@ -367,16 +367,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-23189538",
-          "work_item_id": "a07EE00002dClwlYAC",
-          "scheduled_build": "-",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-23456136",
           "work_item_id": "a07EE00002eoLY5YAM",
           "scheduled_build": "-",
@@ -718,8 +708,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -970,9 +960,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -1253,9 +1243,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -1336,9 +1326,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -1389,7 +1379,7 @@
       "epic_id": "a3QEE00000207ht2AA",
       "epic_name": "264 [Hyperforce][Performance Priming] Stability & Resiliency",
       "epic_status": "Not Started",
-      "story_points": 66,
+      "story_points": 64,
       "work_items": [
         {
           "work_item_name": "W-19747895",
@@ -1579,16 +1569,6 @@
           "story_points": 1,
           "assignee": "Pawan Kumar",
           "status": "Closed - New Bug Logged",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22329111",
-          "work_item_id": "a07EE00002ZExSAYA1",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-SFS Mobile Services",
-          "story_points": 2,
-          "assignee": "ResultNG Notification Engine",
-          "status": "Closed",
           "month": "June"
         },
         {
@@ -1823,9 +1803,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -2266,16 +2246,16 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 22,
+      "story_points": 17,
       "work_items": [
         {
           "work_item_name": "W-21569975",
@@ -2315,16 +2295,6 @@
           "story_points": 2,
           "assignee": "Kim Le",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22576359",
-          "work_item_id": "a07EE00002aQmFhYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Services",
-          "story_points": 1,
-          "assignee": "IncidentCommandCenter",
-          "status": "Closed - New Bug Logged",
           "month": "June"
         },
         {
@@ -2376,31 +2346,11 @@
           "assignee": "Stephen Bayard",
           "status": "Closed",
           "month": "July"
-        },
-        {
-          "work_item_name": "W-22784005",
-          "work_item_id": "a07EE00002bKD9QYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Services",
-          "story_points": 2,
-          "assignee": "Your Friendly Build Master",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23009817",
-          "work_item_id": "a07EE00002cJ2VeYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Services",
-          "story_points": 2,
-          "assignee": "ResultNG Notification Engine",
-          "status": "New",
-          "month": "July"
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -2521,38 +2471,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022glB2AQ",
-      "epic_name": "SF Multi Incident RCA",
-      "epic_status": "Not Started",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-22576360",
-          "work_item_id": "a07EE00002aQmFiYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Services",
-          "story_points": 1,
-          "assignee": "IncidentCommandCenter",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22937829",
-          "work_item_id": "a07EE00002bynkWYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Services",
-          "story_points": 1,
-          "assignee": "IncidentCommandCenter",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -2876,9 +2795,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -3029,9 +2948,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -3393,9 +3312,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -3446,9 +3365,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -3560,16 +3479,16 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
       "epic_id": "a3QEE0000024ChN2AU",
       "epic_name": "264 [Hyperforce][Performance Priming] Trust: Maintenance & Compliance",
       "epic_status": "Not Started",
-      "story_points": 25,
+      "story_points": 22,
       "work_items": [
         {
           "work_item_name": "W-22563197",
@@ -3702,26 +3621,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-23070103",
-          "work_item_id": "a07EE00002cX7nkYAC",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-SFS Mobile Services",
-          "story_points": 2,
-          "assignee": "ResultNG Notification Engine",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23336710",
-          "work_item_id": "a07EE00002e6DIgYAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-SFS Mobile Services",
-          "story_points": 1,
-          "assignee": "ResultNG Notification Engine",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-15203600",
           "work_item_id": "a07EE00001lfdSQYAY",
           "scheduled_build": "264",
@@ -3743,9 +3642,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -3838,9 +3737,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -4141,9 +4040,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -4174,8 +4073,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -4349,8 +4248,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     },
     {
@@ -5192,7 +5091,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 42,
+      "story_points": 40,
       "work_items": [
         {
           "work_item_name": "W-21950326",
@@ -5395,26 +5294,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22567863",
-          "work_item_id": "a07EE00002aOr7UYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22845939",
-          "work_item_id": "a07EE00002bXiIaYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-21965100",
           "work_item_id": "a07EE00002Xn3XnYAJ",
           "scheduled_build": "-",
@@ -5466,8 +5345,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -5658,9 +5537,9 @@
         }
       ],
       "months": [
+        "July",
         "September",
-        "June",
-        "July"
+        "June"
       ]
     }
   ],
@@ -5785,8 +5664,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -5897,9 +5776,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -6040,8 +5919,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6212,8 +6091,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6474,9 +6353,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -6618,8 +6497,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6882,8 +6761,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6944,8 +6823,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7066,8 +6945,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7118,8 +6997,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7230,8 +7109,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7354,8 +7233,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7671,8 +7550,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7774,8 +7653,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7929,7 +7808,7 @@
       "epic_id": "a3QEE000002CjWT2A0",
       "epic_name": "264 SFS Frontline AI - [M2.7] Core Unplanned Trust",
       "epic_status": "On Track",
-      "story_points": 29,
+      "story_points": 27,
       "work_items": [
         {
           "work_item_name": "W-20393134",
@@ -8022,16 +7901,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22812922",
-          "work_item_id": "a07EE00002bRCwWYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22293127",
           "work_item_id": "a07EE00002Z6lk1YAB",
           "scheduled_build": "-",
@@ -8073,8 +7942,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8395,8 +8264,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8849,8 +8718,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8891,8 +8760,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8963,8 +8832,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9077,8 +8946,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9109,8 +8978,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9663,8 +9532,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9746,8 +9615,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9888,8 +9757,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -10277,9 +10146,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -10521,9 +10390,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -10595,8 +10464,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     }
   ],
@@ -10929,8 +10798,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -11851,8 +11720,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -12003,8 +11872,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -12156,8 +12025,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -12288,8 +12157,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -12320,8 +12189,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     }
   ],
@@ -12330,7 +12199,7 @@
       "epic_id": "a3QEE000002K0cD2AS",
       "epic_name": "* [1.16.5][264] PBS Unplanned/Ad-hoc Items",
       "epic_status": "Completed",
-      "story_points": 24,
+      "story_points": 23,
       "work_items": [
         {
           "work_item_name": "W-22995205",
@@ -12509,16 +12378,6 @@
           "sprint_name": "2026.06b-MomentumForce",
           "story_points": 1,
           "assignee": "Akshya Jain",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21577346",
-          "work_item_id": "a07EE00002WDixXYAT",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-MomentumForce",
-          "story_points": 1,
-          "assignee": "ResultNG Notification Engine",
           "status": "Closed",
           "month": "June"
         },
@@ -12800,8 +12659,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13042,8 +12901,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13214,9 +13073,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -13317,8 +13176,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13370,8 +13229,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13542,8 +13401,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13594,8 +13453,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13686,8 +13545,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13718,8 +13577,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -13800,9 +13659,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -13873,9 +13732,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -14271,9 +14130,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -14404,8 +14263,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14696,8 +14555,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14918,8 +14777,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -15275,8 +15134,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     },
     {
@@ -16081,9 +15940,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -16494,8 +16353,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16730,8 +16589,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -17111,8 +16970,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     }
   ],
@@ -17525,9 +17384,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -17740,8 +17599,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -17942,8 +17801,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18014,8 +17873,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18116,8 +17975,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18188,8 +18047,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18362,8 +18221,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18514,8 +18373,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18567,8 +18426,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -18803,8 +18662,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     },
     {
@@ -19168,8 +19027,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -19507,8 +19366,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -19711,9 +19570,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -20252,8 +20111,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -20825,8 +20684,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     },
     {
@@ -21218,8 +21077,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -21590,8 +21449,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -21733,8 +21592,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -21845,8 +21704,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22158,8 +22017,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22362,8 +22221,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22434,8 +22293,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22567,8 +22426,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -23044,8 +22903,8 @@
         }
       ],
       "months": [
-        "August",
-        "July"
+        "July",
+        "August"
       ]
     },
     {
@@ -23464,9 +23323,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -23529,27 +23388,6 @@
       "months": [
         "September",
         "August",
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002ENy52AG",
-      "epic_name": "264 SFS [Operations Intelligence] ZBB",
-      "epic_status": "On Track",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-22051341",
-          "work_item_id": "a07EE00002YDHnAYAX",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
         "June"
       ]
     },
@@ -23701,8 +23539,8 @@
         }
       ],
       "months": [
-        "September",
-        "July"
+        "July",
+        "September"
       ]
     },
     {
@@ -23937,9 +23775,9 @@
         }
       ],
       "months": [
+        "July",
         "September",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -24030,7 +23868,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 4,
+      "story_points": 2,
       "work_items": [
         {
           "work_item_name": "W-20917904",
@@ -24041,21 +23879,10 @@
           "assignee": "Courtney Evans",
           "status": "Closed",
           "month": "June"
-        },
-        {
-          "work_item_name": "W-22992339",
-          "work_item_id": "a07EE00002cEZLvYAO",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Setup Experience",
-          "story_points": 2,
-          "assignee": "Your Friendly Build Master",
-          "status": "Ready for Review",
-          "month": "July"
         }
       ],
       "months": [
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -24226,8 +24053,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -24328,8 +24155,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -24369,7 +24196,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 3,
+      "story_points": 2,
       "work_items": [
         {
           "work_item_name": "W-22944314",
@@ -24378,16 +24205,6 @@
           "sprint_name": "2026.06b-SFS Setup Experience",
           "story_points": 2,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23074868",
-          "work_item_id": "a07EE00002cYxpzYAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Setup Experience",
-          "story_points": 1,
-          "assignee": "Your Friendly Build Master",
           "status": "Closed",
           "month": "June"
         }
@@ -25350,8 +25167,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -25443,8 +25260,8 @@
         }
       ],
       "months": [
-        "September",
-        "July"
+        "July",
+        "September"
       ]
     },
     {
@@ -26809,9 +26626,9 @@
         }
       ],
       "months": [
+        "July",
         "August",
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -27402,8 +27219,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27454,8 +27271,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27737,8 +27554,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
