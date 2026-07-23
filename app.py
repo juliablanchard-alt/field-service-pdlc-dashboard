@@ -1243,6 +1243,15 @@ def refresh_all_data():
             'output': team_po_result.stdout if team_po_result.returncode == 0 else team_po_result.stderr
         })
 
+        # Analyze hygiene issues (non-critical)
+        hygiene_script = os.path.join(base_dir, 'analyze_hygiene.py')
+        hygiene_result = subprocess.run(['python3', hygiene_script], capture_output=True, text=True, timeout=60)
+        results.append({
+            'script': 'hygiene',
+            'success': hygiene_result.returncode == 0,
+            'output': hygiene_result.stdout if hygiene_result.returncode == 0 else hygiene_result.stderr
+        })
+
         # Check if all succeeded
         all_success = all(r['success'] for r in results)
 
