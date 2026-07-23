@@ -3,6 +3,7 @@
     {
       "epic_id": "a3QEE0000025BL32AM",
       "epic_name": "264 SFS [Operations Intelligence] Technical Trust",
+      "epic_status": "On Track",
       "story_points": 14,
       "work_items": [
         {
@@ -11,6 +12,8 @@
           "scheduled_build": "264",
           "sprint_name": "2026.08a-FSL - Operations - Intelligence [RF]",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -19,6 +22,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "August"
         },
         {
@@ -27,6 +32,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mahes Kumar Subramanian",
+          "status": "New",
           "month": "August"
         },
         {
@@ -35,6 +42,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "August"
         },
         {
@@ -43,6 +52,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -53,6 +64,7 @@
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
+      "epic_status": null,
       "story_points": 9,
       "work_items": [
         {
@@ -61,6 +73,8 @@
           "scheduled_build": "-",
           "sprint_name": "2026.08b-FSL - Operations - Intelligence",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -69,6 +83,8 @@
           "scheduled_build": "-",
           "sprint_name": "2026.09a-FSL - Operations - Intelligence",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -77,17 +93,20 @@
           "scheduled_build": "-",
           "sprint_name": "2026.09b-FSL - Operations - Intelligence",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "September"
         }
       ],
       "months": [
-        "August",
-        "September"
+        "September",
+        "August"
       ]
     },
     {
       "epic_id": "a3QEE000001oayz2AA",
       "epic_name": "266 SFS [Operations Intelligence]  Papercuts & Customer Asks",
+      "epic_status": "Not Started",
       "story_points": 13,
       "work_items": [
         {
@@ -96,6 +115,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Rani Chintha",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -104,6 +125,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -112,6 +135,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mahes Kumar Subramanian",
+          "status": "New",
           "month": "September"
         },
         {
@@ -120,6 +145,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -128,6 +155,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Riya Kukadia",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -136,6 +165,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Silpa Guddati",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -146,6 +177,7 @@
     {
       "epic_id": "a3QEE000001ob2D2AQ",
       "epic_name": "266 SFS [Operations Intelligence] Field Service Operations Trust",
+      "epic_status": "Not Started",
       "story_points": 50,
       "work_items": [
         {
@@ -154,6 +186,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Alona Sapiro Haitovich",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -162,6 +196,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -170,6 +206,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Hiromichi Cho",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -178,6 +216,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mahes Kumar Subramanian",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -186,6 +226,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -194,6 +236,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Yaxin Liu",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -202,6 +246,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mahes Kumar Subramanian",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -210,6 +256,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Laura Fernandez Esteban",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -218,6 +266,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Dana Yang",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -226,6 +276,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Dana Yang",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -234,6 +286,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Darren Boland",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -242,6 +296,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Pratheesh Peethambaran",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -252,6 +308,7 @@
     {
       "epic_id": "a3QEE000002MGY12AO",
       "epic_name": "266 SFS [Operations Intelligence] Technical Trust",
+      "epic_status": "Not Started",
       "story_points": 10,
       "work_items": [
         {
@@ -260,6 +317,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Tushar Sharma",
+          "status": "New",
           "month": "September"
         },
         {
@@ -268,6 +327,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mahes Kumar Subramanian",
+          "status": "New",
           "month": "September"
         },
         {
@@ -276,6 +337,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -288,6 +351,7 @@
     {
       "epic_id": "a3QEE000002KjcX2AS",
       "epic_name": "266 [FSL - Foundation - Apps] Place Holder",
+      "epic_status": "On Track",
       "story_points": 2,
       "work_items": [
         {
@@ -296,6 +360,8 @@
           "scheduled_build": "-",
           "sprint_name": "2026.08a-FSL - Foundation - Apps",
           "story_points": 2,
+          "assignee": "Siddharth Mathur",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -308,6 +374,7 @@
     {
       "epic_id": "a3QEE000001rmdp2AA",
       "epic_name": "264 [Hyperforce][Performance Priming] Support PSS and deploy to Gov Cloud",
+      "epic_status": "Not Started",
       "story_points": 18,
       "work_items": [
         {
@@ -316,6 +383,8 @@
           "scheduled_build": "264",
           "sprint_name": "2026.08a-SFS Mobile Services",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -324,6 +393,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -332,6 +403,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -340,6 +413,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -348,6 +423,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -356,6 +433,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -364,6 +443,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -372,6 +453,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -380,6 +463,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -388,6 +473,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "govobx-conductor API user",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -396,6 +483,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "govobx-conductor API user",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -404,6 +493,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "govobx-conductor API user",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -412,6 +503,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "govobx-conductor API user",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -420,6 +513,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -430,6 +525,7 @@
     {
       "epic_id": "a3QEE00000205pl2AA",
       "epic_name": "264 [Hyperforce][Performance Priming] Trust: Operational Productivity",
+      "epic_status": "Not Started",
       "story_points": 3,
       "work_items": [
         {
@@ -438,6 +534,8 @@
           "scheduled_build": "264",
           "sprint_name": "2026.08a-SFS Mobile Services",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -446,6 +544,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -456,6 +556,7 @@
     {
       "epic_id": "a3QEE00000205Zd2AI",
       "epic_name": "264 [Hyperforce][Performance Priming] High Throughput Data Processing",
+      "epic_status": "Not Started",
       "story_points": 2,
       "work_items": [
         {
@@ -464,6 +565,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -474,6 +577,7 @@
     {
       "epic_id": "a3QEE00000207ht2AA",
       "epic_name": "264 [Hyperforce][Performance Priming] Stability & Resiliency",
+      "epic_status": "Not Started",
       "story_points": 28,
       "work_items": [
         {
@@ -482,6 +586,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -490,6 +596,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -498,6 +606,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -506,6 +616,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -514,6 +626,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -522,6 +636,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -530,6 +646,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -538,6 +656,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -546,6 +666,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -554,6 +676,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -562,6 +686,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -570,6 +696,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -580,6 +708,7 @@
     {
       "epic_id": "a3QEE00000207oL2AQ",
       "epic_name": "264 [Hyperforce][Performance Priming] Trust: Quality",
+      "epic_status": "Not Started",
       "story_points": 3,
       "work_items": [
         {
@@ -588,6 +717,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -598,6 +729,7 @@
     {
       "epic_id": "a3QEE0000020Dtl2AE",
       "epic_name": "264 [Core] Trust - Direct Cx Impacting Bug, Bug, Problem Detection, Mandate",
+      "epic_status": "Not Started",
       "story_points": 67,
       "work_items": [
         {
@@ -606,6 +738,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Igor Mochurad",
+          "status": "New",
           "month": "August"
         },
         {
@@ -614,6 +748,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -622,6 +758,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -630,6 +768,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -638,6 +778,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Bhanu Prakash Reddy Nermati",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -646,6 +788,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Danny Wilson",
+          "status": "New",
           "month": "August"
         },
         {
@@ -654,6 +798,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Sheila Christian",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -662,6 +808,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -670,6 +818,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Fai Ng",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -678,6 +828,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -686,6 +838,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -694,6 +848,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -702,6 +858,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -710,6 +868,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -718,6 +878,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -726,6 +888,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -734,6 +898,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -742,6 +908,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -750,6 +918,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -758,6 +928,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "New",
           "month": "August"
         },
         {
@@ -766,6 +938,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -774,6 +948,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Zhengkang Liu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -782,6 +958,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -790,6 +968,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Aditya Maniar",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -798,6 +978,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Aditya Maniar",
+          "status": "New",
           "month": "August"
         },
         {
@@ -806,6 +988,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "New",
           "month": "August"
         },
         {
@@ -814,6 +998,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Zhengkang Liu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -822,6 +1008,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -832,6 +1020,7 @@
     {
       "epic_id": "a3QEE0000024Ce92AE",
       "epic_name": "264 [Hyperforce][Performance Priming] Observability / Monitoring",
+      "epic_status": "Not Started",
       "story_points": 12,
       "work_items": [
         {
@@ -840,6 +1029,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -848,6 +1039,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -856,6 +1049,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -864,6 +1059,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -872,6 +1069,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -880,6 +1079,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -888,6 +1089,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -896,6 +1099,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -906,6 +1111,7 @@
     {
       "epic_id": "a3QEE0000024ChN2AU",
       "epic_name": "264 [Hyperforce][Performance Priming] Trust: Maintenance & Compliance",
+      "epic_status": "Not Started",
       "story_points": 5,
       "work_items": [
         {
@@ -914,6 +1120,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -922,6 +1130,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -932,6 +1142,7 @@
     {
       "epic_id": "a3QEE0000027UEj2AM",
       "epic_name": "[Performance Priming] [Q4] Performance and Quality",
+      "epic_status": "Not Started",
       "story_points": 81,
       "work_items": [
         {
@@ -940,6 +1151,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -948,6 +1161,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 15,
+          "assignee": "Raghav Abboy",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -956,6 +1171,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Raghav Abboy",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -964,6 +1181,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -972,6 +1191,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -980,6 +1201,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 20,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -988,6 +1211,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -996,6 +1221,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Naishal Patel",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -1004,6 +1231,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1012,6 +1241,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -1022,6 +1253,7 @@
     {
       "epic_id": "a3QEE000002KsSv2AK",
       "epic_name": "264 Broad Designs and Spikes",
+      "epic_status": "Not Started",
       "story_points": 5,
       "work_items": [
         {
@@ -1030,6 +1262,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -1040,6 +1274,7 @@
     {
       "epic_id": "a3QEE000002KsW92AK",
       "epic_name": "264 [Mobile] Trust, Maintenance and Compliance",
+      "epic_status": "Not Started",
       "story_points": 23,
       "work_items": [
         {
@@ -1048,6 +1283,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1056,6 +1293,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1064,6 +1303,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1072,6 +1313,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1080,6 +1323,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1088,6 +1333,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         },
         {
@@ -1096,6 +1343,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Stephen Bayard",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -1106,6 +1355,7 @@
     {
       "epic_id": "a3QEE000002L9gf2AC",
       "epic_name": "264 [Hyperforce][Performance Priming]- Trust: On Call Duty and Pager Alerts",
+      "epic_status": "Not Started",
       "story_points": 10,
       "work_items": [
         {
@@ -1114,6 +1364,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Danny Wilson",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -1124,6 +1376,7 @@
     {
       "epic_id": "a3QEE000002ML332AG",
       "epic_name": "264 [Mobile] Upload Queue Enhancements",
+      "epic_status": "Not Started",
       "story_points": 8,
       "work_items": [
         {
@@ -1132,6 +1385,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Kim Le",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -1142,6 +1397,7 @@
     {
       "epic_id": "a3QEE000002MREv2AO",
       "epic_name": "264 [Core]  TechDebt - Non Customer Facing, Refactor, Tests, QoL Improvement",
+      "epic_status": "Not Started",
       "story_points": 77,
       "work_items": [
         {
@@ -1150,6 +1406,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1158,6 +1416,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1166,6 +1426,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1174,6 +1436,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1182,6 +1446,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1190,6 +1456,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1198,6 +1466,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1206,6 +1476,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1214,6 +1486,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1222,6 +1496,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1230,6 +1506,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1238,6 +1516,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Aditya Maniar",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -1246,6 +1526,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1254,6 +1536,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1262,6 +1546,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1270,6 +1556,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1278,6 +1566,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1286,6 +1576,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1294,6 +1586,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1302,6 +1596,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Igor Mochurad",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1310,6 +1606,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1318,6 +1616,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1326,6 +1626,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1334,6 +1636,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1342,6 +1646,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Aditya Maniar",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -1350,6 +1656,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -1358,6 +1666,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -1368,6 +1678,7 @@
     {
       "epic_id": "a3QEE000002MTv32AG",
       "epic_name": "264 [Hyperforce][Performance Priming] AGX Metadata Priming",
+      "epic_status": "Not Started",
       "story_points": 40,
       "work_items": [
         {
@@ -1376,6 +1687,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 20,
+          "assignee": "Nigel Menger",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -1384,6 +1697,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 20,
+          "assignee": "Nigel Menger",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -1394,6 +1709,7 @@
     {
       "epic_id": "a3QEE00000130e12AA",
       "epic_name": "266 [Hyperforce][Performance Priming] - Files Priming",
+      "epic_status": "Not Started",
       "story_points": 13,
       "work_items": [
         {
@@ -1402,6 +1718,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Raghav Abboy",
+          "status": "Duplicate",
           "month": "September"
         },
         {
@@ -1410,6 +1728,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1420,6 +1740,7 @@
     {
       "epic_id": "a3QEE000001P9cD2AS",
       "epic_name": "266 [Hyperforce][Performance Priming] Global deployment / migration strategy",
+      "epic_status": "Not Started",
       "story_points": 33,
       "work_items": [
         {
@@ -1428,6 +1749,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1436,6 +1759,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Naishal Patel",
+          "status": "Duplicate",
           "month": "September"
         },
         {
@@ -1444,6 +1769,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Naishal Patel",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1452,6 +1779,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1460,6 +1789,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Naishal Patel",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1468,6 +1799,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Zhengkang Liu",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1476,6 +1809,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1484,6 +1819,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1492,6 +1829,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1502,6 +1841,7 @@
     {
       "epic_id": "a3QEE000001jqLF2AY",
       "epic_name": "266 [Core] [Briefcase] Run as User asynchronously for long executions",
+      "epic_status": "On Track",
       "story_points": 12,
       "work_items": [
         {
@@ -1510,6 +1850,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Zhengkang Liu",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1518,6 +1860,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Zhengkang Liu",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -1528,6 +1872,7 @@
     {
       "epic_id": "a3QEE000001ljYz2AI",
       "epic_name": "266 [Core] [LWC Priming] Support LWC Priming via Briefcase Rules for Offline Use",
+      "epic_status": null,
       "story_points": 5,
       "work_items": [
         {
@@ -1536,6 +1881,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Igor Mochurad",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1544,6 +1891,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Igor Mochurad",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -1554,6 +1903,7 @@
     {
       "epic_id": "a3QEE0000020EWT2A2",
       "epic_name": "266 [Core] Scale Platform Actions Mobile Metadata API",
+      "epic_status": "Not Started",
       "story_points": 39,
       "work_items": [
         {
@@ -1562,6 +1912,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1570,6 +1922,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1578,6 +1932,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1586,6 +1942,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Raghav Abboy",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1594,6 +1952,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1602,6 +1962,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Man Kit Yau",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1610,6 +1972,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "September"
         },
         {
@@ -1618,6 +1982,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 15,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -1628,6 +1994,7 @@
     {
       "epic_id": "a3QEE000002Lhbt2AC",
       "epic_name": "266 [Core] Trust, Maintenance and Compliance",
+      "epic_status": "Not Started",
       "story_points": 13,
       "work_items": [
         {
@@ -1636,6 +2003,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Zhengkang Liu",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1644,6 +2013,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Zhengkang Liu",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1654,6 +2025,7 @@
     {
       "epic_id": "a3QEE000002MSFp2AO",
       "epic_name": "266 [Hyperforce][Performance Priming] Stability & Resiliency",
+      "epic_status": "Not Started",
       "story_points": 14,
       "work_items": [
         {
@@ -1662,6 +2034,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Naishal Patel",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1670,6 +2044,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1678,6 +2054,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1686,6 +2064,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1694,6 +2074,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1702,6 +2084,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1712,6 +2096,7 @@
     {
       "epic_id": "a3QEE000002MSJ32AO",
       "epic_name": "266 [Hyperforce][Performance Priming] Trust: Quality",
+      "epic_status": "Not Started",
       "story_points": 7,
       "work_items": [
         {
@@ -1720,6 +2105,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1728,6 +2115,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1738,6 +2127,7 @@
     {
       "epic_id": "a3QEE000002MSNt2AO",
       "epic_name": "266 [Hyperforce][Performance Priming] Trust: Maintenance & Compliance",
+      "epic_status": "Not Started",
       "story_points": 15,
       "work_items": [
         {
@@ -1746,6 +2136,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1754,6 +2146,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1762,6 +2156,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Aditya Maniar",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1770,6 +2166,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1778,6 +2176,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1786,6 +2186,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1794,6 +2196,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1802,6 +2206,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -1812,6 +2218,7 @@
     {
       "epic_id": "a3QEE000002MSPV2A4",
       "epic_name": "266 [Hyperforce][Performance Priming] Observability / Monitoring",
+      "epic_status": "Not Started",
       "story_points": 14,
       "work_items": [
         {
@@ -1820,6 +2227,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1828,6 +2237,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1836,6 +2247,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1844,6 +2257,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1854,6 +2269,7 @@
     {
       "epic_id": "a3QEE000002MSR72AO",
       "epic_name": "266 [Hyperforce][Performance Priming] Trust: Operational Productivity",
+      "epic_status": "Not Started",
       "story_points": 29,
       "work_items": [
         {
@@ -1862,6 +2278,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1870,6 +2288,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Waiting",
           "month": "September"
         },
         {
@@ -1878,6 +2298,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1886,6 +2308,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1894,6 +2318,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1902,6 +2328,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1910,6 +2338,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1918,6 +2348,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -1928,6 +2360,7 @@
     {
       "epic_id": "a3QEE000002MSSj2AO",
       "epic_name": "266 [Hyperforce][Performance Priming] High Throughput Data Processing",
+      "epic_status": "Not Started",
       "story_points": 86,
       "work_items": [
         {
@@ -1936,6 +2369,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Naveen Vasu",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1944,6 +2379,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1952,6 +2389,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1960,6 +2399,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1968,6 +2409,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1976,6 +2419,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1984,6 +2429,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -1992,6 +2439,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2000,6 +2449,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2008,6 +2459,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2016,6 +2469,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2024,6 +2479,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2032,6 +2489,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2040,6 +2499,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2048,6 +2509,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2056,6 +2519,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2064,6 +2529,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Danny Wilson",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -2074,6 +2541,7 @@
     {
       "epic_id": "a3QEE000002RhJ32AK",
       "epic_name": "266 [Core] Enable PSS Data Hierarchy for Performance Priming",
+      "epic_status": "On Track",
       "story_points": 3,
       "work_items": [
         {
@@ -2082,6 +2550,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Aditya Maniar",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -2094,6 +2564,7 @@
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
+      "epic_status": null,
       "story_points": 0,
       "work_items": [
         {
@@ -2102,6 +2573,8 @@
           "scheduled_build": "-",
           "sprint_name": "2026.08b-Optimization Engineering",
           "story_points": 0,
+          "assignee": "Avior Malkukian",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -2112,6 +2585,7 @@
     {
       "epic_id": "a3QEE000002R4hV2AS",
       "epic_name": "264 SFS [Infra] Availability - metering",
+      "epic_status": "On Track",
       "story_points": 5,
       "work_items": [
         {
@@ -2120,6 +2594,8 @@
           "scheduled_build": "264.1",
           "sprint_name": "2026.08b-Optimization Engineering",
           "story_points": 1,
+          "assignee": "Josh Honeycutt",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2128,6 +2604,8 @@
           "scheduled_build": "264.1",
           "sprint_name": "2026.08b-Optimization Engineering",
           "story_points": 3,
+          "assignee": "Josh Honeycutt",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2136,6 +2614,8 @@
           "scheduled_build": "264.1",
           "sprint_name": "2026.08b-Optimization Engineering",
           "story_points": 1,
+          "assignee": "Josh Honeycutt",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -2146,6 +2626,7 @@
     {
       "epic_id": "a3QEE000002N8Bp2AK",
       "epic_name": "264 SFS - Intelligent Routing and GIS",
+      "epic_status": "On Track",
       "story_points": 2,
       "work_items": [
         {
@@ -2154,6 +2635,8 @@
           "scheduled_build": "264",
           "sprint_name": "2026.09a-Optimization Engineering",
           "story_points": 2,
+          "assignee": "Dylan Mistry",
+          "status": "Duplicate",
           "month": "August"
         }
       ],
@@ -2164,6 +2647,7 @@
     {
       "epic_id": "a3QEE000002NSQf2AO",
       "epic_name": "[264] MST & MDW Optimization Team for the New Scheduling Console",
+      "epic_status": "Completed",
       "story_points": 2,
       "work_items": [
         {
@@ -2172,6 +2656,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Miriam Lebel",
+          "status": "Not a bug",
           "month": "August"
         }
       ],
@@ -2182,6 +2668,7 @@
     {
       "epic_id": "a3QEE000002OBCT2A4",
       "epic_name": "264 [Engine] SFS GPU Quality",
+      "epic_status": "On Track",
       "story_points": 21,
       "work_items": [
         {
@@ -2190,6 +2677,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Rubi Arviv",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2198,6 +2687,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Rubi Arviv",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2206,6 +2697,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Rubi Arviv",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2214,6 +2707,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Rubi Arviv",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2222,6 +2717,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Avior Malkukian",
+          "status": "In Progress",
           "month": "August"
         }
       ],
@@ -2234,6 +2731,7 @@
     {
       "epic_id": "a3QEE000002LH6L2AW",
       "epic_name": "266 UWM Worker Engagement Experience: Trust",
+      "epic_status": "Not Started",
       "story_points": 9,
       "work_items": [
         {
@@ -2242,6 +2740,8 @@
           "scheduled_build": "266",
           "sprint_name": "2026.08b-SFS - WFM - Worker - Experience",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -2250,6 +2750,8 @@
           "scheduled_build": "266",
           "sprint_name": "2026.09a-SFS - WFM - Worker - Experience",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -2258,17 +2760,20 @@
           "scheduled_build": "266",
           "sprint_name": "2026.09b-SFS - WFM - Worker - Experience",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Triaged",
           "month": "September"
         }
       ],
       "months": [
-        "August",
-        "September"
+        "September",
+        "August"
       ]
     },
     {
       "epic_id": "a3QEE000002LDM52AO",
       "epic_name": "264 UMW Worker Engagement Experience: Open Shifts Pool",
+      "epic_status": "On Track",
       "story_points": 152,
       "work_items": [
         {
@@ -2277,6 +2782,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2285,6 +2792,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2293,6 +2802,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2301,6 +2812,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2309,6 +2822,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2317,6 +2832,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2325,6 +2842,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2333,6 +2852,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2341,6 +2862,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2349,6 +2872,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2357,6 +2882,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2365,6 +2892,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2373,6 +2902,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2381,6 +2912,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2389,6 +2922,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2397,6 +2932,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2405,6 +2942,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2413,6 +2952,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2421,6 +2962,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2429,6 +2972,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2437,6 +2982,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2445,6 +2992,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2453,6 +3002,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2461,6 +3012,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2469,6 +3022,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2477,6 +3032,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2485,6 +3042,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2493,6 +3052,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Pauli Peralta",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2501,6 +3062,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2509,6 +3072,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2517,6 +3082,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2525,6 +3092,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2533,6 +3102,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2541,6 +3112,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2549,6 +3122,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2557,6 +3132,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2565,6 +3142,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2573,6 +3152,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2581,6 +3162,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2589,6 +3172,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2597,6 +3182,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2605,6 +3192,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2613,6 +3202,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2621,6 +3212,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2629,6 +3222,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2637,6 +3232,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Pauli Peralta",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2645,6 +3242,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -2653,6 +3252,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Hiromichi Cho",
+          "status": "Closed",
           "month": "August"
         }
       ],
@@ -2663,6 +3264,7 @@
     {
       "epic_id": "a3QEE000002LSub2AG",
       "epic_name": "264 UMW Worker Engagement Experience:Time Management -Clockin/Clockout - Strech",
+      "epic_status": "Not Started",
       "story_points": 116,
       "work_items": [
         {
@@ -2671,6 +3273,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2679,6 +3283,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2687,6 +3293,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -2695,6 +3303,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2703,6 +3313,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2711,6 +3323,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2719,6 +3333,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2727,6 +3343,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2735,6 +3353,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -2743,6 +3363,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2751,6 +3373,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2759,6 +3383,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2767,6 +3393,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2775,6 +3403,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2783,6 +3413,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2791,6 +3423,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 15,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2799,6 +3433,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2807,6 +3443,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2815,6 +3453,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2823,6 +3463,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         },
         {
@@ -2831,6 +3473,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -2841,6 +3485,7 @@
     {
       "epic_id": "a3QEE0000021mnp2AA",
       "epic_name": "266 UWM Worker Engagement Experience: Transfer Shifts",
+      "epic_status": "Not Started",
       "story_points": 120,
       "work_items": [
         {
@@ -2849,6 +3494,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Sindhubala Ulavapalli",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2857,6 +3504,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2865,6 +3514,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2873,6 +3524,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "Duplicate",
           "month": "September"
         },
         {
@@ -2881,6 +3534,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2889,6 +3544,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "Duplicate",
           "month": "September"
         },
         {
@@ -2897,6 +3554,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2905,6 +3564,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "Never",
           "month": "September"
         },
         {
@@ -2913,6 +3574,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2921,6 +3584,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2929,6 +3594,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2937,6 +3604,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2945,6 +3614,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2953,6 +3624,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2961,6 +3634,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2969,6 +3644,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2977,6 +3654,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2985,6 +3664,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -2993,6 +3674,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Yi-Chin Chang",
+          "status": "Never",
           "month": "September"
         },
         {
@@ -3001,6 +3684,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3009,6 +3694,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3017,6 +3704,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3025,6 +3714,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3033,6 +3724,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "Duplicate",
           "month": "September"
         },
         {
@@ -3041,6 +3734,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3049,6 +3744,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3057,6 +3754,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3065,6 +3764,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3073,6 +3774,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3081,6 +3784,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3089,6 +3794,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3097,6 +3804,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3105,6 +3814,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Yi-Chin Chang",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3115,6 +3826,7 @@
     {
       "epic_id": "a3QEE0000021msf2AA",
       "epic_name": "266 UWM Worker Engagement Experience: Availability Management",
+      "epic_status": "Not Started",
       "story_points": 28,
       "work_items": [
         {
@@ -3123,6 +3835,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3131,6 +3845,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3139,6 +3855,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3147,6 +3865,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3155,6 +3875,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3163,6 +3885,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3173,6 +3897,7 @@
     {
       "epic_id": "a3QEE0000021mz72AA",
       "epic_name": "266 UWM Worker Engagement Experience: Swap Shifts",
+      "epic_status": "Not Started",
       "story_points": 110,
       "work_items": [
         {
@@ -3181,6 +3906,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3189,6 +3916,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3197,6 +3926,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3205,6 +3936,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3213,6 +3946,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3221,6 +3956,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3229,6 +3966,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3237,6 +3976,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3245,6 +3986,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3253,6 +3996,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3261,6 +4006,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3269,6 +4016,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3277,6 +4026,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3285,6 +4036,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3293,6 +4046,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3301,6 +4056,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3309,6 +4066,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3317,6 +4076,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3325,6 +4086,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3333,6 +4096,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3343,6 +4108,7 @@
     {
       "epic_id": "a3QEE000002BjAL2A0",
       "epic_name": "266 UWM Worker Engagement Experience: Call Out flow with Slack",
+      "epic_status": "On Track",
       "story_points": 5,
       "work_items": [
         {
@@ -3351,6 +4117,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3359,6 +4127,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Eric Willits",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3369,6 +4139,7 @@
     {
       "epic_id": "a3QEE000002JOqH2AW",
       "epic_name": "266 UWM Worker Engagement Experience: Agentic Shift Management",
+      "epic_status": "Not Started",
       "story_points": 127,
       "work_items": [
         {
@@ -3377,6 +4148,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3385,6 +4158,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3393,6 +4168,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3401,6 +4178,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3409,6 +4188,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3417,6 +4198,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3425,6 +4208,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3433,6 +4218,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3441,6 +4228,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3449,6 +4238,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3457,6 +4248,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3465,6 +4258,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3473,6 +4268,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3481,6 +4278,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3489,6 +4288,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3497,6 +4298,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3505,6 +4308,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3513,6 +4318,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3521,6 +4328,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3529,6 +4338,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3537,6 +4348,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3545,6 +4358,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3553,6 +4368,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3561,6 +4378,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3569,6 +4388,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3577,6 +4398,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3585,6 +4408,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Carla Ferreira",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3595,6 +4420,7 @@
     {
       "epic_id": "a3QEE000002LEGX2A4",
       "epic_name": "266 UWM Worker Engagement Experience: Calendar Enhancements",
+      "epic_status": "Not Started",
       "story_points": 37,
       "work_items": [
         {
@@ -3603,6 +4429,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3611,6 +4439,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 13,
+          "assignee": "Vamsi Krishna Nadiminti",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -3619,6 +4449,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Sindhubala Ulavapalli",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3627,6 +4459,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Sindhubala Ulavapalli",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3635,6 +4469,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3645,6 +4481,7 @@
     {
       "epic_id": "a3QEE000002LGmz2AG",
       "epic_name": "266 UWM Worker Engagement Experience: Notifications",
+      "epic_status": "Not Started",
       "story_points": 69,
       "work_items": [
         {
@@ -3653,6 +4490,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Sindhubala Ulavapalli",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3661,6 +4500,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 25,
+          "assignee": "Sindhubala Ulavapalli",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3669,6 +4510,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3677,6 +4520,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3685,6 +4530,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3693,6 +4540,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3701,6 +4550,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3709,6 +4560,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3719,6 +4572,7 @@
     {
       "epic_id": "a3QEE000002LNRt2AO",
       "epic_name": "266 UMW Worker Engagement Experience: SFS Integration",
+      "epic_status": "On Track",
       "story_points": 28,
       "work_items": [
         {
@@ -3727,6 +4581,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3735,6 +4591,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3743,6 +4601,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3751,6 +4611,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3759,6 +4621,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3767,6 +4631,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3775,6 +4641,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Vinay Bayya",
+          "status": "New",
           "month": "September"
         },
         {
@@ -3783,6 +4651,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Vamsi Krishna Nadiminti",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -3795,6 +4665,7 @@
     {
       "epic_id": "a3QEE000001ixbh2AA",
       "epic_name": "262 SFS Frontline AI - Voice to Form On device Pilot",
+      "epic_status": "Completed",
       "story_points": 9,
       "work_items": [
         {
@@ -3803,6 +4674,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Manushi Talwar",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -3811,6 +4684,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Paul Chan",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -3819,6 +4694,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Paul Chan",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -3829,6 +4706,7 @@
     {
       "epic_id": "a3QEE0000022Y652AE",
       "epic_name": "266 SFS Frontline AI - Pre-day Brief",
+      "epic_status": "Not Started",
       "story_points": 35,
       "work_items": [
         {
@@ -3837,6 +4715,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Paul Chan",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3845,6 +4725,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 25,
+          "assignee": "Paul Chan",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -3855,6 +4737,7 @@
     {
       "epic_id": "a3QEE0000022kYf2AI",
       "epic_name": "264 SFS Frontline AI - Guided Troubleshooting GA",
+      "epic_status": "Not Started",
       "story_points": 10,
       "work_items": [
         {
@@ -3863,6 +4746,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Paul Chan",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -3875,6 +4760,7 @@
     {
       "epic_id": "a3QEE000001ntE52AI",
       "epic_name": "[264][SFS MCX][Trust] Offline Engine Availability Bugs",
+      "epic_status": "Not Started",
       "story_points": 6,
       "work_items": [
         {
@@ -3883,6 +4769,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Karin Lackrif",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3891,6 +4779,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Maya Shavin",
+          "status": "Duplicate",
           "month": "August"
         }
       ],
@@ -3901,6 +4791,7 @@
     {
       "epic_id": "a3QEE000001u4tB2AQ",
       "epic_name": "[SFS MCX][Trust] Trust Backlog",
+      "epic_status": "Not Started",
       "story_points": 56,
       "work_items": [
         {
@@ -3909,6 +4800,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Man Kit Yau",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -3917,6 +4810,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Man Kit Yau",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -3925,6 +4820,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "David Liu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3933,6 +4830,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Aashim Tarika",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3941,6 +4840,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Aashim Tarika",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3949,6 +4850,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Aashim Tarika",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -3957,6 +4860,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Akash Patel",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3965,6 +4870,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Karin Lackrif",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3973,6 +4880,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 6,
+          "assignee": "Karin Lackrif",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3981,6 +4890,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -3989,6 +4900,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sudheer Kumar Donepudi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -3997,6 +4910,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Isaac Simantov",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -4005,6 +4920,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Isaac Simantov",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -4013,6 +4930,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Isaac Simantov",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -4021,6 +4940,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Annath Benhamou Benizri",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4029,6 +4950,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4037,6 +4960,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Denina Walker",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -4045,6 +4970,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4053,6 +4980,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Rotem Hen",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4061,6 +4990,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Mor Cohen H.",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4069,6 +5000,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Adar Tzeiri",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4077,6 +5010,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Rotem Hen",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4085,6 +5020,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4093,6 +5030,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4101,6 +5040,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4109,6 +5050,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Moaad Morad",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4117,6 +5060,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4125,6 +5070,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Mor Cohen H.",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4133,6 +5080,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Rotem Hen",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4141,6 +5090,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Rotem Hen",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4149,6 +5100,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Rotem Hen",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -4159,6 +5112,7 @@
     {
       "epic_id": "a3QEE000002CSnN2AW",
       "epic_name": "[264][SFS MCX][Mobile Settings] Roll out Scale FS Mobile Settings",
+      "epic_status": "Completed",
       "story_points": 10,
       "work_items": [
         {
@@ -4167,6 +5121,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4175,6 +5131,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Preethi Vijai Lilly",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4183,6 +5141,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Rani Chintha",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4193,6 +5153,7 @@
     {
       "epic_id": "a3QEE000002GRJF2A4",
       "epic_name": "[264][SFS MCX][Data Capture] Automation Enhancement - Phase 2",
+      "epic_status": "On Track",
       "story_points": 14,
       "work_items": [
         {
@@ -4201,6 +5162,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4209,6 +5172,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4217,6 +5182,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Maya Shavin",
+          "status": "In Progress",
           "month": "August"
         },
         {
@@ -4225,6 +5192,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Maya Shavin",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -4237,6 +5206,7 @@
     {
       "epic_id": "a3QEE000001u4tB2AQ",
       "epic_name": "[SFS MCX][Trust] Trust Backlog",
+      "epic_status": "Not Started",
       "story_points": 3,
       "work_items": [
         {
@@ -4245,6 +5215,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Yosef Arraf",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -4255,6 +5227,7 @@
     {
       "epic_id": "a3QEE0000020oLR2AY",
       "epic_name": "264 SFS Mobile - [MIT][Trust] SFS Planned Trust Enhancements",
+      "epic_status": "Not Started",
       "story_points": 50,
       "work_items": [
         {
@@ -4263,6 +5236,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 13,
+          "assignee": "Andrew Little",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4271,6 +5246,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Itzik Hershkovitz",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4279,6 +5256,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Ahmed Elhosseiny",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4287,6 +5266,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Shai Hirsch",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -4295,6 +5276,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Marko Katziv",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -4303,6 +5286,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nadav Goldstein",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4311,6 +5296,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Adar Tzeiri",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4319,6 +5306,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4327,6 +5316,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4335,6 +5326,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Eliran Sharabi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4343,6 +5336,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4351,6 +5346,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4359,6 +5356,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4367,6 +5366,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Eliran Sharabi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4375,6 +5376,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4383,6 +5386,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4391,6 +5396,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4399,6 +5406,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4407,6 +5416,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -4415,6 +5426,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4423,6 +5436,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4431,6 +5446,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Eliran Sharabi",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4439,6 +5456,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Dana Bergman",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -4449,6 +5468,7 @@
     {
       "epic_id": "a3QEE000002GU2b2AG",
       "epic_name": "264 SFS Mobile - [TRUST] FSE Support",
+      "epic_status": "Not Started",
       "story_points": 2,
       "work_items": [
         {
@@ -4457,6 +5477,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Yotam Cohen",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -4469,6 +5491,7 @@
     {
       "epic_id": "a3QEE0000021mKn2AI",
       "epic_name": "[264] [Trust] Error Handling in Go Features",
+      "epic_status": "On Track",
       "story_points": 6,
       "work_items": [
         {
@@ -4477,6 +5500,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Rahul Mehta",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -4485,6 +5510,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Bryan Sugiarto",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -4493,6 +5520,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Bryan Sugiarto",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4503,6 +5532,7 @@
     {
       "epic_id": "a3QEE0000029ZqD2AU",
       "epic_name": "[264] Bulk User Import - Allow additional standard and custom fields",
+      "epic_status": "Canceled",
       "story_points": 29,
       "work_items": [
         {
@@ -4511,6 +5541,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 7,
+          "assignee": "Daniel Zheng",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4519,6 +5551,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 7,
+          "assignee": "Daniel Zheng",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4527,6 +5561,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Daniel Zheng",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4535,6 +5571,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Daniel Zheng",
+          "status": "New",
           "month": "August"
         },
         {
@@ -4543,6 +5581,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Daniel Zheng",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -4553,6 +5593,7 @@
     {
       "epic_id": "a3QEE000002HRFZ2A4",
       "epic_name": "[264] SFS Setup Experiences Trust",
+      "epic_status": "On Track",
       "story_points": 4,
       "work_items": [
         {
@@ -4561,6 +5602,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Rahul Mehta",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4571,6 +5614,7 @@
     {
       "epic_id": "a3QEE000002V7wv2AC",
       "epic_name": "[266] [Trust] Error Handling in Go Features",
+      "epic_status": "Not Started",
       "story_points": 5,
       "work_items": [
         {
@@ -4579,6 +5623,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Pauli Peralta",
+          "status": "New",
           "month": "September"
         },
         {
@@ -4587,6 +5633,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Pauli Peralta",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -4599,6 +5647,7 @@
     {
       "epic_id": "a3QEE000002DbQP2A0",
       "epic_name": "264 SFS Core Scheduler - Engineering Trust Work",
+      "epic_status": "Not Started",
       "story_points": 9,
       "work_items": [
         {
@@ -4607,6 +5656,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Peter (Duong) Doan",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4615,6 +5666,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Sunny Sadhnani",
+          "status": "Closed",
           "month": "August"
         }
       ],
@@ -4625,6 +5678,7 @@
     {
       "epic_id": "a3QEE000002J32f2AC",
       "epic_name": "264 SFS Core Scheduler - Engineering Trust Work : Gacks",
+      "epic_status": "Not Started",
       "story_points": 1,
       "work_items": [
         {
@@ -4633,6 +5687,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Delphi Bot",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4643,6 +5699,7 @@
     {
       "epic_id": "a3QEE000002MXp02AG",
       "epic_name": "[Duplicate] 264: PSS-FS: Operations Console: List Views",
+      "epic_status": "Canceled",
       "story_points": 74,
       "work_items": [
         {
@@ -4651,6 +5708,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4659,6 +5718,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4667,6 +5728,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4675,6 +5738,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4683,6 +5748,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4691,6 +5758,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4699,6 +5768,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4707,6 +5778,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4715,6 +5788,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4723,6 +5798,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4731,6 +5808,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4739,6 +5818,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4747,6 +5828,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4755,6 +5838,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4763,6 +5848,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4771,6 +5858,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4779,6 +5868,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4787,6 +5878,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4795,6 +5888,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4803,6 +5898,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4813,6 +5910,7 @@
     {
       "epic_id": "a3QEE000002MY0H2AW",
       "epic_name": "[Duplicate] 264: PSS-FS: Operations Console: Map",
+      "epic_status": "Canceled",
       "story_points": 20,
       "work_items": [
         {
@@ -4821,6 +5919,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4829,6 +5929,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4837,6 +5939,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4845,6 +5949,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4853,6 +5959,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4861,6 +5969,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4869,6 +5979,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4877,6 +5989,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -4887,6 +6001,7 @@
     {
       "epic_id": "a3QEE000002MYDB2A4",
       "epic_name": "264: PSS-FS: Operations Console: 264 Release Planning",
+      "epic_status": "Completed",
       "story_points": 42,
       "work_items": [
         {
@@ -4895,6 +6010,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4903,6 +6020,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4911,6 +6030,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4919,6 +6040,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4927,6 +6050,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4935,6 +6060,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4943,6 +6070,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4951,6 +6080,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4959,6 +6090,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4967,6 +6100,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4975,6 +6110,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4983,6 +6120,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4991,6 +6130,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -4999,6 +6140,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Kritica Mantri",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5009,6 +6152,7 @@
     {
       "epic_id": "a3QEE000002MY9x2AG",
       "epic_name": "266: PSS-FS: Operations Console: Caching (Vega Cache)",
+      "epic_status": "Not Started",
       "story_points": 5,
       "work_items": [
         {
@@ -5017,6 +6161,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Kritica Mantri",
+          "status": "Closed",
           "month": "September"
         }
       ],
@@ -5029,6 +6175,7 @@
     {
       "epic_id": "a3QEE000002Fc5R2AS",
       "epic_name": "[AGX GA] Screen Debugging",
+      "epic_status": "Not Started",
       "story_points": 24,
       "work_items": [
         {
@@ -5037,6 +6184,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 24,
+          "assignee": "Raghav Abboy",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5047,6 +6196,7 @@
     {
       "epic_id": "a3QEE000002IrhR2AS",
       "epic_name": "Comms Cloud Acadia - 264 Trust",
+      "epic_status": "On Track",
       "story_points": 1,
       "work_items": [
         {
@@ -5055,6 +6205,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Test Failure Sweeper User",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5065,6 +6217,7 @@
     {
       "epic_id": "a3QEE000002O3YH2A0",
       "epic_name": "[AGX GA] Flow Builder, Setup Experience",
+      "epic_status": "On Track",
       "story_points": 9,
       "work_items": [
         {
@@ -5073,6 +6226,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Eldar Khalyknazarov",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5081,6 +6236,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Vincent Lai",
+          "status": "Not a bug",
           "month": "August"
         },
         {
@@ -5089,6 +6246,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Roman Ivaniv",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5097,6 +6256,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Aditya Maniar",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5109,6 +6270,7 @@
     {
       "epic_id": "a3QEE000002GKWH2A4",
       "epic_name": "* 264 SFS [Trust]  - mTLS Migration",
+      "epic_status": "On Track",
       "story_points": 4,
       "work_items": [
         {
@@ -5117,6 +6279,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Lev Gorelik",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5125,6 +6289,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Lev Gorelik",
+          "status": "Closed",
           "month": "August"
         }
       ],
@@ -5135,6 +6301,7 @@
     {
       "epic_id": "a3QEE000002K64w2AC",
       "epic_name": "264 SFS [Unified Scheduling] - Generic Fetch Data",
+      "epic_status": "On Track",
       "story_points": 26,
       "work_items": [
         {
@@ -5143,6 +6310,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 13,
+          "assignee": "Yuli Livshits",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5151,6 +6320,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 13,
+          "assignee": "Yuli Livshits",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5161,6 +6332,7 @@
     {
       "epic_id": "a3QEE000002K7FV2A0",
       "epic_name": "264 SFS [Unified Scheduling] - Fetch Data Hammer",
+      "epic_status": "On Hold",
       "story_points": 10,
       "work_items": [
         {
@@ -5169,6 +6341,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Mirabelle Herscu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5177,6 +6351,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Mirabelle Herscu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5185,6 +6361,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Mirabelle Herscu",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -5195,6 +6373,7 @@
     {
       "epic_id": "a3QEE000002WABB2A4",
       "epic_name": "266 SFS [Unified Scheduling] - MP2Core Unified Infrastructure Enhancements",
+      "epic_status": "On Track",
       "story_points": 7,
       "work_items": [
         {
@@ -5203,6 +6382,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nisan Tagar",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5211,6 +6392,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Nisan Tagar",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -5221,6 +6404,7 @@
     {
       "epic_id": "a3QEE000002WAeD2AW",
       "epic_name": "* 266 SFS [Trust] - Zero Incidents initiative",
+      "epic_status": "On Track",
       "story_points": 14,
       "work_items": [
         {
@@ -5229,6 +6413,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5237,6 +6423,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5245,6 +6433,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5253,6 +6443,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5261,6 +6453,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5269,6 +6463,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5277,6 +6473,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5285,6 +6483,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5293,6 +6493,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5301,6 +6503,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5309,6 +6513,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5317,6 +6523,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5325,6 +6533,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5333,6 +6543,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "New",
           "month": "September"
         }
       ],
@@ -5345,6 +6557,7 @@
     {
       "epic_id": "a3QEE000002GWXR2A4",
       "epic_name": "264 SFS Mobile Platform DX - Quality Framework",
+      "epic_status": "Not Started",
       "story_points": 19,
       "work_items": [
         {
@@ -5353,6 +6566,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Neil Parsons",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -5361,6 +6576,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Andrew Shand",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5369,6 +6586,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Andrew Shand",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5377,6 +6596,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Andrew Shand",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5385,6 +6606,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Joel Harmon",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5393,6 +6616,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Joel Harmon",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5401,6 +6626,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Joel Harmon",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5411,6 +6638,7 @@
     {
       "epic_id": "a3QEE000002JIHp2AO",
       "epic_name": "264 SFS Mobile Platform DX - Auth Innovation and Maintenance",
+      "epic_status": "Not Started",
       "story_points": 9,
       "work_items": [
         {
@@ -5419,6 +6647,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Amisha Goyal",
+          "status": "Duplicate",
           "month": "August"
         },
         {
@@ -5427,6 +6657,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Amisha Goyal",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5435,6 +6667,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Amisha Goyal",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5447,6 +6681,7 @@
     {
       "epic_id": "a3QEE000002Izwj2AC",
       "epic_name": "[264 SFS Asset Team] Trust Initiatives",
+      "epic_status": "On Track",
       "story_points": 2,
       "work_items": [
         {
@@ -5455,6 +6690,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Venkat Deepak Garlapati",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5465,6 +6702,7 @@
     {
       "epic_id": "a3QEE000002WJKv2AO",
       "epic_name": "[266 SFS Asset Team] Trust Initiatives",
+      "epic_status": "On Track",
       "story_points": 6,
       "work_items": [
         {
@@ -5473,6 +6711,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Bhanu Prakash Reddy Nermati",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5481,6 +6721,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Rahul Dwivedi",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -5493,6 +6735,7 @@
     {
       "epic_id": "a3QEE000002JREf2AO",
       "epic_name": "*[264] QuantumForce - FIT Support +add capabilities",
+      "epic_status": "On Track",
       "story_points": 1,
       "work_items": [
         {
@@ -5501,6 +6744,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sara Amar",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5511,6 +6756,7 @@
     {
       "epic_id": "a3QEE000002JTzd2AG",
       "epic_name": "*[264] QuantumForce - Orgfarm support",
+      "epic_status": "Completed",
       "story_points": 4,
       "work_items": [
         {
@@ -5519,6 +6765,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Monex Slack App (Bot)",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -5527,6 +6775,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Sara Amar",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5539,6 +6789,7 @@
     {
       "epic_id": "a3QEE000002JoRN2A0",
       "epic_name": "* [1.16.5][264][SFS][FSL][FSE] Unplanned/Ad-hoc Items",
+      "epic_status": "On Track",
       "story_points": 1,
       "work_items": [
         {
@@ -5547,6 +6798,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Bhuvnesh Mehra",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -5557,6 +6810,7 @@
     {
       "epic_id": "a3QEE000002N3wv2AC",
       "epic_name": "[264] [TRUST] FIT Coverage 100% in All Services",
+      "epic_status": "Watch",
       "story_points": 9,
       "work_items": [
         {
@@ -5565,6 +6819,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 9,
+          "assignee": "Nathan Slonim",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5575,6 +6831,7 @@
     {
       "epic_id": "a3QEE000002NyVN2A0",
       "epic_name": "[264] [TRUST] Push Onboard to GovCloud",
+      "epic_status": "Watch",
       "story_points": 43,
       "work_items": [
         {
@@ -5583,6 +6840,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nathan Slonim",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5591,6 +6850,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nathan Slonim",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5599,6 +6860,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nathan Slonim",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5607,6 +6870,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nathan Slonim",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5615,6 +6880,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nathan Slonim",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5623,6 +6890,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Nathan Slonim",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5631,6 +6900,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Nathan Slonim",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5639,6 +6910,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nathan Slonim",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5647,6 +6920,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Nathan Slonim",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -5657,6 +6932,7 @@
     {
       "epic_id": "a3QEE000002Oo492AC",
       "epic_name": "[264] [TRUST] Services Ongoing",
+      "epic_status": "On Track",
       "story_points": 1,
       "work_items": [
         {
@@ -5665,6 +6941,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Nathan Slonim",
+          "status": "Triaged",
           "month": "August"
         }
       ],
@@ -5675,6 +6953,7 @@
     {
       "epic_id": "a3QEE000002REwz2AG",
       "epic_name": "Q4 FSL 264 Trust FWE_Platform",
+      "epic_status": "Not Started",
       "story_points": 5,
       "work_items": [
         {
@@ -5683,6 +6962,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Arina Rivkin",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5695,6 +6976,7 @@
     {
       "epic_id": "a3QEE000002JxzJ2AS",
       "epic_name": "[264 Atlas] TDs and Trust",
+      "epic_status": "On Track",
       "story_points": 43,
       "work_items": [
         {
@@ -5703,6 +6985,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5711,6 +6995,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5719,6 +7005,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5727,6 +7015,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Avani Jindal",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5735,6 +7025,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Dongyao Ling",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5743,6 +7035,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Pei Chu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5751,6 +7045,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 4,
+          "assignee": "Pei Chu",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5759,6 +7055,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5767,6 +7065,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5775,6 +7075,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Avani Jindal",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5783,6 +7085,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Avani Jindal",
+          "status": "Triaged",
           "month": "August"
         },
         {
@@ -5791,6 +7095,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Angela Liu (SFS)",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -5801,6 +7107,7 @@
     {
       "epic_id": "a3QEE000002CH8n2AG",
       "epic_name": "Schedule Manager 266 Potential",
+      "epic_status": "On Track",
       "story_points": 74,
       "work_items": [
         {
@@ -5809,6 +7116,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Dongyao Ling",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5817,6 +7126,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Peter (Duong) Doan",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5825,6 +7136,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Peter (Duong) Doan",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5833,6 +7146,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Rebecca Hampton",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5841,6 +7156,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 15,
+          "assignee": "Angela Liu (SFS)",
+          "status": "New",
           "month": "September"
         },
         {
@@ -5849,6 +7166,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Dongyao Ling",
+          "status": "Never",
           "month": "September"
         },
         {
@@ -5857,6 +7176,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Dongyao Ling",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5865,6 +7186,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Manisha Chaurasia",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5873,6 +7196,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5881,6 +7206,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Never",
           "month": "September"
         },
         {
@@ -5889,6 +7216,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5897,6 +7226,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5905,6 +7236,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "September"
         },
         {
@@ -5913,6 +7246,8 @@
           "scheduled_build": "266",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Angela Liu (SFS)",
+          "status": "Triaged",
           "month": "September"
         }
       ],
@@ -5925,6 +7260,7 @@
     {
       "epic_id": "a3QEE000002K0cD2AS",
       "epic_name": "* [1.16.5][264] PBS Unplanned/Ad-hoc Items",
+      "epic_status": "Completed",
       "story_points": 1,
       "work_items": [
         {
@@ -5933,6 +7269,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Akshya Jain",
+          "status": "Closed",
           "month": "August"
         }
       ],
@@ -5943,6 +7281,7 @@
     {
       "epic_id": "a3QEE000002Kjfl2AC",
       "epic_name": "*[][264][PBS]PBSGeo Data Update - 264 - Dataset update",
+      "epic_status": "On Track",
       "story_points": 16,
       "work_items": [
         {
@@ -5951,6 +7290,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5959,6 +7300,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5967,6 +7310,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5975,6 +7320,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Akshya Jain",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -5983,6 +7330,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5991,6 +7340,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -5999,6 +7350,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6007,6 +7360,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6017,6 +7372,7 @@
     {
       "epic_id": "a3QEE000002KjmD2AS",
       "epic_name": "*[][264][PBS]Fixing Security P2 Bugs - Clear Text & HTTPS Fix",
+      "epic_status": "On Track",
       "story_points": 20,
       "work_items": [
         {
@@ -6025,6 +7381,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6033,6 +7391,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6043,6 +7403,7 @@
     {
       "epic_id": "a3QEE000002Kjnp2AC",
       "epic_name": "*[][264][PBS]Rest Client Promotion & Impl - PBSGeo/PBSMatch",
+      "epic_status": "On Track",
       "story_points": 4,
       "work_items": [
         {
@@ -6051,6 +7412,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6059,6 +7422,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Akshya Jain",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6069,6 +7434,7 @@
     {
       "epic_id": "a3QEE000002KjpR2AS",
       "epic_name": "SFS: Phase 3 3PP automation process (renovate/own solution)",
+      "epic_status": "On Track",
       "story_points": 4,
       "work_items": [
         {
@@ -6077,6 +7443,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Roi Romano",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6085,6 +7453,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Roi Romano",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6095,6 +7465,7 @@
     {
       "epic_id": "a3QEE000002Kk5Z2AS",
       "epic_name": "**[8.9.13][264][SFS] Zero Incident Program",
+      "epic_status": "On Track",
       "story_points": 5,
       "work_items": [
         {
@@ -6103,6 +7474,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Sumit Jaiswal",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -6111,6 +7484,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Sumit Jaiswal",
+          "status": "Waiting",
           "month": "August"
         },
         {
@@ -6119,6 +7494,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Sumit Jaiswal",
+          "status": "Waiting",
           "month": "August"
         }
       ],
@@ -6129,6 +7506,7 @@
     {
       "epic_id": "a3QEE000002KlKz2AK",
       "epic_name": "[PlaceHolder] [SFS] Implement Standardized Risk-aware Staggers (SRS)",
+      "epic_status": "Not Started",
       "story_points": 10,
       "work_items": [
         {
@@ -6137,6 +7515,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Roi Romano",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6149,6 +7529,7 @@
     {
       "epic_id": "a3QEE000002KmSL2A0",
       "epic_name": "[264] [SFS Mobile Assets] Production Support",
+      "epic_status": "Completed",
       "story_points": 0,
       "work_items": [
         {
@@ -6157,6 +7538,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 0,
+          "assignee": "Sandeep Agrawal",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -6167,6 +7550,7 @@
     {
       "epic_id": "a3QEE000002VBAv2AO",
       "epic_name": "[264] [SFS Mobile Assets] Service Documents EPT Observability",
+      "epic_status": "Not Started",
       "story_points": 20,
       "work_items": [
         {
@@ -6175,6 +7559,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Anurag Dixit",
+          "status": "Ready for Review",
           "month": "August"
         },
         {
@@ -6183,6 +7569,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 5,
+          "assignee": "Anurag Dixit",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6191,6 +7579,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Anurag Dixit",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6199,6 +7589,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Anurag Dixit",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6207,6 +7599,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Anurag Dixit",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6215,6 +7609,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Anurag Dixit",
+          "status": "New",
           "month": "August"
         }
       ],
@@ -6227,6 +7623,7 @@
     {
       "epic_id": "a3QEE000002Mran2AC",
       "epic_name": "264 SFS [Trust] - Dispatcher Console Trust *",
+      "epic_status": "Not Started",
       "story_points": 2,
       "work_items": [
         {
@@ -6235,6 +7632,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Monex Slack App (Bot)",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -6243,6 +7642,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Monex Slack App (Bot)",
+          "status": "Closed",
           "month": "August"
         }
       ],
@@ -6253,6 +7654,7 @@
     {
       "epic_id": "a3QEE000002SsXN2A0",
       "epic_name": "[264] [Scheduling Console] bugs and features enhancements",
+      "epic_status": "On Track",
       "story_points": 81,
       "work_items": [
         {
@@ -6261,6 +7663,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Lilach Talbi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6269,6 +7673,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Lilach Talbi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6277,6 +7683,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Lilach Talbi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6285,6 +7693,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Lilach Talbi",
+          "status": "In Progress",
           "month": "August"
         },
         {
@@ -6293,6 +7703,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Lilach Talbi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6301,6 +7713,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 0,
+          "assignee": "Lilach Talbi",
+          "status": "Closed",
           "month": "August"
         },
         {
@@ -6309,6 +7723,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 0,
+          "assignee": "Lilach Talbi",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6317,6 +7733,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Gal Asraf",
+          "status": "Never",
           "month": "August"
         },
         {
@@ -6325,6 +7743,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Gal Asraf",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6333,6 +7753,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 2,
+          "assignee": "Gal Asraf",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6341,6 +7763,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 40,
+          "assignee": "Gal Asraf",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6349,6 +7773,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 3,
+          "assignee": "Gal Asraf",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6357,6 +7783,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 7,
+          "assignee": "Gal Asraf",
+          "status": "New",
           "month": "August"
         },
         {
@@ -6365,6 +7793,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 10,
+          "assignee": "Gal Asraf",
+          "status": "Never",
           "month": "August"
         }
       ],
@@ -6375,6 +7805,7 @@
     {
       "epic_id": "a3QEE000002SzFV2A0",
       "epic_name": "262 Dispatch Experience 2.0 - Sticky Columns & Separator",
+      "epic_status": "On Track",
       "story_points": 8,
       "work_items": [
         {
@@ -6383,6 +7814,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 8,
+          "assignee": "Lilach Talbi",
+          "status": "Pending Release",
           "month": "August"
         }
       ],
@@ -6395,6 +7828,7 @@
     {
       "epic_id": "a3QEE000002Sio92AC",
       "epic_name": "* [264][Trust] RDS Rotation Changes",
+      "epic_status": "On Track",
       "story_points": 1,
       "work_items": [
         {
@@ -6403,6 +7837,8 @@
           "scheduled_build": "264",
           "sprint_name": "No Sprint",
           "story_points": 1,
+          "assignee": "Yonatan Bar-Yehuda",
+          "status": "New",
           "month": "August"
         }
       ],

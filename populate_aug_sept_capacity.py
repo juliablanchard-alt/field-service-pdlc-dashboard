@@ -72,6 +72,8 @@ print("\n🔄 Finding August 2026 work items (by sprint start date)...")
 august_sprinted_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
        Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
        Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
 WHERE Sprint__r.Start_Date__c >= 2026-08-01
@@ -88,6 +90,8 @@ print("🔄 Finding work assigned to August patches but not yet sprinted...")
 august_unsprinted_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
        Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
        Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
 WHERE Epic__r.Scheduled_Build__r.Name IN ('264', '264.0', '264.1', '264.2', '264.3', '264.4')
@@ -124,6 +128,8 @@ print("\n🔄 Finding September 2026 work items (by sprint start date)...")
 september_sprinted_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
        Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
        Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
 WHERE Sprint__r.Start_Date__c >= 2026-09-01
@@ -140,6 +146,8 @@ print("🔄 Finding work assigned to September patches but not yet sprinted...")
 september_unsprinted_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
        Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
        Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
 WHERE Epic__r.Scheduled_Build__r.Name IN ('264.5', '264.6', '266', '266.0', '266.1')
@@ -269,6 +277,7 @@ print("\n🔄 Building unmapped work item details grouped by epic...")
 unmapped_by_team_epic = defaultdict(lambda: defaultdict(lambda: {
     'epic_id': None,
     'epic_name': None,
+    'epic_status': None,
     'story_points': 0,
     'work_items': [],
     'months': set()
@@ -297,15 +306,24 @@ for item in august_items:
             if not epic_group['epic_id']:
                 epic_group['epic_id'] = epic_id if epic_id != 'no-epic' else 'no-epic'
                 epic_group['epic_name'] = epic_name
+                # Get Epic Health from Epic__r.Health__c
+                epic_health = item.get('Epic__r', {}).get('Health__c') if item.get('Epic__r') else None
+                epic_group['epic_status'] = epic_health
 
             epic_group['story_points'] += item.get('Story_Points__c', 0)
             epic_group['months'].add('August')
+
+            owner_info = item.get('Owner')
+            assignee_name = owner_info.get('Name', '-') if owner_info else '-'
+
             epic_group['work_items'].append({
                 'work_item_name': item.get('Name', ''),
                 'work_item_id': item.get('Id', ''),
                 'scheduled_build': build,
                 'sprint_name': sprint_name,
                 'story_points': item.get('Story_Points__c', 0),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', '-'),
                 'month': 'August'
             })
 
@@ -332,15 +350,24 @@ for item in september_items:
             if not epic_group['epic_id']:
                 epic_group['epic_id'] = epic_id if epic_id != 'no-epic' else 'no-epic'
                 epic_group['epic_name'] = epic_name
+                # Get Epic Health from Epic__r.Health__c
+                epic_health = item.get('Epic__r', {}).get('Health__c') if item.get('Epic__r') else None
+                epic_group['epic_status'] = epic_health
 
             epic_group['story_points'] += item.get('Story_Points__c', 0)
             epic_group['months'].add('September')
+
+            owner_info = item.get('Owner')
+            assignee_name = owner_info.get('Name', '-') if owner_info else '-'
+
             epic_group['work_items'].append({
                 'work_item_name': item.get('Name', ''),
                 'work_item_id': item.get('Id', ''),
                 'scheduled_build': build,
                 'sprint_name': sprint_name,
                 'story_points': item.get('Story_Points__c', 0),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', '-'),
                 'month': 'September'
             })
 
