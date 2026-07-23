@@ -65,6 +65,60 @@ print(f"✅ Found {len(scrum_teams)} teams")
 
 team_ids_str = "', '".join(team_ids)
 
+# Query June work items (for unmapped details only)
+print("\n🔄 Finding June 2026 work items (by sprint start date)...")
+june_sprinted_query = f"""
+SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
+       Sprint__r.Name, Sprint__r.Start_Date__c
+FROM ADM_Work__c
+WHERE Sprint__r.Start_Date__c >= 2026-06-01
+  AND Sprint__r.Start_Date__c < 2026-07-01
+  AND Scrum_Team__c IN ('{team_ids_str}')
+  AND Story_Points__c != null
+LIMIT 50000
+"""
+
+june_items = run_soql(june_sprinted_query)
+print(f"✅ Found {len(june_items)} June work items")
+
+# Build epic-to-project mapping for June
+june_epic_to_project = {}
+for item in june_items:
+    epic_id = item.get('Epic__c')
+    if epic_id and epic_id not in june_epic_to_project:
+        project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
+        june_epic_to_project[epic_id] = project
+
+# Query July work items (for unmapped details only)
+print("\n🔄 Finding July 2026 work items (by sprint start date)...")
+july_sprinted_query = f"""
+SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Epic__r.Health__c,
+       Owner.Name, Status__c,
+       Sprint__r.Name, Sprint__r.Start_Date__c
+FROM ADM_Work__c
+WHERE Sprint__r.Start_Date__c >= 2026-07-01
+  AND Sprint__r.Start_Date__c < 2026-08-01
+  AND Scrum_Team__c IN ('{team_ids_str}')
+  AND Story_Points__c != null
+LIMIT 50000
+"""
+
+july_items = run_soql(july_sprinted_query)
+print(f"✅ Found {len(july_items)} July work items")
+
+# Build epic-to-project mapping for July
+july_epic_to_project = {}
+for item in july_items:
+    epic_id = item.get('Epic__c')
+    if epic_id and epic_id not in july_epic_to_project:
+        project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
+        july_epic_to_project[epic_id] = project
+
 # Query August work items - TWO sources:
 # 1. Work in sprints starting in August 2026
 # 2. Work with August patch builds (264.0-264.4) but NO sprint assignment yet
@@ -272,8 +326,8 @@ print(f"  [Unmapped]: {total_september_unmapped:.1f} points")
 
 print(f"\n✅ Updated {TEAMS_FILE}")
 
-# Build unmapped work item details grouped by epic for UI expansion
-print("\n🔄 Building unmapped work item details grouped by epic...")
+# Build unmapped work item details grouped by epic for UI expansion (June-September)
+print("\n🔄 Building unmapped work item details grouped by epic (June-September)...")
 unmapped_by_team_epic = defaultdict(lambda: defaultdict(lambda: {
     'epic_id': None,
     'epic_name': None,
@@ -282,6 +336,92 @@ unmapped_by_team_epic = defaultdict(lambda: defaultdict(lambda: {
     'work_items': [],
     'months': set()
 }))
+
+# Add June unmapped work items
+for item in june_items:
+    team_id = item.get('Scrum_Team__c')
+    epic_id = item.get('Epic__c') or 'no-epic'
+
+    if team_id in team_name_map:
+        team_name = team_name_map[team_id]
+        project_name = june_epic_to_project.get(epic_id)
+
+        # Only include items without project assignment (orphaned)
+        if not project_name or project_name not in project_to_program:
+            epic_name = item.get('Epic__r', {}).get('Name', '[No Epic Assignment]') if item.get('Epic__r') else '[No Epic Assignment]'
+            epic_build = item.get('Epic__r', {}).get('Scheduled_Build__r') if item.get('Epic__r') else None
+            build = epic_build.get('Name', '-') if epic_build else '-'
+            sprint_info = item.get('Sprint__r')
+            sprint_name = sprint_info.get('Name', 'No Sprint') if sprint_info else 'No Sprint'
+
+            epic_key = epic_id if epic_id != 'no-epic' else 'no-epic'
+            epic_group = unmapped_by_team_epic[team_name][epic_key]
+
+            if not epic_group['epic_id']:
+                epic_group['epic_id'] = epic_id if epic_id != 'no-epic' else 'no-epic'
+                epic_group['epic_name'] = epic_name
+                epic_health = item.get('Epic__r', {}).get('Health__c') if item.get('Epic__r') else None
+                epic_group['epic_status'] = epic_health
+
+            epic_group['story_points'] += item.get('Story_Points__c', 0)
+            epic_group['months'].add('June')
+
+            owner_info = item.get('Owner')
+            assignee_name = owner_info.get('Name', '-') if owner_info else '-'
+
+            epic_group['work_items'].append({
+                'work_item_name': item.get('Name', ''),
+                'work_item_id': item.get('Id', ''),
+                'scheduled_build': build,
+                'sprint_name': sprint_name,
+                'story_points': item.get('Story_Points__c', 0),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', '-'),
+                'month': 'June'
+            })
+
+# Add July unmapped work items
+for item in july_items:
+    team_id = item.get('Scrum_Team__c')
+    epic_id = item.get('Epic__c') or 'no-epic'
+
+    if team_id in team_name_map:
+        team_name = team_name_map[team_id]
+        project_name = july_epic_to_project.get(epic_id)
+
+        # Only include items without project assignment (orphaned)
+        if not project_name or project_name not in project_to_program:
+            epic_name = item.get('Epic__r', {}).get('Name', '[No Epic Assignment]') if item.get('Epic__r') else '[No Epic Assignment]'
+            epic_build = item.get('Epic__r', {}).get('Scheduled_Build__r') if item.get('Epic__r') else None
+            build = epic_build.get('Name', '-') if epic_build else '-'
+            sprint_info = item.get('Sprint__r')
+            sprint_name = sprint_info.get('Name', 'No Sprint') if sprint_info else 'No Sprint'
+
+            epic_key = epic_id if epic_id != 'no-epic' else 'no-epic'
+            epic_group = unmapped_by_team_epic[team_name][epic_key]
+
+            if not epic_group['epic_id']:
+                epic_group['epic_id'] = epic_id if epic_id != 'no-epic' else 'no-epic'
+                epic_group['epic_name'] = epic_name
+                epic_health = item.get('Epic__r', {}).get('Health__c') if item.get('Epic__r') else None
+                epic_group['epic_status'] = epic_health
+
+            epic_group['story_points'] += item.get('Story_Points__c', 0)
+            epic_group['months'].add('July')
+
+            owner_info = item.get('Owner')
+            assignee_name = owner_info.get('Name', '-') if owner_info else '-'
+
+            epic_group['work_items'].append({
+                'work_item_name': item.get('Name', ''),
+                'work_item_id': item.get('Id', ''),
+                'scheduled_build': build,
+                'sprint_name': sprint_name,
+                'story_points': item.get('Story_Points__c', 0),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', '-'),
+                'month': 'July'
+            })
 
 # Add August unmapped work items
 for item in august_items:

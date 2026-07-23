@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T14:06:44.741708",
+  "last_updated": "2026-07-23T14:12:04.963057",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -103,8 +103,8 @@
       "work_items_closed_june": 74,
       "capacity_committed_july": 114,
       "work_items_committed_july": 32,
-      "capacity_committed_august": 175.0,
-      "work_items_committed_august": 40,
+      "capacity_committed_august": 176.0,
+      "work_items_committed_august": 41,
       "capacity_committed_september": 117.0,
       "work_items_committed_september": 26,
       "june_delivered_by_program": {},
@@ -112,7 +112,7 @@
       "july_committed_by_program": {},
       "july_committed_unmapped": 18.0,
       "august_committed_by_program": {
-        "[264] Unified Workforce Management (UWM)": 132.0
+        "[264] Unified Workforce Management (UWM)": 133.0
       },
       "august_committed_unmapped": 43.0,
       "september_committed_by_program": {
@@ -132,7 +132,7 @@
       "work_items_closed_june": 90,
       "capacity_committed_july": 48.5,
       "work_items_committed_july": 35,
-      "capacity_committed_august": 31.0,
+      "capacity_committed_august": 19.0,
       "work_items_committed_august": 9,
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
@@ -147,7 +147,7 @@
       },
       "july_committed_unmapped": 4.0,
       "august_committed_by_program": {
-        "FS 264: S&O Trust": 31.0
+        "FS 264: S&O Trust": 19.0
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
@@ -331,8 +331,8 @@
       "work_items_closed_june": 54,
       "capacity_committed_july": 78,
       "work_items_committed_july": 29,
-      "capacity_committed_august": 102.0,
-      "work_items_committed_august": 33,
+      "capacity_committed_august": 107.0,
+      "work_items_committed_august": 34,
       "capacity_committed_september": 21.0,
       "work_items_committed_september": 16,
       "june_delivered_by_program": {
@@ -347,7 +347,7 @@
       },
       "july_committed_unmapped": 5.0,
       "august_committed_by_program": {
-        "FS 264: S&O Trust": 40.0,
+        "FS 264: S&O Trust": 45.0,
         "264 Infield": 22.0
       },
       "august_committed_unmapped": 40.0,
