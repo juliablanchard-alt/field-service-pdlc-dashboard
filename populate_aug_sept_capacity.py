@@ -63,12 +63,12 @@ print(f"✅ Found {len(scrum_teams)} teams")
 
 team_ids_str = "', '".join(team_ids)
 
-# Query August epics first (264.2 patch)
-print("\n🔄 Finding August epics (264.2 patch)...")
+# Query August epics - 264.0 through 264.4 (August patches per release schedule)
+print("\n🔄 Finding August epics (264, 264.1, 264.2, 264.3, 264.4)...")
 august_epics_query = f"""
 SELECT Id, Name, Scheduled_Build__r.Name, Project__r.Name
 FROM ADM_Epic__c
-WHERE Scheduled_Build__r.Name IN ('264.2')
+WHERE Scheduled_Build__r.Name IN ('264', '264.0', '264.1', '264.2', '264.3', '264.4')
 LIMIT 5000
 """
 
@@ -118,12 +118,12 @@ for item in august_items:
             # Unmapped (no project assignment)
             august_unmapped[team_name] += points
 
-# Query September epics (264.3 patch + early 266)
-print("\n🔄 Finding September epics (264.3 patch + 266 work)...")
+# Query September epics (264.4, 264.5, 264.6 patches + early 266)
+print("\n🔄 Finding September epics (264.4, 264.5, 264.6 + 266 work)...")
 september_epics_query = f"""
 SELECT Id, Name, Scheduled_Build__r.Name, Project__r.Name
 FROM ADM_Epic__c
-WHERE Scheduled_Build__r.Name IN ('264.3', '266', '266.0', '266.1')
+WHERE Scheduled_Build__r.Name IN ('264.4', '264.5', '264.6', '266', '266.0', '266.1')
 LIMIT 5000
 """
 
