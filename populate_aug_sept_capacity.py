@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Populate August and September capacity by querying work items with
-Scheduled_Build__c containing August/September patches or 266 releases
+Populate August and September capacity by querying work items IN SPRINTS
+that start in those months (NOT by epic build numbers).
+
+CRITICAL: Epic Scheduled_Build__c indicates WHICH RELEASE, not WHEN work happens.
+Work is scheduled by Sprint__r.Start_Date__c.
 """
 
 import json
@@ -30,11 +33,9 @@ print("🔄 Loading execution data...")
 with open(EXECUTION_FILE, 'r') as f:
     execution_data = json.load(f)
 
-# Build project -> program mapping
+# Build project -> program mapping (all programs, not just 264)
 project_to_program = {}
 for program in execution_data.get('programs', []):
-    if not program.get('portfolio', '').startswith('264'):
-        continue
     program_name = program.get('name', '')
     for project in program.get('projects', []):
         project_name = project.get('name', '')
@@ -64,35 +65,111 @@ print(f"✅ Found {len(scrum_teams)} teams")
 
 team_ids_str = "', '".join(team_ids)
 
-# Query August work items directly (264.0 through 264.4) for Field Service teams only
-print("\n🔄 Finding August work items (264, 264.1, 264.2, 264.3, 264.4) for Field Service teams...")
-august_items_query = f"""
+# Query August work items - TWO sources:
+# 1. Work in sprints starting in August 2026
+# 2. Work with August patch builds (264.0-264.4) but NO sprint assignment yet
+print("\n🔄 Finding August 2026 work items (by sprint start date)...")
+august_sprinted_query = f"""
 SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
-       Epic__r.Name, Epic__r.Scheduled_Build__r.Name, Epic__r.Project__r.Name
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Sprint__r.Name, Sprint__r.Start_Date__c
 FROM ADM_Work__c
-WHERE Epic__r.Scheduled_Build__r.Name IN ('264', '264.0', '264.1', '264.2', '264.3', '264.4')
+WHERE Sprint__r.Start_Date__c >= 2026-08-01
+  AND Sprint__r.Start_Date__c < 2026-09-01
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
 LIMIT 50000
 """
 
-august_items = run_soql(august_items_query)
-print(f"✅ Found {len(august_items)} August work items for Field Service teams")
+august_sprinted = run_soql(august_sprinted_query)
+print(f"✅ Found {len(august_sprinted)} sprinted August work items")
 
-# Build epic-to-project mapping from work items
+print("🔄 Finding work assigned to August patches but not yet sprinted...")
+august_unsprinted_query = f"""
+SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Sprint__r.Name, Sprint__r.Start_Date__c
+FROM ADM_Work__c
+WHERE Epic__r.Scheduled_Build__r.Name IN ('264', '264.0', '264.1', '264.2', '264.3', '264.4')
+  AND Sprint__c = null
+  AND Scrum_Team__c IN ('{team_ids_str}')
+  AND Story_Points__c != null
+LIMIT 50000
+"""
+
+august_unsprinted = run_soql(august_unsprinted_query)
+print(f"✅ Found {len(august_unsprinted)} unsprinted work items targeting August patches")
+
+# Combine and dedupe (in case any appear in both)
+august_items_dict = {item['Id']: item for item in august_sprinted}
+for item in august_unsprinted:
+    if item['Id'] not in august_items_dict:
+        august_items_dict[item['Id']] = item
+
+august_items = list(august_items_dict.values())
+print(f"✅ Total August work items: {len(august_items)}")
+
+# Build epic-to-project mapping
 august_epic_to_project = {}
-august_epic_ids = set()
 for item in august_items:
     epic_id = item.get('Epic__c')
-    if epic_id:
-        august_epic_ids.add(epic_id)
-        if epic_id not in august_epic_to_project:
-            project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
-            august_epic_to_project[epic_id] = project
+    if epic_id and epic_id not in august_epic_to_project:
+        project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
+        august_epic_to_project[epic_id] = project
 
-print(f"✅ Found {len(august_epic_ids)} unique August epics")
+# Query September work items - TWO sources:
+# 1. Work in sprints starting in September 2026
+# 2. Work with September patch builds (264.5, 264.6, 266.0) but NO sprint assignment yet
+print("\n🔄 Finding September 2026 work items (by sprint start date)...")
+september_sprinted_query = f"""
+SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Sprint__r.Name, Sprint__r.Start_Date__c
+FROM ADM_Work__c
+WHERE Sprint__r.Start_Date__c >= 2026-09-01
+  AND Sprint__r.Start_Date__c < 2026-10-01
+  AND Scrum_Team__c IN ('{team_ids_str}')
+  AND Story_Points__c != null
+LIMIT 50000
+"""
 
-# Aggregate by team + program
+september_sprinted = run_soql(september_sprinted_query)
+print(f"✅ Found {len(september_sprinted)} sprinted September work items")
+
+print("🔄 Finding work assigned to September patches but not yet sprinted...")
+september_unsprinted_query = f"""
+SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
+       Epic__r.Name, Epic__r.Project__r.Name, Epic__r.Scheduled_Build__r.Name,
+       Sprint__r.Name, Sprint__r.Start_Date__c
+FROM ADM_Work__c
+WHERE Epic__r.Scheduled_Build__r.Name IN ('264.5', '264.6', '266', '266.0', '266.1')
+  AND Sprint__c = null
+  AND Scrum_Team__c IN ('{team_ids_str}')
+  AND Story_Points__c != null
+LIMIT 50000
+"""
+
+september_unsprinted = run_soql(september_unsprinted_query)
+print(f"✅ Found {len(september_unsprinted)} unsprinted work items targeting September patches")
+
+# Combine and dedupe (in case any appear in both)
+september_items_dict = {item['Id']: item for item in september_sprinted}
+for item in september_unsprinted:
+    if item['Id'] not in september_items_dict:
+        september_items_dict[item['Id']] = item
+
+september_items = list(september_items_dict.values())
+print(f"✅ Total September work items: {len(september_items)}")
+
+# Build epic-to-project mapping
+september_epic_to_project = {}
+for item in september_items:
+    epic_id = item.get('Epic__c')
+    if epic_id and epic_id not in september_epic_to_project:
+        project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
+        september_epic_to_project[epic_id] = project
+
+# Aggregate August capacity by team + program
 august_team_program = defaultdict(lambda: defaultdict(float))
 august_unmapped = defaultdict(float)
 
@@ -109,38 +186,11 @@ for item in august_items:
         if project_name and project_name in project_to_program:
             program_name = project_to_program[project_name]
             august_team_program[team_name][program_name] += points
-        elif not project_name:
-            # Unmapped (no project assignment)
+        else:
+            # Unmapped (no project assignment or project not in execution data)
             august_unmapped[team_name] += points
 
-# Query September work items directly (264.4, 264.5, 264.6 + 266) for Field Service teams only
-print("\n🔄 Finding September work items (264.4, 264.5, 264.6 + 266) for Field Service teams...")
-september_items_query = f"""
-SELECT Id, Name, Scrum_Team__c, Story_Points__c, Epic__c,
-       Epic__r.Name, Epic__r.Scheduled_Build__r.Name, Epic__r.Project__r.Name
-FROM ADM_Work__c
-WHERE Epic__r.Scheduled_Build__r.Name IN ('264.4', '264.5', '264.6', '266', '266.0', '266.1')
-  AND Scrum_Team__c IN ('{team_ids_str}')
-  AND Story_Points__c != null
-LIMIT 50000
-"""
-
-september_items = run_soql(september_items_query)
-print(f"✅ Found {len(september_items)} September work items for Field Service teams")
-
-# Build epic-to-project mapping from work items
-september_epic_to_project = {}
-september_epic_ids = set()
-for item in september_items:
-    epic_id = item.get('Epic__c')
-    if epic_id:
-        september_epic_ids.add(epic_id)
-        if epic_id not in september_epic_to_project:
-            project = item.get('Epic__r', {}).get('Project__r', {}).get('Name') if item.get('Epic__r', {}).get('Project__r') else None
-            september_epic_to_project[epic_id] = project
-
-print(f"✅ Found {len(september_epic_ids)} unique September epics")
-
+# Aggregate September capacity by team + program
 september_team_program = defaultdict(lambda: defaultdict(float))
 september_unmapped = defaultdict(float)
 
@@ -157,8 +207,8 @@ for item in september_items:
         if project_name and project_name in project_to_program:
             program_name = project_to_program[project_name]
             september_team_program[team_name][program_name] += points
-        elif not project_name:
-            # Unmapped (no project assignment)
+        else:
+            # Unmapped (no project assignment or project not in execution data)
             september_unmapped[team_name] += points
 
 # Update teams data with program breakdown
@@ -236,15 +286,19 @@ for item in august_items:
         project_name = august_epic_to_project.get(epic_id)
 
         # Only include items without project assignment (orphaned)
-        if not project_name:
-            epic_name = item.get('Epic__r', {}).get('Name', 'Unknown Epic')
-            build = item.get('Epic__r', {}).get('Scheduled_Build__r', {}).get('Name', 'Unknown')
+        if not project_name or project_name not in project_to_program:
+            epic_name = item.get('Epic__r', {}).get('Name', 'Unknown Epic') if item.get('Epic__r') else 'Unknown Epic'
+            epic_build = item.get('Epic__r', {}).get('Scheduled_Build__r') if item.get('Epic__r') else None
+            build = epic_build.get('Name', '-') if epic_build else '-'
+            sprint_info = item.get('Sprint__r')
+            sprint_name = sprint_info.get('Name', 'No Sprint') if sprint_info else 'No Sprint'
 
             unmapped_details[team_name].append({
                 'work_item_name': item.get('Name', ''),
                 'epic_name': epic_name,
                 'epic_id': epic_id,
                 'scheduled_build': build,
+                'sprint_name': sprint_name,
                 'story_points': item.get('Story_Points__c', 0),
                 'month': 'August'
             })
@@ -259,15 +313,19 @@ for item in september_items:
         project_name = september_epic_to_project.get(epic_id)
 
         # Only include items without project assignment (orphaned)
-        if not project_name:
-            epic_name = item.get('Epic__r', {}).get('Name', 'Unknown Epic')
-            build = item.get('Epic__r', {}).get('Scheduled_Build__r', {}).get('Name', 'Unknown')
+        if not project_name or project_name not in project_to_program:
+            epic_name = item.get('Epic__r', {}).get('Name', 'Unknown Epic') if item.get('Epic__r') else 'Unknown Epic'
+            epic_build = item.get('Epic__r', {}).get('Scheduled_Build__r') if item.get('Epic__r') else None
+            build = epic_build.get('Name', '-') if epic_build else '-'
+            sprint_info = item.get('Sprint__r')
+            sprint_name = sprint_info.get('Name', 'No Sprint') if sprint_info else 'No Sprint'
 
             unmapped_details[team_name].append({
                 'work_item_name': item.get('Name', ''),
                 'epic_name': epic_name,
                 'epic_id': epic_id,
                 'scheduled_build': build,
+                'sprint_name': sprint_name,
                 'story_points': item.get('Story_Points__c', 0),
                 'month': 'September'
             })
