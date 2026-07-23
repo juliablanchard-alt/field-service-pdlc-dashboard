@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T14:31:50.533074",
+  "last_updated": "2026-07-23T15:58:08.239248",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -112,17 +112,21 @@
       "capacity_committed_september": 117.0,
       "work_items_committed_september": 26,
       "june_delivered_by_program": {
+        "Salesforce Field Service 258: Trust": 49.0,
         "[264] Unified Workforce Management (UWM)": 155.0
       },
-      "june_delivered_unmapped": 95.0,
+      "june_delivered_unmapped": 46.0,
       "july_committed_by_program": {
-        "[264] Unified Workforce Management (UWM)": 110.0
+        "Salesforce Field Service 258: Trust": 47.0,
+        "[264] Unified Workforce Management (UWM)": 110.0,
+        "[262] Unified Workforce Management (UWM)": 3.0
       },
-      "july_committed_unmapped": 74.0,
+      "july_committed_unmapped": 24.0,
       "august_committed_by_program": {
-        "[264] Unified Workforce Management (UWM)": 133.0
+        "[264] Unified Workforce Management (UWM)": 133.0,
+        "Salesforce Field Service 258: Trust": 43.0
       },
-      "august_committed_unmapped": 43.0,
+      "august_committed_unmapped": 0,
       "september_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 43.0
       },
@@ -146,15 +150,18 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
+        "FS 262: S&O: Agentic S&O": 2.0,
         "FS 264: S&O: Agentic S&O": 91.0,
-        "FS 264: S&O Trust": 43.0
+        "FS 264: S&O Trust": 43.0,
+        "FS 262: S&O: Dispatch Experience 2.0": 2.0
       },
-      "june_delivered_unmapped": 12.0,
+      "june_delivered_unmapped": 8.0,
       "july_committed_by_program": {
         "FS 264: S&O: Agentic S&O": 58.0,
-        "FS 264: S&O Trust": 35.0
+        "FS 264: S&O Trust": 35.0,
+        "Do not use FS 262: S&O Trust": 2.0
       },
-      "july_committed_unmapped": 11.0,
+      "july_committed_unmapped": 9.0,
       "august_committed_by_program": {
         "FS 264: S&O Trust": 19.0
       },
@@ -219,9 +226,10 @@
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
         "FS 264: S&O Trust": 9.0,
+        "FS 262: S&O: Dispatch Experience 2.0": 91.0,
         "FS 264: S&O: The New Scheduling Console": 18.0
       },
-      "june_delivered_unmapped": 141.0,
+      "june_delivered_unmapped": 50.0,
       "july_committed_by_program": {
         "FS 264: S&O: The New Scheduling Console": 27.0
       },
@@ -250,9 +258,10 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
-        "[264] Unified Workforce Management (UWM)": 239.0
+        "[264] Unified Workforce Management (UWM)": 239.0,
+        "[262] Unified Workforce Management (UWM)": 6.0
       },
-      "june_delivered_unmapped": 225.0,
+      "june_delivered_unmapped": 219.0,
       "july_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 119.0
       },
@@ -286,9 +295,10 @@
         "FS 264: S&O Trust": 71.0,
         "FS 264: S&O: The New Scheduling Console": 57.0,
         "FS 264: S&O: Agentic S&O": 7.0,
+        "FS 262: S&O: Workforce Optimization": 4.0,
         "FS 264: S&O: S&O Customer Success": 1.0
       },
-      "june_delivered_unmapped": 74.0,
+      "june_delivered_unmapped": 70.0,
       "july_committed_by_program": {
         "FS 264: S&O Trust": 61.0,
         "FS 264: S&O: Agentic S&O": 30.0,
@@ -359,15 +369,19 @@
       "work_items_committed_september": 16,
       "june_delivered_by_program": {
         "FS 264: S&O Trust": 64.0,
+        "FS 262: S&O: Unified on Core": 20.0,
         "264 Infield": 87.0,
+        "262 Field Service Trust": 4.0,
         "264 Infield & Onsite Hybrid": 9.0
       },
-      "june_delivered_unmapped": 194.0,
+      "june_delivered_unmapped": 170.0,
       "july_committed_by_program": {
         "FS 264: S&O Trust": 69.0,
-        "264 Infield": 69.0
+        "FS 262: S&O: Unified on Core": 7.0,
+        "264 Infield": 69.0,
+        "262 Field Service Trust": 6.0
       },
-      "july_committed_unmapped": 46.0,
+      "july_committed_unmapped": 33.0,
       "august_committed_by_program": {
         "FS 264: S&O Trust": 45.0,
         "264 Infield": 22.0
@@ -394,9 +408,10 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
-        "FS 264: S&O Trust": 108.5
+        "FS 264: S&O Trust": 108.5,
+        "Do not use FS 262: S&O Trust": 6.0
       },
-      "june_delivered_unmapped": 297.0,
+      "june_delivered_unmapped": 291.0,
       "july_committed_by_program": {
         "FS 264: S&O Trust": 50.5
       },
@@ -429,19 +444,23 @@
       "june_delivered_by_program": {
         "[264] Unified Workforce Management (UWM)": 66.0,
         "FS 264: S&O: Agentic S&O": 38.0,
-        "FS 264: S&O: S&O Customer Success": 37.0
+        "FS 264: S&O: S&O Customer Success": 37.0,
+        "FS 262: S&O: Opt. Scale & Speed": 24.0,
+        "262 Field Service Trust": 11.0
       },
-      "june_delivered_unmapped": 186.0,
+      "june_delivered_unmapped": 151.0,
       "july_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 60.0,
+        "FS 262: S&O: Opt. Scale & Speed": 23.0,
         "FS 264: S&O: Agentic S&O": 30.0,
         "FS 264: S&O: S&O Customer Success": 18.0
       },
-      "july_committed_unmapped": 154.0,
+      "july_committed_unmapped": 131.0,
       "august_committed_by_program": {
-        "[264] Unified Workforce Management (UWM)": 2.0
+        "[264] Unified Workforce Management (UWM)": 2.0,
+        "FS 262: S&O: Opt. Scale & Speed": 21.0
       },
-      "august_committed_unmapped": 30.0,
+      "august_committed_unmapped": 9.0,
       "september_committed_by_program": {},
       "september_committed_unmapped": 0,
       "work_items_delivered_june": 190
@@ -489,17 +508,20 @@
       "capacity_committed_september": 5.0,
       "work_items_committed_september": 1,
       "june_delivered_by_program": {
+        "Salesforce Field Service 258: Trust": 48.0,
         "264 Operations Console": 233.0
       },
-      "june_delivered_unmapped": 172.0,
+      "june_delivered_unmapped": 124.0,
       "july_committed_by_program": {
+        "Salesforce Field Service 258: Trust": 33.0,
         "264 Operations Console": 88.0
       },
-      "july_committed_unmapped": 46.0,
+      "july_committed_unmapped": 13.0,
       "august_committed_by_program": {
+        "Salesforce Field Service 258: Trust": 10.0,
         "264 Operations Console": 122.0
       },
-      "august_committed_unmapped": 146.0,
+      "august_committed_unmapped": 136.0,
       "september_committed_by_program": {},
       "september_committed_unmapped": 5.0,
       "work_items_delivered_june": 147
@@ -514,23 +536,26 @@
       ],
       "capacity_delivered_june": 234.0,
       "work_items_closed_june": 89,
-      "capacity_committed_july": 96.0,
-      "work_items_committed_july": 50,
+      "capacity_committed_july": 99.0,
+      "work_items_committed_july": 52,
       "capacity_committed_august": 54.0,
       "work_items_committed_august": 6,
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
+        "262 Field Service Trust": 1.0,
         "264 Field Service: Mobile Agentic AI": 70.0,
         "264 Field Service: Workforce Scheduling on Mobile": 10.0
       },
-      "june_delivered_unmapped": 154.0,
+      "june_delivered_unmapped": 153.0,
       "july_committed_by_program": {
-        "264 Field Service: Mobile Agentic AI": 14.0
+        "264 Field Service: Mobile Agentic AI": 15.0
       },
-      "july_committed_unmapped": 82.0,
-      "august_committed_by_program": {},
-      "august_committed_unmapped": 54.0,
+      "july_committed_unmapped": 84.0,
+      "august_committed_by_program": {
+        "262 Field Service: Mobile AI/Agentforce": 35.0
+      },
+      "august_committed_unmapped": 19.0,
       "september_committed_by_program": {},
       "september_committed_unmapped": 0,
       "work_items_delivered_june": 134
@@ -552,14 +577,16 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 78.0
+        "264 Field Service: Workforce Scheduling on Mobile": 78.0,
+        "FS 262: Unified: Mobile for Industries (AGX)": 33.0
       },
-      "june_delivered_unmapped": 211.0,
+      "june_delivered_unmapped": 178.0,
       "july_committed_by_program": {
         "264 Field Service: Workforce Scheduling on Mobile": 115.0,
+        "FS 262: Unified: Mobile for Industries (AGX)": 6.0,
         "[264] Field Service: Headless (aka Project Codey)": 2.0
       },
-      "july_committed_unmapped": 131.0,
+      "july_committed_unmapped": 125.0,
       "august_committed_by_program": {
         "264 Field Service: Workforce Scheduling on Mobile": 99.0
       },
@@ -585,14 +612,16 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 42.0
+        "264 Field Service: Workforce Scheduling on Mobile": 42.0,
+        "262 Field Service Trust": 2.0
       },
-      "june_delivered_unmapped": 253.0,
+      "june_delivered_unmapped": 251.0,
       "july_committed_by_program": {
         "264 Field Service: Workforce Scheduling on Mobile": 8.0,
-        "264 Field Service: Customer Trust": 3.0
+        "264 Field Service: Customer Trust": 3.0,
+        "262 Field Service: Mobile Worker Satisfaction": 2.0
       },
-      "july_committed_unmapped": 171.0,
+      "july_committed_unmapped": 169.0,
       "august_committed_by_program": {},
       "august_committed_unmapped": 20.0,
       "september_committed_by_program": {},
@@ -616,13 +645,15 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
+        "262 Field Service Trust": 48.0,
         "264 Field Service: KONE": 21.0
       },
-      "june_delivered_unmapped": 97.0,
+      "june_delivered_unmapped": 49.0,
       "july_committed_by_program": {
+        "262 Field Service Trust": 15.0,
         "264 Field Service: KONE": 8.0
       },
-      "july_committed_unmapped": 71.0,
+      "july_committed_unmapped": 56.0,
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
@@ -648,10 +679,12 @@
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
       "june_delivered_by_program": {
+        "262 Field Service Trust": 35.0,
         "264 Field Service: Workforce Scheduling on Mobile": 20.0,
+        "262 Field Service: Customer Adoption": 5.0,
         "264 Field Service: Customer Trust": 7.0
       },
-      "june_delivered_unmapped": 148.0,
+      "june_delivered_unmapped": 108.0,
       "july_committed_by_program": {
         "264 Infield": 20.0,
         "264 Field Service: Workforce Scheduling on Mobile": 49.0
@@ -738,8 +771,10 @@
       "work_items_committed_august": 10,
       "capacity_committed_september": 0,
       "work_items_committed_september": 0,
-      "june_delivered_by_program": {},
-      "june_delivered_unmapped": 196.0,
+      "june_delivered_by_program": {
+        "262 Field Service: Mobile Worker Satisfaction": 2.0
+      },
+      "june_delivered_unmapped": 194.0,
       "july_committed_by_program": {},
       "july_committed_unmapped": 118.0,
       "august_committed_by_program": {},
@@ -786,9 +821,9 @@
       "capacity_delivered_june": 294.0,
       "work_items_closed_june": 64,
       "capacity_committed_july": 162.0,
-      "work_items_committed_july": 81,
-      "capacity_committed_august": 425.0,
-      "work_items_committed_august": 128,
+      "work_items_committed_july": 82,
+      "capacity_committed_august": 427.0,
+      "work_items_committed_august": 129,
       "capacity_committed_september": 283.0,
       "work_items_committed_september": 71,
       "june_delivered_by_program": {
@@ -796,13 +831,13 @@
       },
       "june_delivered_unmapped": 261.0,
       "july_committed_by_program": {
-        "264 Field Service: Workforce Scheduling on Mobile": 22.0
+        "264 Field Service: Workforce Scheduling on Mobile": 23.0
       },
-      "july_committed_unmapped": 140.0,
+      "july_committed_unmapped": 139.0,
       "august_committed_by_program": {
         "264 Field Service: Workforce Scheduling on Mobile": 43.0
       },
-      "august_committed_unmapped": 382.0,
+      "august_committed_unmapped": 384.0,
       "september_committed_by_program": {},
       "september_committed_unmapped": 283.0,
       "work_items_delivered_june": 124
@@ -829,8 +864,10 @@
         "[264] Field Service: Headless (aka Project Codey)": 7.0
       },
       "july_committed_unmapped": 42.0,
-      "august_committed_by_program": {},
-      "august_committed_unmapped": 39.0,
+      "august_committed_by_program": {
+        "262 Field Service Foundations: Fast Start to Work": 29.0
+      },
+      "august_committed_unmapped": 10.0,
       "september_committed_by_program": {},
       "september_committed_unmapped": 5.0,
       "work_items_delivered_june": 19

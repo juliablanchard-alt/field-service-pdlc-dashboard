@@ -325,11 +325,178 @@ def enrich_with_epic_ids(structured_data):
 
     return structured_data
 
+def fetch_field_service_teams():
+    """Fetch Field Service team IDs from teams_data.json"""
+    teams_file = SCRIPT_DIR / "data" / "teams_data.json"
+    if not teams_file.exists():
+        print("   ⚠️  teams_data.json not found, skipping team filter")
+        return []
+
+    with open(teams_file, 'r') as f:
+        teams_data = json.load(f)
+
+    active_team_names = [team['name'] for team in teams_data['teams']]
+
+    # Get scrum team IDs
+    name_conditions = " OR ".join([f"Name = '{name}'" for name in active_team_names])
+    teams_query = f"""
+    SELECT Id, Name
+    FROM ADM_Scrum_Team__c
+    WHERE {name_conditions}
+    """
+
+    try:
+        result = subprocess.run(
+            ['sf', 'data', 'query', '--query', teams_query, '--target-org', TARGET_ORG, '--json'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        data = json.loads(result.stdout)
+        scrum_teams = data.get('result', {}).get('records', [])
+        team_ids = [team['Id'] for team in scrum_teams]
+        print(f"   ✓ Found {len(team_ids)} Field Service teams")
+        return team_ids
+    except Exception as e:
+        print(f"   ⚠️  Failed to fetch teams: {e}")
+        return []
+
+def fetch_262_projects():
+    """Fetch 262 projects with their program mappings via epics (Field Service teams only)"""
+    print("🔍 Fetching 262 projects for Field Service teams...")
+
+    # Get Field Service team IDs
+    team_ids = fetch_field_service_teams()
+    if not team_ids:
+        print("   ⚠️  No teams found, skipping 262 project fetch")
+        return []
+
+    team_ids_str = "', '".join(team_ids)
+
+    # Query work items to get their projects (filtered by Field Service teams)
+    query = f"""
+    SELECT Epic__r.Project__r.Id, Epic__r.Project__r.Name,
+           Epic__r.Project__r.Program__r.Name, Epic__r.Project__r.Program__r.Id,
+           Epic__r.Project__r.Program__r.Portfolio__c,
+           Epic__r.Scheduled_Build__r.Name
+    FROM ADM_Work__c
+    WHERE Epic__r.Scheduled_Build__r.Name LIKE '262%'
+    AND Epic__r.Project__c != null
+    AND Epic__r.Project__r.Program__c != null
+    AND Scrum_Team__c IN ('{team_ids_str}')
+    LIMIT 50000
+    """
+
+    try:
+        result = subprocess.run(
+            ['sf', 'data', 'query', '--query', query, '--target-org', TARGET_ORG, '--json'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        data = json.loads(result.stdout)
+        records = data.get('result', {}).get('records', [])
+
+        # Deduplicate projects in Python
+        projects = []
+        seen_projects = set()
+        for record in records:
+            if not record.get('Epic__r') or not record['Epic__r'].get('Project__r'):
+                continue
+
+            project_data = record['Epic__r']['Project__r']
+            project_id = project_data.get('Id', '')
+
+            if project_id and project_id not in seen_projects:
+                seen_projects.add(project_id)
+                projects.append({
+                    'Id': project_id,
+                    'Name': project_data.get('Name', ''),
+                    'Program__r': project_data.get('Program__r', {}),
+                    'Scheduled_Build__r': record['Epic__r'].get('Scheduled_Build__r', {})
+                })
+
+        print(f"   ✓ Found {len(projects)} unique 262 projects with program assignments")
+        return projects
+
+    except Exception as e:
+        print(f"   ⚠️  Failed to fetch 262 projects: {e}")
+        return []
+
+def merge_262_projects(structured_data, projects_262):
+    """Merge 262 projects into structured data"""
+    if not projects_262:
+        return structured_data
+
+    print("🔀 Merging 262 projects into execution data...")
+
+    # Group 262 projects by program
+    programs_map = {}
+    for program in structured_data['programs']:
+        programs_map[program['name']] = program
+
+    added_projects = 0
+    new_programs = 0
+
+    for proj_record in projects_262:
+        program_name = proj_record.get('Program__r', {}).get('Name', '')
+        if not program_name:
+            continue
+
+        project_name = proj_record.get('Name', '')
+        project_id = proj_record.get('Id', '')
+        scheduled_build = proj_record.get('Scheduled_Build__r', {}).get('Name', '')
+        portfolio = proj_record.get('Program__r', {}).get('Portfolio__c', 'Unknown')
+
+        # Check if program exists
+        if program_name not in programs_map:
+            # Create new program for 262
+            program_id = proj_record.get('Program__r', {}).get('Id', '')
+            programs_map[program_name] = {
+                'name': program_name,
+                'id': program_id,
+                'portfolio': portfolio,
+                'health': 'Unknown',
+                'health_status': 'Unknown',
+                'program_manager': '',
+                'target_release': '262',
+                'projects': []
+            }
+            structured_data['programs'].append(programs_map[program_name])
+            new_programs += 1
+
+        program = programs_map[program_name]
+
+        # Check if project already exists
+        existing_project = None
+        for proj in program['projects']:
+            if proj['name'] == project_name or proj['id'] == project_id:
+                existing_project = proj
+                break
+
+        if not existing_project:
+            # Add new 262 project
+            program['projects'].append({
+                'name': project_name,
+                'id': project_id,
+                'product_owner': '',
+                'dev_lead': '',
+                'target': scheduled_build,
+                'last_modified': '',
+                'health_status': 'Unknown',
+                'epics': []  # 262 projects won't have epic details from this query
+            })
+            added_projects += 1
+
+    print(f"   ✓ Added {added_projects} 262 projects across {new_programs} programs")
+    return structured_data
+
 def main():
     """Main function to fetch and save execution data"""
     print("🔄 Fetching execution data from GUS...")
 
-    # Fetch report data
+    # Fetch report data (264 programs/projects/epics)
     report_data = fetch_execution_report()
     if not report_data:
         print("❌ Failed to fetch report data")
@@ -340,6 +507,10 @@ def main():
 
     # Enrich with epic IDs from GUS
     structured_data = enrich_with_epic_ids(structured_data)
+
+    # Fetch and merge 262 projects
+    projects_262 = fetch_262_projects()
+    structured_data = merge_262_projects(structured_data, projects_262)
 
     # Save to JSON file
     DATA_FILE.parent.mkdir(exist_ok=True)

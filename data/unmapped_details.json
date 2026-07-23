@@ -738,38 +738,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000021o1d2AA",
-      "epic_name": "[262] WFM Shift Scheduling & Optimization Service",
-      "epic_status": "Completed",
-      "story_points": 6,
-      "work_items": [
-        {
-          "work_item_name": "W-20745285",
-          "work_item_id": "a07EE00002S84LsYAJ",
-          "scheduled_build": "262",
-          "sprint_name": "2026.01a-FSL - Resource - Scheduling Hawks",
-          "story_points": 3,
-          "assignee": "Nardit Yogev",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22795155",
-          "work_item_id": "a07EE00002bMwliYAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.01a-FSL - Resource - Scheduling Hawks",
-          "story_points": 3,
-          "assignee": "Nabih Abu Abid",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -1021,9 +990,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -1304,9 +1273,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -1387,9 +1356,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -2015,16 +1984,16 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
       "epic_id": "a3QEE00000207ht2AA",
       "epic_name": "264 [Hyperforce][Performance Priming] Stability & Resiliency",
       "epic_status": "Not Started",
-      "story_points": 70,
+      "story_points": 71,
       "work_items": [
         {
           "work_item_name": "W-22920480",
@@ -2317,6 +2286,16 @@
           "month": "July"
         },
         {
+          "work_item_name": "W-23545505",
+          "work_item_id": "a07EE00002fVDM9YAO",
+          "scheduled_build": "264",
+          "sprint_name": "2026.07b-SFS Mobile Services",
+          "story_points": 1,
+          "assignee": "Nigel Menger",
+          "status": "In Progress",
+          "month": "July"
+        },
+        {
           "work_item_name": "W-21122537",
           "work_item_id": "a07EE00002TxwoTYAR",
           "scheduled_build": "264",
@@ -2478,9 +2457,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -2631,8 +2610,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -2763,9 +2742,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -2957,8 +2936,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -3129,9 +3108,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -3282,9 +3261,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -3465,32 +3444,12 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-22729728",
-          "work_item_id": "a07EE00002b8C6HYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-SFS Mobile Services",
-          "story_points": 1,
-          "assignee": "govobx-conductor API user",
-          "status": "Triaged",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-22729732",
           "work_item_id": "a07EE00002b8FGrYAM",
           "scheduled_build": "264",
           "sprint_name": "2026.07b-SFS Mobile Services",
           "story_points": 1,
           "assignee": "govobx-conductor API user",
-          "status": "Triaged",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23021819",
-          "work_item_id": "a07EE00002cLTV7YAO",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-SFS Mobile Services",
-          "story_points": 2,
-          "assignee": "Nigel Menger",
           "status": "Triaged",
           "month": "July"
         },
@@ -3525,6 +3484,16 @@
           "month": "July"
         },
         {
+          "work_item_name": "W-22729728",
+          "work_item_id": "a07EE00002b8C6HYAU",
+          "scheduled_build": "264",
+          "sprint_name": "2026.07b-SFS Mobile Services",
+          "story_points": 1,
+          "assignee": "govobx-conductor API user",
+          "status": "Closed",
+          "month": "July"
+        },
+        {
           "work_item_name": "W-22729687",
           "work_item_id": "a07EE00002b8PMKYA2",
           "scheduled_build": "264",
@@ -3549,6 +3518,16 @@
           "work_item_id": "a07EE00002Vza2aYAB",
           "scheduled_build": "264",
           "sprint_name": "2026.08a-SFS Mobile Services",
+          "story_points": 2,
+          "assignee": "Nigel Menger",
+          "status": "Triaged",
+          "month": "August"
+        },
+        {
+          "work_item_name": "W-23021819",
+          "work_item_id": "a07EE00002cLTV7YAO",
+          "scheduled_build": "264",
+          "sprint_name": "2026.08b-SFS Mobile Services",
           "story_points": 2,
           "assignee": "Nigel Menger",
           "status": "Triaged",
@@ -3686,9 +3665,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -3819,9 +3798,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -3882,8 +3861,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -3934,9 +3913,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -4027,9 +4006,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -4155,7 +4134,7 @@
           "sprint_name": "2026.07a-SFS Mobile Services",
           "story_points": 3,
           "assignee": "Raghav Abboy",
-          "status": "Triaged",
+          "status": "In Progress",
           "month": "July"
         },
         {
@@ -4220,9 +4199,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -4253,8 +4232,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -4315,9 +4294,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -4628,9 +4607,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -4661,8 +4640,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -5604,529 +5583,6 @@
   ],
   "FSL - Foundation - Atlas": [
     {
-      "epic_id": "a3QEE000002JxzJ2AS",
-      "epic_name": "[264 Atlas] TDs and Trust",
-      "epic_status": "On Track",
-      "story_points": 139,
-      "work_items": [
-        {
-          "work_item_name": "W-21485973",
-          "work_item_id": "a07EE00002VsN83YAF",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 4,
-          "assignee": "Avani Jindal",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22248570",
-          "work_item_id": "a07EE00002YvfFBYAZ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.05b-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22695750",
-          "work_item_id": "a07EE00002ayooEYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22797084",
-          "work_item_id": "a07EE00002bNPFpYAO",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23029046",
-          "work_item_id": "a07EE00002cNdwnYAC",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 4,
-          "assignee": "Rebecca Hampton",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23122612",
-          "work_item_id": "a07EE00002cnTVsYAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Mike Cliffe",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23164617",
-          "work_item_id": "a07EE00002d29OEYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22034336",
-          "work_item_id": "a07EE00002Y7kNAYAZ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Pei Chu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22474831",
-          "work_item_id": "a07EE00002ZwljPYAR",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22547303",
-          "work_item_id": "a07EE00002aIjQwYAK",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Pei Chu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22620211",
-          "work_item_id": "a07EE00002afv3IYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Manisha Chaurasia",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22695123",
-          "work_item_id": "a07EE00002azLJPYA2",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 4,
-          "assignee": "Manisha Chaurasia",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22696850",
-          "work_item_id": "a07EE00002azm44YAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 4,
-          "assignee": "Pei Chu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22843127",
-          "work_item_id": "a07EE00002bX7SkYAK",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22956150",
-          "work_item_id": "a07EE00002c3FFPYA2",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23000358",
-          "work_item_id": "a07EE00002cH52DYAS",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Dongyao Ling",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22860604",
-          "work_item_id": "a07EE00002banMCYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Pei Chu",
-          "status": "Duplicate",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22860899",
-          "work_item_id": "a07EE00002baxcFYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Rebecca Hampton",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23096462",
-          "work_item_id": "a07EE00002cfV4VYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23099577",
-          "work_item_id": "a07EE00002cgS9WYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23494601",
-          "work_item_id": "a07EE00002f4TG4YAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Never",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-21844247",
-          "work_item_id": "a07EE00002XG17PYAT",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-FSL - Foundation - Atlas",
-          "story_points": 4,
-          "assignee": "Mike Cliffe",
-          "status": "Triaged",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23258406",
-          "work_item_id": "a07EE00002dbkPZYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23433274",
-          "work_item_id": "a07EE00002eeg61YAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Rebecca Hampton",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23480484",
-          "work_item_id": "a07EE00002eyO0EYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Ben Lee",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23482209",
-          "work_item_id": "a07EE00002eyTpVYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23479705",
-          "work_item_id": "a07EE00002eya7BYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Manisha Chaurasia",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23482185",
-          "work_item_id": "a07EE00002eygMzYAI",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23482904",
-          "work_item_id": "a07EE00002ezYD8YAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23482974",
-          "work_item_id": "a07EE00002ezZ15YAE",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Ben Lee",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23479520",
-          "work_item_id": "a07EE00002eyaoeYAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Suresh Gupta",
-          "status": "Not Reproducible",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23542238",
-          "work_item_id": "a07EE00002fU0aVYAS",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Manisha Chaurasia",
-          "status": "Ready for Review",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22920764",
-          "work_item_id": "a07EE00002brRuBYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22034312",
-          "work_item_id": "a07EE00002Y8C2fYAF",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 8,
-          "assignee": "Pei Chu",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22034339",
-          "work_item_id": "a07EE00002Y8CnPYAV",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Pei Chu",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23163185",
-          "work_item_id": "a07EE00002d1bjNYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Manisha Chaurasia",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23531612",
-          "work_item_id": "a07EE00002fPK4dYAG",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Manisha Chaurasia",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22860604",
-          "work_item_id": "a07EE00002banMCYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Pei Chu",
-          "status": "Duplicate",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23257455",
-          "work_item_id": "a07EE00002dbEjTYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-FSL - Foundation - Atlas",
-          "story_points": 2,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Waiting",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-21296498",
-          "work_item_id": "a07EE00002UwP0nYAF",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-21468984",
-          "work_item_id": "a07EE00002VoWQtYAN",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-21860064",
-          "work_item_id": "a07EE00002XJrcZYAT",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-21937184",
-          "work_item_id": "a07EE00002XeRaBYAV",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 4,
-          "assignee": "Avani Jindal",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-21984135",
-          "work_item_id": "a07EE00002XtpXSYAZ",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Dongyao Ling",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22034207",
-          "work_item_id": "a07EE00002Y7gTbYAJ",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Pei Chu",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22045816",
-          "work_item_id": "a07EE00002YC4ycYAD",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 4,
-          "assignee": "Pei Chu",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22065859",
-          "work_item_id": "a07EE00002YHlSxYAL",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22065877",
-          "work_item_id": "a07EE00002YHlWBYA1",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 10,
-          "assignee": "Angela Liu (SFS)",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22496164",
-          "work_item_id": "a07EE00002a3FLNYA2",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Avani Jindal",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22496139",
-          "work_item_id": "a07EE00002a3NLsYAM",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Avani Jindal",
-          "status": "Triaged",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-23124267",
-          "work_item_id": "a07EE00002coellYAA",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 3,
-          "assignee": "Angela Liu (SFS)",
-          "status": "New",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "June",
-        "July",
-        "August"
-      ]
-    },
-    {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
@@ -6504,8 +5960,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6716,30 +6172,9 @@
         }
       ],
       "months": [
-        "June",
+        "September",
         "July",
-        "September"
-      ]
-    },
-    {
-      "epic_id": "a3QEE00000227gz2AA",
-      "epic_name": "Load Shifts and Shift details on Coverage Grid",
-      "epic_status": "Completed",
-      "story_points": 3,
-      "work_items": [
-        {
-          "work_item_name": "W-21812533",
-          "work_item_id": "a07EE00002XBjSXYA1",
-          "scheduled_build": "262",
-          "sprint_name": "2026.07b-FSL - Foundation - Atlas",
-          "story_points": 3,
-          "assignee": "Ben Lee",
-          "status": "Triaged",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "July"
+        "June"
       ]
     }
   ],
@@ -6864,8 +6299,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -6996,9 +6431,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -7139,28 +6574,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023buj2AA",
-      "epic_name": "262 SFS Mobile Platform DX - Mobile Worker Trust",
-      "epic_status": "On Track",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-23125110",
-          "work_item_id": "a07EE00002cotm0YAA",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile Platform DX",
-          "story_points": 2,
-          "assignee": "Joel Harmon",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -7352,8 +6766,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7654,9 +7068,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -7798,8 +7212,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -7961,8 +7375,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8225,8 +7639,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8287,8 +7701,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8409,8 +7823,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8461,8 +7875,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -8585,8 +7999,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9148,7 +8562,7 @@
           "sprint_name": "2026.07b-SFS Mobile Comms and Search",
           "story_points": 3,
           "assignee": "Steve Thistle",
-          "status": "Fixed",
+          "status": "Closed",
           "month": "July"
         },
         {
@@ -9173,250 +8587,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002FliD2AS",
-      "epic_name": "264 SFS Mobile - C&S - [Trust] ZBB",
-      "epic_status": "On Track",
-      "story_points": 45,
-      "work_items": [
-        {
-          "work_item_name": "W-21950506",
-          "work_item_id": "a07EE00002Xh6ZMYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 4,
-          "assignee": "Sohail Ahmed Mohammed",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015726",
-          "work_item_id": "a07EE00002Y3QOIYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Audit Data Importer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015740",
-          "work_item_id": "a07EE00002Y3QOWYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015781",
-          "work_item_id": "a07EE00002Y3QPBYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015784",
-          "work_item_id": "a07EE00002Y3QPEYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 3,
-          "assignee": "Audit Data Importer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22026738",
-          "work_item_id": "a07EE00002Y5qLJYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22026793",
-          "work_item_id": "a07EE00002Y5qrxYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22027048",
-          "work_item_id": "a07EE00002Y6VqzYAF",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 4,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22709844",
-          "work_item_id": "a07EE00002b3Wa4YAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Ahmed Elhosseiny",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22845893",
-          "work_item_id": "a07EE00002bXRAEYA4",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Matthew Rathbun",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22898638",
-          "work_item_id": "a07EE00002bkJQMYA2",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015727",
-          "work_item_id": "a07EE00002Y3QOJYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Audit Data Importer",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015743",
-          "work_item_id": "a07EE00002Y3QOZYA3",
-          "scheduled_build": "-",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015782",
-          "work_item_id": "a07EE00002Y3QPCYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22277707",
-          "work_item_id": "a07EE00002Z2ojoYAB",
-          "scheduled_build": "-",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015725",
-          "work_item_id": "a07EE00002Y3QOHYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015783",
-          "work_item_id": "a07EE00002Y3QPDYA3",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22276286",
-          "work_item_id": "a07EE00002Z2f5eYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23475236",
-          "work_item_id": "a07EE00002exSopYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Andre Dion",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-18591139",
-          "work_item_id": "a07EE00002EqWe4YAF",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 3,
-          "assignee": "Kalavathi Kalaivannan",
-          "status": "Triaged",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-18576672",
-          "work_item_id": "a07EE00002Ek0xfYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Roman Ivaniv",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22242061",
-          "work_item_id": "a07EE00002Yu7NIYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Kalavathi Kalaivannan",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-20592566",
-          "work_item_id": "a07EE00002ROZKoYAP",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 3,
-          "assignee": "William Wyatt",
-          "status": "Not Reproducible",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -9432,37 +8604,6 @@
           "sprint_name": "2026.06b-SFS Mobile Comms and Search",
           "story_points": 1,
           "assignee": "Audit Data Importer",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE00000231zJ2AQ",
-      "epic_name": "262 SFS Mobile - C&S - [Trust] [Stretch] ZBB",
-      "epic_status": "On Track",
-      "story_points": 6,
-      "work_items": [
-        {
-          "work_item_name": "W-21253684",
-          "work_item_id": "a07EE00002Uh9zQYAR",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 3,
-          "assignee": "Steve Thistle",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21511475",
-          "work_item_id": "a07EE00002VzeowYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Comms and Search",
-          "story_points": 3,
-          "assignee": "Brian Criscuolo",
           "status": "Closed",
           "month": "June"
         }
@@ -9549,90 +8690,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000021tHR2AY",
-      "epic_name": "262 - SFS Mobile - C&S - [Trust] Production Support",
-      "epic_status": "On Track",
-      "story_points": 12,
-      "work_items": [
-        {
-          "work_item_name": "W-22694725",
-          "work_item_id": "a07EE00002azUP3YAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Brian Criscuolo",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22697058",
-          "work_item_id": "a07EE00002b0FIlYAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22771206",
-          "work_item_id": "a07EE00002bHLweYAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Brian Criscuolo",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22813072",
-          "work_item_id": "a07EE00002bQswWYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Keerthini Reddy Chimarla",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23473508",
-          "work_item_id": "a07EE00002exLYpYAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Brian Criscuolo",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23402051",
-          "work_item_id": "a07EE00002eT2UzYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Brian Criscuolo",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23424747",
-          "work_item_id": "a07EE00002ecfsQYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Comms and Search",
-          "story_points": 1,
-          "assignee": "Brian Criscuolo",
-          "status": "Closed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -10130,8 +9189,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -10282,8 +9341,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -10766,8 +9825,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -10808,28 +9867,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000001wPAL2A2",
-      "epic_name": "262 SFS Frontline AI - [M2.7] Unplanned Core Trust",
-      "epic_status": "Completed",
-      "story_points": 1,
-      "work_items": [
-        {
-          "work_item_name": "W-22199795",
-          "work_item_id": "a07EE00002Yj5HDYAZ",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Frontline AI",
-          "story_points": 1,
-          "assignee": "Vishal Gupta",
-          "status": "Not Reproducible",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -10928,7 +9966,7 @@
           "sprint_name": "2026.07a-SFS Frontline AI",
           "story_points": 1,
           "assignee": "Nitasha Walia",
-          "status": "Triaged",
+          "status": "In Progress",
           "month": "July"
         },
         {
@@ -10953,8 +9991,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -11025,8 +10063,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -11099,8 +10137,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -11172,8 +10210,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -11252,7 +10290,7 @@
       "epic_id": "a3QEE000002Vlnt2AC",
       "epic_name": "264 SFS Frontline AI - Orgfarm Template Internal Tools",
       "epic_status": "On Track",
-      "story_points": 12,
+      "story_points": 14,
       "work_items": [
         {
           "work_item_name": "W-23376351",
@@ -11301,6 +10339,16 @@
           "sprint_name": "2026.07a-SFS Frontline AI",
           "story_points": 2,
           "assignee": "Paul Chan",
+          "status": "Triaged",
+          "month": "July"
+        },
+        {
+          "work_item_name": "W-23561323",
+          "work_item_id": "a07EE00002fdmddYAA",
+          "scheduled_build": "-",
+          "sprint_name": "2026.07a-SFS Frontline AI",
+          "story_points": 2,
+          "assignee": "Kenna Nyuga-Galega",
           "status": "Triaged",
           "month": "July"
         },
@@ -11523,37 +10571,6 @@
       "months": [
         "August"
       ]
-    },
-    {
-      "epic_id": "a3QEE0000022Y652AE",
-      "epic_name": "266 SFS Frontline AI - Pre-day Brief",
-      "epic_status": "Not Started",
-      "story_points": 35,
-      "work_items": [
-        {
-          "work_item_name": "W-20611209",
-          "work_item_id": "a07EE00002RTYhSYAX",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 10,
-          "assignee": "Paul Chan",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-20643625",
-          "work_item_id": "a07EE00002RdM0KYAV",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 25,
-          "assignee": "Paul Chan",
-          "status": "New",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "August"
-      ]
     }
   ],
   "FSL - Resource - Scheduling Intelligence": [
@@ -11695,38 +10712,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE00000225Lp2AI",
-      "epic_name": "262 SFS HH - Do not exceed maximum contract hours per resource per pay period",
-      "epic_status": "Not Started",
-      "story_points": 4,
-      "work_items": [
-        {
-          "work_item_name": "W-22766136",
-          "work_item_id": "a07EE00002bGcpfYAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a - FSL - Resource - Scheduling Intelligence",
-          "story_points": 2,
-          "assignee": "Ayelet Jungreis",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22882397",
-          "work_item_id": "a07EE00002bfOv2YAE",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a - FSL - Resource - Scheduling Intelligence",
-          "story_points": 2,
-          "assignee": "Ayelet Jungreis",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -11809,8 +10795,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -11951,8 +10937,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -12340,9 +11326,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -12603,70 +11589,8 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023thx2AA",
-      "epic_name": "262 Dispatch Experience 2.0 - Custom Actions Setting",
-      "epic_status": "Completed",
-      "story_points": 15,
-      "work_items": [
-        {
-          "work_item_name": "W-20608948",
-          "work_item_id": "a07EE00002RSVFIYA5",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 15,
-          "assignee": "Gal Asraf",
-          "status": "Never",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022a6H2AQ",
-      "epic_name": "262 Dispatch Experience 2.0 - Global/Inday KPIs",
-      "epic_status": "Completed",
-      "story_points": 15,
-      "work_items": [
-        {
-          "work_item_name": "W-21520812",
-          "work_item_id": "a07EE00002W1bBHYAZ",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Gal Asraf",
-          "status": "Never",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20660123",
-          "work_item_id": "a07EE00002RjdtEYAR",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 10,
-          "assignee": "Gal Asraf",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20660127",
-          "work_item_id": "a07EE00002RjpxGYAR",
-          "scheduled_build": "262.8",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 3,
-          "assignee": "Gal Asraf",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
         "June"
       ]
     },
@@ -12683,118 +11607,6 @@
           "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
           "story_points": 1,
           "assignee": "Shai Ziv",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023eXd2AI",
-      "epic_name": "*262 New Dispatch Experience - 260 Bugs and Leftovers [FSL - Resource - DC2]",
-      "epic_status": "Completed",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-19604714",
-          "work_item_id": "a07EE00002LWFUYYA5",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-19696759",
-          "work_item_id": "a07EE00002M6YwFYAV",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20265819",
-          "work_item_id": "a07EE00002PiMyUYAV",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 0,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022ZN72AM",
-      "epic_name": "262 Dispatch Experience 2.0 - SA Side Panel",
-      "epic_status": "Completed",
-      "story_points": 10,
-      "work_items": [
-        {
-          "work_item_name": "W-20608460",
-          "work_item_id": "a07EE00002RS9WtYAL",
-          "scheduled_build": "262.8",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 2,
-          "assignee": "Gal Asraf",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20693256",
-          "work_item_id": "a07EE00002RsSyBYAV",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Gal Asraf",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20693254",
-          "work_item_id": "a07EE00002RsYc6YAF",
-          "scheduled_build": "262.8",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Gal Asraf",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22489634",
-          "work_item_id": "a07EE00002a0hFiYAI",
-          "scheduled_build": "262.8",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Natalia Polozyuk",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22815236",
-          "work_item_id": "a07EE00002bRe8ZYAS",
-          "scheduled_build": "262.8",
-          "sprint_name": "2026.06a - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Natalia Polozyuk",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22883494",
-          "work_item_id": "a07EE00002bfdfyYAA",
-          "scheduled_build": "262.8",
-          "sprint_name": "2026.06a - FSL - Resource - Dispatcher Console",
-          "story_points": 2,
-          "assignee": "Natalia Polozyuk",
           "status": "Closed",
           "month": "June"
         }
@@ -12826,150 +11638,6 @@
           "sprint_name": "2026.05b - FSL - Resource - Dispatcher Console",
           "story_points": 1,
           "assignee": "Jouwana Dow",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002SzCH2A0",
-      "epic_name": "262 Dispatch Experience 2.0 - Resource Live Indication",
-      "epic_status": "Completed",
-      "story_points": 7,
-      "work_items": [
-        {
-          "work_item_name": "W-22658982",
-          "work_item_id": "a07EE00002apfQqYAI",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 3,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22944260",
-          "work_item_id": "a07EE00002c1IsMYAU",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 3,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22944274",
-          "work_item_id": "a07EE00002c1TacYAE",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.07a - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002SzH72AK",
-      "epic_name": "262 Dispatch Experience 2.0 - Gantt Drag Time Intervals",
-      "epic_status": "Completed",
-      "story_points": 4,
-      "work_items": [
-        {
-          "work_item_name": "W-22658987",
-          "work_item_id": "a07EE00002aqAozYAE",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 3,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22836583",
-          "work_item_id": "a07EE00002bVXw5YAG",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06a - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Natalia Polozyuk",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002SzDt2AK",
-      "epic_name": "262 Dispatch Experience 2.0 - New Territory Selection",
-      "epic_status": "Completed",
-      "story_points": 22,
-      "work_items": [
-        {
-          "work_item_name": "W-22658984",
-          "work_item_id": "a07EE00002aqUpDYAU",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 20,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22944313",
-          "work_item_id": "a07EE00002c11emYAA",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22944321",
-          "work_item_id": "a07EE00002c1BDFYA2",
-          "scheduled_build": "262.11",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 1,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002SzAf2AK",
-      "epic_name": "262 Dispatch Experience 2.0 - Support RTL Languages",
-      "epic_status": "On Track",
-      "story_points": 16,
-      "work_items": [
-        {
-          "work_item_name": "W-22911066",
-          "work_item_id": "a07EE00002boiffYAA",
-          "scheduled_build": "262.13",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 8,
-          "assignee": "Lilach Talbi",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22944337",
-          "work_item_id": "a07EE00002c1TaiYAE",
-          "scheduled_build": "262.13",
-          "sprint_name": "2026.06b - FSL - Resource - Dispatcher Console",
-          "story_points": 8,
-          "assignee": "Lilach Talbi",
           "status": "Closed",
           "month": "June"
         }
@@ -13016,8 +11684,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     }
   ],
@@ -13370,8 +12038,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14342,8 +13010,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14524,8 +13192,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14687,9 +13355,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -14820,8 +13488,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -14872,9 +13540,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     }
   ],
@@ -15087,8 +13755,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -15253,8 +13921,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -15416,8 +14084,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -15453,37 +14121,6 @@
           "sprint_name": "2026.06b-MomentumForce",
           "story_points": 1,
           "assignee": "Jigyansoo Das",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023QjB2AU",
-      "epic_name": "*[1.16.11][262] Non-Hyperforce Security bugs/Host vulnerabilities/Wiz/Cloud Misc",
-      "epic_status": "Completed",
-      "story_points": 3,
-      "work_items": [
-        {
-          "work_item_name": "W-22762575",
-          "work_item_id": "a07EE00002bFqSdYAK",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-MomentumForce",
-          "story_points": 1,
-          "assignee": "Bhuvnesh Mehra",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23001899",
-          "work_item_id": "a07EE00002cHA6FYAW",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-MomentumForce",
-          "story_points": 2,
-          "assignee": "Bhuvnesh Mehra",
           "status": "Closed",
           "month": "June"
         }
@@ -15550,8 +14187,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -15792,8 +14429,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -15964,9 +14601,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -16067,8 +14704,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16120,8 +14757,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16292,8 +14929,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16344,8 +14981,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16436,8 +15073,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16468,8 +15105,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -16550,39 +15187,8 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023HpZ2AU",
-      "epic_name": "*[1.16.11][262] SFS: 3PP and Deployments - Run the Business",
-      "epic_status": "Completed",
-      "story_points": 3,
-      "work_items": [
-        {
-          "work_item_name": "W-22990943",
-          "work_item_id": "a07EE00002cE9YVYA0",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-MomentumForce",
-          "story_points": 2,
-          "assignee": "Shubham Gupta",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22996245",
-          "work_item_id": "a07EE00002cFwzNYAS",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-MomentumForce",
-          "story_points": 1,
-          "assignee": "Bharat Mishra",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
         "June"
       ]
     },
@@ -16654,9 +15260,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -17061,9 +15667,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -17194,8 +15800,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -17656,8 +16262,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -17898,28 +16504,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023enl2AA",
-      "epic_name": "[262][SFS MCX][Trust][GIS & Settings]",
-      "epic_status": "Completed",
-      "story_points": 35,
-      "work_items": [
-        {
-          "work_item_name": "W-20660982",
-          "work_item_id": "a07EE00002Rjy3FYAR",
-          "scheduled_build": "262",
-          "sprint_name": "No Sprint",
-          "story_points": 35,
-          "assignee": "Adi Sharet",
-          "status": "Never",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -18035,27 +16620,6 @@
       ]
     },
     {
-      "epic_id": "a3QEE0000027ITh2AM",
-      "epic_name": "[262][SFS MCX][AA] Telemetry (PFT)",
-      "epic_status": "On Track",
-      "story_points": 5,
-      "work_items": [
-        {
-          "work_item_name": "W-22005390",
-          "work_item_id": "a07EE00002Y14q2YAB",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile Core Experience",
-          "story_points": 5,
-          "assignee": "Mor Cohen H.",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
       "epic_id": "a3QEE000001ntE52AI",
       "epic_name": "[264][SFS MCX][Trust] Offline Engine Availability Bugs",
       "epic_status": "Not Started",
@@ -18093,8 +16657,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -18317,8 +16881,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -19474,9 +18038,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -19717,8 +18281,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -20129,8 +18693,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -20847,8 +19411,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -21011,8 +19575,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -21197,81 +19761,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022OEn2AM",
-      "epic_name": "*[262] SFS [AF] Scheduling Agent- Guest User Support",
-      "epic_status": "Completed",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-22724480",
-          "work_item_id": "a07EE00002b6sFzYAI",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-FSL - Foundation - Corecodiles",
-          "story_points": 2,
-          "assignee": "Neetu Meena",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022ZRx2AM",
-      "epic_name": "*262 Dispatch Experience 2.0 - List Views Migration Logic",
-      "epic_status": "Completed",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-23064297",
-          "work_item_id": "a07EE00002cVq2DYAS",
-          "scheduled_build": "262.4",
-          "sprint_name": "2026.06b-FSL - Foundation - Corecodiles",
-          "story_points": 1,
-          "assignee": "Eyal Cohen",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23107693",
-          "work_item_id": "a07EE00002cjycSYAQ",
-          "scheduled_build": "262.4",
-          "sprint_name": "2026.06b-FSL - Foundation - Corecodiles",
-          "story_points": 1,
-          "assignee": "Eyal Cohen",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE00000238nt2AA",
-      "epic_name": "*[262] SFS [ESO] [TRUST] Serivce Support",
-      "epic_status": "Completed",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-23513797",
-          "work_item_id": "a07EE00002fGFCEYA4",
-          "scheduled_build": "262",
-          "sprint_name": "2026.08a-FSL - Foundation - Corecodiles",
-          "story_points": 2,
-          "assignee": "Avi Inbar",
-          "status": "New",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "July"
       ]
     }
   ],
@@ -21523,16 +20014,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-22495818",
-          "work_item_id": "a07EE00002a2gx8YAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Walter Wu",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-23002531",
           "work_item_id": "a07EE00002cHWOAYA4",
           "scheduled_build": "-",
@@ -21559,6 +20040,16 @@
           "sprint_name": "2026.07b-Optimization Engineering",
           "story_points": 3,
           "assignee": "Dylan Mistry",
+          "status": "Closed",
+          "month": "July"
+        },
+        {
+          "work_item_name": "W-22495818",
+          "work_item_id": "a07EE00002a2gx8YAA",
+          "scheduled_build": "-",
+          "sprint_name": "2026.07b-Optimization Engineering",
+          "story_points": 2,
+          "assignee": "Walter Wu",
           "status": "Closed",
           "month": "July"
         },
@@ -21714,9 +20205,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -21927,8 +20418,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22039,8 +20530,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22221,9 +20712,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -22294,8 +20785,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -22466,8 +20957,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22548,8 +21039,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22620,8 +21111,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -22688,239 +21179,6 @@
           "sprint_name": "2026.06b-Optimization Engineering",
           "story_points": 1,
           "assignee": "Gil Laufer",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002NyYb2AK",
-      "epic_name": "[264] Dynamic scaling - trust",
-      "epic_status": "On Track",
-      "story_points": 36,
-      "work_items": [
-        {
-          "work_item_name": "W-22466459",
-          "work_item_id": "a07EE00002ZvB04YAF",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Eyal Tenzer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22469757",
-          "work_item_id": "a07EE00002ZvUPyYAN",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22469762",
-          "work_item_id": "a07EE00002ZvvUxYAJ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22469761",
-          "work_item_id": "a07EE00002Zw1pqYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22488718",
-          "work_item_id": "a07EE00002a09WNYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 4,
-          "assignee": "Eyal Tenzer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22495312",
-          "work_item_id": "a07EE00002a2UxjYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Walter Wu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22495217",
-          "work_item_id": "a07EE00002a2j2WYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Walter Wu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22838769",
-          "work_item_id": "a07EE00002bWCPpYAO",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22838759",
-          "work_item_id": "a07EE00002bWEkpYAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926189",
-          "work_item_id": "a07EE00002bu8x6YAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926186",
-          "work_item_id": "a07EE00002buTxPYAU",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23047223",
-          "work_item_id": "a07EE00002cRWWeYAO",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Eyal Tenzer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22588932",
-          "work_item_id": "a07EE00002aVXtQYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.08a-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Walter Wu",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23456986",
-          "work_item_id": "a07EE00002eonarYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Eyal Tenzer",
-          "status": "Ready for Review",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22466465",
-          "work_item_id": "a07EE00002Zucg8YAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Eyal Tenzer",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22495916",
-          "work_item_id": "a07EE00002a30hKYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Walter Wu",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23047107",
-          "work_item_id": "a07EE00002cRKlwYAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Dylan Mistry",
-          "status": "Closed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002PHan2AG",
-      "epic_name": "[264] Reshuffle - trust",
-      "epic_status": "Completed",
-      "story_points": 11,
-      "work_items": [
-        {
-          "work_item_name": "W-22488855",
-          "work_item_id": "a07EE00002ZzpKkYAJ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 5,
-          "assignee": "Eyal Tenzer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22756606",
-          "work_item_id": "a07EE00002bEYC5YAO",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-Optimization Engineering",
-          "story_points": 1,
-          "assignee": "Gil Laufer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23136639",
-          "work_item_id": "a07EE00002cs9ELYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-Optimization Engineering",
-          "story_points": 2,
-          "assignee": "Eyal Tenzer",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23225863",
-          "work_item_id": "a07EE00002dQ8PYYA0",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Sharon Hadar",
           "status": "Closed",
           "month": "June"
         }
@@ -23157,8 +21415,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -23210,8 +21468,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -23456,100 +21714,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002OBCT2A4",
-      "epic_name": "264 [Engine] SFS GPU Quality",
-      "epic_status": "On Track",
-      "story_points": 32,
-      "work_items": [
-        {
-          "work_item_name": "W-22491225",
-          "work_item_id": "a07EE00002a18z3YAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 5,
-          "assignee": "Rubi Arviv",
-          "status": "Never",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23471664",
-          "work_item_id": "a07EE00002ewKWmYAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Avior Malkukian",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22491226",
-          "work_item_id": "a07EE00002a18z4YAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b-Optimization Engineering",
-          "story_points": 3,
-          "assignee": "Rubi Arviv",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22491231",
-          "work_item_id": "a07EE00002a0uRXYAY",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 3,
-          "assignee": "Rubi Arviv",
-          "status": "Closed",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22491232",
-          "work_item_id": "a07EE00002a0uRYYAY",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 8,
-          "assignee": "Rubi Arviv",
-          "status": "Closed",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22491233",
-          "work_item_id": "a07EE00002a0uRZYAY",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Rubi Arviv",
-          "status": "Closed",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22491234",
-          "work_item_id": "a07EE00002a0uRaYAI",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 3,
-          "assignee": "Rubi Arviv",
-          "status": "Closed",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-23456766",
-          "work_item_id": "a07EE00002eohmvYAA",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 2,
-          "assignee": "Avior Malkukian",
-          "status": "In Progress",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -24044,8 +22210,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -24361,8 +22527,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -24468,48 +22634,6 @@
       ]
     },
     {
-      "epic_id": "a3QEE000001zqIr2AI",
-      "epic_name": "262 SFS [Hybrid Scheduling]  - MP 2 CORE improvments",
-      "epic_status": "On Track",
-      "story_points": 12,
-      "work_items": [
-        {
-          "work_item_name": "W-20587315",
-          "work_item_id": "a07EE00002RMvFZYA1",
-          "scheduled_build": "262",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Mirabelle Herscu",
-          "status": "Never",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21029269",
-          "work_item_id": "a07EE00002TWN37YAH",
-          "scheduled_build": "262",
-          "sprint_name": "2026.08a-FSL - Resource - Scheduling Platform",
-          "story_points": 5,
-          "assignee": "Alona Sapiro Haitovich",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-21705605",
-          "work_item_id": "a07EE00002WlCCCYA3",
-          "scheduled_build": "262",
-          "sprint_name": "2026.08a-FSL - Resource - Scheduling Platform",
-          "story_points": 2,
-          "assignee": "Alona Sapiro Haitovich",
-          "status": "New",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
       "epic_id": "a3QEE000001d5vJ2AQ",
       "epic_name": "258 SFS [Workforce Scheduler Unification] - Convert SR Custom Fields To Standard",
       "epic_status": "Canceled",
@@ -24588,59 +22712,7 @@
         }
       ],
       "months": [
-        "June",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022Tkj2AE",
-      "epic_name": "262 SFS [Unified Scheduling] - AB Performance - AB / GC Service-Less (in memory)",
-      "epic_status": "Completed",
-      "story_points": 5,
-      "work_items": [
-        {
-          "work_item_name": "W-20672718",
-          "work_item_id": "a07EE00002RmyZMYAZ",
-          "scheduled_build": "262",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Liran Shlomo",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
-        "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022SYX2A2",
-      "epic_name": "262 SFS [Unified Scheduling] - Unified API - Integration",
-      "epic_status": "On Track",
-      "story_points": 10,
-      "work_items": [
-        {
-          "work_item_name": "W-21705503",
-          "work_item_id": "a07EE00002Wl5KbYAJ",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-FSL - Resource - Scheduling Platform",
-          "story_points": 5,
-          "assignee": "Nisan Tagar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22982853",
-          "work_item_id": "a07EE00002cBofkYAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-FSL - Resource - Scheduling Platform",
-          "story_points": 5,
-          "assignee": "Nisan Tagar",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "August",
         "June"
       ]
     },
@@ -24692,8 +22764,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -24854,71 +22926,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000023wkf2AA",
-      "epic_name": "* 262 SFS [Trust] - Patch and Merge",
-      "epic_status": "Completed",
-      "story_points": 10,
-      "work_items": [
-        {
-          "work_item_name": "W-22753520",
-          "work_item_id": "a07EE00002bDki8YAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-FSL - Resource - Scheduling Platform",
-          "story_points": 2,
-          "assignee": "Lev Gorelik",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22982778",
-          "work_item_id": "a07EE00002cBg2oYAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-FSL - Resource - Scheduling Platform",
-          "story_points": 2,
-          "assignee": "Lev Gorelik",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23560642",
-          "work_item_id": "a07EE00002fc79dYAA",
-          "scheduled_build": "262",
-          "sprint_name": "2026.08a-FSL - Resource - Scheduling Platform",
-          "story_points": 2,
-          "assignee": "Lev Gorelik",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23383522",
-          "work_item_id": "a07EE00002eLECOYA4",
-          "scheduled_build": "262",
-          "sprint_name": "2026.07b-FSL - Resource - Scheduling Platform",
-          "story_points": 3,
-          "assignee": "Lev Gorelik",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23537583",
-          "work_item_id": "a07EE00002fRxQWYA0",
-          "scheduled_build": "262",
-          "sprint_name": "2026.07b-FSL - Resource - Scheduling Platform",
-          "story_points": 1,
-          "assignee": "Lev Gorelik",
-          "status": "Closed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
+        "June"
       ]
     },
     {
@@ -25587,8 +23597,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -26160,8 +24170,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -26472,8 +24482,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -26584,8 +24594,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -26926,8 +24936,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27298,8 +25308,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27441,8 +25451,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27553,8 +25563,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27595,8 +25605,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -27729,8 +25739,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -27891,8 +25901,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -28034,38 +26044,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000001nt7d2AA",
-      "epic_name": "262 [SFS Mobile Assets] Trust items and crash alert improvements, Telemetry",
-      "epic_status": "Completed",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-23030175",
-          "work_item_id": "a07EE00002cNgqJYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Assets",
-          "story_points": 1,
-          "assignee": "Anurag Dixit",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23169797",
-          "work_item_id": "a07EE00002d4kOLYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Assets",
-          "story_points": 1,
-          "assignee": "Anurag Dixit",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -28552,8 +26531,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -28721,27 +26700,6 @@
           "story_points": 2,
           "assignee": "Sandeep Agrawal",
           "status": "Closed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000022Qjd2AE",
-      "epic_name": "[264] [SFS Mobile Assets] Firebase performance SDK integration",
-      "epic_status": "On Track",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-23276788",
-          "work_item_id": "a07EE00002dgxd8YAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Assets",
-          "story_points": 2,
-          "assignee": "Sandeep Agrawal",
-          "status": "Fixed",
           "month": "July"
         }
       ],
@@ -28971,9 +26929,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "September",
-        "August"
+        "June"
       ]
     },
     {
@@ -29024,8 +26982,8 @@
         }
       ],
       "months": [
-        "June",
-        "September"
+        "September",
+        "June"
       ]
     },
     {
@@ -29156,9 +27114,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -29330,8 +27288,8 @@
         }
       ],
       "months": [
-        "July",
-        "September"
+        "September",
+        "July"
       ]
     },
     {
@@ -29407,451 +27365,6 @@
     }
   ],
   "SFS Core Scheduler": [
-    {
-      "epic_id": "a3QEE000002JpTt2AK",
-      "epic_name": "264 SFS Core Scheduler - Compliance : Accessibility",
-      "epic_status": "Not Started",
-      "story_points": 13,
-      "work_items": [
-        {
-          "work_item_name": "W-19080143",
-          "work_item_id": "a07EE00002IS4i9YAD",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Hiromichi Cho",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21475296",
-          "work_item_id": "a07EE00002Vq4UqYAJ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Anindya De",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21476904",
-          "work_item_id": "a07EE00002VqbC0YAJ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Saurabh Mittal",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22990608",
-          "work_item_id": "a07EE00002cEJ1QYAW",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sivagopal Manapragada",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22663997",
-          "work_item_id": "a07EE00002arW28YAE",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Sa11y Violations Importer API User",
-          "status": "Ready for Review",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22663999",
-          "work_item_id": "a07EE00002arW2AYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Sa11y Violations Importer API User",
-          "status": "Ready for Review",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22664056",
-          "work_item_id": "a07EE00002arW35YAE",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Sa11y Violations Importer API User",
-          "status": "Ready for Review",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22664011",
-          "work_item_id": "a07EE00002arW2MYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Sa11y Violations Importer API User",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22664019",
-          "work_item_id": "a07EE00002arW2UYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Sa11y Violations Importer API User",
-          "status": "Fixed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002DbQP2A0",
-      "epic_name": "264 SFS Core Scheduler - Engineering Trust Work",
-      "epic_status": "Not Started",
-      "story_points": 75,
-      "work_items": [
-        {
-          "work_item_name": "W-21346333",
-          "work_item_id": "a07EE00002VHt4CYAT",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Anant Dev",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22747499",
-          "work_item_id": "a07EE00002bCJjiYAG",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sunny Sadhnani",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22897038",
-          "work_item_id": "a07EE00002bjKpWYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Kritica Mantri",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22903139",
-          "work_item_id": "a07EE00002blf4wYAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Pragnya Sahu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23135975",
-          "work_item_id": "a07EE00002cs4tPYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Neetu Meena",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23135459",
-          "work_item_id": "a07EE00002csErtYAE",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Neetu Meena",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23155592",
-          "work_item_id": "a07EE00002cyuFTYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Neetu Meena",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23173051",
-          "work_item_id": "a07EE00002d7yYbYAI",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a [SP6-SF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Neetu Meena",
-          "status": "Not a bug",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23155576",
-          "work_item_id": "a07EE00002cz8mxYAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Neetu Meena",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22195500",
-          "work_item_id": "a07EE00002YhpObYAJ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 4,
-          "assignee": "Kritica Mantri",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22342273",
-          "work_item_id": "a07EE00002ZIdXiYAL",
-          "scheduled_build": "264",
-          "sprint_name": "2026.05b [SP3] - SFS Core Scheduler",
-          "story_points": 3,
-          "assignee": "Utpal Hajela",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22544362",
-          "work_item_id": "a07EE00002aIMKnYAO",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 4,
-          "assignee": "Sunny Sadhnani",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22835209",
-          "work_item_id": "a07EE00002bUxniYAC",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 3,
-          "assignee": "Utpal Hajela",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22855792",
-          "work_item_id": "a07EE00002bZhcFYAS",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Utpal Hajela",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22961533",
-          "work_item_id": "a07EE00002c5DaRYAU",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Pragnya Sahu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22963247",
-          "work_item_id": "a07EE00002c5ZI5YAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Josson Thoppil",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22964465",
-          "work_item_id": "a07EE00002c5rrWYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Anant Dev",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22966283",
-          "work_item_id": "a07EE00002c6OQaYAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a [SP4] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Saurabh Mittal",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23012469",
-          "work_item_id": "a07EE00002cJWRCYA4",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Anant Dev",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23012805",
-          "work_item_id": "a07EE00002cJjdtYAC",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sivagopal Manapragada",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23119146",
-          "work_item_id": "a07EE00002cmzPUYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sivagopal Manapragada",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23133525",
-          "work_item_id": "a07EE00002cr8hRYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sivagopal Manapragada",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21506663",
-          "work_item_id": "a07EE00002VycqnYAB",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Anant Dev",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22964515",
-          "work_item_id": "a07EE00002c5jxvYAA",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 5,
-          "assignee": "Kritica Mantri",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23452637",
-          "work_item_id": "a07EE00002en30HYAQ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sivagopal Manapragada",
-          "status": "QA In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-20392886",
-          "work_item_id": "a07EE00002QQuF1YAL",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Elisabet Perez Bautista",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-21246670",
-          "work_item_id": "a07EE00002UeixhYAB",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Ankur Yadav",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22723565",
-          "work_item_id": "a07EE00002b6dHAYAY",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 2,
-          "assignee": "Sunny Sadhnani",
-          "status": "QA In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-21602657",
-          "work_item_id": "a07EE00002WKh0aYAD",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 3,
-          "assignee": "Utpal Hajela",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22041120",
-          "work_item_id": "a07EE00002YB7wWYAT",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 6,
-          "assignee": "Kritica Mantri",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22195506",
-          "work_item_id": "a07EE00002Yhi8AYAR",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07b [SP7-FF] - SFS Core Scheduler",
-          "story_points": 3,
-          "assignee": "Kritica Mantri",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-17832758",
-          "work_item_id": "a07EE000029pP80YAE",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Peter (Duong) Doan",
-          "status": "Never",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-22544362",
-          "work_item_id": "a07EE00002aIMKnYAO",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 4,
-          "assignee": "Sunny Sadhnani",
-          "status": "Closed",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "June",
-        "July",
-        "August"
-      ]
-    },
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
@@ -29991,38 +27504,6 @@
       ],
       "months": [
         "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002J32f2AC",
-      "epic_name": "264 SFS Core Scheduler - Engineering Trust Work : Gacks",
-      "epic_status": "Not Started",
-      "story_points": 2,
-      "work_items": [
-        {
-          "work_item_name": "W-18427436",
-          "work_item_id": "a07EE00002DolK3YAJ",
-          "scheduled_build": "264",
-          "sprint_name": "2026.03a - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Delphi Bot",
-          "status": "Never",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-18594091",
-          "work_item_id": "a07EE00002EqJbTYAV",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Delphi Bot",
-          "status": "Never",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "June",
-        "August"
       ]
     },
     {
@@ -30433,8 +27914,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -30615,8 +28096,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -30657,9 +28138,9 @@
         }
       ],
       "months": [
-        "June",
+        "September",
         "July",
-        "September"
+        "June"
       ]
     },
     {
@@ -30717,27 +28198,6 @@
           "story_points": 2,
           "assignee": "Josson Thoppil",
           "status": "Fixed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000002XtkX2AS",
-      "epic_name": "266 SFS Core Scheduler - Engineering Trust Work",
-      "epic_status": "Not Started",
-      "story_points": 1,
-      "work_items": [
-        {
-          "work_item_name": "W-22358528",
-          "work_item_id": "a07EE00002ZLxtJYAT",
-          "scheduled_build": "266",
-          "sprint_name": "2026.08a [SP8-RF] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Anant Dev",
-          "status": "New",
           "month": "July"
         }
       ],
@@ -31147,9 +28607,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -31190,8 +28650,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -31412,9 +28872,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -31436,67 +28896,6 @@
       ],
       "months": [
         "June"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000029ZqD2AU",
-      "epic_name": "[264] Bulk User Import - Allow additional standard and custom fields",
-      "epic_status": "Canceled",
-      "story_points": 29,
-      "work_items": [
-        {
-          "work_item_name": "W-20425315",
-          "work_item_id": "a07EE00002QZyX1YAL",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 7,
-          "assignee": "Daniel Zheng",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-20425302",
-          "work_item_id": "a07EE00002Qa1z6YAB",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 7,
-          "assignee": "Daniel Zheng",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-20425282",
-          "work_item_id": "a07EE00002QaUgUYAV",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Daniel Zheng",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-20425262",
-          "work_item_id": "a07EE00002Qace0YAB",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Daniel Zheng",
-          "status": "New",
-          "month": "August"
-        },
-        {
-          "work_item_name": "W-20425272",
-          "work_item_id": "a07EE00002QaoclYAB",
-          "scheduled_build": "264",
-          "sprint_name": "No Sprint",
-          "story_points": 5,
-          "assignee": "Daniel Zheng",
-          "status": "Triaged",
-          "month": "August"
-        }
-      ],
-      "months": [
-        "August"
       ]
     },
     {
@@ -32233,8 +29632,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -32475,8 +29874,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
+        "August",
+        "June"
       ]
     },
     {
@@ -32567,8 +29966,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -32660,8 +30059,8 @@
         }
       ],
       "months": [
-        "July",
-        "September"
+        "September",
+        "July"
       ]
     },
     {
@@ -33887,148 +31286,6 @@
       ]
     },
     {
-      "epic_id": "a3QEE0000022Uth2AE",
-      "epic_name": "262 [AGX Pilot] Setup Experience, Core APIs and Flow Builder",
-      "epic_status": "Not Started",
-      "story_points": 19,
-      "work_items": [
-        {
-          "work_item_name": "W-22714990",
-          "work_item_id": "a07EE00002b4PS3YAM",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22739927",
-          "work_item_id": "a07EE00002bAGhzYAG",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22904378",
-          "work_item_id": "a07EE00002blHvhYAE",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 3,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23011439",
-          "work_item_id": "a07EE00002cJR0yYAG",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23034824",
-          "work_item_id": "a07EE00002cOe2zYAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23050208",
-          "work_item_id": "a07EE00002cSF72YAG",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23122916",
-          "work_item_id": "a07EE00002coSwuYAE",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23128529",
-          "work_item_id": "a07EE00002cpjFcYAI",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22547863",
-          "work_item_id": "a07EE00002aIp09YAC",
-          "scheduled_build": "262",
-          "sprint_name": "2026.05b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Zhengkang Liu",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22524748",
-          "work_item_id": "a07EE00002a9sSVYAY",
-          "scheduled_build": "262",
-          "sprint_name": "2026.05b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22680200",
-          "work_item_id": "a07EE00002avYUpYAM",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23050203",
-          "work_item_id": "a07EE00002cS8GwYAK",
-          "scheduled_build": "262",
-          "sprint_name": "2026.07a-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-22519522",
-          "work_item_id": "a07EE00002a8lHGYAY",
-          "scheduled_build": "262",
-          "sprint_name": "2026.07a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Fixed",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
@@ -34136,8 +31393,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -34278,18 +31535,18 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-23238514",
-          "work_item_id": "a07EE00002dSbEEYA0",
+          "work_item_name": "W-22726430",
+          "work_item_id": "a07EE00002b7QG2YAM",
           "scheduled_build": "264",
           "sprint_name": "2026.07a-SFS Mobile AGX",
           "story_points": 1,
           "assignee": "Test Failure Sweeper User",
-          "status": "Ready for Review",
+          "status": "Fixed",
           "month": "July"
         },
         {
-          "work_item_name": "W-22726430",
-          "work_item_id": "a07EE00002b7QG2YAM",
+          "work_item_name": "W-23238514",
+          "work_item_id": "a07EE00002dSbEEYA0",
           "scheduled_build": "264",
           "sprint_name": "2026.07a-SFS Mobile AGX",
           "story_points": 1,
@@ -34339,9 +31596,9 @@
         }
       ],
       "months": [
-        "June",
+        "August",
         "July",
-        "August"
+        "June"
       ]
     },
     {
@@ -34952,88 +32209,7 @@
         }
       ],
       "months": [
-        "June",
-        "July"
-      ]
-    },
-    {
-      "epic_id": "a3QEE000001tlfF2AQ",
-      "epic_name": "262 [AGX Pilot] iOS Native Runtime",
-      "epic_status": "On Track",
-      "story_points": 17,
-      "work_items": [
-        {
-          "work_item_name": "W-21652263",
-          "work_item_id": "a07EE00002WXWyCYAX",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 3,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22351787",
-          "work_item_id": "a07EE00002ZKU6kYAH",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Arnav Mendiratta",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22588703",
-          "work_item_id": "a07EE00002aVqeJYAS",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 3,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22622823",
-          "work_item_id": "a07EE00002agsTrYAI",
-          "scheduled_build": "262",
-          "sprint_name": "2026.05b-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22709248",
-          "work_item_id": "a07EE00002b3D6dYAE",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22785441",
-          "work_item_id": "a07EE00002bKXiGYAW",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 3,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22936348",
-          "work_item_id": "a07EE00002byQr3YAE",
-          "scheduled_build": "262",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        }
-      ],
-      "months": [
+        "July",
         "June"
       ]
     },
@@ -35085,8 +32261,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -35368,8 +32544,8 @@
         }
       ],
       "months": [
-        "June",
-        "July"
+        "July",
+        "June"
       ]
     },
     {
@@ -35431,29 +32607,8 @@
         }
       ],
       "months": [
-        "June",
-        "August"
-      ]
-    },
-    {
-      "epic_id": "a3QEE0000026LYT2A2",
-      "epic_name": "[AGX Android Pilot] Android Native Runtime",
-      "epic_status": "On Track",
-      "story_points": 3,
-      "work_items": [
-        {
-          "work_item_name": "W-18300247",
-          "work_item_id": "a07EE00002CxsrRYAR",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Location and DC",
-          "story_points": 3,
-          "assignee": "Thomas Myrden",
-          "status": "Triaged",
-          "month": "July"
-        }
-      ],
-      "months": [
-        "July"
+        "August",
+        "June"
       ]
     },
     {
