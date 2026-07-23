@@ -15005,25 +15005,31 @@ document.querySelectorAll('.allocations-view-btn').forEach(btn => {
 });
 
 // Team search filter
-document.getElementById('team-search').addEventListener('input', (e) => {
-    const search = e.target.value.toLowerCase();
-    const rows = document.querySelectorAll('#teams-table-body .team-row');
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(search) ? '' : 'none';
+const teamSearch = document.getElementById('team-search');
+if (teamSearch) {
+    teamSearch.addEventListener('input', (e) => {
+        const search = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#teams-table-body .team-row');
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(search) ? '' : 'none';
+        });
     });
-});
+}
 
 // Program search filter
-document.getElementById('program-search').addEventListener('input', (e) => {
-    const search = e.target.value.toLowerCase();
-    const rows = document.querySelectorAll('.program-capacity-row');
+const programSearch = document.getElementById('program-search');
+if (programSearch) {
+    programSearch.addEventListener('input', (e) => {
+        const search = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('.program-capacity-row');
 
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(search) ? '' : 'none';
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(search) ? '' : 'none';
+        });
     });
-});
+}
 </script>
     </div>
 

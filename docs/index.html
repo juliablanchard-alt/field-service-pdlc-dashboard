@@ -7394,7 +7394,7 @@ Lets dispatchers ask Agentforce why specific appointm
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-22
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-23
                             </span>
                             
                         </div>
@@ -7445,7 +7445,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -8197,7 +8197,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -12301,7 +12301,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -15092,7 +15092,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -18878,7 +18878,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -19486,7 +19486,7 @@ Lets dispatchers ask Agentforce why specific appointm
                             
                             <span style="color: #9ca3af; margin: 0 4px;">|</span>
                             <span class="project-meta-item">
-                                <span class="project-meta-label">Last Modified:</span> 2026-07-22
+                                <span class="project-meta-label">Last Modified:</span> 2026-07-23
                             </span>
                             
                         </div>
@@ -19537,7 +19537,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -19697,7 +19697,7 @@ Lets dispatchers ask Agentforce why specific appointm
                                         </span>
                                         
                                         
-                                        <span><strong>Last Modified:</strong> 2026-07-22</span>
+                                        <span><strong>Last Modified:</strong> 2026-07-23</span>
                                         
                                         <div class="hygiene-badges-container" style="margin-left: auto; line-height: 1;"></div>
                                     </div>
@@ -36774,25 +36774,31 @@ document.querySelectorAll('.allocations-view-btn').forEach(btn => {
 });
 
 // Team search filter
-document.getElementById('team-search').addEventListener('input', (e) => {
-    const search = e.target.value.toLowerCase();
-    const rows = document.querySelectorAll('#teams-table-body .team-row');
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(search) ? '' : 'none';
+const teamSearch = document.getElementById('team-search');
+if (teamSearch) {
+    teamSearch.addEventListener('input', (e) => {
+        const search = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#teams-table-body .team-row');
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(search) ? '' : 'none';
+        });
     });
-});
+}
 
 // Program search filter
-document.getElementById('program-search').addEventListener('input', (e) => {
-    const search = e.target.value.toLowerCase();
-    const rows = document.querySelectorAll('.program-capacity-row');
+const programSearch = document.getElementById('program-search');
+if (programSearch) {
+    programSearch.addEventListener('input', (e) => {
+        const search = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('.program-capacity-row');
 
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(search) ? '' : 'none';
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(search) ? '' : 'none';
+        });
     });
-});
+}
 </script>
     </div>
 
@@ -37341,7 +37347,7 @@ document.getElementById('program-search').addEventListener('input', (e) => {
             }
 
             // Update last updated timestamp
-            const lastUpdated = "2026-07-23T09:24:15.412259";
+            const lastUpdated = "2026-07-23T09:51:04.292011";
             if (lastUpdated) {
                 // Format the timestamp if it's an ISO string
                 const date = new Date(lastUpdated);
