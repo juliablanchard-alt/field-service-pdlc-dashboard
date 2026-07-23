@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T16:42:41.634515",
+  "last_updated": "2026-07-23T18:59:38.692551",
   "programs": [
     {
       "name": "[264] Mobile Insights GA",
@@ -747,8 +747,8 @@
               "name": "264 SFS Frontline AI - Voice To Form UX Enhancements",
               "id": "a3QEE0000021w5d2AA",
               "priority": "57",
-              "health": "Not Started",
-              "health_status": "Not Started",
+              "health": "On Track",
+              "health_status": "On Track",
               "health_comments": "-",
               "owner": "Paul Chan",
               "team": "SFS Frontline AI",
@@ -4466,7 +4466,7 @@
     {
       "name": "FS 260 Trust: S&O",
       "id": "a1fEE0000002eW1YAI",
-      "portfolio": "a1cEE000002UzmTYAS",
+      "portfolio": "Field Service 260 Trust",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4497,7 +4497,7 @@
     {
       "name": "262 Field Service Foundations: Operations and Intelligence",
       "id": "a1fEE0000002y9lYAA",
-      "portfolio": "a1cEE000003HtUbYAK",
+      "portfolio": "262 Field Service Foundations",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4518,7 +4518,7 @@
     {
       "name": "262 Field Service: Customer Adoption",
       "id": "a1fEE0000002tgOYAQ",
-      "portfolio": "a1cEE000003HtUcYAK",
+      "portfolio": "262 Field Service Mobile",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4539,7 +4539,7 @@
     {
       "name": "262 Field Service: Performance Priming",
       "id": "a1fEE0000002tgNYAQ",
-      "portfolio": "a1cEE000003HtUcYAK",
+      "portfolio": "262 Field Service Mobile",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4560,7 +4560,7 @@
     {
       "name": "262 Field Service: Mobile Worker Satisfaction",
       "id": "a1fEE0000002tgPYAQ",
-      "portfolio": "a1cEE000003HtUcYAK",
+      "portfolio": "262 Field Service Mobile",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4581,7 +4581,7 @@
     {
       "name": "262 Field Service Trust",
       "id": "a1fEE0000002wKrYAI",
-      "portfolio": "a1cEE000003XLaDYAW",
+      "portfolio": "FY26/27 Field Service Trust",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4642,7 +4642,7 @@
     {
       "name": "FS 262: Unified: Mobile for Industries (AGX)",
       "id": "a1fEE0000002kjVYAQ",
-      "portfolio": "a1cEE000002qklZYAQ",
+      "portfolio": "262 Field Service Unified Scheduling",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4673,7 +4673,7 @@
     {
       "name": "[262] Unified Workforce Management (UWM)",
       "id": "a1fEE0000002mmvYAA",
-      "portfolio": "a1cEE000002xDJRYA2",
+      "portfolio": "FY27 SC M5 AFCC Voice",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4734,7 +4734,7 @@
     {
       "name": "262 Field Service Foundations: Fast Start to Work",
       "id": "a1fEE0000002y89YAA",
-      "portfolio": "a1cEE000003HtUbYAK",
+      "portfolio": "262 Field Service Foundations",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4755,7 +4755,7 @@
     {
       "name": "FS 262: S&O: Unified on Core",
       "id": "a1fEE0000002tEvYAI",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4796,7 +4796,7 @@
     {
       "name": "Partner Cloud",
       "id": "a1fEE00000017U5YAI",
-      "portfolio": "a1cB000000000VJIAY",
+      "portfolio": "Sales Cloud",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4817,7 +4817,7 @@
     {
       "name": "SFS Mobile Quality",
       "id": "a1fEE0000002F1NYAU",
-      "portfolio": null,
+      "portfolio": "Unknown",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4838,7 +4838,7 @@
     {
       "name": "FS 260 Mobile: Performance Priming",
       "id": "a1fEE0000002dwXYAQ",
-      "portfolio": "a1cEE000002UuObYAK",
+      "portfolio": "Field Service 260 Mobile Pillar",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4859,7 +4859,7 @@
     {
       "name": "FS 260: S&O: New Dispatch Experience",
       "id": "a1fEE0000002e4bYAA",
-      "portfolio": "a1cEE000002UuQDYA0",
+      "portfolio": "Field Service 260 Scheduling & Optimization Pillar",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4880,7 +4880,7 @@
     {
       "name": "262 Field Service: Mobile AI/Agentforce",
       "id": "a1fEE0000002tgMYAQ",
-      "portfolio": "a1cEE000003HtUcYAK",
+      "portfolio": "262 Field Service Mobile",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4911,7 +4911,7 @@
     {
       "name": "FS 260 Trust: Foundations",
       "id": "a1fEE0000002eXdYAI",
-      "portfolio": "a1cEE000002UzmTYAS",
+      "portfolio": "Field Service 260 Trust",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4932,7 +4932,7 @@
     {
       "name": "262 Field Service: Native GIS",
       "id": "a1fEE0000002tgLYAQ",
-      "portfolio": "a1cEE000003HtUcYAK",
+      "portfolio": "262 Field Service Mobile",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4963,7 +4963,7 @@
     {
       "name": "[262] Service Cloud Trust",
       "id": "a1fEE0000002pT3YAI",
-      "portfolio": "a1cEE000003BdabYAC",
+      "portfolio": "FY27 SC M1 Trust",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -4994,7 +4994,7 @@
     {
       "name": "FS 262: S&O: Workforce Optimization",
       "id": "a1fEE0000002wG1YAI",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5015,7 +5015,7 @@
     {
       "name": "Nonprofit Impact",
       "id": "a1fEE0000000DlFYAU",
-      "portfolio": "a1cB00000000hrCIAQ",
+      "portfolio": "Industries Cloud",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5036,7 +5036,7 @@
     {
       "name": "FS 262: S&O: Opt. Scale & Speed",
       "id": "a1fEE0000002tDJYAY",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5067,7 +5067,7 @@
     {
       "name": "FS 262: S&O: Agentic S&O",
       "id": "a1fEE0000002t8TYAQ",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5138,7 +5138,7 @@
     {
       "name": "FS 262: S&O: Dispatch Experience 2.0",
       "id": "a1fEE0000002tA5YAI",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5239,7 +5239,7 @@
     {
       "name": "Do not use FS 262: S&O Trust",
       "id": "a1fEE0000002wEPYAY",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5280,7 +5280,7 @@
     {
       "name": "FS 262: S&O: Customer Success / Flexibility",
       "id": "a1fEE0000002tGXYAY",
-      "portfolio": "a1cEE000003HtUdYAK",
+      "portfolio": "262 Field Service Scheduling & Optimization",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5311,7 +5311,7 @@
     {
       "name": "Health Cloud and Life Sciences",
       "id": "a1fEE0000000ObpYAE",
-      "portfolio": "a1cB00000000hrCIAQ",
+      "portfolio": "Industries Cloud",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5332,7 +5332,7 @@
     {
       "name": "FS 262: Unified Scheduling",
       "id": "a1fEE0000002kgHYAQ",
-      "portfolio": "a1cEE000002qklZYAQ",
+      "portfolio": "262 Field Service Unified Scheduling",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5363,7 +5363,7 @@
     {
       "name": "Salesforce Field Service 258: Trust",
       "id": "a1fEE0000002GBxYAM",
-      "portfolio": "a1cEE000001hLdJYAU",
+      "portfolio": "Salesforce Field Service 258 Theme:  Trust",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5404,7 +5404,7 @@
     {
       "name": "262 Field Service Foundations: Assets",
       "id": "a1fEE0000002yCzYAI",
-      "portfolio": "a1cEE000003HtUbYAK",
+      "portfolio": "262 Field Service Foundations",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",
@@ -5425,7 +5425,7 @@
     {
       "name": "Public Sector Solutions",
       "id": "a1fEE0000000jZpYAI",
-      "portfolio": "a1cB00000000hrCIAQ",
+      "portfolio": "Industries Cloud",
       "health": "Unknown",
       "health_status": "Unknown",
       "program_manager": "",

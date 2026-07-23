@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T16:37:37.659058",
+  "last_updated": "2026-07-23T19:00:05.719207",
   "teams": [
     {
       "name": "FSL - Asset - 360",
@@ -9,6 +9,8 @@
       "portfolios": [
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Sri Ram Bathina",
+      "product_owner": "Nishant Sharma",
       "capacity_delivered_june": 209.0,
       "work_items_closed_june": 46,
       "capacity_committed_july": 198.0,
@@ -28,8 +30,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 6.0,
-      "work_items_delivered_june": 75
+      "september_committed_unmapped": 6.0
     },
     {
       "name": "FSL - Core - Foundations",
@@ -39,6 +40,8 @@
       "portfolios": [
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Anand Komarraju",
+      "product_owner": "Christopher Battles",
       "capacity_delivered_june": 49.0,
       "work_items_closed_june": 13,
       "capacity_committed_july": 70.0,
@@ -60,8 +63,7 @@
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 15
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Foundation - Apps",
@@ -71,6 +73,8 @@
       "portfolios": [
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Siddharth Mathur",
+      "product_owner": "Neerja Rewal",
       "capacity_delivered_june": 447.0,
       "work_items_closed_june": 23,
       "capacity_committed_july": 150.0,
@@ -92,8 +96,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 2.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 85
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Foundation - Atlas",
@@ -103,6 +106,8 @@
       "portfolios": [
         "FY27 SC M4 UWM"
       ],
+      "engineering_manager": "Pei Chu",
+      "product_owner": "Tushar Sharma",
       "capacity_delivered_june": 224.0,
       "work_items_closed_june": 74,
       "capacity_committed_july": 168.0,
@@ -130,8 +135,7 @@
       "september_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 40.0
       },
-      "september_committed_unmapped": 66.0,
-      "work_items_delivered_june": 88
+      "september_committed_unmapped": 66.0
     },
     {
       "name": "FSL - Foundation - Corecodiles",
@@ -141,6 +145,8 @@
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
       ],
+      "engineering_manager": "Avi Inbar",
+      "product_owner": "Niv Garber",
       "capacity_delivered_june": 133.0,
       "work_items_closed_june": 90,
       "capacity_committed_july": 102.0,
@@ -167,8 +173,7 @@
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 99
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Operations - Intelligence",
@@ -179,6 +184,8 @@
         "264 Field Service Foundations",
         "FY27 SC M4 UWM"
       ],
+      "engineering_manager": "Vinay Bayya",
+      "product_owner": "Tushar Sharma",
       "capacity_delivered_june": 136.0,
       "work_items_closed_june": 51,
       "capacity_committed_july": 162.0,
@@ -205,8 +212,7 @@
       "september_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 82.0
       },
-      "september_committed_unmapped": 79.0,
-      "work_items_delivered_june": 41
+      "september_committed_unmapped": 79.0
     },
     {
       "name": "FSL - Resource - Dispatch Console",
@@ -216,6 +222,8 @@
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
       ],
+      "engineering_manager": "Lilach Talbi",
+      "product_owner": "Yulia Libster",
       "capacity_delivered_june": 138.0,
       "work_items_closed_june": 42,
       "capacity_committed_july": 50.0,
@@ -237,8 +245,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 78.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 55
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Resource - Scheduling Hawks",
@@ -249,6 +256,8 @@
         "264 Field Service Scheduling & Optimization",
         "FY27 SC M4 UWM"
       ],
+      "engineering_manager": "Eviatar Yosef",
+      "product_owner": "Itay Sagiv",
       "capacity_delivered_june": 462.0,
       "work_items_closed_june": 111,
       "capacity_committed_july": 237.0,
@@ -271,8 +280,7 @@
       },
       "august_committed_unmapped": 58.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 155
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Resource - Scheduling Intelligence",
@@ -283,6 +291,8 @@
         "264 Field Service Scheduling & Optimization",
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Yonatan Bar-Yehuda",
+      "product_owner": "Dori Nahmias",
       "capacity_delivered_june": 207.0,
       "work_items_closed_june": 68,
       "capacity_committed_july": 143.0,
@@ -312,8 +322,7 @@
       },
       "august_committed_unmapped": 1.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 80
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Resource - Scheduling Orcas",
@@ -323,6 +332,8 @@
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
       ],
+      "engineering_manager": "Shay Gozansky",
+      "product_owner": "Niv Garber",
       "capacity_delivered_june": 446.0,
       "work_items_closed_june": 142,
       "capacity_committed_july": 219.0,
@@ -346,8 +357,7 @@
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 173
+      "september_committed_unmapped": 0
     },
     {
       "name": "FSL - Resource - Scheduling Platform",
@@ -358,6 +368,8 @@
         "264 Field Service Scheduling & Optimization",
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Gal Shalom",
+      "product_owner": "Dori Nahmias",
       "capacity_delivered_june": 215.0,
       "work_items_closed_june": 54,
       "capacity_committed_july": 182.0,
@@ -387,8 +399,7 @@
       },
       "august_committed_unmapped": 38.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 21.0,
-      "work_items_delivered_june": 82
+      "september_committed_unmapped": 21.0
     },
     {
       "name": "MomentumForce",
@@ -398,6 +409,8 @@
       "portfolios": [
         "264 Field Service Scheduling & Optimization"
       ],
+      "engineering_manager": "Ankur Singh",
+      "product_owner": "Amit Mizrahi",
       "capacity_delivered_june": 218.5,
       "work_items_closed_june": 156,
       "capacity_committed_july": 118.5,
@@ -420,8 +433,7 @@
       },
       "august_committed_unmapped": 60.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 175
+      "september_committed_unmapped": 0
     },
     {
       "name": "Optimization Engineering",
@@ -432,6 +444,8 @@
         "264 Field Service Scheduling & Optimization",
         "FY27 SC M4 UWM"
       ],
+      "engineering_manager": "Mor Cohen",
+      "product_owner": "Dori Nahmias",
       "capacity_delivered_june": 305.0,
       "work_items_closed_june": 138,
       "capacity_committed_july": 201.0,
@@ -461,8 +475,7 @@
       },
       "august_committed_unmapped": 7.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 168
+      "september_committed_unmapped": 0
     },
     {
       "name": "QuantumForce",
@@ -472,6 +485,8 @@
       "portfolios": [
         "264 Field Service Foundations"
       ],
+      "engineering_manager": "Yariv Finkelshtein",
+      "product_owner": "Yariv Finkelshtein",
       "capacity_delivered_june": 125.0,
       "work_items_closed_june": 98,
       "capacity_committed_july": 87.0,
@@ -487,8 +502,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 110
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Core Scheduler",
@@ -498,6 +512,8 @@
       "portfolios": [
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Kritica Mantri",
+      "product_owner": "Nishant Sharma",
       "capacity_delivered_june": 264.0,
       "work_items_closed_june": 69,
       "capacity_committed_july": 130.0,
@@ -522,8 +538,7 @@
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 5.0,
-      "work_items_delivered_june": 104
+      "september_committed_unmapped": 5.0
     },
     {
       "name": "SFS Frontline AI",
@@ -533,6 +548,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Paul Chan",
+      "product_owner": "Nitasha Walia",
       "capacity_delivered_june": 177.0,
       "work_items_closed_june": 89,
       "capacity_committed_july": 93.0,
@@ -547,16 +564,15 @@
       },
       "june_delivered_unmapped": 119.0,
       "july_committed_by_program": {
-        "264 Field Service: Mobile Agentic AI": 11.0
+        "264 Field Service: Mobile Agentic AI": 9.0
       },
-      "july_committed_unmapped": 82.0,
+      "july_committed_unmapped": 84.0,
       "august_committed_by_program": {
         "262 Field Service: Mobile AI/Agentforce": 35.0
       },
       "august_committed_unmapped": 3.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 103
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile AGX",
@@ -566,6 +582,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Raghav Abboy",
+      "product_owner": "Will Carpenter",
       "capacity_delivered_june": 241.0,
       "work_items_closed_june": 68,
       "capacity_committed_july": 241.0,
@@ -590,8 +608,7 @@
       },
       "august_committed_unmapped": 33.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 93
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Assets",
@@ -601,6 +618,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Sandeep Agrawal",
+      "product_owner": "Sharon Adler",
       "capacity_delivered_june": 258.0,
       "work_items_closed_june": 80,
       "capacity_committed_july": 176.0,
@@ -623,8 +642,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 20.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 127
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Comms and Search",
@@ -634,6 +652,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Steve Thistle",
+      "product_owner": "Kara Carreri",
       "capacity_delivered_june": 106.0,
       "work_items_closed_june": 41,
       "capacity_committed_july": 76.0,
@@ -655,8 +675,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 50
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Core Experience",
@@ -668,6 +687,8 @@
         "264 Field Service Mobile",
         "264 Field Service Workforce Scheduling"
       ],
+      "engineering_manager": "Adi Sharet",
+      "product_owner": "Kevin Ota",
       "capacity_delivered_june": 117.0,
       "work_items_closed_june": 34,
       "capacity_committed_july": 185.0,
@@ -692,8 +713,7 @@
       },
       "august_committed_unmapped": 68.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 59
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Location and DC",
@@ -703,6 +723,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Yoni Moseri",
+      "product_owner": "Sharon Adler",
       "capacity_delivered_june": 184.0,
       "work_items_closed_june": 66,
       "capacity_committed_july": 93.0,
@@ -723,8 +745,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 29.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 87
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Offline Extensibility",
@@ -734,6 +755,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Raghav Abboy",
+      "product_owner": "Nitasha Walia",
       "capacity_delivered_june": 0,
       "work_items_closed_june": 0,
       "capacity_committed_july": 0,
@@ -749,8 +772,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 0
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Platform DX",
@@ -760,6 +782,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Andrew Shand",
+      "product_owner": "Will Carpenter",
       "capacity_delivered_june": 172.0,
       "work_items_closed_june": 46,
       "capacity_committed_july": 118.0,
@@ -777,8 +801,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 14.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 87
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile - Quality",
@@ -788,6 +811,8 @@
       "portfolios": [
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Shobha Srinivasa",
+      "product_owner": "Ray Finn",
       "capacity_delivered_june": 0,
       "work_items_closed_june": 0,
       "capacity_committed_july": 3.0,
@@ -803,8 +828,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 0
+      "september_committed_unmapped": 0
     },
     {
       "name": "SFS Mobile Services",
@@ -815,6 +839,8 @@
         "264 Field Service Foundations",
         "264 Field Service Mobile"
       ],
+      "engineering_manager": "Raghav Abboy",
+      "product_owner": "Nitasha Walia",
       "capacity_delivered_june": 187.0,
       "work_items_closed_june": 64,
       "capacity_committed_july": 155.0,
@@ -836,8 +862,7 @@
       },
       "august_committed_unmapped": 310.0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 275.0,
-      "work_items_delivered_june": 93
+      "september_committed_unmapped": 275.0
     },
     {
       "name": "SFS Setup Experience",
@@ -847,6 +872,8 @@
       "portfolios": [
         "264 Field Service Foundations"
       ],
+      "engineering_manager": "Pei Chu",
+      "product_owner": "Shilpa Ramaswamy",
       "capacity_delivered_june": 22.0,
       "work_items_closed_june": 11,
       "capacity_committed_july": 35.0,
@@ -866,8 +893,7 @@
       },
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 5.0,
-      "work_items_delivered_june": 12
+      "september_committed_unmapped": 5.0
     },
     {
       "name": "SFS - WFM - Worker - Experience",
@@ -877,6 +903,8 @@
       "portfolios": [
         "FY27 SC M4 UWM"
       ],
+      "engineering_manager": "Vinay Bayya",
+      "product_owner": "Tushar Sharma",
       "capacity_delivered_june": 200.0,
       "work_items_closed_june": 64,
       "capacity_committed_july": 73.0,
@@ -900,8 +928,7 @@
       "september_committed_by_program": {
         "[264] Unified Workforce Management (UWM)": 8.0
       },
-      "september_committed_unmapped": 516.0,
-      "work_items_delivered_june": 66
+      "september_committed_unmapped": 516.0
     },
     {
       "name": "SynergyForce",
@@ -911,6 +938,8 @@
       "portfolios": [
         "264 Field Service Foundations"
       ],
+      "engineering_manager": "Yariv Finkelshtein",
+      "product_owner": "Amit Mizrahi",
       "capacity_delivered_june": 5.0,
       "work_items_closed_june": 3,
       "capacity_committed_july": 0,
@@ -926,8 +955,7 @@
       "august_committed_by_program": {},
       "august_committed_unmapped": 0,
       "september_committed_by_program": {},
-      "september_committed_unmapped": 0,
-      "work_items_delivered_june": 4
+      "september_committed_unmapped": 0
     }
   ]
 }
