@@ -16321,21 +16321,21 @@ if (programSearch) {
                 `;
 
                 // Epic details (collapsed by default)
-                team.epics.forEach(epic => {
+                team.epics.forEach((epic, epicIndex) => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
                                       epic.health === 'Watch' ? '#f59e0b' :
                                       epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
 
                     html += `
-                        <tr id="breakdown-orphaned-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
+                        <tr class="breakdown-orphaned-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
                             <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b;">
                                 <div style="font-weight: 500; margin-bottom: 2px;">
                                     <a href="https://gus.my.salesforce.com/${epic.id}" target="_blank" style="color: #0176D3; text-decoration: none;">
                                         ${epic.name}
-                                    </a>
+                                    </a> | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.health}</span>
                                 </div>
                                 <div style="font-size: 11px; color: #94a3b8;">
-                                    Owner: ${epic.owner} | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.health}</span>
+                                    Owner: ${epic.owner}
                                 </div>
                             </td>
                             <td style="text-align: center; padding: 8px 16px;"></td>
@@ -16355,7 +16355,7 @@ if (programSearch) {
 
         function toggleOrphanedTeamBreakdown(teamName) {
             const icon = document.getElementById(`icon-${teamName}`);
-            const breakdownRows = document.querySelectorAll(`#breakdown-orphaned-${teamName}`);
+            const breakdownRows = document.querySelectorAll(`.breakdown-orphaned-${teamName}`);
 
             if (breakdownRows.length > 0) {
                 const isExpanded = breakdownRows[0].style.display !== 'none';
@@ -16411,22 +16411,22 @@ if (programSearch) {
                 `;
 
                 // Epic details (collapsed by default)
-                release.epics.forEach(epic => {
+                release.epics.forEach((epic, epicIndex) => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
                                       epic.health === 'Watch' ? '#f59e0b' :
                                       epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
 
                     html += `
-                        <tr id="breakdown-release-${sanitizedRelease}" style="display: none; border-bottom: 1px solid #f1f5f9;">
+                        <tr class="breakdown-release-${sanitizedRelease}" style="display: none; border-bottom: 1px solid #f1f5f9;">
                             <td style="padding: 8px 16px;"></td>
                             <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #64748b;">
                                 <div style="font-weight: 500; margin-bottom: 2px;">
                                     <a href="https://gus.my.salesforce.com/${epic.id}" target="_blank" style="color: #0176D3; text-decoration: none;">
                                         ${epic.name}
-                                    </a>
+                                    </a> | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.health}</span>
                                 </div>
                                 <div style="font-size: 11px; color: #94a3b8;">
-                                    Team: ${epic.team} | Owner: ${epic.owner} | <span style="background: ${healthColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.health}</span>
+                                    Team: ${epic.team} | Owner: ${epic.owner}
                                 </div>
                             </td>
                             <td style="text-align: center; padding: 8px 16px;"></td>
@@ -16443,7 +16443,7 @@ if (programSearch) {
 
         function toggleOrphanedReleaseBreakdown(releaseName) {
             const icon = document.getElementById(`icon-release-${releaseName}`);
-            const breakdownRows = document.querySelectorAll(`#breakdown-release-${releaseName}`);
+            const breakdownRows = document.querySelectorAll(`.breakdown-release-${releaseName}`);
 
             if (breakdownRows.length > 0) {
                 const isExpanded = breakdownRows[0].style.display !== 'none';
