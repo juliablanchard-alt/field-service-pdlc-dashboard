@@ -83,6 +83,43 @@ def derive_team_portfolios():
 
     return team_portfolio_map
 
+def fetch_team_managers(team_names):
+    """Fetch engineering manager and product owner for each team"""
+    print("🔍 Fetching team managers from GUS...")
+    name_conditions = " OR ".join([f"Name = '{name}'" for name in team_names])
+    query = f"""
+    SELECT Name, Engineering_Manager__r.Name, Product_Owner__r.Name
+    FROM ADM_Scrum_Team__c
+    WHERE {name_conditions}
+    """
+
+    try:
+        result = subprocess.run(
+            ['sf', 'data', 'query', '--target-org', TARGET_ORG,
+             '--query', query, '--json'],
+            capture_output=True, text=True, check=True
+        )
+        data = json.loads(result.stdout)
+        records = data.get('result', {}).get('records', [])
+
+        team_managers = {}
+        for record in records:
+            team_name = record.get('Name', '')
+            em_obj = record.get('Engineering_Manager__r', {})
+            po_obj = record.get('Product_Owner__r', {})
+            em_name = em_obj.get('Name', '') if em_obj else ''
+            po_name = po_obj.get('Name', '') if po_obj else ''
+            team_managers[team_name] = {
+                'engineering_manager': em_name.title() if em_name else '',
+                'product_owner': po_name.title() if po_name else ''
+            }
+
+        print(f"   ✓ Fetched manager data for {len(team_managers)} teams")
+        return team_managers
+    except Exception as e:
+        print(f"   ⚠️  Failed to fetch manager data: {e}")
+        return {}
+
 def parse_teams(report_data):
     """Parse teams from report groupings"""
     teams_list = []
@@ -143,6 +180,10 @@ report_data = fetch_report()
 
 teams = parse_teams(report_data)
 
+# Fetch manager data for all teams
+team_names = [team['name'] for team in teams]
+team_managers = fetch_team_managers(team_names)
+
 # Load existing teams data to preserve capacity fields
 existing_data = {}
 if DATA_FILE.exists():
@@ -158,12 +199,18 @@ if existing_data.get('teams'):
     for team in existing_data['teams']:
         existing_teams_map[team['name']] = team
 
-# Merge new roster data with existing capacity data
+# Merge new roster data with existing capacity data and add manager data
 for team in teams:
     team_name = team['name']
+
+    # Add manager data (fetched fresh from GUS)
+    managers = team_managers.get(team_name, {})
+    team['engineering_manager'] = managers.get('engineering_manager', '')
+    team['product_owner'] = managers.get('product_owner', '')
+
     if team_name in existing_teams_map:
         existing_team = existing_teams_map[team_name]
-        # Preserve all capacity-related fields and manager data
+        # Preserve capacity-related fields (but NOT manager fields - those are freshly fetched)
         capacity_fields = [
             'capacity_delivered_june', 'work_items_closed_june',
             'capacity_committed_july', 'work_items_committed_july',
@@ -172,8 +219,7 @@ for team in teams:
             'june_delivered_by_program', 'june_delivered_unmapped',
             'july_committed_by_program', 'july_committed_unmapped',
             'august_committed_by_program', 'august_committed_unmapped',
-            'september_committed_by_program', 'september_committed_unmapped',
-            'engineering_manager', 'product_owner'
+            'september_committed_by_program', 'september_committed_unmapped'
         ]
         for field in capacity_fields:
             if field in existing_team:
