@@ -15097,7 +15097,10 @@ document.getElementById('program-search').addEventListener('input', (e) => {
 
             // Otherwise, load and render epic breakdown
             try {
-                const response = await fetch('/api/unmapped-details');
+                // Try static JSON first (for GitHub Pages), fallback to API
+                const endpoint = window.location.hostname.includes('github.io') ?
+                    'data/unmapped_details.json' : '/api/unmapped-details';
+                const response = await fetch(endpoint);
                 if (!response.ok) {
                     console.error('API error:', response.status, response.statusText);
                     return;
