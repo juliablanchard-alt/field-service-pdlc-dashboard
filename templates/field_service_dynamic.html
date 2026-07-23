@@ -15143,7 +15143,7 @@ if (programSearch) {
                                               epic.epic_status === 'Blocked' ? '#dc2626' :
                                               epic.epic_status === 'Completed' ? '#60a5fa' :
                                               epic.epic_status === 'On Hold' ? '#eab308' :
-                                              epic.epic_status === 'Canceled' || epic.epic_status === 'Cancelled' ? '#9ca3af' :
+                                              epic.epic_status === 'Canceled' || epic.epic_status === 'Cancelled' ? '#bca2d3' :
                                               epic.epic_status === 'Not Started' ? '#94a3b8' : '#64748b';
                         const epicStatusBadge = epic.epic_status ?
                             ` | <span style="background: ${epicStatusColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${epic.epic_status}</span>` : '';
@@ -15185,7 +15185,7 @@ if (programSearch) {
                                               wi.status === 'QA In Progress' ? '#8b5cf6' :  // purple
                                               wi.status === 'Triaged' ? '#008080' :  // darker teal
                                               wi.status === 'On Hold' ? '#eab308' :  // yellow
-                                              wi.status === 'Canceled' || wi.status === 'Cancelled' ? '#9ca3af' :  // muted grey
+                                              wi.status === 'Canceled' || wi.status === 'Cancelled' ? '#bca2d3' :  // light purple/lavender
                                               wi.status === 'New' ? '#2563eb' : '#64748b';  // blue font color
                             const statusBadge = wi.status ?
                                 ` | <span style="background: ${statusColor}; color: white; padding: 1px 6px; border-radius: 3px; font-size: 10px; white-space: nowrap;">${wi.status}</span>` : '';
