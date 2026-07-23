@@ -708,8 +708,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -961,8 +961,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -1244,8 +1244,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -1327,8 +1327,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -1804,8 +1804,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2247,8 +2247,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2349,8 +2349,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2471,8 +2471,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2796,8 +2796,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2949,8 +2949,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -3313,8 +3313,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -3366,8 +3366,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -3480,8 +3480,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -3643,8 +3643,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -3738,8 +3738,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -4041,8 +4041,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -4073,8 +4073,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -4248,8 +4248,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -5345,8 +5345,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -5537,9 +5537,9 @@
         }
       ],
       "months": [
-        "July",
+        "September",
         "June",
-        "September"
+        "July"
       ]
     }
   ],
@@ -5664,8 +5664,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -5777,15 +5777,15 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 20,
+      "story_points": 19,
       "work_items": [
         {
           "work_item_name": "W-22895734",
@@ -5835,16 +5835,6 @@
           "story_points": 2,
           "assignee": "Joel Harmon",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-20015297",
-          "work_item_id": "a07EE00002Nsg2zYAB",
-          "scheduled_build": "-",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Denina Walker",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -5919,8 +5909,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6091,8 +6081,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6354,8 +6344,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6497,8 +6487,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6761,8 +6751,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6823,8 +6813,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6945,8 +6935,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6997,8 +6987,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7109,8 +7099,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7233,8 +7223,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7306,7 +7296,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 53,
+      "story_points": 51,
       "work_items": [
         {
           "work_item_name": "W-21200257",
@@ -7406,16 +7396,6 @@
           "story_points": 1,
           "assignee": "Thomas Myrden",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21949813",
-          "work_item_id": "a07EE00002XgpIZYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Comms and Search",
-          "story_points": 2,
-          "assignee": "Neil Parsons",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -7550,8 +7530,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7653,8 +7633,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7808,7 +7788,7 @@
       "epic_id": "a3QEE000002CjWT2A0",
       "epic_name": "264 SFS Frontline AI - [M2.7] Core Unplanned Trust",
       "epic_status": "On Track",
-      "story_points": 27,
+      "story_points": 24,
       "work_items": [
         {
           "work_item_name": "W-20393134",
@@ -7891,26 +7871,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22162660",
-          "work_item_id": "a07EE00002YakEsYAJ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Frontline AI",
-          "story_points": 1,
-          "assignee": "Karthick Raghavan",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22293127",
-          "work_item_id": "a07EE00002Z6lk1YAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Vishal Gupta",
-          "status": "Not Reproducible",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-22860883",
           "work_item_id": "a07EE00002bb3ypYAA",
           "scheduled_build": "-",
@@ -7942,15 +7902,15 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "a3QEE000002CjY52AK",
       "epic_name": "264 SFS Frontline AI - [M2.7] Mobile Unplanned Trust",
       "epic_status": "On Track",
-      "story_points": 40,
+      "story_points": 36,
       "work_items": [
         {
           "work_item_name": "W-20448828",
@@ -8103,36 +8063,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-20448376",
-          "work_item_id": "a07EE00002QigRzYAJ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 1,
-          "assignee": "Manushi Talwar",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21958443",
-          "work_item_id": "a07EE00002XlMVoYAN",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06c-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Manushi Talwar",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22344030",
-          "work_item_id": "a07EE00002ZJ13lYAD",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 1,
-          "assignee": "Vishal Gupta",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22494118",
           "work_item_id": "a07EE00002a33baYAA",
           "scheduled_build": "-",
@@ -8264,15 +8194,15 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "a3QEE000002Krev2AC",
       "epic_name": "264 SFS Frontline AI - [Accessibility] Accessibility Audit",
       "epic_status": "Completed",
-      "story_points": 28,
+      "story_points": 14,
       "work_items": [
         {
           "work_item_name": "W-22015732",
@@ -8342,76 +8272,6 @@
           "story_points": 2,
           "assignee": "Audit Data Importer",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015750",
-          "work_item_id": "a07EE00002Y3QOgYAN",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015842",
-          "work_item_id": "a07EE00002Y3bYUYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06c-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015845",
-          "work_item_id": "a07EE00002Y3bYXYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06c-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015852",
-          "work_item_id": "a07EE00002Y3bYeYAJ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015887",
-          "work_item_id": "a07EE00002Y3bZDYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015888",
-          "work_item_id": "a07EE00002Y3bZEYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22015891",
-          "work_item_id": "a07EE00002Y3bZHYAZ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 2,
-          "assignee": "Audit Data Importer",
-          "status": "Not Reproducible",
           "month": "June"
         }
       ],
@@ -8718,15 +8578,15 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "a3QEE000002ByVx2AK",
       "epic_name": "264 SFS Frontline AI - [M2.7] Mobile Trust",
       "epic_status": "On Track",
-      "story_points": 4,
+      "story_points": 3,
       "work_items": [
         {
           "work_item_name": "W-23073479",
@@ -8736,16 +8596,6 @@
           "story_points": 1,
           "assignee": "Denina Walker",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21845226",
-          "work_item_id": "a07EE00002XG6nGYAT",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Frontline AI",
-          "story_points": 1,
-          "assignee": "Shreyaa Sridhar",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -8760,8 +8610,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8832,8 +8682,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8946,8 +8796,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8978,8 +8828,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9532,8 +9382,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9615,8 +9465,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9757,8 +9607,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10147,8 +9997,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10391,8 +10241,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10464,8 +10314,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     }
   ],
@@ -10798,8 +10648,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -11720,8 +11570,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -11872,8 +11722,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12025,8 +11875,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12157,8 +12007,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12189,8 +12039,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     }
   ],
@@ -12659,8 +12509,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12901,8 +12751,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13074,8 +12924,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13176,8 +13026,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13229,8 +13079,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13401,8 +13251,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13453,8 +13303,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13545,8 +13395,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13577,8 +13427,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13660,8 +13510,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13733,8 +13583,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14131,8 +13981,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14263,8 +14113,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14555,8 +14405,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14777,8 +14627,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -15134,8 +14984,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -15306,7 +15156,7 @@
       "epic_id": "a3QEE0000020oLR2AY",
       "epic_name": "264 SFS Mobile - [MIT][Trust] SFS Planned Trust Enhancements",
       "epic_status": "Not Started",
-      "story_points": 126,
+      "story_points": 122,
       "work_items": [
         {
           "work_item_name": "W-20442846",
@@ -15336,26 +15186,6 @@
           "story_points": 1,
           "assignee": "Dana Bergman",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21740052",
-          "work_item_id": "a07EE00002WvDrZYAV",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-SFS Location and DC",
-          "story_points": 2,
-          "assignee": "Maya Shavin",
-          "status": "Not Reproducible",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22361609",
-          "work_item_id": "a07EE00002ZMaxgYAD",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06a-SFS Location and DC",
-          "story_points": 2,
-          "assignee": "Dana Bergman",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -15941,15 +15771,15 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "a3QEE000002GU0z2AG",
       "epic_name": "264 SFS Mobile - [TRUST] Production Support & Investigations",
       "epic_status": "On Track",
-      "story_points": 75,
+      "story_points": 73,
       "work_items": [
         {
           "work_item_name": "W-22238072",
@@ -16039,16 +15869,6 @@
           "story_points": 2,
           "assignee": "Denina Walker",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22710498",
-          "work_item_id": "a07EE00002b3QORYA2",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-SFS Location and DC",
-          "story_points": 2,
-          "assignee": "Nadav Goldstein",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -16353,8 +16173,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -16589,8 +16409,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -16846,7 +16666,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 16,
+      "story_points": 15,
       "work_items": [
         {
           "work_item_name": "W-22664212",
@@ -16919,16 +16739,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-23378079",
-          "work_item_id": "a07EE00002eJ8jPYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-FSL - Foundation - Corecodiles",
-          "story_points": 1,
-          "assignee": "Eyal Cohen",
-          "status": "Not Reproducible",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-22897009",
           "work_item_id": "a07EE00002bjoaMYAQ",
           "scheduled_build": "-",
@@ -16970,8 +16780,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     }
   ],
@@ -17385,8 +17195,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17599,8 +17409,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17801,8 +17611,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17873,8 +17683,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17975,8 +17785,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18047,8 +17857,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18221,8 +18031,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18373,8 +18183,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18426,8 +18236,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18662,8 +18472,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -18693,7 +18503,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 74,
+      "story_points": 73,
       "work_items": [
         {
           "work_item_name": "W-21929320",
@@ -18753,16 +18563,6 @@
           "story_points": 2,
           "assignee": "Shashikant Maurya",
           "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-21769330",
-          "work_item_id": "a07EE00002X0dw5YAB",
-          "scheduled_build": "-",
-          "sprint_name": "No Sprint",
-          "story_points": 1,
-          "assignee": "Arnab Samanta",
-          "status": "Not Reproducible",
           "month": "June"
         },
         {
@@ -19027,8 +18827,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19366,8 +19166,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19571,8 +19371,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -20111,8 +19911,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -20684,8 +20484,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -21077,8 +20877,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -21449,8 +21249,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -21592,8 +21392,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -21704,8 +21504,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22017,8 +21817,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22221,8 +22021,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22293,8 +22093,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22426,8 +22226,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22903,8 +22703,8 @@
         }
       ],
       "months": [
-        "July",
-        "August"
+        "August",
+        "July"
       ]
     },
     {
@@ -23191,8 +22991,8 @@
         }
       ],
       "months": [
-        "June",
-        "September"
+        "September",
+        "June"
       ]
     },
     {
@@ -23324,8 +23124,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23387,8 +23187,8 @@
       ],
       "months": [
         "August",
-        "June",
-        "September"
+        "September",
+        "June"
       ]
     },
     {
@@ -23539,8 +23339,8 @@
         }
       ],
       "months": [
-        "July",
-        "September"
+        "September",
+        "July"
       ]
     },
     {
@@ -23775,9 +23575,9 @@
         }
       ],
       "months": [
-        "July",
+        "September",
         "June",
-        "September"
+        "July"
       ]
     },
     {
@@ -24053,8 +23853,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -24155,8 +23955,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -25167,8 +24967,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -25260,8 +25060,8 @@
         }
       ],
       "months": [
-        "July",
-        "September"
+        "September",
+        "July"
       ]
     },
     {
@@ -26627,8 +26427,8 @@
       ],
       "months": [
         "August",
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -27219,8 +27019,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -27271,8 +27071,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -27554,8 +27354,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {

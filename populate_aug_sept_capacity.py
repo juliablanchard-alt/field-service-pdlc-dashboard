@@ -79,7 +79,7 @@ WHERE Closed_On__c >= 2026-06-01T00:00:00Z
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
@@ -108,7 +108,7 @@ WHERE Sprint__r.Start_Date__c >= 2026-07-01
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
@@ -139,7 +139,7 @@ WHERE Sprint__r.Start_Date__c >= 2026-08-01
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
@@ -159,7 +159,7 @@ WHERE Epic__r.Scheduled_Build__r.Name IN ('264', '264.0', '264.1', '264.2', '264
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
@@ -199,7 +199,7 @@ WHERE Sprint__r.Start_Date__c >= 2026-09-01
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
@@ -219,7 +219,7 @@ WHERE Epic__r.Scheduled_Build__r.Name IN ('264.5', '264.6', '266', '266.0', '266
   AND Scrum_Team__c IN ('{team_ids_str}')
   AND Story_Points__c != null
   AND CreatedBy.Name NOT IN ('Test Failure Sweeper User', 'Your Friendly Build Master', 'ResultNG Notification Engine', 'IncidentCommandCenter', 'TFMA Yoda')
-  AND Status__c NOT IN ('Never', 'Duplicate')
+  AND Status__c NOT IN ('Never', 'Duplicate', 'Not Reproducible')
 LIMIT 50000
 """
 
