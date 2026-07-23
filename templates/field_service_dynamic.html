@@ -2777,7 +2777,7 @@
         <button class="nav-button" onclick="switchView('execution')" tabindex="-1">Execution</button>
         <button class="nav-button" onclick="switchView('allocations')" tabindex="-1">Allocations</button>
         {% if show_orphaned_tab %}
-        <button class="nav-button" onclick="switchView('orphaned')" tabindex="-1">Unallocated</button>
+        <button class="nav-button" onclick="switchView('orphaned')" tabindex="-1">Orphaned Work</button>
         {% endif %}
     </div>
 
@@ -2857,7 +2857,7 @@
             </div>
         </div>
 
-        <!-- Unallocated filters (only show in Unallocated view) -->
+        <!-- Orphaned Work filters (only show in Orphaned Work view) -->
         <div id="orphaned-filters-inline" style="display: none;">
             <!-- View Toggles (By Team | By Release) -->
             <div class="filter-group-exec">
@@ -14751,7 +14751,7 @@
                                     <tr style="border-bottom: 1px solid #f1f5f9; cursor: pointer;" onclick="toggleUnmappedBreakdown('{{ team.name | replace(' ', '-') | replace(':', '') }}', '{{ team.name }}')">
                                         <td style="padding: 8px 16px 8px 48px; font-size: 13px; color: #94a3b8; font-style: italic; vertical-align: top;">
                                             <span class="expand-icon" id="expand-unmapped-{{ team.name | replace(' ', '-') | replace(':', '') }}" style="display: inline-block; width: 18px; margin-right: 4px; font-size: 14px; color: #94a3b8; transition: transform 0.2s;">▸</span>
-                                            Unallocated
+                                            Orphaned
                                         </td>
                                         <td style="padding: 8px 16px; vertical-align: top;"></td>
                                         <td style="text-align: center; padding: 8px 16px; font-size: 12px; color: #64748b; vertical-align: top;">
@@ -14888,7 +14888,7 @@
     {% if show_orphaned_tab %}
     <!-- Orphaned Epics Content -->
     <div id="orphaned-view" class="view-content">
-        <h2 style="font-size: 24px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">Unallocated Epics</h2>
+        <h2 style="font-size: 24px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">Orphaned Work</h2>
         <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">
             Epics missing program or project assignments (264+ releases only). These require PM/leadership intervention to properly nest in the portfolio hierarchy.
         </p>
