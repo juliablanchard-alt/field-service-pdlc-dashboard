@@ -4,7 +4,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 163,
+      "story_points": 162,
       "work_items": [
         {
           "work_item_name": "W-22794768",
@@ -725,21 +725,11 @@
           "assignee": "Naor Alkobi",
           "status": "Duplicate",
           "month": "July"
-        },
-        {
-          "work_item_name": "W-23485258",
-          "work_item_id": "a07EE00002ezzkyYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-FSL - Resource - Scheduling Hawks",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -990,9 +980,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -1273,9 +1263,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -1356,9 +1346,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -1863,9 +1853,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -2356,9 +2346,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -2499,8 +2489,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2621,8 +2611,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -2814,8 +2804,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -2976,9 +2966,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3129,9 +3119,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3513,9 +3503,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3566,9 +3556,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3680,9 +3670,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3873,9 +3863,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -3906,8 +3896,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -3968,9 +3958,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -4271,9 +4261,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -4304,8 +4294,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -5342,7 +5332,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 52,
+      "story_points": 42,
       "work_items": [
         {
           "work_item_name": "W-21950326",
@@ -5555,82 +5545,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22645645",
-          "work_item_id": "a07EE00002amFidYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22772390",
-          "work_item_id": "a07EE00002bHYFUYA4",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22781284",
-          "work_item_id": "a07EE00002bJfcgYAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22845939",
           "work_item_id": "a07EE00002bXiIaYAK",
           "scheduled_build": "-",
           "sprint_name": "2026.06b-FSL - Foundation - Atlas",
           "story_points": 1,
           "assignee": "Your Friendly Build Master",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22911328",
-          "work_item_id": "a07EE00002bop7UYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22953407",
-          "work_item_id": "a07EE00002c2SwsYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23021493",
-          "work_item_id": "a07EE00002cLZdOYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23109943",
-          "work_item_id": "a07EE00002ckZdsYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -5675,36 +5595,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-23411790",
-          "work_item_id": "a07EE00002eXUu7YAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Pending Release",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23130015",
-          "work_item_id": "a07EE00002cqi9PYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23261541",
-          "work_item_id": "a07EE00002dbvepYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-FSL - Foundation - Atlas",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-23425457",
           "work_item_id": "a07EE00002ecf9LYAQ",
           "scheduled_build": "-",
@@ -5716,8 +5606,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -5908,9 +5798,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "September",
-        "June"
+        "July"
       ]
     }
   ],
@@ -6035,8 +5925,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6167,9 +6057,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -6310,8 +6200,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6502,8 +6392,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -6804,9 +6694,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -6989,8 +6879,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7253,8 +7143,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7315,8 +7205,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7437,8 +7327,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7489,8 +7379,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7601,8 +7491,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -7725,8 +7615,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8303,8 +8193,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8406,8 +8296,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -8705,8 +8595,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9047,8 +8937,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9501,8 +9391,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9543,8 +9433,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9615,8 +9505,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9729,8 +9619,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -9761,8 +9651,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10305,8 +10195,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10388,8 +10278,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10530,8 +10420,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -10919,9 +10809,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -11163,9 +11053,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -11571,8 +11461,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12513,8 +12403,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12665,8 +12555,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12818,8 +12708,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12950,8 +12840,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -12982,8 +12872,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     }
   ],
@@ -13196,8 +13086,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -13359,8 +13249,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -13462,8 +13352,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13704,8 +13594,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -13876,9 +13766,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -13979,8 +13869,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14032,8 +13922,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14204,8 +14094,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14256,8 +14146,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14348,8 +14238,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14380,8 +14270,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -14462,9 +14352,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -14535,9 +14425,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -14953,9 +14843,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -15086,15 +14976,15 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
       "epic_id": "a3QEE000002JRL72AO",
       "epic_name": "[264][SFS MCX][Trust] Trust",
       "epic_status": "On Track",
-      "story_points": 55,
+      "story_points": 40,
       "work_items": [
         {
           "work_item_name": "W-22057409",
@@ -15247,72 +15137,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22027145",
-          "work_item_id": "a07EE00002Y6jlwYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22186791",
           "work_item_id": "a07EE00002YfxJZYAZ",
           "scheduled_build": "-",
           "sprint_name": "2026.05c-SFS Mobile Core Experience",
           "story_points": 1,
           "assignee": "Man Kit Yau",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22814777",
-          "work_item_id": "a07EE00002bRbesYAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22869273",
-          "work_item_id": "a07EE00002bcSBtYAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23024386",
-          "work_item_id": "a07EE00002cLhl9YAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23034638",
-          "work_item_id": "a07EE00002cOtuIYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23109673",
-          "work_item_id": "a07EE00002cjwkaYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -15435,101 +15265,11 @@
           "assignee": "Isaac Simantov",
           "status": "Ready for Review",
           "month": "July"
-        },
-        {
-          "work_item_name": "W-22847621",
-          "work_item_id": "a07EE00002bXoy3YAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23376034",
-          "work_item_id": "a07EE00002eIEcYYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "In Progress",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23136726",
-          "work_item_id": "a07EE00002csaWDYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23284114",
-          "work_item_id": "a07EE00002djW84YAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23342179",
-          "work_item_id": "a07EE00002e6ktaYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23380799",
-          "work_item_id": "a07EE00002eKp0JYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23443891",
-          "work_item_id": "a07EE00002ejtIPYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23449055",
-          "work_item_id": "a07EE00002ektdYYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23463762",
-          "work_item_id": "a07EE00002esBvFYAU",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-SFS Mobile Core Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -15750,8 +15490,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -15893,8 +15633,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -16953,9 +16693,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -17366,8 +17106,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17428,8 +17168,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17664,8 +17404,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -17828,8 +17568,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -18014,8 +17754,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     }
   ],
@@ -18428,9 +18168,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -18501,8 +18241,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -18673,8 +18413,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18875,8 +18615,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -18947,8 +18687,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19049,8 +18789,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19121,8 +18861,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19305,9 +19045,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -19458,8 +19198,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19511,8 +19251,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -19778,7 +19518,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 84,
+      "story_points": 74,
       "work_items": [
         {
           "work_item_name": "W-21929320",
@@ -20031,86 +19771,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-21204635",
-          "work_item_id": "a07EE00002UOM7eYAH",
-          "scheduled_build": "-",
-          "sprint_name": "2026.02c-FSL - Asset - 360",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22166165",
-          "work_item_id": "a07EE00002YbGgSYAV",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22353101",
-          "work_item_id": "a07EE00002ZKO7sYAH",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22483937",
-          "work_item_id": "a07EE00002Zze8GYAR",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22528491",
-          "work_item_id": "a07EE00002aBueUYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22612195",
-          "work_item_id": "a07EE00002aeDsXYAU",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22616352",
-          "work_item_id": "a07EE00002afn3rYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22841736",
-          "work_item_id": "a07EE00002bWiJAYA0",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-23252037",
           "work_item_id": "a07EE00002daDCDYA2",
           "scheduled_build": "-",
@@ -20189,21 +19849,11 @@
           "assignee": "Alisha Khatoon",
           "status": "Closed",
           "month": "July"
-        },
-        {
-          "work_item_name": "W-22105077",
-          "work_item_id": "a07EE00002YMbhUYAT",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07b-FSL - Asset - 360",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Fixed",
-          "month": "July"
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -20339,8 +19989,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -20541,8 +20191,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -20593,8 +20243,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -20755,9 +20405,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -21042,7 +20692,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 61,
+      "story_points": 48,
       "work_items": [
         {
           "work_item_name": "W-22482114",
@@ -21085,52 +20735,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22427506",
-          "work_item_id": "a07EE00002Zj07iYAB",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22638570",
-          "work_item_id": "a07EE00002ailRbYAI",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22655640",
           "work_item_id": "a07EE00002aonhnYAA",
           "scheduled_build": "-",
           "sprint_name": "2026.06a-FSL - Foundation - Apps",
           "story_points": 2,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22691043",
-          "work_item_id": "a07EE00002ayRu7YAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22691044",
-          "work_item_id": "a07EE00002aySqLYAU",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -21165,42 +20775,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22769252",
-          "work_item_id": "a07EE00002bGrIxYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22784073",
-          "work_item_id": "a07EE00002bKanNYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Apps",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22805435",
           "work_item_id": "a07EE00002bPP5bYAG",
           "scheduled_build": "-",
           "sprint_name": "2026.06b-FSL - Foundation - Apps",
           "story_points": 1,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22855654",
-          "work_item_id": "a07EE00002bZnT4YAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -21225,32 +20805,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-23040399",
-          "work_item_id": "a07EE00002cPx5JYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-23054372",
           "work_item_id": "a07EE00002cT091YAC",
           "scheduled_build": "-",
           "sprint_name": "2026.06b-FSL - Foundation - Apps",
           "story_points": 2,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23129981",
-          "work_item_id": "a07EE00002cqksoYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06c-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -21375,26 +20935,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-23151335",
-          "work_item_id": "a07EE00002cxQRMYA2",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-FSL - Foundation - Apps",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "New",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23148633",
-          "work_item_id": "a07EE00002cweW6YAI",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-FSL - Foundation - Apps",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-23329548",
           "work_item_id": "a07EE00002e454MYAQ",
           "scheduled_build": "-",
@@ -21406,8 +20946,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22281,8 +21821,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22383,8 +21923,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22755,8 +22295,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -22898,8 +22438,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23010,8 +22550,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23323,8 +22863,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23527,8 +23067,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23599,8 +23139,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -23742,8 +23282,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -24507,8 +24047,8 @@
         }
       ],
       "months": [
-        "September",
-        "June"
+        "June",
+        "September"
       ]
     },
     {
@@ -24639,27 +24179,17 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 30,
+      "story_points": 13,
       "work_items": [
-        {
-          "work_item_name": "W-21789805",
-          "work_item_id": "a07EE00002X5PRvYAN",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
         {
           "work_item_name": "W-21906788",
           "work_item_id": "a07EE00002XWKSGYA5",
@@ -24671,92 +24201,12 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22662535",
-          "work_item_id": "a07EE00002aqXxVYAU",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22904058",
           "work_item_id": "a07EE00002blXB6YAM",
           "scheduled_build": "-",
           "sprint_name": "2026.06a-FSL - Operations - Intelligence",
           "story_points": 2,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926111",
-          "work_item_id": "a07EE00002buMkkYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926115",
-          "work_item_id": "a07EE00002buOcmYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926114",
-          "work_item_id": "a07EE00002buSV4YAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22926110",
-          "work_item_id": "a07EE00002buWTiYAM",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22959269",
-          "work_item_id": "a07EE00002c3knvYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23053171",
-          "work_item_id": "a07EE00002cSe78YAC",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-FSL - Operations - Intelligence",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23130087",
-          "work_item_id": "a07EE00002cqL9fYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06c-FSL - Operations - Intelligence [ Schema Freeze]",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -24792,9 +24242,9 @@
         }
       ],
       "months": [
-        "September",
+        "June",
         "August",
-        "June"
+        "September"
       ]
     },
     {
@@ -25047,7 +24497,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 16,
+      "story_points": 14,
       "work_items": [
         {
           "work_item_name": "W-23084162",
@@ -25130,16 +24580,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22806085",
-          "work_item_id": "a07EE00002bPSlCYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-22961591",
           "work_item_id": "a07EE00002c5EJgYAM",
           "scheduled_build": "-",
@@ -25156,16 +24596,6 @@
           "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
           "story_points": 1,
           "assignee": "TFMS Yoda",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23013469",
-          "work_item_id": "a07EE00002cJknKYAS",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b [SP5] - SFS Core Scheduler",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -25222,9 +24652,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "September",
-        "June"
+        "July"
       ]
     },
     {
@@ -25336,7 +24766,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 7,
+      "story_points": 4,
       "work_items": [
         {
           "work_item_name": "W-20917904",
@@ -25345,16 +24775,6 @@
           "sprint_name": "2026.06a-SFS Setup Experience",
           "story_points": 2,
           "assignee": "Courtney Evans",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23135812",
-          "work_item_id": "a07EE00002cs8i4YAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Setup Experience",
-          "story_points": 3,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -25370,8 +24790,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -25542,8 +24962,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -25674,9 +25094,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -25716,18 +25136,8 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 5,
+      "story_points": 3,
       "work_items": [
-        {
-          "work_item_name": "W-22650492",
-          "work_item_id": "a07EE00002anp7CYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Setup Experience",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
         {
           "work_item_name": "W-22944314",
           "work_item_id": "a07EE00002c1WbdYAE",
@@ -26413,8 +25823,8 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
@@ -26655,15 +26065,15 @@
         }
       ],
       "months": [
-        "August",
-        "June"
+        "June",
+        "August"
       ]
     },
     {
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 12,
+      "story_points": 8,
       "work_items": [
         {
           "work_item_name": "W-22739152",
@@ -26696,36 +26106,6 @@
           "month": "June"
         },
         {
-          "work_item_name": "W-22555353",
-          "work_item_id": "a07EE00002aKYmCYAW",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS - WFM - Worker - Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23055799",
-          "work_item_id": "a07EE00002cT0MSYA0",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS - WFM - Worker - Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-23066210",
-          "work_item_id": "a07EE00002cWCqiYAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS - WFM - Worker - Experience",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
           "work_item_name": "W-23159889",
           "work_item_id": "a07EE00002d18IkYAI",
           "scheduled_build": "-",
@@ -26734,21 +26114,11 @@
           "assignee": "Yi-Chin Chang",
           "status": "Triaged",
           "month": "July"
-        },
-        {
-          "work_item_name": "W-23301446",
-          "work_item_id": "a07EE00002dr3rdYAA",
-          "scheduled_build": "-",
-          "sprint_name": "2026.07a-SFS - WFM - Worker - Experience [ FF]",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "July"
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -26882,8 +26252,8 @@
         }
       ],
       "months": [
-        "September",
-        "August"
+        "August",
+        "September"
       ]
     },
     {
@@ -28050,7 +27420,7 @@
       "epic_id": "no-epic",
       "epic_name": "[No Epic Assignment]",
       "epic_status": null,
-      "story_points": 11,
+      "story_points": 2,
       "work_items": [
         {
           "work_item_name": "W-22920629",
@@ -28059,86 +27429,6 @@
           "sprint_name": "2026.06b-SFS Mobile AGX",
           "story_points": 2,
           "assignee": "Aditya Maniar",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22527137",
-          "work_item_id": "a07EE00002aB9CqYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22527146",
-          "work_item_id": "a07EE00002aBRstYAG",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22527115",
-          "work_item_id": "a07EE00002aBbKsYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22564661",
-          "work_item_id": "a07EE00002aNlWmYAK",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22643727",
-          "work_item_id": "a07EE00002akhrWYAQ",
-          "scheduled_build": "-",
-          "sprint_name": "2026.05b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22675541",
-          "work_item_id": "a07EE00002avD9kYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22730326",
-          "work_item_id": "a07EE00002b83JTYAY",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06a-SFS Mobile AGX",
-          "story_points": 2,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22734167",
-          "work_item_id": "a07EE00002b9BzfYAE",
-          "scheduled_build": "-",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         }
@@ -28182,7 +27472,7 @@
       "epic_id": "a3QEE000002O3YH2A0",
       "epic_name": "[AGX GA] Flow Builder, Setup Experience",
       "epic_status": "On Track",
-      "story_points": 30,
+      "story_points": 27,
       "work_items": [
         {
           "work_item_name": "W-23050213",
@@ -28211,16 +27501,6 @@
           "sprint_name": "2026.06b-SFS Mobile AGX",
           "story_points": 2,
           "assignee": "Roman Ivaniv",
-          "status": "Closed",
-          "month": "June"
-        },
-        {
-          "work_item_name": "W-22730338",
-          "work_item_id": "a07EE00002b8Of5YAE",
-          "scheduled_build": "264",
-          "sprint_name": "2026.06b-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
           "status": "Closed",
           "month": "June"
         },
@@ -28285,26 +27565,6 @@
           "month": "July"
         },
         {
-          "work_item_name": "W-22726430",
-          "work_item_id": "a07EE00002b7QG2YAM",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
-          "work_item_name": "W-23238514",
-          "work_item_id": "a07EE00002dSbEEYA0",
-          "scheduled_build": "264",
-          "sprint_name": "2026.07a-SFS Mobile AGX",
-          "story_points": 1,
-          "assignee": "Test Failure Sweeper User",
-          "status": "Fixed",
-          "month": "July"
-        },
-        {
           "work_item_name": "W-21093228",
           "work_item_id": "a07EE00002TqEQzYAN",
           "scheduled_build": "264",
@@ -28346,9 +27606,9 @@
         }
       ],
       "months": [
-        "July",
+        "June",
         "August",
-        "June"
+        "July"
       ]
     },
     {
@@ -28939,8 +28199,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -28991,8 +28251,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
@@ -29274,8 +28534,8 @@
         }
       ],
       "months": [
-        "July",
-        "June"
+        "June",
+        "July"
       ]
     },
     {
