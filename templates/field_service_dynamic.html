@@ -16378,7 +16378,11 @@ if (programSearch) {
                 team.epics.forEach((epic, epicIndex) => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
                                       epic.health === 'Watch' ? '#f59e0b' :
-                                      epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
+                                      epic.health === 'Blocked' ? '#dc2626' :
+                                      epic.health === 'Completed' ? '#60a5fa' :
+                                      epic.health === 'On Hold' ? '#eab308' :
+                                      epic.health === 'Canceled' || epic.health === 'Cancelled' ? '#bca2d3' :
+                                      epic.health === 'Not Started' ? '#94a3b8' : '#64748b';
 
                     html += `
                         <tr class="breakdown-orphaned-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
@@ -16464,7 +16468,11 @@ if (programSearch) {
                 manager.epics.forEach((epic, epicIndex) => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
                                       epic.health === 'Watch' ? '#f59e0b' :
-                                      epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
+                                      epic.health === 'Blocked' ? '#dc2626' :
+                                      epic.health === 'Completed' ? '#60a5fa' :
+                                      epic.health === 'On Hold' ? '#eab308' :
+                                      epic.health === 'Canceled' || epic.health === 'Cancelled' ? '#bca2d3' :
+                                      epic.health === 'Not Started' ? '#94a3b8' : '#64748b';
 
                     html += `
                         <tr class="breakdown-em-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
@@ -16533,7 +16541,11 @@ if (programSearch) {
                 manager.epics.forEach((epic, epicIndex) => {
                     const healthColor = epic.health === 'On Track' ? '#10b981' :
                                       epic.health === 'Watch' ? '#f59e0b' :
-                                      epic.health === 'Blocked' ? '#dc2626' : '#94a3b8';
+                                      epic.health === 'Blocked' ? '#dc2626' :
+                                      epic.health === 'Completed' ? '#60a5fa' :
+                                      epic.health === 'On Hold' ? '#eab308' :
+                                      epic.health === 'Canceled' || epic.health === 'Cancelled' ? '#bca2d3' :
+                                      epic.health === 'Not Started' ? '#94a3b8' : '#64748b';
 
                     html += `
                         <tr class="breakdown-pm-${sanitizedName}" style="display: none; border-bottom: 1px solid #f1f5f9;">
