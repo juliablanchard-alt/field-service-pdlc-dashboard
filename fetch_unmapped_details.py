@@ -241,6 +241,171 @@ for item in july_items:
                 'points': points
             })
 
+# Query August/September committed work using the epic discovery approach
+print("\n🔄 Fetching August/September epics...")
+
+# Get August epics (264.2, 264.4, 264.5, etc)
+august_epics_query = """
+SELECT Id, Name, Scheduled_Build__r.Name
+FROM ADM_Epic__c
+WHERE Scheduled_Build__r.Name IN ('264.2', '264.4', '264.5', '264.6')
+LIMIT 5000
+"""
+august_epics = run_soql(august_epics_query)
+august_epic_ids = [e['Id'] for e in august_epics]
+
+# Get September epics (264.3, 264.7, 266)
+september_epics_query = """
+SELECT Id, Name, Scheduled_Build__r.Name
+FROM ADM_Epic__c
+WHERE Scheduled_Build__r.Name IN ('264.3', '264.7', '264.8', '266', '266.0', '266.1')
+LIMIT 5000
+"""
+september_epics = run_soql(september_epics_query)
+september_epic_ids = [e['Id'] for e in september_epics]
+
+print(f"✅ Found {len(august_epic_ids)} August epics, {len(september_epic_ids)} September epics")
+
+# Query August work items in batches
+august_unmapped_by_team = defaultdict(lambda: defaultdict(lambda: {
+    'epic_id': '', 'epic_name': '', 'epic_health': '', 'epic_owner': '', 'story_points': 0, 'work_items': []
+}))
+
+if august_epic_ids:
+    print("🔄 Fetching August work items...")
+    BATCH_SIZE = 100
+    august_work_items = []
+    for i in range(0, len(august_epic_ids), BATCH_SIZE):
+        batch = august_epic_ids[i:i+BATCH_SIZE]
+        batch_ids_str = "', '".join(batch)
+        query = f"""
+        SELECT Id, Name, Scrum_Team__c, Story_Points__c,
+               Epic__r.Id, Epic__r.Name, Epic__r.Health__c,
+               Epic__r.Scheduled_Build__r.Name, Epic__r.LastModifiedDate,
+               Epic__r.Project__r.Name, Epic__r.Owner.Name,
+               Assignee__r.Name, Subject__c, Status__c
+        FROM ADM_Work__c
+        WHERE Epic__c IN ('{batch_ids_str}')
+          AND Scrum_Team__c IN ('{team_ids_str}')
+          AND Story_Points__c != null
+        LIMIT 50000
+        """
+        august_work_items.extend(run_soql(query))
+
+    print(f"✅ Found {len(august_work_items)} August work items")
+
+    # Process August items (same logic as June/July)
+    for item in august_work_items:
+        team_id = item.get('Scrum_Team__c')
+        points = item.get('Story_Points__c', 0) or 0
+        epic = item.get('Epic__r')
+
+        if team_id in team_name_map:
+            team_name = team_name_map[team_id]
+            project_name = epic.get('Project__r', {}).get('Name') if epic and epic.get('Project__r') else None
+
+            # Only include if unmapped
+            if project_name and project_name in project_to_program:
+                continue
+
+            if epic and should_include_epic(epic):
+                epic_id = epic.get('Id', 'no-epic')
+                epic_name = epic.get('Name', '[No Epic]')
+                epic_health = epic.get('Health__c', 'Unknown')
+                epic_owner = epic.get('Owner', {}).get('Name', '-') if epic.get('Owner') else '-'
+            else:
+                epic_id = 'no-epic'
+                epic_name = '[No Epic]'
+                epic_health = 'Unknown'
+                epic_owner = '-'
+
+            august_unmapped_by_team[team_name][epic_id]['epic_id'] = epic_id
+            august_unmapped_by_team[team_name][epic_id]['epic_name'] = epic_name
+            august_unmapped_by_team[team_name][epic_id]['epic_health'] = epic_health
+            august_unmapped_by_team[team_name][epic_id]['epic_owner'] = epic_owner
+            august_unmapped_by_team[team_name][epic_id]['story_points'] += points
+
+            assignee_obj = item.get('Assignee__r')
+            assignee_name = assignee_obj.get('Name', '-') if assignee_obj else '-'
+            august_unmapped_by_team[team_name][epic_id]['work_items'].append({
+                'id': item.get('Id', ''),
+                'name': item.get('Name', ''),
+                'subject': item.get('Subject__c', ''),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', 'Unknown'),
+                'points': points
+            })
+
+# Query September work items in batches
+september_unmapped_by_team = defaultdict(lambda: defaultdict(lambda: {
+    'epic_id': '', 'epic_name': '', 'epic_health': '', 'epic_owner': '', 'story_points': 0, 'work_items': []
+}))
+
+if september_epic_ids:
+    print("🔄 Fetching September work items...")
+    BATCH_SIZE = 100
+    september_work_items = []
+    for i in range(0, len(september_epic_ids), BATCH_SIZE):
+        batch = september_epic_ids[i:i+BATCH_SIZE]
+        batch_ids_str = "', '".join(batch)
+        query = f"""
+        SELECT Id, Name, Scrum_Team__c, Story_Points__c,
+               Epic__r.Id, Epic__r.Name, Epic__r.Health__c,
+               Epic__r.Scheduled_Build__r.Name, Epic__r.LastModifiedDate,
+               Epic__r.Project__r.Name, Epic__r.Owner.Name,
+               Assignee__r.Name, Subject__c, Status__c
+        FROM ADM_Work__c
+        WHERE Epic__c IN ('{batch_ids_str}')
+          AND Scrum_Team__c IN ('{team_ids_str}')
+          AND Story_Points__c != null
+        LIMIT 50000
+        """
+        september_work_items.extend(run_soql(query))
+
+    print(f"✅ Found {len(september_work_items)} September work items")
+
+    # Process September items (same logic as June/July)
+    for item in september_work_items:
+        team_id = item.get('Scrum_Team__c')
+        points = item.get('Story_Points__c', 0) or 0
+        epic = item.get('Epic__r')
+
+        if team_id in team_name_map:
+            team_name = team_name_map[team_id]
+            project_name = epic.get('Project__r', {}).get('Name') if epic and epic.get('Project__r') else None
+
+            # Only include if unmapped
+            if project_name and project_name in project_to_program:
+                continue
+
+            if epic and should_include_epic(epic):
+                epic_id = epic.get('Id', 'no-epic')
+                epic_name = epic.get('Name', '[No Epic]')
+                epic_health = epic.get('Health__c', 'Unknown')
+                epic_owner = epic.get('Owner', {}).get('Name', '-') if epic.get('Owner') else '-'
+            else:
+                epic_id = 'no-epic'
+                epic_name = '[No Epic]'
+                epic_health = 'Unknown'
+                epic_owner = '-'
+
+            september_unmapped_by_team[team_name][epic_id]['epic_id'] = epic_id
+            september_unmapped_by_team[team_name][epic_id]['epic_name'] = epic_name
+            september_unmapped_by_team[team_name][epic_id]['epic_health'] = epic_health
+            september_unmapped_by_team[team_name][epic_id]['epic_owner'] = epic_owner
+            september_unmapped_by_team[team_name][epic_id]['story_points'] += points
+
+            assignee_obj = item.get('Assignee__r')
+            assignee_name = assignee_obj.get('Name', '-') if assignee_obj else '-'
+            september_unmapped_by_team[team_name][epic_id]['work_items'].append({
+                'id': item.get('Id', ''),
+                'name': item.get('Name', ''),
+                'subject': item.get('Subject__c', ''),
+                'assignee': assignee_name,
+                'status': item.get('Status__c', 'Unknown'),
+                'points': points
+            })
+
 # Convert to list format
 june_unmapped_list = {}
 for team_name, epics in june_unmapped_by_team.items():
@@ -250,10 +415,20 @@ july_unmapped_list = {}
 for team_name, epics in july_unmapped_by_team.items():
     july_unmapped_list[team_name] = list(epics.values())
 
+august_unmapped_list = {}
+for team_name, epics in august_unmapped_by_team.items():
+    august_unmapped_list[team_name] = list(epics.values())
+
+september_unmapped_list = {}
+for team_name, epics in september_unmapped_by_team.items():
+    september_unmapped_list[team_name] = list(epics.values())
+
 # Save output
 output = {
     'june_delivered_unmapped': june_unmapped_list,
-    'july_committed_unmapped': july_unmapped_list
+    'july_committed_unmapped': july_unmapped_list,
+    'august_committed_unmapped': august_unmapped_list,
+    'september_committed_unmapped': september_unmapped_list
 }
 
 with open(OUTPUT_FILE, 'w') as f:
@@ -262,3 +437,5 @@ with open(OUTPUT_FILE, 'w') as f:
 print(f"\n✅ Saved unmapped details to {OUTPUT_FILE}")
 print(f"   June: {sum(len(epics) for epics in june_unmapped_list.values())} unmapped epics")
 print(f"   July: {sum(len(epics) for epics in july_unmapped_list.values())} unmapped epics")
+print(f"   August: {sum(len(epics) for epics in august_unmapped_list.values())} unmapped epics")
+print(f"   September: {sum(len(epics) for epics in september_unmapped_list.values())} unmapped epics")
